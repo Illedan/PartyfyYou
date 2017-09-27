@@ -26,7 +26,7 @@ namespace SpotifyListener
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window-
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
@@ -53,12 +53,12 @@ namespace SpotifyListener
                         previous = track.Item.Name;
                         var youtubeService = new YouTubeService(new BaseClientService.Initializer()
                         {
-                            ApiKey = "YOUR YOUTUBE KEY. Rember to activate the key on google for youtube",
+                            ApiKey = "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
                             ApplicationName = this.GetType().ToString()
                         });
 
                         var searchListRequest = youtubeService.Search.List("snippet");
-                        searchListRequest.Q = previous + track.Item.Artists.First().Name; // Replace with your search term.
+                        searchListRequest.Q = previous + " " + track.Item.Artists.First().Name; // Replace with your search term.
                         searchListRequest.MaxResults = 1;
 
                         // Call the search.list method to retrieve results matching the specified query term.
