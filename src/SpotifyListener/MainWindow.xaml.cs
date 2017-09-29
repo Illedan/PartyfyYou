@@ -53,7 +53,7 @@ namespace SpotifyListener
                         previous = track.Item.Name;
                         var youtubeService = new YouTubeService(new BaseClientService.Initializer()
                         {
-                            ApiKey = "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
+                            ApiKey = "AIzaSyDDzSJAO2jU6Pl5IFtOLnN3rmhtq4jVwBQ",// "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
                             ApplicationName = this.GetType().ToString()
                         });
 
@@ -64,7 +64,31 @@ namespace SpotifyListener
                         // Call the search.list method to retrieve results matching the specified query term.
                         var searchListResponse = await searchListRequest.ExecuteAsync();
                         var song = searchListResponse.Items.First(s => s.Id.Kind.Equals("youtube#video"));
-                        webBrowser.Navigate("https://www.youtube.com/watch?v=" + song.Id.VideoId);
+                        var url = "https://www.youtube.com/embed/"+ song.Id.VideoId + "?autoplay=1";
+
+                        if (File.Exists("c:\\videoLink.txt"))
+                        {
+                            string oldurl = File.ReadAllText("c:\\videoLink.txt");
+                            if (!url.Equals(oldurl))
+                            {
+                                StreamWriter file = new StreamWriter("c:\\videoLink.txt");
+                                file.Write(url);
+
+                                file.Close();
+                            }
+
+                        }
+                        else
+                        {
+                            StreamWriter file = new StreamWriter("c:\\videoLink.txt");
+                            file.Write(url);
+
+                            file.Close();
+                        }
+
+                        //Åpne chrome og gå til http://localhost:1337/ :)
+
+                        webBrowser.Navigate("https://www.youtube.com/watch?v=" + song.Id.VideoId); 
                     }
                 }
                 catch (Exception exception)
