@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Google.Apis.Services;
-
+using System.Xml;
 using Google.Apis.YouTube.v3;
 using SpotifyAPI.Web;
 using SpotifyAPI.Web.Auth;
@@ -48,7 +46,7 @@ namespace SpotifyListner.Web
                 var track = _spotify.GetPlayingTrack();
                 if (previous != track.Item.Name)
                 {
-                    
+
                     previous = track.Item.Name;
                     var youtubeService = new YouTubeService(new BaseClientService.Initializer()
                     {
@@ -62,8 +60,8 @@ namespace SpotifyListner.Web
 
                     // Call the search.list method to retrieve results matching the specified query term.
                     var searchListResponse = await searchListRequest.ExecuteAsync();
-                    var song = searchListResponse.Items.First(s => s.Id.Kind.Equals("youtube#video"));                   
-                    var url = "https://www.youtube.com/embed/" + song.Id.VideoId + "?autoplay=1";               
+                    var song = searchListResponse.Items.First(s => s.Id.Kind.Equals("youtube#video"));
+                    var url = "https://www.youtube.com/embed/" + song.Id.VideoId + "?autoplay=1";
 
                     if (File.Exists("c:\\videoLink.txt"))
                     {
@@ -85,16 +83,30 @@ namespace SpotifyListner.Web
                         file.Close();
                     }
 
+                    // Get youtube video info
                     var videoRequest = youtubeService.Videos.List("id, contentDetails");
                     videoRequest.Id = song.Id.VideoId;
                     var video = await videoRequest.ExecuteAsync();
                     var videoDuration = XmlConvert.ToTimeSpan(video.Items.FirstOrDefault()?.ContentDetails.Duration);
-                    var durationDiffrence = videoDuration - new TimeSpan(0, 0, 0, 0, track.Item.DurationMs);
-                    if (durationDiffrence.Milliseconds > 0)
+
+                    // Get duration diffrence between youtube video and Spotify track.
+                    var durationDiffrence = videoDuration - new TimeSpan(0, 0, 0, 0, track.Item.DurationMs) + TimeSpan.FromSeconds(2);
+
+                    // If diffrence is more than 0 ms
+                    if (durationDiffrence.TotalMilliseconds > 0)
                     {
+                        // Pause spotify untill youtube and spotify is synchronized.
                         _spotify.PausePlayback();
-                        await Task.Delay(durationDiffrence.Milliseconds);
+                        await Task.Delay(durationDiffrence);
                         _spotify.ResumePlayback();
+                    }
+                    else
+                    {
+                        // Skip spotify to match youtube video.
+                        var progress = _spotify.GetPlayback().ProgressMs;
+                        progress = progress - int.Parse(durationDiffrence.TotalMilliseconds.ToString());
+                        _spotify.SeekPlayback(progress);
+
                     }
 
                     //Åpne chrome og gå til http://localhost:1337/ :)
@@ -104,27 +116,9 @@ namespace SpotifyListner.Web
             }
             catch (Exception exception)
             {
-               var x = exception.Message;
+                var x = exception.Message;
             }
 
-        }
-
-        public static string FormatIso8601(DateTimeOffset dto)
-        {
-            string format = dto.Offset == TimeSpan.Zero
-                ? "yyyy-MM-ddTHH:mm:ss.fffZ"
-                : "yyyy-MM-ddTHH:mm:ss.fffzzz";
-
-            return dto.ToString(format, CultureInfo.InvariantCulture);
-        }
-
-        public static DateTimeOffset ParseIso8601(string iso8601String)
-        {
-            return DateTimeOffset.ParseExact(
-                iso8601String,
-                new string[] { "yyyy-MM-dd'T'HH:mm:ss.FFFK" },
-                CultureInfo.InvariantCulture,
-                DateTimeStyles.None);
         }
 
 
