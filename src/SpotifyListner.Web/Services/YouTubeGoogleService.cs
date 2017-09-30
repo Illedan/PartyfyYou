@@ -1,39 +1,52 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Configuration;
+using System.Threading.Tasks;
 using Google.Apis.Services;
 using SpotifyListner.Web.Models;
 using System.Linq;
+using System.Xml;
 using Google.Apis.YouTube.v3;
 
 namespace SpotifyListner.Web.Services
 {
     public class YouTubeGoogleService : IYouTubeGoogleService
     {
-        public async Task<string> FetchUrl(SpotifySong spotifySong)
+        private readonly YouTubeService youtubeService;
+        public YouTubeGoogleService()
         {
-            var youtubeService = new YouTubeService(new BaseClientService.Initializer()
+            youtubeService = new YouTubeService(new BaseClientService.Initializer
             {
-                ApiKey = "AIzaSyDDzSJAO2jU6Pl5IFtOLnN3rmhtq4jVwBQ",// "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
+                ApiKey = ConfigurationManager.AppSettings["YouTubeServiceApiKey"],// "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
                 ApplicationName = "PartyfyYou"
             });
+        }
 
+        public async Task<string> FetchUrl(SpotifySong spotifySong)
+        {
             var searchListRequest = youtubeService.Search.List("snippet");
             searchListRequest.Q = spotifySong.Song + " " + spotifySong.Artist; 
             searchListRequest.MaxResults = 1;
 
             var searchListResponse = await searchListRequest.ExecuteAsync();
 
-
             var song = searchListResponse.Items.FirstOrDefault(s => s.Id.Kind.Equals("youtube#video"));
             var songId = song?.Id?.VideoId;
             if (song == null)
             {
                 //TODO: pick random videos if not found.
-                //https://www.youtube.com/watch?v=UcRtFYAz2Yo
-                songId = "UcRtFYAz2Yo";
+                return "15_Y3_eRfOU&t";
             }
 
-            var url = "https://www.youtube.com/embed/" + songId + "?autoplay=1";
-            return url;
+            return songId;
+        }
+
+        public async Task<TimeSpan> GetSongLength(string id)
+        {
+            var videoRequest = youtubeService.Videos.List("id, contentDetails");
+            videoRequest.Id = id;
+            var video = await videoRequest.ExecuteAsync();
+            var videoDuration = XmlConvert.ToTimeSpan(video.Items.FirstOrDefault()?.ContentDetails.Duration);
+            return videoDuration;
         }
     }
 }

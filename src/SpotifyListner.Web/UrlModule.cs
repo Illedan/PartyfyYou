@@ -1,27 +1,21 @@
 ﻿using Nancy;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Nancy.Extensions;
 
 namespace SpotifyListner.Web
 {
     public class UrlModule : NancyModule
     {
-        private static string URL;
         public UrlModule()
         {
-            Get["/url"] = parameters => !string.IsNullOrEmpty(URL) ? URL : "https://www.youtube.com/embed/o1eHKf-dMwo?autoplay=1";
-            Post["/url"] = parameters =>
+            var youTubeGoogleService = StaticContainer.YouTubeGoogleService;
+            var spotifyService = StaticContainer.SpotifyService;
+
+            Get["/url", true] = async (parameters, ct) =>
             {
-                var text = Context.Request.Body.AsString();
-                URL = text;
-                return true;
+                var song = await spotifyService.GetCurrentSong();
+                return await youTubeGoogleService.FetchUrl(song);
             };
+
+            Get["/pause/{id}", true] = (parameters, ct) => spotifyService.PauseSong(parameters["id"]);
         }
     }
-
 }
