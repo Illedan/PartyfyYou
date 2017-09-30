@@ -1,4 +1,6 @@
-﻿using Topshelf.Nancy;
+﻿using Nancy.Bootstrapper;
+using Nancy.TinyIoc;
+using Topshelf.Nancy;
 using Topshelf;
 
 namespace SpotifyListner.Web
@@ -11,6 +13,7 @@ namespace SpotifyListner.Web
         {
             var host = HostFactory.New(x =>
             {
+                
                 x.UseLinuxIfAvailable();
                 x.Service<SpotifyListnerSelfHost>(s =>
                 {
@@ -25,6 +28,7 @@ namespace SpotifyListner.Web
                     });
                 });
 
+                
                 x.StartAutomatically();
                 x.SetServiceName("SpotifyListner");
                 x.SetDisplayName("SpotifyListner");
@@ -34,6 +38,11 @@ namespace SpotifyListner.Web
             });
 
             host.Run();
+        }
+
+        protected static void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
+        {
+            pipelines.AfterRequest += (ctx) => { ctx.Response.Headers.Add("Access-Control-Allow-Origin", "*"); };
         }
     }
 }
