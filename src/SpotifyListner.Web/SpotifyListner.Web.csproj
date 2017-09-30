@@ -112,13 +112,20 @@
     <Compile Include="Services\YouTubeGoogleService.cs" />
     <Compile Include="SpotifyListnerSelfHost.cs" />
     <Compile Include="UrlModule.cs" />
+    <Compile Include="ViewModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="help.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="join.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
