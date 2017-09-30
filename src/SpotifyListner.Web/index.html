@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body style=" background-color : #000000">
+<script>
+    if (!window.console) console = {};
+    console.log = console.log || function () { };
+    var isLoaded = false;
+    var currentSong = "id";
+
+    function httpGet(theUrl, callback) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, true); // false for synchronous request
+        xmlHttp.onload = function (e) {
+            callback(xmlHttp.responseText);
+        };
+        xmlHttp.onerror = function (e) {
+        };
+        xmlHttp.send(null);
+    }
+
+    function getPath(callback) {
+        
+        httpGet(window.location.href + "/url", callback);
+    }
+
+    function createYoutubeUrl(id) {
+        return "https://www.youtube.com/embed/" + id + "?autoplay=1";
+    }
+
+    function pauseVideo() {
+        httpGet(window.location.href + "/pause/" + currentSong, function(ignored){ });
+    }
+
+    function OnNewPath(newPath) {
+        if (currentSong !== newPath) { 
+            document.getElementById('Myframe').src = createYoutubeUrl(newPath);
+            currentSong = newPath;
+            pauseVideo();
+        }
+    }
+   
+    function changeSrc() {
+        if (!isLoaded) {
+            loop();
+            isLoaded = true;
+            setInterval(function () {
+                loop();
+            }, 1000);
+        }
+
+        function loop() {
+            getPath(OnNewPath);
+        }
+    }
+</script>
+<table>
+    <tr>
+        <td>
+            <iframe id="Myframe" onLoad="changeSrc();" src="about:blank" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 70%; height: 100%; border: none; margin: 0; padding: 0; overflow: hidden; z-index: 999999;">
+                Your browser doesn't support iframes
+            </iframe>
+        </td>
+        <td>
+            <span>Content?</span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
