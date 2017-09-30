@@ -10,6 +10,7 @@ using SpotifyAPI.Web;
 using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using System.IO;
+using System.Configuration;
 
 namespace SpotifyListner.Web
 {
@@ -19,9 +20,11 @@ namespace SpotifyListner.Web
         private int Interval = 1;
         private SpotifyWebAPI _spotify;
         private string previous = "";
+        private string apiKey;
         public SpotifyListnerSelfHost(string listeningInfo)
         {
             Console.WriteLine($"SpotifyListner listening on: {listeningInfo}");
+            apiKey = ConfigurationManager.AppSettings["YouTubeServiceApiKey"];
             _spotify = new SpotifyWebAPI();
             RunAuthentication();
         }
@@ -49,7 +52,7 @@ namespace SpotifyListner.Web
                     previous = track.Item.Name;
                     var youtubeService = new YouTubeService(new BaseClientService.Initializer()
                     {
-                        ApiKey = "AIzaSyDDzSJAO2jU6Pl5IFtOLnN3rmhtq4jVwBQ",// "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
+                        ApiKey = apiKey,// "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
                         ApplicationName = this.GetType().ToString()
                     });
 
