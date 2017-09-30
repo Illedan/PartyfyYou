@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyListener", "SpotifyListener\SpotifyListener.csproj", "{AF0F7ECA-E73A-400A-B771-5F3D425A712A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyListner.Web", "SpotifyListner.Web\SpotifyListner.Web.csproj", "{56C2BD12-2C06-4596-95FB-F3B23C3B9514}"
 EndProject
 Global
@@ -15,14 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Debug|x86.ActiveCfg = Debug|x86
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Debug|x86.Build.0 = Debug|x86
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Release|x86.ActiveCfg = Release|x86
-		{AF0F7ECA-E73A-400A-B771-5F3D425A712A}.Release|x86.Build.0 = Release|x86
 		{56C2BD12-2C06-4596-95FB-F3B23C3B9514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56C2BD12-2C06-4596-95FB-F3B23C3B9514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56C2BD12-2C06-4596-95FB-F3B23C3B9514}.Debug|x86.ActiveCfg = Debug|Any CPU
