@@ -111,7 +111,6 @@
     <Compile Include="Services\SpotifyService.cs" />
     <Compile Include="Services\YouTubeGoogleService.cs" />
     <Compile Include="SpotifyListnerSelfHost.cs" />
-    <Compile Include="StaticContainer.cs" />
     <Compile Include="UrlModule.cs" />
   </ItemGroup>
   <ItemGroup>

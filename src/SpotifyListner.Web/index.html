@@ -13,16 +13,20 @@
     var isLoaded = false;
     var currentSong = "id";
 
-    function httpGet(theUrl) {
+    function httpGet(theUrl, callback) {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", theUrl, false); // false for synchronous request
+        xmlHttp.open("GET", theUrl, true); // false for synchronous request
+        xmlHttp.onload = function (e) {
+            callback(xmlHttp.responseText);
+        };
+        xmlHttp.onerror = function (e) {
+        };
         xmlHttp.send(null);
-        return xmlHttp.responseText;
     }
 
-    function getPath() {
+    function getPath(callback) {
         
-        return httpGet(window.location.href + "/url");
+        httpGet(window.location.href + "/url", callback);
     }
 
     function createYoutubeUrl(id) {
@@ -30,7 +34,15 @@
     }
 
     function pauseVideo() {
-        httpGet(window.location.href + "/pause/" + currentSong);
+        httpGet(window.location.href + "/pause/" + currentSong, function(ignored){ });
+    }
+
+    function OnNewPath(newPath) {
+        if (currentSong !== newPath) { 
+            document.getElementById('Myframe').src = createYoutubeUrl(newPath);
+            currentSong = newPath;
+            pauseVideo();
+        }
     }
    
     function changeSrc() {
@@ -43,12 +55,7 @@
         }
 
         function loop() {
-            var newPath = getPath();
-            if (currentSong !== newPath) { 
-                document.getElementById('Myframe').src = createYoutubeUrl(newPath);
-                currentSong = newPath;
-                pauseVideo();
-            }
+            getPath(OnNewPath);
         }
     }
 </script>

@@ -21,13 +21,7 @@ namespace SpotifyListner.Web.Services
 
         public async Task<SpotifySong> GetCurrentSong()
         {
-            while (m_spotifyWebApi == null)
-            {
-                await Task.Delay(100);
-                //TODO: what if fails?!
-            }
-
-            var track = m_spotifyWebApi.GetPlayingTrack();
+            var track = await  Task.Run(() => m_spotifyWebApi.GetPlayingTrack() );
             return new SpotifySong { Artist = track.Item.Artists.First().Name, Genre = track.Item.Type, Song = track.Item.Name, Time = track.Item.DurationMs };
         }
 
