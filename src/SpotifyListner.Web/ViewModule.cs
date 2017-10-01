@@ -13,12 +13,12 @@ namespace SpotifyListner.Web
         {
             Get["/help"] = parameters =>
             {
-                return Response.AsFile("help.html", "text/html");
+                return Response.AsFile("Content/views/help.html", "text/html");
             };
 
             Get["/join"] = parameters =>
             {
-                return Response.AsFile("join.html", "text/html");
+                return Response.AsFile("Content/views/join.html", "text/html");
             };
         }
     }
