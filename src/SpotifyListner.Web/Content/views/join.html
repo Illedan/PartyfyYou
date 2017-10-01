@@ -4,9 +4,36 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<style>
+    html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-animation: background 5s cubic-bezier(1,0,0,1) infinite;
+  animation: background 5s cubic-bezier(1,0,0,1) infinite;  
+}
+
+
+@-webkit-keyframes background {
+  0% { background-color: #f99; }
+  33% { background-color: #9f9; }  
+  67% { background-color: #99f; }
+  100% { background-color: #f99; }
+}
+
+@keyframes background {
+  0% { background-color: #f99; }
+  33% { background-color: #9f9; }  
+  67% { background-color: #99f; }
+  100% { background-color: #f99; }
+}
+</style>
 </head>
 <body>
     <!-- Optional JavaScript -->
@@ -16,7 +43,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <div class="container" style="width: 250px; margin-top: 100px">
         <form class="form-signin">
-            <h2 class="form-signin-heading">Partify</h2>
+           <!-- <h2 class="form-signin-heading">Partify</h2>-->
+            <img src="img/partify.png" alt="Mountain View" style="width:304px;height:228px;">
+            <br />
+            <br />
+            <br />
             <input type="text" id="inputPin" class="form-control" placeholder="Party PIN" required autofocus>
             <br />
             <button class="btn btn-lg btn-primary btn-block" type="submit">Enter</button>
