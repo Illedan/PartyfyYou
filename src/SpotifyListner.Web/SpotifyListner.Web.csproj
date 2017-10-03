@@ -123,6 +123,9 @@
     <Content Include="Content\css\joinstyle.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\js\authorization.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\js\index.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
