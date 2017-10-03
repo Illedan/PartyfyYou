@@ -129,7 +129,9 @@
     <Content Include="Content\js\index.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\js\spotify.js" />
+    <Content Include="Content\js\spotify.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\views\help.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

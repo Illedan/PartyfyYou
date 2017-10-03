@@ -16,7 +16,7 @@ namespace SpotifyListner.Web.Services
         public SpotifyService(IYouTubeGoogleService youTubeGoogleService)
         {
             m_youTubeGoogleService = youTubeGoogleService;
-            RunAuthentication();
+            //RunAuthentication();
         }
 
         public async Task<SpotifySong> GetCurrentSong()
@@ -49,6 +49,13 @@ namespace SpotifyListner.Web.Services
                 progress = progress - int.Parse(durationDiffrence.TotalMilliseconds.ToString());
                 m_spotifyWebApi.SeekPlayback(progress);
             }
+        }
+
+        public async Task<SpotifySong> GetCurrentSong(string token)
+        {
+            var spotify = new SpotifyWebAPI { AccessToken = token };
+            var track = await Task.Run(() => spotify.GetPlayingTrack());
+            return new SpotifySong { Artist = track.Item.Artists.First().Name, Genre = track.Item.Type, Song = track.Item.Name, Time = track.Item.DurationMs };
         }
 
         private async void RunAuthentication()
