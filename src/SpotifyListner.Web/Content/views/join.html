@@ -21,11 +21,13 @@
         <form class="form-signin">
            <!-- <h2 class="form-signin-heading">Partify</h2>-->
             <img src="img/partify.png" alt="Mountain View" style="width:304px;height:228px;">
+            <p id="myfield"/>
             <br />
             <br />
             <br />
             <input type="text" id="inputPin" class="form-control" placeholder="Party PIN" required autofocus>
             <br />
+            <iframe onLoad="changeSrc();" width="300px" height="300px" id="bestFrame" src="about:blank"></iframe>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Enter</button>
         </form>
     </div>

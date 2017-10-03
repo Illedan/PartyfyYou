@@ -11,6 +11,11 @@ namespace SpotifyListner.Web
     {
         public ViewModule()
         {
+            //After.AddItemToEndOfPipeline((ctx) => ctx.Response
+            //    .WithHeader("Access-Control-Allow-Origin", "*")
+            //    .WithHeader("Access-Control-Allow-Methods", "POST,GET")
+            //    .WithHeader("Access-Control-Allow-Headers", "Accept, Origin, Content-type"));
+
             Get["/help"] = parameters =>
             {
                 return Response.AsFile("Content/views/help.html", "text/html");
