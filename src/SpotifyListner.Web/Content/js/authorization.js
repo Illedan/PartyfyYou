@@ -32,7 +32,7 @@ function login() {
         var text = w.location.href.split("=");
         var token = text[1];
         document.getElementById('myfield').innerHTML = 'loading';
-        httpGet(window.location.href+'/getsongwithtoken', token);
+        httpGet(window.location.href + '/asd?token=' + token);
         //var spotify = new SpotifyWebApi();
         //spotify.setAccessToken(token);
         //spotify.setVolume(40);
@@ -40,19 +40,36 @@ function login() {
     };
 }
 
-function httpGet(theUrl, body) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", theUrl, true); // false for synchronous request
-    //xmlHttp.withCredentials = true;
-    //xmlHttp.setRequestHeader('Authorization', 'Bearer ' + authorization);
-    //xmlHttp.setRequestHeader('Access-Control-Allow-Headers', '*');
-    //xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-    console.log("ASD");
-    xmlHttp.send(body);
-    xmlHttp.onload = function () {
-        document.getElementById('myfield').innerHTML = xmlHttp.responseText;
-    };
-}
+//function httpGet(theUrl, body) {
+//    var xmlHttp = new XMLHttpRequest();
+//    xmlHttp.open("POST", theUrl, true); // false for synchronous request
+//    //xmlHttp.withCredentials = true;
+//    //xmlHttp.setRequestHeader('Authorization', 'Bearer ' + authorization);
+//    //xmlHttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+//    //xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+//    console.log("ASD");
+//    xmlHttp.send(body);
+//    xmlHttp.onload = function () {
+//        document.getElementById('myfield').innerHTML = xmlHttp.responseText;
+//    };
+//}
+
+
+function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, true); // false for synchronous request
+        //xmlHttp.withCredentials = true;
+        //xmlHttp.setRequestHeader('Authorization', 'Bearer ' + authorization);
+        //xmlHttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+        //xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+        console.log("ASD");
+        xmlHttp.send(null);
+        xmlHttp.onload = function () {
+            document.getElementById('myfield').innerHTML = xmlHttp.responseText;
+        };
+    }
+
+
 
 //var url = "https://accounts.spotify.com/authorize/?client_id=dfce289f6499436bbd1d60033ac14957&response_type=code&redirect_uri=https://localhost:1337/callback&scope=user-read-private%20user-read-email&state=34fFs29kd09";
 
