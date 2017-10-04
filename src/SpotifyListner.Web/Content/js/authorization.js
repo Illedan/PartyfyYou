@@ -26,7 +26,7 @@ function login() {
         'Spotify',
         'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
     );
-
+    
     w.onbeforeunload = function() {
         //document.getElementById('myfield').innerHTML = w.location.href;
         var text = w.location.href.split("=");

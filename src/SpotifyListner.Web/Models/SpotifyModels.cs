@@ -76,7 +76,7 @@ public class Item
     public string uri { get; set; }
     }
 
-    public class Example
+    public class SpotifyContent
 {
     public long timestamp { get; set; }
     public int progress_ms { get; set; }
