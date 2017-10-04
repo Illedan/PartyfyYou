@@ -5,6 +5,9 @@ using SpotifyAPI.Web;
 using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using SpotifyListner.Web.Models;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.IO;
 
 namespace SpotifyListner.Web.Services
 {
@@ -53,6 +56,11 @@ namespace SpotifyListner.Web.Services
 
         public async Task<SpotifySong> GetCurrentSong(string token)
         {
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var responeMessage = await httpClient.GetAsync("https://api.spotify.com/v1/me/player/currently-playing");
+            var result = await responeMessage.Content.ReadAsStringAsync();
+
             var spotify = new SpotifyWebAPI { AccessToken = token };
             var track = await Task.Run(() => spotify.GetPlayingTrack());
             return new SpotifySong { Artist = track.Item.Artists.First().Name, Genre = track.Item.Type, Song = track.Item.Name, Time = track.Item.DurationMs };
