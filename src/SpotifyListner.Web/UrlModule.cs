@@ -7,7 +7,7 @@ namespace SpotifyListner.Web
 {
     public class UrlModule : NancyModule
     {
-        public UrlModule(IYouTubeGoogleService youTubeGoogleService, ISpotifyService spotifyService)
+        public UrlModule(IYouTubeGoogleService youTubeGoogleService, ISpotifyService spotifyService, IAuthorization authorization)
         {
             Get["/url", true] = async (parameters, ct) =>
             {
@@ -25,6 +25,16 @@ namespace SpotifyListner.Web
                 var song =  (await spotifyService.GetCurrentSong(token));
 
                 return song.item.id;
+            };
+
+            Get["/join/token/", true] = async (parameters, ct) =>
+            {
+                string token = this.Request.Query["token"];
+                var refreshToken = "";
+
+                refreshToken =  authorization.GetNewToken(token);
+
+                return refreshToken;
             };
 
         }
