@@ -37,11 +37,14 @@ function login() {
         localStorage.setItem("code", w.location.href);
         //window.location.assign("http://localhost:1337/videopage");
         window.location.href = 'http://localhost:1337/videopage';
+
+
+
+
         //window.location = "/videopage";
         //TODO: make this work.
         window.document.getElementById("myspan").innerHTML = w.location.href;
         //window.document.getElementById('button').style.visibility = 'hidden';
-        //var content = w.location.href.split("?")[1];
         //var items = content.split("&");
         //var code = ExtractData(items[0]);
         ////var token_type = ExtractData(items[1]);
