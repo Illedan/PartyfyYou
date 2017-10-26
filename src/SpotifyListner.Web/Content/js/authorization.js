@@ -68,13 +68,13 @@ function tokenReturned(token){
 	var	newToken = token;
 	console.log(newToken);
 }
-function GetNewToken(callback){
-	return httpGetRequest(window.location.href + '/token?token=' + originalToken, callback); //usikker på om man trenger å sende inn token, shit is strange
+function GetNewToken(callback) {
+	return httpGetRequest("http://localhost:1337" + '/token?code=' + originalToken, callback); //usikker på om man trenger å sende inn token, shit is strange
 }
 
 function httpGet(theUrl) {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", theUrl, true); 
+        xmlHttp.open("GET", theUrl, true);
         xmlHttp.send(null);
         xmlHttp.onload = function () {
             document.getElementById('myfield').innerHTML = xmlHttp.responseText;
