@@ -51,44 +51,48 @@ function login() {
         //localStorage.setItem("expires_in", expires_in);
         //window.location = '/videopage/';
 
+
+        //var text = w.location.href.split("=");
+        //var token = text[1];
+        //document.getElementById('myfield').innerHTML = 'loading';
+        //httpGet(window.location.href + '/asd?token=' + token);
+        //originalToken = token;
         //var spotify = new SpotifyWebApi();
         //spotify.setAccessToken(token);
         //spotify.setVolume(40);
         //console.log('hert');
+        GetNewToken(tokenReturned);
     };
+}
+function tokenReturned(token){
+	var	newToken = token;
+	console.log(newToken);
+}
+function GetNewToken(callback){
+	return httpGetRequest(window.location.href + '/token?token=' + originalToken, callback); //usikker på om man trenger å sende inn token, shit is strange
 }
 
 function httpGet(theUrl) {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", theUrl, true); // false for synchronous request
-        //xmlHttp.withCredentials = true;
-        //xmlHttp.setRequestHeader('Authorization', 'Bearer ' + authorization);
-        //xmlHttp.setRequestHeader('Access-Control-Allow-Headers', '*');
-        //xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+        xmlHttp.open("GET", theUrl, true); 
         xmlHttp.send(null);
         xmlHttp.onload = function () {
             document.getElementById('myfield').innerHTML = xmlHttp.responseText;
         };
     }
+	function httpGetRequest(theUrl, callback) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", theUrl, true); // false for synchronous request
+    xmlHttp.onload = function (e) {
+        callback(xmlHttp.responseText);
+    };
+    xmlHttp.onerror = function (e) {
+    };
+    xmlHttp.send(null);
+}
+
+
+var url = "https://accounts.spotify.com/authorize/?client_id=dfce289f6499436bbd1d60033ac14957&response_type=token&redirect_uri=http://localhost:1337/&state=XSS&scope=playlist-read-private%20user-read-private%20user-read-email%20user-library-read%20user-follow-read%20user-read-birthdate%20user-top-read%20playlist-read-collaborative%20user-read-recently-played%20user-read-playback-state%20user-modify-playback-state&show_dialog=False";
 
 
 
-//var url = "https://accounts.spotify.com/authorize/?client_id=dfce289f6499436bbd1d60033ac14957&response_type=code&redirect_uri=https://localhost:1337/callback&scope=user-read-private%20user-read-email&state=34fFs29kd09";
-
-//var url = "https://accounts.spotify.com/authorize/?client_id=dfce289f6499436bbd1d60033ac14957&response_type=token&redirect_uri=http://localhost:1337/&state=XSS&scope=playlist-read-private%20user-read-private%20user-read-email%20user-library-read%20user-follow-read%20user-read-birthdate%20user-top-read%20playlist-read-collaborative%20user-read-recently-played%20user-read-playback-state%20user-modify-playback-state&show_dialog=False";
-//var result = httpGet(url);
-//console.log(result);
-
-
-
-//var x = window.open(url);
-
-
-//while (asd = ! "about:blank") {
-   
-//}
-//var asd = x.location.href;
-//alert(asd);
-//console.log(asd);
-
-//console.log(x);

@@ -103,6 +103,8 @@
     <Compile Include="Models\SpotifyModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Authorization.cs" />
+    <Compile Include="Services\IAuthorization.cs" />
     <Compile Include="Services\ISpotifyService.cs" />
     <Compile Include="Services\WebApi\ISpotifyWebApi.cs" />
     <Compile Include="Services\IYouTubeGoogleService.cs" />
