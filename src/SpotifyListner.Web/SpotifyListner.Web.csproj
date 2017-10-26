@@ -130,13 +130,16 @@
     <Content Include="Content\js\spotify.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\views\help.html">
+    <Content Include="Content\js\videopage.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="index.html">
+    <Content Include="Content\views\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\views\join.html">
+    <Content Include="Content\views\OkPage.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\views\videopage.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Content\img\partify.png">

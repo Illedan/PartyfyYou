@@ -8,8 +8,11 @@ namespace SpotifyListner.Web
         {
             Get["/"] = parameters =>
             {
-
-                return Response.AsFile("index.html", "text/html");
+                return Response.AsFile("Content/views/index.html", "text/html");
+            };
+            Get["/okpage"] = parameters =>
+            {
+                return Response.AsFile("Content/views/okpage.html", "text/html");
             };
         }
     }
