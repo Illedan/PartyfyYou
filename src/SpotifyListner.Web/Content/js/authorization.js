@@ -2,6 +2,7 @@
 if (!window.console) console = {};
 console.log = console.log || function () { };
 var awsome = "";
+var originalToken = "";
 
 function ExtractData(str) {
     return str.split("=")[1];
@@ -18,7 +19,8 @@ function login() {
     }
 
     var url = getLoginURL([
-        'playlist-modify-public'
+        //'playlist-modify-public'
+        'user-read-currently-playing'
     ]);
 
     var width = 450,
@@ -34,9 +36,9 @@ function login() {
     
     w.onbeforeunload = function() {
         //document.getElementById('myfield').innerHTML = w.location.href;
-        localStorage.setItem("code", w.location.href);
+        
         //window.location.assign("http://localhost:1337/videopage");
-        window.location.href = 'http://localhost:1337/videopage';
+        
 
 
 
@@ -44,6 +46,11 @@ function login() {
         //window.location = "/videopage";
         //TODO: make this work.
         window.document.getElementById("myspan").innerHTML = w.location.href;
+       
+        var s = w.location.href;
+        var array = s.split("=");
+        originalToken = array[1];
+        GetNewToken(tokenReturned);
         //window.document.getElementById('button').style.visibility = 'hidden';
         //var items = content.split("&");
         //var code = ExtractData(items[0]);
@@ -64,12 +71,14 @@ function login() {
         //spotify.setAccessToken(token);
         //spotify.setVolume(40);
         //console.log('hert');
-        GetNewToken(tokenReturned);
+        
     };
 }
-function tokenReturned(token){
-	var	newToken = token;
-	console.log(newToken);
+function tokenReturned(responseString){
+    
+    localStorage.setItem("responseString", responseString);
+    window.location.replace("http://localhost:1337/videopage");
+   
 }
 function GetNewToken(callback) {
 	return httpGetRequest("http://localhost:1337" + '/token?code=' + originalToken, callback); //usikker på om man trenger å sende inn token, shit is strange
