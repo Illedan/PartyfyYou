@@ -10,7 +10,7 @@ function login() {
         return 'https://accounts.spotify.com/authorize?client_id=' + CLIENT_ID +
             '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
             '&scope=' + encodeURIComponent(scopes.join(' ')) +
-            '&response_type=token';
+            '&response_type=code';
     }
 
     var url = getLoginURL([
@@ -35,7 +35,7 @@ function login() {
         httpGet(window.location.href + '/asd?token=' + token);
 		originalToken = token;
 
-		//GetNewToken(tokenReturned);
+		GetNewToken(tokenReturned);
       
     };
 }
@@ -43,14 +43,13 @@ function tokenReturned(token){
 	var	newToken = token;
 	console.log(newToken);
 }
-function GetNewToken(callback){
-	return httpGetRequest(window.location.href + '/token?token=' + originalToken, callback); //usikker på om man trenger å sende inn token, shit is strange
+function GetNewToken(callback) {
+	return httpGetRequest("http://localhost:1337" + '/token?code=' + originalToken, callback); //usikker på om man trenger å sende inn token, shit is strange
 }
 
 function httpGet(theUrl) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", theUrl, true);
-        console.log("ASD");
         xmlHttp.send(null);
         xmlHttp.onload = function () {
             document.getElementById('myfield').innerHTML = xmlHttp.responseText;
