@@ -124,6 +124,9 @@
     <Content Include="Content\css\joinstyle.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\js\callback_spotify.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\js\authorization.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -134,6 +137,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\js\videopage.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\views\callback.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\views\index.html">

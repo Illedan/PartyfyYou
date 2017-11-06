@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 namespace SpotifyListner.Web.Services
 {
     public class Authorization : IAuthorization
-    {
-        private string redirectUri = "http://localhost:1337/"; 
+    { 
+        private string redirectUri = "http://localhost:1337/callback/";
         private string spotifyTokenUri = "https://accounts.spotify.com/api/token";
         private string clientId = "dfce289f6499436bbd1d60033ac14957";
         private string clientSecret = "";

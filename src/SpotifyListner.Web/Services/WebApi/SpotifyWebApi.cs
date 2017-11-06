@@ -17,13 +17,15 @@ namespace SpotifyListner.Web.Services.WebApi
 
         public async Task<SpotifyContent> GetPlayingSong(string token)
         {
-            return await GetAsync<SpotifyContent>("https://api.spotify.com/v1/me/player/currently-playing", token);
+            var content = await GetAsync<SpotifyContent>("https://api.spotify.com/v1/me/player/currently-playing", token);
+            return content;
         }
 
         private static async Task<T> GetAsync<T>(string url, string token)
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+           
             var responeMessage = await httpClient.GetAsync(url);
             var result = await responeMessage.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<T>(result);

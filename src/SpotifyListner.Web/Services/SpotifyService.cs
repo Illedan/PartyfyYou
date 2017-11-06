@@ -45,9 +45,10 @@ namespace SpotifyListner.Web.Services
             //}
         }
 
-        public Task<SpotifyContent> GetCurrentSong(string token)
-        {
-            return m_spotifyWebApi.GetPlayingSong(token);
+        public async Task<SpotifyContent> GetCurrentSong(string token)
+        { 
+            var spotifyContent = await m_spotifyWebApi.GetPlayingSong(token);
+            return spotifyContent;
         }
     }
 }

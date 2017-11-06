@@ -7,81 +7,60 @@ var originalToken = "";
 function ExtractData(str) {
     return str.split("=")[1];
 }
-
 function login() {
-    var CLIENT_ID = 'dfce289f6499436bbd1d60033ac14957';
-    var REDIRECT_URI = 'http://localhost:1337/';
-    function getLoginURL(scopes) {
-        return 'https://accounts.spotify.com/authorize?client_id=' + CLIENT_ID +
-            '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
-            '&scope=' + encodeURIComponent(scopes.join(' ')) +
-            '&response_type=code';
-    }
 
-    var url = getLoginURL([
-        //'playlist-modify-public'
-        'user-read-currently-playing'
-    ]);
+        var CLIENT_ID = 'dfce289f6499436bbd1d60033ac14957';
+        var REDIRECT_URI = 'http://localhost:1337/callback/';
+        function getLoginURL(scopes) {
+            return 'https://accounts.spotify.com/authorize?client_id=' + CLIENT_ID +
+                '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
+                '&scope=' + encodeURIComponent(scopes.join(' ')) +
+                '&response_type=code';
+        }
+
+        var loginUrl = getLoginURL([
+            //'playlist-modify-public'
+            'user-read-currently-playing',
+            'user-read-playback-state'
+        ]);
+
 
     var width = 450,
         height = 730,
         left = (screen.width / 2) - (width / 2),
         top = (screen.height / 2) - (height / 2);
-
-    
-    var w = window.open(url,
+   
+   // http://localhost:1337/callback/
+    var w = window.open(
+        loginUrl,
         'Spotify',
         'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
     );
-    
-    w.onbeforeunload = function() {
-        //document.getElementById('myfield').innerHTML = w.location.href;
+
+    window.addEventListener("message", function (event) {
+        var codeResponse = JSON.parse(event.data);
+        if (codeResponse.type == 'access_code_spotify') {
+            callback(codeResponse.code);
+        }
+    }, false);
+
+    var callback = function (token) {
+        GetAccessToken(tokenReturned,token)
         
-        //window.location.assign("http://localhost:1337/videopage");
-        
-
-
-
-
-        //window.location = "/videopage";
-        //TODO: make this work.
-        window.document.getElementById("myspan").innerHTML = w.location.href;
        
-        var s = w.location.href;
-        var array = s.split("=");
-        originalToken = array[1];
-        GetNewToken(tokenReturned);
-        //window.document.getElementById('button').style.visibility = 'hidden';
-        //var items = content.split("&");
-        //var code = ExtractData(items[0]);
-        ////var token_type = ExtractData(items[1]);
-        ////var expires_in = ExtractData(items[2]);
-        ////httpGet(window.location.href + '/asd?token=' + token);
-        //localStorage.setItem("token_type", token_type);
-        //localStorage.setItem("expires_in", expires_in);
-        //window.location = '/videopage/';
-
-
-        //var text = w.location.href.split("=");
-        //var token = text[1];
-        //document.getElementById('myfield').innerHTML = 'loading';
-        //httpGet(window.location.href + '/asd?token=' + token);
-        //originalToken = token;
-        //var spotify = new SpotifyWebApi();
-        //spotify.setAccessToken(token);
-        //spotify.setVolume(40);
-        //console.log('hert');
-        
     };
+
 }
+
 function tokenReturned(responseString){
     
     localStorage.setItem("responseString", responseString);
+    
     window.location.replace("http://localhost:1337/videopage");
    
 }
-function GetNewToken(callback) {
-	return httpGetRequest("http://localhost:1337" + '/token?code=' + originalToken, callback); //usikker på om man trenger å sende inn token, shit is strange
+function GetAccessToken(callback, token) {
+    return httpGetRequest("http://localhost:1337" + '/token?code=' + token, callback);
 }
 
 function httpGet(theUrl) {
@@ -102,9 +81,5 @@ function httpGet(theUrl) {
     };
     xmlHttp.send(null);
 }
-
-
-var url = "https://accounts.spotify.com/authorize/?client_id=dfce289f6499436bbd1d60033ac14957&response_type=token&redirect_uri=http://localhost:1337/&state=XSS&scope=playlist-read-private%20user-read-private%20user-read-email%20user-library-read%20user-follow-read%20user-read-birthdate%20user-top-read%20playlist-read-collaborative%20user-read-recently-played%20user-read-playback-state%20user-modify-playback-state&show_dialog=False";
-
 
 

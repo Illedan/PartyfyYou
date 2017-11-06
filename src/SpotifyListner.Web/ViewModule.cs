@@ -9,6 +9,10 @@ namespace SpotifyListner.Web
             {
                 return Response.AsFile("Content/views/videopage.html", "text/html");
             };
+            Get["/callback"] = parameters =>
+            {
+                return Response.AsFile("Content/views/callback.html", "text/html");
+            };
         }
     }
 }
