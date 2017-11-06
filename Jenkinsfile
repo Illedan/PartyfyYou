@@ -1,4 +1,4 @@
-node {
+git {
 	stage 'Checkout'
 		checkout scm
 
