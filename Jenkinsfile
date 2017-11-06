@@ -1,3 +1,7 @@
 node {
-    echo 'Hello from Pipeline'
+  checkout scm
+
+  docker.build(env.JOB_NAME).inside {
+    sh 'script/ci'
+  }
 }
