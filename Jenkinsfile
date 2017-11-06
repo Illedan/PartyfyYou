@@ -1,9 +1,21 @@
-node {
-  stage('HelloWorld') {
-    echo 'Hello World'
-  }
+pipeline {
+    agent any
 
-  stage('git clone') {
-    git clone "https://github.com/Illedan/PartyfyYou.git"
-  }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
