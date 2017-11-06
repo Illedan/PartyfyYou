@@ -1,5 +1,4 @@
 pipeline {
-  ...
   stages {
     stage('HelloWorld') {
       steps {
