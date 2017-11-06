@@ -1,6 +1,6 @@
 git {
 	stage 'Checkout'
-		checkout scm
+		checkout bug/mal-CORS
 
 	stage 'Build'
 		bat 'nuget restore SolutionName.sln'
