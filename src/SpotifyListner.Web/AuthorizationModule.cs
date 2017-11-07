@@ -7,20 +7,20 @@ namespace SpotifyListner.Web
     {
         public AuthorizationModule(IAuthorization authorization)
         {
-            Get["/token"] = (parameters) =>
+            Get["/token", true] = async (parameters, ct) =>
             {
                 string code = this.Request.Query["code"];
 
-                var tokenResponse = authorization.GetToken(code);
+                var tokenResponse = await authorization.GetToken(code);
 
                 return tokenResponse;
             };
 
-            Get["/refreshToken"] = (parameters) =>
+            Get["/refreshToken", true] = async (parameters, ct) =>
             {
                 string refreshToken = this.Request.Query["refreshToken"];
 
-                var tokenResponse = authorization.RefreshToken(refreshToken);
+                var tokenResponse = await authorization.RefreshToken(refreshToken);
 
                 return tokenResponse;
             };

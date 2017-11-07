@@ -1,12 +1,9 @@
 ﻿using Newtonsoft.Json;
 using SpotifyListner.Web.Models;
 using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Configuration;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,8 +14,6 @@ namespace SpotifyListner.Web.Services
         private readonly IKeyService m_keyService;
         private readonly string redirectUri;
         private readonly string spotifyTokenUri = "https://accounts.spotify.com/api/token";
-        //private readonly string clientId = "dfce289f6499436bbd1d60033ac14957";
-        //private readonly string clientSecret = "";
 
         public Authorization(IKeyService keyService)
         {
