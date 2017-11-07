@@ -23,6 +23,12 @@ namespace SpotifyListner.Web.Services
             
             string GetPath()
             {
+                var fullConfiguredPath = ConfigurationManager.AppSettings["KeysFullPath"];
+                if (!string.IsNullOrEmpty(fullConfiguredPath))
+                {
+                    return fullConfiguredPath;
+                }
+
                 var pathEnding = ConfigurationManager.AppSettings["KeysPathEnding"];
                 var codeBase = Assembly.GetExecutingAssembly().CodeBase;
                 var uri = new UriBuilder(codeBase);
