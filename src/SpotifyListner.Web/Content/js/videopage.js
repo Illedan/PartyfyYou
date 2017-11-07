@@ -2,7 +2,7 @@
 if (!window.console) console = {};
 console.log = console.log || function () { };
  
-var apiUrlBase = "http://localhost:1337";
+var apiUrlBase = "http://tegster.asuscomm.com:1337";
  
 function createYoutubeUrl(id) {
     return "https://www.youtube.com/embed/" + id + "?autoplay=1";

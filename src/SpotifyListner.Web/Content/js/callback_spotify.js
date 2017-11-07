@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-    var accepted_origin = "http://localhost:1337/";
+    var accepted_origin = "http://tegster.asuscomm.com:1337/";
 
     var callbackString = window.location.href;
     var array = callbackString.split("=");
