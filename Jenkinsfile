@@ -1,4 +1,6 @@
 node {
     stage 'Build'
-    MSBuild SpotifyListener.sln
+    {
+        MSBuild SpotifyListener.sln
+    }
 }
