@@ -9,8 +9,8 @@ namespace SpotifyListner.Web.Services
 {
     public interface IAuthorization
     {
-        TokenResponse GetToken(string code);
+        Task<TokenResponse> GetToken(string code);
 
-        RefreshTokenResponse RefreshToken(string refreshToken);
+        Task<RefreshTokenResponse> RefreshToken(string refreshToken);
     }
 }
