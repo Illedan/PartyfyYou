@@ -1,24 +1,17 @@
 ﻿using Nancy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SpotifyListner.Web
 {
     public class ViewModule : NancyModule
     {
         public ViewModule()
         {
-            Get["/help"] = parameters =>
+            Get["/videopage"] = parameters =>
             {
-                return Response.AsFile("Content/views/help.html", "text/html");
+                return Response.AsFile("Content/views/videopage.html", "text/html");
             };
-
-            Get["/join"] = parameters =>
+            Get["/callback"] = parameters =>
             {
-                return Response.AsFile("Content/views/join.html", "text/html");
+                return Response.AsFile("Content/views/callback.html", "text/html");
             };
         }
     }

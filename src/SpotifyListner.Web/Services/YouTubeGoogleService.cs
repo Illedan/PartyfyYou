@@ -11,20 +11,21 @@ namespace SpotifyListner.Web.Services
 {
     public class YouTubeGoogleService : IYouTubeGoogleService
     {
-        private readonly YouTubeService youtubeService;
-        public YouTubeGoogleService()
+        private YouTubeService youtubeService;
+
+        public IKeyService m_keyService { get; }
+
+        public YouTubeGoogleService(IKeyService keyService)
         {
-            youtubeService = new YouTubeService(new BaseClientService.Initializer
-            {
-                ApiKey = ConfigurationManager.AppSettings["YouTubeServiceApiKey"],// "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
-                ApplicationName = "PartyfyYou"
-            });
+            m_keyService = keyService;
         }
 
-        public async Task<string> FetchUrl(SpotifySong spotifySong)
+        public async Task<string> FetchUrl(SpotifyContent spotifySong)
         {
+            await CreateYouTubeService();
+
             var searchListRequest = youtubeService.Search.List("snippet");
-            searchListRequest.Q = spotifySong.Song + " " + spotifySong.Artist; 
+            searchListRequest.Q = spotifySong.item.name + " " + spotifySong.item.artists.First().name; 
             searchListRequest.MaxResults = 1;
 
             var searchListResponse = await searchListRequest.ExecuteAsync();
@@ -42,11 +43,29 @@ namespace SpotifyListner.Web.Services
 
         public async Task<TimeSpan> GetSongLength(string id)
         {
+            await CreateYouTubeService();
+
             var videoRequest = youtubeService.Videos.List("id, contentDetails");
             videoRequest.Id = id;
             var video = await videoRequest.ExecuteAsync();
             var videoDuration = XmlConvert.ToTimeSpan(video.Items.FirstOrDefault()?.ContentDetails.Duration);
             return videoDuration;
+        }
+
+        private async Task CreateYouTubeService()
+        {
+            if (youtubeService == null)
+            {
+                var keys = await m_keyService.GetKeys();
+
+                youtubeService = new YouTubeService(new BaseClientService.Initializer
+                {
+                    ApiKey = keys.YouTubeServiceId, // "YouTube-APIkey => https://console.developers.google.com/apis/credentials/",
+                    ApplicationName = "PartyfyYou"
+                });
+
+            }
+
         }
     }
 }

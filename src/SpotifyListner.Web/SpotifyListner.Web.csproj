@@ -75,10 +75,6 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SpotifyAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpotifyAPI-NET.2.16.0\lib\SpotifyAPI.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -104,12 +100,20 @@
   <ItemGroup>
     <Compile Include="CustomBootstrapper.cs" />
     <Compile Include="MainModule.cs" />
+    <Compile Include="Models\KeyModel.cs" />
+    <Compile Include="Models\SpotifyModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\SpotifySong.cs" />
+    <Compile Include="Services\Authorization.cs" />
+    <Compile Include="AuthorizationModule.cs" />
+    <Compile Include="Services\IAuthorization.cs" />
+    <Compile Include="Services\IKeyService.cs" />
     <Compile Include="Services\ISpotifyService.cs" />
+    <Compile Include="Services\KeyService.cs" />
+    <Compile Include="Services\WebApi\ISpotifyWebApi.cs" />
     <Compile Include="Services\IYouTubeGoogleService.cs" />
     <Compile Include="Services\SpotifyService.cs" />
+    <Compile Include="Services\WebApi\SpotifyWebApi.cs" />
     <Compile Include="Services\YouTubeGoogleService.cs" />
     <Compile Include="SpotifyListnerSelfHost.cs" />
     <Compile Include="UrlModule.cs" />
@@ -118,21 +122,39 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <Content Include="Services\Keys.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\joinstyle.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\js\callback_spotify.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\authorization.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\js\index.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\views\help.html">
+    <Content Include="Content\js\spotify.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="index.html">
+    <Content Include="Content\js\videopage.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\views\join.html">
+    <Content Include="Content\views\callback.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\views\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\views\OkPage.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\views\videopage.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Content\img\partify.png">

@@ -1,4 +1,6 @@
 ﻿using Nancy;
+using Nancy.Extensions;
+using Nancy.IO;
 using SpotifyListner.Web.Services;
 
 namespace SpotifyListner.Web
@@ -9,11 +11,22 @@ namespace SpotifyListner.Web
         {
             Get["/url", true] = async (parameters, ct) =>
             {
-                var song = await spotifyService.GetCurrentSong();
+                string token = this.Request.Query["token"];
+                var song = (await spotifyService.GetCurrentSong(token));
                 return await youTubeGoogleService.FetchUrl(song);
             };
 
-            Get["/pause/{id}", true] = async (parameters, ct) => await spotifyService.PauseSong(parameters["id"]);
+            //Get["/pause/{id}", true] = async (parameters, ct) => await spotifyService.PauseSong(parameters["id"]);
+
+            Get["/join/asd/", true] = async (parameters, ct) =>
+            {
+                string token = this.Request.Query["token"];
+
+                var song =  (await spotifyService.GetCurrentSong(token));
+
+                return song.item.id;
+            };
+
         }
     }
 }
