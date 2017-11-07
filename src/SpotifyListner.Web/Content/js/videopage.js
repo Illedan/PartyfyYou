@@ -49,8 +49,7 @@ function tokenReturned(token) {
 	newToken.scope = recievedToken.scope;
 
 	localStorage.setItem("responseString", JSON.stringify(newToken));
-	localStorage.setItem("timeTicketFetched", Date.now());
-
+    localStorage.setItem("timeTicketFetched", JSON.stringify(Date.now()));
 }
  
 var tokenResponse;
@@ -58,32 +57,23 @@ var isLoaded = false;
 function loadedFrame() {
     var responseString = localStorage.getItem("responseString");
     tokenResponse = JSON.parse(responseString); // har access_token her
- 
     
     function loop() {
         GetPlayingSong(songIdReturned);
 		var timeTicketFetchedString = localStorage.getItem("timeTicketFetched");
-    var timeTicketFetched = JSON.parse(timeTicketFetchedString);
-    if (timeTicketFetched === null) {
-		console.log("timeTicketFetched==null:"+ timeTicketFetched);
-         RefreshToken(tokenReturned);
-
-    } else {
-        var timeDifference = Date.now() - timeTicketFetched;
-		console.log("timeDifference: " +timeDifference/1000);
-        if (timeDifference<60000) {
-		    RefreshToken(tokenReturned);
-            //get new token
-            //set tokenResponse to the new token
-           
-            //set localstorage with new token
- 
-            //set localstorage with timeTicketFetched
+        var timeTicketFetched = JSON.parse(timeTicketFetchedString);
+        if (timeTicketFetchedString === null) {
+             RefreshToken(tokenReturned);
+        } else
+        {
+            var timeDifference = (Date.now() - timeTicketFetched)/60000;
+            //console.log("timeDifference: " + timeDifference);
+            if (timeDifference>50) {
+		        RefreshToken(tokenReturned);
+            }
         }
- 
     }
-		
-    }
+
     if (!isLoaded && tokenResponse !== null) {
  
       
