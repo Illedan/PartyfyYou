@@ -18,6 +18,14 @@ function httpGetRequest(theUrl, callback) {
     };
     xmlHttp.send(null);
 }
+
+function SetPlayMode(mode) {
+    alert(mode);
+    GetPlayingSong(songIdReturned);
+}
+
+
+
 function GetPlayingSong(callback) {
     return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token, callback);
 }
@@ -121,7 +129,6 @@ function loadedFrame() {
                 console.log("token response from server is null");
             }
            
-            document.getElementById("myspan").innerHTML = code;
         } catch (e) {
             document.getElementById('Myframe').src = createYoutubeUrl("zS5kvbe9Sv4");
         }
