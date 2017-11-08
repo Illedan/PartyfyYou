@@ -8,7 +8,7 @@
     position: relative;
     display: table-cell;
     width: 40px;
-    height: 24px;
+    height: 40px;
     text-align: center;
     vertical-align: middle;
     font-size:20px;
@@ -21,6 +21,8 @@
     bottom: 0;
     height: 100%;
     right: 0;
+    margin-top: -8px;
+    margin-right: 5px;
 }
 .main-menu:hover,nav.main-menu.expanded {
     width:250px;
@@ -35,7 +37,7 @@
 
 .main-menu {
     background: #000000;
-    border-right: 1px solid #000000;
+    border-left: 1px solid #555555;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -66,7 +68,7 @@
     border-spacing:0;
     color:#999;
     font-family: arial;
-    font-size: 14px;
+    font-size: 20px;
     text-decoration:none;
     -webkit-transform:translateZ(0) scale(1,1);
     -webkit-transition:all .1s linear;
@@ -78,7 +80,7 @@
     position:relative;
     display:table-cell;
     width:40px;
-    height:36px;
+    height:40px;
     text-align:center;
     vertical-align:middle;
     font-size:18px;

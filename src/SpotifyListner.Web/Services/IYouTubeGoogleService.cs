@@ -6,7 +6,7 @@ namespace SpotifyListner.Web.Services
 {
     public interface IYouTubeGoogleService
     {
-        Task<string> FetchUrl(SpotifyContent spotifySong);
+        Task<string> FetchUrl(SpotifyContent spotifySong, string mode);
 
         Task<TimeSpan> GetSongLength(string id);
     }

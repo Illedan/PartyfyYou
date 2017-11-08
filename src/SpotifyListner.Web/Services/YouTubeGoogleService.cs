@@ -20,12 +20,17 @@ namespace SpotifyListner.Web.Services
             m_keyService = keyService;
         }
 
-        public async Task<string> FetchUrl(SpotifyContent spotifySong)
+        public async Task<string> FetchUrl(SpotifyContent spotifySong, string mode)
         {
             await CreateYouTubeService();
 
             var searchListRequest = youtubeService.Search.List("snippet");
-            searchListRequest.Q = spotifySong.item.name + " " + spotifySong.item.artists.First().name; 
+            var searchTerm = spotifySong.item.name + " " + spotifySong.item.artists.First().name;
+            if (!string.IsNullOrEmpty(mode))
+            {
+                searchTerm += " " + mode; 
+            }
+            searchListRequest.Q = searchTerm; 
             searchListRequest.MaxResults = 1;
 
             var searchListResponse = await searchListRequest.ExecuteAsync();
