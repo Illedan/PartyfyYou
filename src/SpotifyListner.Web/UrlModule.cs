@@ -12,8 +12,9 @@ namespace SpotifyListner.Web
             Get["/url", true] = async (parameters, ct) =>
             {
                 string token = this.Request.Query["token"];
+                string mode = this.Request.Query["mode"];
                 var song = (await spotifyService.GetCurrentSong(token));
-                return await youTubeGoogleService.FetchUrl(song);
+                return await youTubeGoogleService.FetchUrl(song, mode);
             };
 
             Get["/id", true] = async (parameters, ct) =>

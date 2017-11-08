@@ -1,7 +1,7 @@
 ﻿'use spotify';
 if (!window.console) console = {};
 console.log = console.log || function () { };
- 
+ var mode = "";
 var apiUrlBase = "http://localhost:1337";
  
 function createYoutubeUrl(id) {
@@ -19,7 +19,7 @@ function httpGetRequest(theUrl, callback) {
     xmlHttp.send(null);
 }
 function GetPlayingSong(callback) {
-    return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token, callback);
+    return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token+"&mode="+mode, callback);
 }
 function GetSongIdPlayedWithSpotify(callback) {
     return httpGetRequest(apiUrlBase + '/id?token=' + tokenResponse.access_token, callback);
