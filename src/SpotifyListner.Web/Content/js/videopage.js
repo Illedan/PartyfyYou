@@ -19,8 +19,8 @@ function httpGetRequest(theUrl, callback) {
     xmlHttp.send(null);
 }
 
-function SetPlayMode(mode) {
-    alert(mode);
+function SetPlayMode(songMode) {
+    mode = songMode;
     GetPlayingSong(songIdReturned);
 }
 
