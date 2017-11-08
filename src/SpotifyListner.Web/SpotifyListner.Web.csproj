@@ -122,6 +122,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <Content Include="Content\css\videopage.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Services\Keys.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
