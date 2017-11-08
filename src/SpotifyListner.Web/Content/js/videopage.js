@@ -21,6 +21,9 @@ function httpGetRequest(theUrl, callback) {
 function GetPlayingSong(callback) {
     return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token, callback);
 }
+function GetSongIdPlayedWithSpotify(callback) {
+    return httpGetRequest(apiUrlBase + '/id?token=' + tokenResponse.access_token, callback);
+}
 function RefreshToken(callback) {
     return httpGetRequest(apiUrlBase + '/refreshToken?refreshToken=' + tokenResponse.refresh_token, callback);
 }
@@ -31,6 +34,30 @@ function songIdReturned(songId) {
 
 		document.getElementById('Myframe').src = newUrl;
 	}  
+}
+
+function spotifySongIdReturned(songId) {
+ 
+	if(songId != null){
+
+		var storedCurrentlyPlaingId = localStorage.getItem("currentlyPlayingSpotifyId");
+		if(storedCurrentlyPlaingId == null){
+			localStorage.setItem("currentlyPlayingSpotifyId", songId);
+			GetPlayingSong(songIdReturned);
+			return;
+		}
+		if(loopCounter<2){
+			localStorage.setItem("currentlyPlayingSpotifyId", songId);
+			GetPlayingSong(songIdReturned);
+			return;
+		}
+		if(songId === storedCurrentlyPlaingId){
+			return;
+		}
+		localStorage.setItem("currentlyPlayingSpotifyId", songId);
+		GetPlayingSong(songIdReturned);  
+	}
+	
 }
 
 function tokenReturned(token) {
@@ -54,12 +81,14 @@ function tokenReturned(token) {
  
 var tokenResponse;
 var isLoaded = false;
+var loopCounter = 0;
 function loadedFrame() {
     var responseString = localStorage.getItem("responseString");
     tokenResponse = JSON.parse(responseString); // har access_token her
     
     function loop() {
-        GetPlayingSong(songIdReturned);
+	loopCounter ++;
+	   GetSongIdPlayedWithSpotify(spotifySongIdReturned);
 		var timeTicketFetchedString = localStorage.getItem("timeTicketFetched");
         var timeTicketFetched = JSON.parse(timeTicketFetchedString);
         if (timeTicketFetchedString === null) {
@@ -67,7 +96,7 @@ function loadedFrame() {
         } else
         {
             var timeDifference = (Date.now() - timeTicketFetched)/60000;
-            //console.log("timeDifference: " + timeDifference);
+
             if (timeDifference>50) {
 		        RefreshToken(tokenReturned);
             }
@@ -87,14 +116,14 @@ function loadedFrame() {
             
             
             if (tokenResponse !== null) {
-                GetPlayingSong(songIdReturned);
+				GetSongIdPlayedWithSpotify(spotifySongIdReturned);
             } else {
                 console.log("token response from server is null");
             }
            
             document.getElementById("myspan").innerHTML = code;
         } catch (e) {
-            document.getElementById('Myframe').src = createYoutubeUrl("aeWmdojEJf0");
+            document.getElementById('Myframe').src = createYoutubeUrl("zS5kvbe9Sv4");
         }
  
        
