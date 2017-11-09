@@ -10,7 +10,7 @@ function ExtractData(str) {
 function login() {
 
         var CLIENT_ID = 'dfce289f6499436bbd1d60033ac14957';
-        var REDIRECT_URI = 'http://localhost:1337/callback/';
+        var REDIRECT_URI = 'http://tegster.asuscomm.com:1337/callback/';
         function getLoginURL(scopes) {
             return 'https://accounts.spotify.com/authorize?client_id=' + CLIENT_ID +
                 '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
@@ -56,11 +56,11 @@ function tokenReturned(responseString){
     
     localStorage.setItem("responseString", responseString);
     
-    window.location.replace("http://localhost:1337/videopage");
+    window.location.replace("http://tegster.asuscomm.com:1337/videopage");
    
 }
 function GetAccessToken(callback, token) {
-    return httpGetRequest("http://localhost:1337" + '/token?code=' + token, callback);
+    return httpGetRequest("http://tegster.asuscomm.com:1337" + '/token?code=' + token, callback);
 }
 
 function httpGet(theUrl) {
