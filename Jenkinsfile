@@ -10,6 +10,6 @@ node {
 	
 	
 	stage 'Archive'
-		archive 'src/SpotifyListener.Web/bin/Release/**'
+		archiveArtifacts 'src/SpotifyListener.Web/bin/Release/**'
 
 }
