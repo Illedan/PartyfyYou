@@ -2,7 +2,7 @@
 if (!window.console) console = {};
 console.log = console.log || function () { };
  var mode = "";
-var apiUrlBase = "http://localhost:1337";
+var apiUrlBase = "http://"+ window.location.host;
  
 function createYoutubeUrl(id) {
     return "https://www.youtube.com/embed/" + id + "?autoplay=1";

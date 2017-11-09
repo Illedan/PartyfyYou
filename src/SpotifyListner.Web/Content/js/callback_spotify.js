@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-    var accepted_origin = "http://localhost:1337/";
+	var apiUrlBase = "http://"+ window.location.host;
 
     var callbackString = window.location.href;
     var array = callbackString.split("=");
@@ -11,7 +11,7 @@
         var codeResponse = { type: "access_code_spotify", code: spotifyCode};
        
 
-        window.opener.postMessage(JSON.stringify(codeResponse), accepted_origin);
+        window.opener.postMessage(JSON.stringify(codeResponse), apiUrlBase);
         window.close();
     }
 
