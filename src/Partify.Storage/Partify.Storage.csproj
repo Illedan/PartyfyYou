@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DbReader, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DbReader.1.0.4\lib\net46\DbReader.dll</HintPath>
+    </Reference>
+    <Reference Include="LightInject, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.5.1.1\lib\net46\LightInject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,12 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompositionRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\IQuery.cs" />
     <Compile Include="Query\IQueryExecutor.cs" />
     <Compile Include="Query\IQueryHandler.cs" />
     <Compile Include="Query\QueryExecutor.cs" />
+    <Compile Include="Suggestion\ISuggestionService.cs" />
+    <Compile Include="Suggestion\SuggestionQuery.cs" />
+    <Compile Include="Suggestion\SuggestionQueryHandler.cs" />
+    <Compile Include="Suggestion\SuggestionResult.cs" />
+    <Compile Include="Suggestion\SuggestionService.cs" />
+    <Compile Include="Song\ISongService.cs" />
+    <Compile Include="Song\SongQuery.cs" />
+    <Compile Include="Song\SongQueryHandler.cs" />
+    <Compile Include="Song\SongResult.cs" />
+    <Compile Include="Song\SongService.cs" />
+    <Compile Include="Sql.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sql.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Video\IVideoService.cs" />
+    <Compile Include="Video\VideoQuery.cs" />
+    <Compile Include="Video\VideoQueryHandler.cs" />
+    <Compile Include="Video\VideoResult.cs" />
+    <Compile Include="Video\VideoService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Sql.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sql.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
