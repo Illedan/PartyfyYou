@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Partify.Storage")]
+[assembly: AssemblyTitle("Pastify.Storage.Server")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Partify.Storage")]
+[assembly: AssemblyProduct("Pastify.Storage.Server")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2c0bc38a-5fd7-4838-82a9-2e5973981fc9")]
+[assembly: Guid("8da7dc07-b339-41a0-b5cd-518a5f8746be")]
 
 // Version information for an assembly consists of the following four values:
 //
