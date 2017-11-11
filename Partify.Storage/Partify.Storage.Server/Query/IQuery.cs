@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pastify.Storage.Server
+namespace Partify.Storage.Server.Query
 {
-    public class Class1
+    public interface IQuery<TResult>
     {
     }
 }

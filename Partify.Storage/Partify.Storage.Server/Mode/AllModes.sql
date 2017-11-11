@@ -1,0 +1,1 @@
+﻿SELECT * FROM app.tag t order by t.Name;

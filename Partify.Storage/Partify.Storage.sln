@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partify.Storage.Server", "Partify.Storage.Server\Partify.Storage.Server.csproj", "{6293547C-F6A0-41FA-A30A-4747F25D5CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partify.Storage.WebApi", "Partify.Storage.WebApi\Partify.Storage.WebApi.csproj", "{DB06933E-C7E2-4F88-AC48-4544D67E00D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partify.Storage.SelfHost", "Partify.Storage.SelfHost\Partify.Storage.SelfHost.csproj", "{B7F98395-DB55-4A16-9146-0140AAD46125}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6293547C-F6A0-41FA-A30A-4747F25D5CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6293547C-F6A0-41FA-A30A-4747F25D5CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6293547C-F6A0-41FA-A30A-4747F25D5CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6293547C-F6A0-41FA-A30A-4747F25D5CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB06933E-C7E2-4F88-AC48-4544D67E00D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB06933E-C7E2-4F88-AC48-4544D67E00D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB06933E-C7E2-4F88-AC48-4544D67E00D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB06933E-C7E2-4F88-AC48-4544D67E00D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F98395-DB55-4A16-9146-0140AAD46125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F98395-DB55-4A16-9146-0140AAD46125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F98395-DB55-4A16-9146-0140AAD46125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F98395-DB55-4A16-9146-0140AAD46125}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9876F506-DCE4-433F-ABA2-41A0ACF45866}
+	EndGlobalSection
+EndGlobal
