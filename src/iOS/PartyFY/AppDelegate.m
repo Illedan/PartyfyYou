@@ -7,16 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import "AppConfig.h"
 
 @interface AppDelegate ()
-
+@property (class) AppConfig *config;
 @end
 
 @implementation AppDelegate
 
+@dynamic config;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"config"
+                                                     ofType:@"json"];
+    
+    NSString* myJson = [NSString stringWithContentsOfFile:path
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+    
+    NSError *error;
+    AppDelegate.config = [[AppConfig alloc] initWithString:myJson error:&error];
     return YES;
 }
 

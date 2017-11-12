@@ -1,0 +1,5 @@
+{
+    "SpotifyClientId": "YourSpotifyClientIdHere",
+    "SpotifyClientSecret": "YourSpotifyClientSecretHere",
+    "YouTubeServiceId": "YourYouTubeServiceIdHere"
+}

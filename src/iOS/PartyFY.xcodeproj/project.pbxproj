@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A3721B9D8F1C93FF0C55121 /* Pods_PartyFY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3B574167A1DE3306A57FA5 /* Pods_PartyFY.framework */; };
 		3218F53F1FB602CA00E8ED65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3218F53E1FB602CA00E8ED65 /* AppDelegate.m */; };
 		3218F5421FB602CA00E8ED65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3218F5411FB602CA00E8ED65 /* ViewController.m */; };
 		3218F5451FB602CA00E8ED65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3218F5431FB602CA00E8ED65 /* Main.storyboard */; };
 		3218F5471FB602CA00E8ED65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3218F5461FB602CA00E8ED65 /* Assets.xcassets */; };
 		3218F54A1FB602CA00E8ED65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3218F5481FB602CA00E8ED65 /* LaunchScreen.storyboard */; };
 		3218F54D1FB602CA00E8ED65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3218F54C1FB602CA00E8ED65 /* main.m */; };
+		322E05271FB82823009594E8 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E05261FB82823009594E8 /* AppConfig.m */; };
+		3261BF411FB756AC005BA9B0 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3261BF401FB756AC005BA9B0 /* config.json */; };
+		3261BF431FB756F5005BA9B0 /* config.default.json in Resources */ = {isa = PBXBuildFile; fileRef = 3261BF421FB756F5005BA9B0 /* config.default.json */; };
+		F30922D2F150E621F3275DD4 /* Pods_PartyFY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3B574167A1DE3306A57FA5 /* Pods_PartyFY.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,10 @@
 		3218F5491FB602CA00E8ED65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3218F54B1FB602CA00E8ED65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3218F54C1FB602CA00E8ED65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		322E05251FB82813009594E8 /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		322E05261FB82823009594E8 /* AppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		3261BF401FB756AC005BA9B0 /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		3261BF421FB756F5005BA9B0 /* config.default.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.default.json; sourceTree = "<group>"; };
 		42A2F505D8C36942F7CEA478 /* Pods-PartyFY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyFY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyFY/Pods-PartyFY.debug.xcconfig"; sourceTree = "<group>"; };
 		9C3B574167A1DE3306A57FA5 /* Pods_PartyFY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyFY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF1986A591E35F8691371C4 /* Pods-PartyFY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyFY.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyFY/Pods-PartyFY.release.xcconfig"; sourceTree = "<group>"; };
@@ -37,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3721B9D8F1C93FF0C55121 /* Pods_PartyFY.framework in Frameworks */,
+				F30922D2F150E621F3275DD4 /* Pods_PartyFY.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,10 @@
 				3218F5481FB602CA00E8ED65 /* LaunchScreen.storyboard */,
 				3218F54B1FB602CA00E8ED65 /* Info.plist */,
 				3218F54C1FB602CA00E8ED65 /* main.m */,
+				3261BF401FB756AC005BA9B0 /* config.json */,
+				3261BF421FB756F5005BA9B0 /* config.default.json */,
+				322E05251FB82813009594E8 /* AppConfig.h */,
+				322E05261FB82823009594E8 /* AppConfig.m */,
 			);
 			path = PartyFY;
 			sourceTree = "<group>";
@@ -157,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3218F54A1FB602CA00E8ED65 /* LaunchScreen.storyboard in Resources */,
+				3261BF411FB756AC005BA9B0 /* config.json in Resources */,
+				3261BF431FB756F5005BA9B0 /* config.default.json in Resources */,
 				3218F5471FB602CA00E8ED65 /* Assets.xcassets in Resources */,
 				3218F5451FB602CA00E8ED65 /* Main.storyboard in Resources */,
 			);
@@ -226,8 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3218F5421FB602CA00E8ED65 /* ViewController.m in Sources */,
-				3218F54D1FB602CA00E8ED65 /* main.m in Sources */,
+				322E05271FB82823009594E8 /* AppConfig.m in Sources */,
 				3218F53F1FB602CA00E8ED65 /* AppDelegate.m in Sources */,
+				3218F54D1FB602CA00E8ED65 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +380,14 @@
 				DEVELOPMENT_TEAM = N3BMHYY53W;
 				INFOPLIST_FILE = PartyFY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"JSONModel\"",
+					"-framework",
+					"\"XCDYouTubeKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.PartyFY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,6 +403,14 @@
 				DEVELOPMENT_TEAM = N3BMHYY53W;
 				INFOPLIST_FILE = PartyFY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"JSONModel\"",
+					"-framework",
+					"\"XCDYouTubeKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.PartyFY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
