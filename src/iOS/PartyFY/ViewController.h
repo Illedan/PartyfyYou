@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Spotify/SpotifyAuthentication.h>
 
 @interface ViewController : UIViewController
-
-
+- (void)authenticationCompleted:(SPTSession*) session;
 @end
 

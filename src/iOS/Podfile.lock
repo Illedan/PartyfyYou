@@ -1,15 +1,24 @@
 PODS:
   - JSONModel (1.7.0)
+  - Spotify-iOS-SDK (0.25.0):
+    - Spotify-iOS-SDK/Authentication (= 0.25.0)
+    - Spotify-iOS-SDK/Metadata (= 0.25.0)
+    - Spotify-iOS-SDK/Playback (= 0.25.0)
+  - Spotify-iOS-SDK/Authentication (0.25.0)
+  - Spotify-iOS-SDK/Metadata (0.25.0)
+  - Spotify-iOS-SDK/Playback (0.25.0)
   - XCDYouTubeKit (2.5.6)
 
 DEPENDENCIES:
   - JSONModel
+  - Spotify-iOS-SDK
   - XCDYouTubeKit
 
 SPEC CHECKSUMS:
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Spotify-iOS-SDK: 58d4092b225578623dd17029f3c7e7042ac3ef6e
   XCDYouTubeKit: dccfe0c17dd5c5187969ec27e93069573badb08f
 
-PODFILE CHECKSUM: 6479edbde64c99e42282d5530104ab69d6539f83
+PODFILE CHECKSUM: 3e22b847dd3c5b09246de4614d98a8a9af171f16
 
 COCOAPODS: 1.3.1

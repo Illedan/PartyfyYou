@@ -7,16 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "AppConfig.h"
 
 @interface AppDelegate ()
-@property (class) AppConfig *config;
+@property (nonatomic, strong) SpotiyAuthenticator *spotifyAuthenticator;
 @end
 
 @implementation AppDelegate
-
-@dynamic config;
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -28,7 +24,14 @@
                                                      error:NULL];
     
     NSError *error;
-    AppDelegate.config = [[AppConfig alloc] initWithString:myJson error:&error];
+    AppConfig *config = [[AppConfig alloc] initWithString:myJson error:&error];
+    if (error) {
+        return NO;
+    }
+    
+    ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    self.spotifyAuthenticator = [[SpotiyAuthenticator alloc] initWithConfig:config viewController:mainController];
+    [self.spotifyAuthenticator startAuthenticationFlow];
     return YES;
 }
 
@@ -59,5 +62,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options
+{
+    if ([self.spotifyAuthenticator handleCallbackURL:url]) {
+        return YES;
+    }
+    
+    return NO;
+}
 
 @end

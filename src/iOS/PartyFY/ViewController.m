@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
 
 @interface ViewController ()
 
@@ -25,5 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)authenticationCompleted:(SPTSession*) session {
+    
+}
 
 @end
