@@ -76,7 +76,6 @@ AppConfig *appConfig;
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
         
     self.spotifyAuthenticator = [[SpotiyAuthenticator alloc] initWithConfig:appConfig viewController:mainController];
-    [self.spotifyAuthenticator startAuthenticationFlow];
 }
 
 
