@@ -37,8 +37,7 @@
     return self;
 }
 
-- (void)startAuthenticationFlow
-{
+- (void)startAuthenticationFlow {
     // Check if we could use the access token we already have
     if ([self.auth.session isValid]) {
         [self.viewController authenticationCompleted:self.auth.session];

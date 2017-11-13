@@ -9,7 +9,10 @@
 #import <JSONModel/JSONModel.h>
 
 @interface AppConfig : JSONModel
-@property (nonatomic) NSString *SpotifyClientId;
-@property (nonatomic) NSString *SpotifyClientSecret;
-@property (nonatomic) NSString *YouTubeServiceId;
+@property (nonatomic, strong) NSString *SpotifyClientId;
+@property (nonatomic, strong) NSString *SpotifyClientSecret;
+@property (nonatomic, strong) NSString *YouTubeServiceId;
+@property (nonatomic, strong) NSString *ServiceDiscoveryURL;
+@property (nonatomic, strong) NSString *apiURL;
 @end
+

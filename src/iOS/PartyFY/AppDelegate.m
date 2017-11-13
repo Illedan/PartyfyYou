@@ -7,12 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "RestClient.h"
+#import "Service.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) SpotiyAuthenticator *spotifyAuthenticator;
 @end
 
 @implementation AppDelegate
+AppConfig *appConfig;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -24,14 +28,11 @@
                                                      error:NULL];
     
     NSError *error;
-    AppConfig *config = [[AppConfig alloc] initWithString:myJson error:&error];
+    appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
     if (error) {
         return NO;
     }
-    
-    ViewController* mainController = (ViewController*)  self.window.rootViewController;
-    self.spotifyAuthenticator = [[SpotiyAuthenticator alloc] initWithConfig:config viewController:mainController];
-    [self.spotifyAuthenticator startAuthenticationFlow];
+        
     return YES;
 }
 
@@ -55,6 +56,19 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    [RestClient makeRestAPICall:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response){
+        NSError *error;
+        Service* service = [[Service alloc] initWithString:response error:&error];
+        if (error) {
+            // TODO: Errorhandling
+        }
+        appConfig.apiURL = service.ip;
+    }];
+    
+    ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    self.spotifyAuthenticator = [[SpotiyAuthenticator alloc] initWithConfig:appConfig viewController:mainController];
+    [self.spotifyAuthenticator startAuthenticationFlow];
 }
 
 

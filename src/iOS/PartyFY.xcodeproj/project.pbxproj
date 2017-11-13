@@ -15,6 +15,8 @@
 		3218F54D1FB602CA00E8ED65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3218F54C1FB602CA00E8ED65 /* main.m */; };
 		322E05271FB82823009594E8 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E05261FB82823009594E8 /* AppConfig.m */; };
 		322E052B1FB874A8009594E8 /* SpotiyAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E052A1FB874A8009594E8 /* SpotiyAuthenticator.m */; };
+		325F08651FB8F87300D7F4DF /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F08641FB8F87300D7F4DF /* Service.m */; };
+		325F08681FB97FC100D7F4DF /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F08671FB97FC100D7F4DF /* RestClient.m */; };
 		3261BF411FB756AC005BA9B0 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3261BF401FB756AC005BA9B0 /* config.json */; };
 		3261BF431FB756F5005BA9B0 /* config.default.json in Resources */ = {isa = PBXBuildFile; fileRef = 3261BF421FB756F5005BA9B0 /* config.default.json */; };
 		F30922D2F150E621F3275DD4 /* Pods_PartyFY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3B574167A1DE3306A57FA5 /* Pods_PartyFY.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -36,6 +38,10 @@
 		322E05281FB87417009594E8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		322E05291FB874A8009594E8 /* SpotiyAuthenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotiyAuthenticator.h; sourceTree = "<group>"; };
 		322E052A1FB874A8009594E8 /* SpotiyAuthenticator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotiyAuthenticator.m; sourceTree = "<group>"; };
+		325F08631FB8F87300D7F4DF /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		325F08641FB8F87300D7F4DF /* Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		325F08661FB97FC100D7F4DF /* RestClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestClient.h; sourceTree = "<group>"; };
+		325F08671FB97FC100D7F4DF /* RestClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestClient.m; sourceTree = "<group>"; };
 		3261BF401FB756AC005BA9B0 /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		3261BF421FB756F5005BA9B0 /* config.default.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.default.json; sourceTree = "<group>"; };
 		42A2F505D8C36942F7CEA478 /* Pods-PartyFY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyFY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyFY/Pods-PartyFY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +106,10 @@
 				322E05261FB82823009594E8 /* AppConfig.m */,
 				322E05291FB874A8009594E8 /* SpotiyAuthenticator.h */,
 				322E052A1FB874A8009594E8 /* SpotiyAuthenticator.m */,
+				325F08631FB8F87300D7F4DF /* Service.h */,
+				325F08641FB8F87300D7F4DF /* Service.m */,
+				325F08661FB97FC100D7F4DF /* RestClient.h */,
+				325F08671FB97FC100D7F4DF /* RestClient.m */,
 			);
 			path = PartyFY;
 			sourceTree = "<group>";
@@ -247,11 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325F08681FB97FC100D7F4DF /* RestClient.m in Sources */,
 				3218F5421FB602CA00E8ED65 /* ViewController.m in Sources */,
 				322E05271FB82823009594E8 /* AppConfig.m in Sources */,
 				3218F53F1FB602CA00E8ED65 /* AppDelegate.m in Sources */,
 				3218F54D1FB602CA00E8ED65 /* main.m in Sources */,
 				322E052B1FB874A8009594E8 /* SpotiyAuthenticator.m in Sources */,
+				325F08651FB8F87300D7F4DF /* Service.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
