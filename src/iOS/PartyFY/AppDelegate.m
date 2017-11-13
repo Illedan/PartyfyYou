@@ -5,6 +5,7 @@
 //  Created by Runar Ovesen Hjerpbakk on 10/11/2017.
 //  Copyright © 2017 Runar Ovesen Hjerpbakk. All rights reserved.
 //
+@import HockeySDK;
 
 #import "AppDelegate.h"
 #import "RestClient.h"
@@ -19,6 +20,11 @@ AppConfig *appConfig;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"9cd9b822fc184178ba7f675446a1ba75"];
+    // Do some additional configuration if needed here
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator
+     authenticateInstallation];
     
     NSString* path = [[NSBundle mainBundle] pathForResource:@"config"
                                                      ofType:@"json"];

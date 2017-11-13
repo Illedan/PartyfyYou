@@ -1,9 +1,10 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/JSONModel" "$PODS_CONFIGURATION_BUILD_DIR/Spotify-iOS-SDK" "$PODS_CONFIGURATION_BUILD_DIR/XCDYouTubeKit"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/JSONModel" "$PODS_CONFIGURATION_BUILD_DIR/Spotify-iOS-SDK" "$PODS_CONFIGURATION_BUILD_DIR/XCDYouTubeKit" "${PODS_ROOT}/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/HockeySDK"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/Spotify-iOS-SDK"
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/JSONModel/JSONModel.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Spotify-iOS-SDK/Spotify.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/XCDYouTubeKit/XCDYouTubeKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "JSONModel" -framework "Spotify" -framework "XCDYouTubeKit"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/JSONModel/JSONModel.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Spotify-iOS-SDK/Spotify.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/XCDYouTubeKit/XCDYouTubeKit.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/HockeySDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "CoreGraphics" -framework "CoreTelephony" -framework "CoreText" -framework "Foundation" -framework "HockeySDK" -framework "JSONModel" -framework "MobileCoreServices" -framework "QuartzCore" -framework "QuickLook" -framework "Security" -framework "Spotify" -framework "SystemConfiguration" -framework "UIKit" -framework "XCDYouTubeKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
