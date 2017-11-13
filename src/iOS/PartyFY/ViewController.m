@@ -88,6 +88,8 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
         
         if ([youTubeId isEqualToString:currentYouTubeId]) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                // TODO: enable background playing and update OS states
+                // TODO: Test properly with airplay
                 if (videoPlayerViewController.moviePlayer.playbackState != MPNowPlayingPlaybackStatePlaying) {
                     [videoPlayerViewController.moviePlayer play];
                 }
@@ -98,7 +100,6 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
         
         currentYouTubeId = youTubeId;
         dispatch_async(dispatch_get_main_queue(), ^{
-            // TODO: Stop currently playing video. Reuse views and such?
             videoPlayerViewController.videoIdentifier = youTubeId;
             if (!videoPlayerViewController.isFirstResponder) {
                 [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
