@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Spotify/SpotifyAuthentication.h>
+#import "AppConfig.h"
 
 @interface ViewController : UIViewController
+@property (nonatomic, strong) AppConfig *appConfig;
 - (void)authenticationCompleted:(SPTSession*) session;
 @end
 

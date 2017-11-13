@@ -37,6 +37,13 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>tegster.asuscomm.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 			<key>who-am-i.xyz</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
