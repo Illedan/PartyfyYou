@@ -37,6 +37,13 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>partify.no</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 			<key>tegster.asuscomm.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
