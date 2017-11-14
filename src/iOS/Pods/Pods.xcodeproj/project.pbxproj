@@ -7,247 +7,363 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		009C79BE88C2F4C986644CD3E0B088C2 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 917A0222F85B61F8E53B77CA393ED0A0 /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		030CE75440600BA519E563A188B73722 /* SPTListPage.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7B325456C29BB40AC681AECB8EB6FE /* SPTListPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		06697BBB6E6D73B5F021E6DACAC5DE45 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AA44DEE3FB2A8CA44C4CD9ACAC33046A /* JSONAPI.m */; };
-		07C339EE9C7A637951E73D6A45275840 /* XCDYouTubeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8104F115C47F18B9A3189A73C9528E14 /* XCDYouTubeClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0897F8C6FEBC3B0865779F6D22D7C582 /* SpPlaybackEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = D585AB90F6AB2B2858945B85D2CE3575 /* SpPlaybackEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B107C22FF7ED8CDFAF7A971ED2CA6F0 /* SpotifyAudioPlayback.h in Headers */ = {isa = PBXBuildFile; fileRef = 97F72ABB528FCFA12D7CA90CE529005B /* SpotifyAudioPlayback.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B1C5725C7BE03D622114275D6FD6EFA /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BF46C66991203D38FF9E3AAA90466A /* JSONModelError.m */; };
-		0B856FF944E01FF740F2398072AEB81F /* SPTPlaybackState.h in Headers */ = {isa = PBXBuildFile; fileRef = 673656632588ADBA5CE7A290A3E1FC1A /* SPTPlaybackState.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0DA1DFDEC57C961AA6F3DFBDCAFC15AE /* SPTMetadataTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E4045142A55A63064E69FB8E62A1B089 /* SPTMetadataTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		138D81EC18900BB95316A2DC3E3DE941 /* Spotify-iOS-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D00334927EEF060CA0ADDA5B497D7705 /* Spotify-iOS-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		188BA3F54E7561098D07EC716A0AFC0F /* SPTArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = CE365EA405B5B9282063B3B7987FA9B3 /* SPTArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C195E4BF4767E5CB122989D1F1A456A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */; };
-		272F811759D01C41869101065959687B /* XCDYouTubeLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FDA4D049794FFCB2EC055EC2AF10EC /* XCDYouTubeLogger.m */; };
-		28F006F8B0FA9115FC25AA57C73768E2 /* SPTPartialArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = D3858C950F26A9CFF6D599753019F81A /* SPTPartialArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		297EF6A8078895E061FB02833B46B2EA /* XCDYouTubeVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 126593E780C092E67385B6267AA086DC /* XCDYouTubeVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29E8EBE2BC40B6CCBF8452234A84D436 /* SPTTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = B8022F7994CA21AA406AFE532AE44DB3 /* SPTTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2AFB0AFA2138181E162CD00669D87FE3 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = DDD35971EC7AF804F4D2C16F835EAB15 /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D898DD01BBA4D423AB4672158BC6CA5 /* SPTPartialTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = B737F424FAE6E6397556BD9E65AEEC11 /* SPTPartialTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32AB65E83F532E56FC9032CDDCC2D6CE /* SPTAudioStreamingController_ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F99CCA6565221C882EDA07037F723A9 /* SPTAudioStreamingController_ErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32DD9AF26F017B746959655FEC9F5B2A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7C04E568CC4CE591B642125B7DA07D /* AVFoundation.framework */; };
-		35A4819409E25DCE47C6D345F0981E78 /* XCDYouTubeError.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BAF58FAE8107FFC3F3A67231CE50FB7 /* XCDYouTubeError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36E344E5B627E04368ECC96338E17F26 /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E68CAC12D28F5381242F87A685789C /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37F6913EE3CD6EB8715086F0C9F6A823 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCAAE4EDDB583C4EA69F18B1CD33761 /* JSONValueTransformer.m */; };
-		37FB279A43AA4520B69D306DD1A4F939 /* SPTDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FE33E487E15CE3DD29328E09A2415A5B /* SPTDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37FD169854FF4B397051998D611F152A /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F65AA435C0737A8918424EF51AB29C8 /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40A6216FC50B4540584DA1C45F98F9FD /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5CB28A1E8FC259331A7C3E6392704 /* JSONModelClassProperty.m */; };
-		4338200D994B348DDA5AACDCF586F104 /* SPTPlaylistSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = D03D48FBADBE733503D3975A1C320964 /* SPTPlaylistSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4633B76E029AB6B6F12797EB407BEE9E /* Pods-PartyFY-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99E917D18E5E95B2B833837A7783257F /* Pods-PartyFY-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4AAEABDA97A7AC5C041A76F7CD8E5EFD /* SPTPlaybackMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = EC49691619301A18E22C8D34CE8F67BE /* SPTPlaybackMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CCB82DB095EC607CD9BC7C8523CA949 /* SPTConnectButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D087E1B0A8356CA0EEC515B6C87619 /* SPTConnectButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DCA0CE6AA8770916078F48F97F0358C /* SPTPartialObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A73B1BFAFE0FD5775EAF4CA80A3FA72 /* SPTPartialObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EB17293737C717D12298CFFE6A67514 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 15006B66611D675A1001052CCBA4D546 /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FDB36FBFBECE9AC4D186642B0E06CAD /* SpotifyMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = A9CF14D4B19E3F279A1CC9945066EBB6 /* SpotifyMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		508708F2D742DED43DC6E1DD56B10C6A /* XCDYouTubeLogger+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3200BB20076E413AE49F92D33F373343 /* XCDYouTubeLogger+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		57A2B410864F1CF1426DD17249CC57E1 /* SPTImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1986A32161211B1541E431375221512B /* SPTImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57FE38F17C0EDD5CF73B2A084A17586E /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF6F0391AFA3510C563D96C12FDB1B /* JSONHTTPClient.m */; };
-		58388F773008AF671CE67FE1C902E6CB /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 86B43534861B4BCB6BC795D1DB01A8D3 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E7A2AEB7562CEF1709DB6F73A9D88CF /* SPTStoreViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD26C1C23F61743610BEAA786EC92C7 /* SPTStoreViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66A2864EE5E6658DB850AE1806159F5C /* SPTAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 0094E681449D75BB78ED625C5F9805C1 /* SPTAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D8DA8B99D280A4E8D8637372C53D4E9 /* SPTCoreAudioController.h in Headers */ = {isa = PBXBuildFile; fileRef = F4C8D7F484718FE9E6361226D30CB663 /* SPTCoreAudioController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DDBE1170C51796CECC4174DFA2360A3 /* XCDYouTubeVideoWebpage.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FFCF02E96847148DCB04D11CF40F0C /* XCDYouTubeVideoWebpage.m */; };
-		6F5906B58272E07A0850248867562581 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A010CCCDC270F3B62294E10D2198F6 /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71850C00296611C9B16BE15499E3BF67 /* XCDYouTubeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6A985E87FCB6061475ED98451E3BA /* XCDYouTubeClient.m */; };
-		73F3458AAAC254A76BF481195691A405 /* SPTSavedTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = F0E799F6E8A4436568CF85E6A9A199B1 /* SPTSavedTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		756083FAF98FB5F3092A969105A1BB64 /* Pods-PartyFY-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AD793F2DD410F5A103EC251F0076B3 /* Pods-PartyFY-dummy.m */; };
-		7653827389E33DE948A287D90A6659F8 /* SPTPartialPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E041F52831F25C2BE26EED8107B9BDD /* SPTPartialPlaylist.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		772785574BC1059C2913576CBFF3AD17 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C2DBB9C202EE3CD999C7DB44D6CE7 /* JSONKeyMapper.m */; };
-		773E1CA495909715A82514ECECD67101 /* SPTAudioPlaybackTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4EC8050701CCFE41C43F229E733DCD /* SPTAudioPlaybackTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79F40D5913AAE1ADF155C9AB19A1C46C /* XCDYouTubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F585A4FE828DB52925AF2C44693E969B /* XCDYouTubeVideo.m */; };
-		7A63589DD40954F8DB917CCD9A8C0377 /* XCDYouTubeVideoOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E5C4BE83EA7AA6EB2A20D90ECDD836AE /* XCDYouTubeVideoOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D65DCA5FAC22175259250AF75890831 /* XCDYouTubeVideoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EAA2D182D6076BC596EFA8A6EA18FE /* XCDYouTubeVideoOperation.m */; };
-		7D6771A6631EF803B001DAEA6FDF8B67 /* SPTPlaylistTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 75EF974622D5123B9E5DD1104904F366 /* SPTPlaylistTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F66E5779B29E0BC17D565DAD7CDEC1B /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F51816748CE7E12BE83692B5D3A57B41 /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8060025235D93F30A5F10B412DD0822E /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEF028169CD2F93902B1E45151D35AB /* JSONModel-dummy.m */; };
-		83D26504BF1CA5DFBB8A1A5160D19A3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */; };
-		845327DE72183B6B7081290A4004DB25 /* XCDYouTubeVideo+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8EB4FE26A214169C93BC0658124C8A /* XCDYouTubeVideo+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8BDE7345B86407B93F5790DEB6643883 /* XCDYouTubeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381583223C0EF8428339066E0AC44C6 /* XCDYouTubeKit-dummy.m */; };
-		8F4CB044F07798A3F91D2A5D5F10F675 /* XCDYouTubeVideoPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E94DC8EC28CFB4CC8C9536750F8D11 /* XCDYouTubeVideoPlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94F72ED89A4F52C4265E3935C6DCDA17 /* SPTPlaylistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A8289D709E8DA622315A5F870728A1 /* SPTPlaylistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98F19C682AC68E9D2E2052F709F42AF9 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE97435F22DDE6DCB56CC3E7A1FB869 /* JSONModel+networking.m */; };
-		9EA229432486EDB48C5296B2BC96AB89 /* SPTAudioStreamingController.h in Headers */ = {isa = PBXBuildFile; fileRef = F2804E523891A9DC7A4165B47D9AC7DE /* SPTAudioStreamingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F6484D88EF9B6D156517AD9D94DFD11 /* XCDYouTubeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F51C8AC011277A5840DBCADB6F2932 /* XCDYouTubeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A77FDB6806266352F675C9E1B6F73996 /* SPTYourMusic.h in Headers */ = {isa = PBXBuildFile; fileRef = 444D7E9A2D22C34F2AF35EC528F7DFD4 /* SPTYourMusic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC6B759B7BDD9DC8864B546DAADDC0CF /* SPTTrackProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E1DCE31B498FD8EB67DDF3BE019C87A /* SPTTrackProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACA18C9D8518B5B7CB9E3ED1AED1EA6E /* SPTFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2C447625F89E9883A7A0DF946A8856 /* SPTFollow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACC6D9C91CD99F61C253C0F729B23DD2 /* SPTJSONDecoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B20A588A6E91C85CD6CA4022FD9F99BF /* SPTJSONDecoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE5BA5D7910142771657690E03D87457 /* XCDYouTubeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF202E2E03A94E442C2DE853511062C /* XCDYouTubeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B00714EF38284CE043632B2B62168EEB /* SPTCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 40782688E490926E5BD4A7EC33E4918B /* SPTCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2C5144F8159A3DBD147866E8A53B6C0 /* SPTBrowse.h in Headers */ = {isa = PBXBuildFile; fileRef = 51B8B55796C4E5DFBCEDC4C3EDBAC2B6 /* SPTBrowse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7D6D098DE8114837157FF6F053A53A2 /* SPTSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2CAF569FB09CD382BF9CD95976F341 /* SPTSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD5D2C57639E57240DD38B2A0949C780 /* SPTUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 203C54A1183CE9BB59F552CA2BE71564 /* SPTUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3188823885859A32F3EA736DE3B921E /* XCDYouTubeOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD3EA39283F1E141293A79214FDFA77 /* XCDYouTubeOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBC2C89C43AFEAD40655208A7092F026 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C27F778830EC95D46C7028ABDB1749 /* JavaScriptCore.framework */; };
-		CDC9BC35DC7DCE95F50C6545302BD00E /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03332E4E236FB99CA82E1043541AD0F9 /* XCDYouTubeVideoPlayerViewController.m */; };
-		D106BE7841FFB12BF4A35754A1DE451E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */; };
-		D324CE94488F29CE6B9A7C8825B6CEA8 /* SPTSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE0B0F2DE77F6DAD942F3DBFA38AB84 /* SPTSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D34629DB6F904ECE914B10D72626F99C /* XCDYouTubeLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 492BBC277F9F324CDC682408B92FD394 /* XCDYouTubeLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		009C79BE88C2F4C986644CD3E0B088C2 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = C751C4771F1D9BCCF2FD381667BAEE90 /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		027D24A66E9033A7A9529B3EDF0F144E /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 804EEEEC823A4D999664AEC0045EEA76 /* Empty.m */; };
+		034F6BF87B11EFC7171144FD31993C02 /* feedbackActivity~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E0660E439931294C6B5D16CF97901D15 /* feedbackActivity~ipad.png */; };
+		038A4380E9EAF5BBECEF1F9854C8842E /* SPTConnectButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D1773674DE9911CF514477BC1F650F8D /* SPTConnectButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06697BBB6E6D73B5F021E6DACAC5DE45 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE27C40A4F7106CBC4D3EC054E522D5 /* JSONAPI.m */; };
+		0850BB5F11C10FAE950A758B3DA0EE96 /* SPTFeaturedPlaylistList.h in Headers */ = {isa = PBXBuildFile; fileRef = BF2F0A755088507F5F7ACA74EC942746 /* SPTFeaturedPlaylistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A9ED6AAA5EE93F76F69579EEE1BF2FE /* Rectangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD85ACC8E7649521CC0AE3E808E058E /* Rectangle@2x.png */; };
+		0B1C5725C7BE03D622114275D6FD6EFA /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAE87E7438E161089D1EB189DF030DA /* JSONModelError.m */; };
+		0BB197B0AA0618F6B803908E39A970E4 /* SpotifyMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C0E26A800AE1C19D4DE52596098993 /* SpotifyMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C7B08590B13FDCB31E05F09C69D02E8 /* iconCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C5488D1B4254C30A4EFC35D68EEDDA /* iconCamera.png */; };
+		0CA78AC46C03FD0677D2BD70F763AA5D /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 399E8F8462497590219725D09474A3A5 /* pt.lproj */; };
+		0DB45C9316585F7ABF54C71813A696D4 /* SPTMetadataTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 65EA7D1B6E3D9A7F406AC95E62682561 /* SPTMetadataTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EEC8356E9319A4760E749A2089BDE1B /* SPTAudioStreamingController_ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = CD15ED9CDAAFDA76D7735DDC1253B182 /* SPTAudioStreamingController_ErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1705097FFCF47B5114A6F4B062C70C08 /* XCDYouTubeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BAFB8CF82FA14CCF0F246E39CA5A5C /* XCDYouTubeKit-dummy.m */; };
+		17C29DE693CF03079553E58DF326C682 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7C04E568CC4CE591B642125B7DA07D /* AVFoundation.framework */; };
+		18C8FE31C992810CC728A5AFEDAA7F13 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 33FF3B2E47036F9A849BA269A4341F1C /* es.lproj */; };
+		1A2180E0DC0BA0B0C7B5CE3ACD2A6768 /* iconCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 975BD28CA273C92422C0B1DA565AF2B9 /* iconCamera@2x.png */; };
+		1A434D26CCA5BDDFD62A1C92FF4CE93C /* buttonRoundedRegularHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 079C612EC7D76A3120F162F02126C03C /* buttonRoundedRegularHighlighted@2x.png */; };
+		1D040F0C81BFB48A85D60FD02ADCA5A4 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C27F778830EC95D46C7028ABDB1749 /* JavaScriptCore.framework */; };
+		204F26CF05E5D95DB7630CC2E8D5E153 /* XCDYouTubeOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 60671D5C97CC14A1D92DEB360EAF0EA6 /* XCDYouTubeOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		219397DC4A4FB649006112172D36BD74 /* XCDYouTubeLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E1098A1EC0FBE8BA932F1EFD2A2FF69 /* XCDYouTubeLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21AF0368D2A74AE7CACCDF04BDD015FF /* authorize_denied@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BE3FDA301CAB8D8C92D22B81DA475A /* authorize_denied@3x.png */; };
+		285F61E2BF71A4CA10F65E553BC9D2E5 /* XCDYouTubePlayerScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E815502867768ED0403026FB1CE6903 /* XCDYouTubePlayerScript.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2893823E9CB1E5776F122C091C03B4F7 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 86661ECE25059FB081AF98F06518DF11 /* de.lproj */; };
+		298A8CF1F92121EE8975416E1B42DA96 /* buttonRoundedRegularHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 52323A9B52F324C3D39FAA001C61AAAF /* buttonRoundedRegularHighlighted.png */; };
+		2AFB0AFA2138181E162CD00669D87FE3 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3E9ED5AF03ADEF6B67D781E29CA1A1 /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B196B950858F08FF975A2246D64C9F7 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = A5C8111E407A686D928596DCCE8194CD /* Cancel.png */; };
+		2EB075BBB1F067D0AD08030262C587C6 /* SpotifyAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 36978317160D2F5A4C7564B60E3F004C /* SpotifyAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F5E6CBD401998573AD5FE0E464262B1 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4F05BCD791D469DDDBEB96FCE7382DA6 /* ja.lproj */; };
+		312C471ABEB60DBA9EDFFA72A1A8E6DE /* XCDYouTubeVideoWebpage.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DFAF6D3B56E7CC41FFEB853E83B380 /* XCDYouTubeVideoWebpage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3410150813B4B3EB3A38A7437FF9EECE /* XCDYouTubeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CD935E09B46D034156FB130569E472FB /* XCDYouTubeClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3591BE3AC49D85B82E01F5245875D1A2 /* SPTPartialArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 31323741516E219A85EA585CF50E77F4 /* SPTPartialArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36E344E5B627E04368ECC96338E17F26 /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B96568590CA383D7CEA9246280336113 /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37F6913EE3CD6EB8715086F0C9F6A823 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7D1C77421C92F0896631A45D9F13A6 /* JSONValueTransformer.m */; };
+		37FD169854FF4B397051998D611F152A /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C5D103895831720A88D720CCBD362C /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38346A807402BEA13689E0F28AB4A9C3 /* SPTPlaylistTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 190519C88F44680AA45F4D84A7707463 /* SPTPlaylistTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D8D9920EE3EF913B602FFEEB8C0A695 /* buttonRoundedRegular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A22F5F3CB50233737667902F4946A8E /* buttonRoundedRegular@2x.png */; };
+		3D9524F690E8C682CA151F6A071BC937 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F102E9D84C9347EFB302E1CDA9ADA3AE /* zh-Hans.lproj */; };
+		40A6216FC50B4540584DA1C45F98F9FD /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FE1BC0174F1764D2E33620AD4F7F85 /* JSONModelClassProperty.m */; };
+		44A7EACB545AABDD70E670102CF8C17C /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B546C2B5A8E277B3E0012F1BDC6B418E /* Arrow.png */; };
+		491750401A9EFDFD245721E7BE4627C6 /* Blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 526810FE4B08F7F2312B840D27A541E3 /* Blur.png */; };
+		4C29F26E3BAA63EBD85795A6037541E0 /* SPTAudioPlaybackTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B08D477EF895700D7F95725198FBE51 /* SPTAudioPlaybackTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CCBA4C92CA1EEF80DB166BBEE0E0920 /* feedbackActivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B79908BDBD976EFD21FA06590E23ADC9 /* feedbackActivity@3x.png */; };
+		4EB17293737C717D12298CFFE6A67514 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 117909595141AB059A2D40EEF4633376 /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F72D084AB1AB0385AFA896BD39BE97D /* Ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 60BDC7D6F3D6412A37D0770D2F69A0A8 /* Ok.png */; };
+		527739F5A4027F6155B36FCDB5AF542C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD68A5405C707F267ED50F9C6CE7739 /* MediaPlayer.framework */; };
+		534196205FFE269EBFCD893A79821DA4 /* XCDYouTubeVideoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DC1782B610CF5147E1F42726327A61 /* XCDYouTubeVideoOperation.m */; };
+		546C2C92080EDDC0E0991C5D93D85C8C /* Ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A776CD12CDAD33FA542227BBF514F6D /* Ok@2x.png */; };
+		57FE38F17C0EDD5CF73B2A084A17586E /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E035E80C0F51BEBBE0B5DBFEFF1EE /* JSONHTTPClient.m */; };
+		58388F773008AF671CE67FE1C902E6CB /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C74734D45FDBC1BB4001075203B6216 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D323ACA5D057AA290776EA7D2CE6619 /* SPTAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F99DA2CB180CDDE8E0D20EA9C472C5A /* SPTAuthViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F295668215CCE1A3712A6ED4C91D127 /* XCDYouTubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3B1C3CC9011D5D70216DF03B26DBA7 /* XCDYouTubeVideo.m */; };
+		604AF9FF3220046790ECBA3383CFDB8B /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A633F5FD667A71956E1DB3621048CD /* XCDYouTubeVideoPlayerViewController.m */; };
+		62B3B2FF935934D79D6A3F98DD9A3310 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A3AAF84D6F84891A128BDB36638CF3E2 /* nb.lproj */; };
+		67CD82782BD1B0E3D61179A03E1D551C /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8FBD8835280E0DC2CB28408CB5FDC69A /* it.lproj */; };
+		6F35985538D059073ADF34294A4CD93C /* IconGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2CCBCA11433EB5C169359C1E65FE4 /* IconGradient.png */; };
+		6F5906B58272E07A0850248867562581 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 50927EE4E6E580A83DAE15CD72060BF9 /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FEEAB6B0BF65AD3A4B262D249393BB5 /* Ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F799480C4760A3B586C74E56F08F42DA /* Ok@3x.png */; };
+		7108AF31CF944A9443EDECDCD3CCBCED /* SPTPlaybackMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 49D1BFA5CC6652936E3E6D430B2D0AF9 /* SPTPlaybackMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		721E3255764D80838325EFEFBA8896D6 /* SPTSavedTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA2F51D49B1542F6DCC9D48CFCA86C7 /* SPTSavedTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		725244C13D5FBDB78956005C0504D0F5 /* SpotifyAudioPlayback.h in Headers */ = {isa = PBXBuildFile; fileRef = B568BE52683177B6C8404EBC18C7678C /* SpotifyAudioPlayback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		772785574BC1059C2913576CBFF3AD17 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9205128971492D8109EC09FCAD549DE1 /* JSONKeyMapper.m */; };
+		794EAB9A47944EC2365071C42E1E3FF6 /* XCDYouTubeVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = D677BF228A90EFB6B6D5DABB21AEC0E4 /* XCDYouTubeVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C074DD39BC70B9C2FEA1DDC557D1E51 /* authorize_denied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C78B1CC6C99393252A2EAB34BEF4935 /* authorize_denied@2x.png */; };
+		7F5F10E74ED8034D89B93DFEB5CFD539 /* Cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029D4AA347EE791A58562263C6D1C18 /* Cancel@3x.png */; };
+		7F66E5779B29E0BC17D565DAD7CDEC1B /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F47114B9F622EAE5DDACAE52D84FD4F /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8055D3FC20CCE9BC4F44626203C81745 /* feedbackActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F18BB80D4D7C3AF6B8D5652DEFF9CE /* feedbackActivity@2x.png */; };
+		8060025235D93F30A5F10B412DD0822E /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C31CAA8A42FBA1B33B5BB3DCBA1FC /* JSONModel-dummy.m */; };
+		8092BB02C170FE0923AD7E7A3640FB24 /* buttonRoundedDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A69581D04F02B2D2A768E5A130401E6 /* buttonRoundedDelete.png */; };
+		82A484029E7E614526A7FD2C1366AC39 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D2721377FBB148406D92B7AFD22A3F5D /* en.lproj */; };
+		83AA80C4C4288E95D1ED250B7A53B1DB /* authorize_denied.png in Resources */ = {isa = PBXBuildFile; fileRef = 6709ED8A6E2840F9A5D7B887DB561707 /* authorize_denied.png */; };
+		84004D40E25E334F16B4D70D53BF149F /* buttonRoundedDeleteHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD7D2E88985A6540FE541BA0CE97DA7 /* buttonRoundedDeleteHighlighted.png */; };
+		87CFB536A253F968FED77C5A75DC8847 /* Blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E5D3328FAE03C08F9EBE4FD51EC713 /* Blur@2x.png */; };
+		8B56514998755BBA9E99667F32686B8C /* SPTSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805015C4760845A5C07997482F6CC0A /* SPTSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C115D2276DEB53520730E0B8791BE0F /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 10963E6DE97F7735D274E8F7888EBDAB /* pt-PT.lproj */; };
+		90C28D94DAD18307A25CF195A78B18DF /* FeedbackPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FEA2CAC111F68EDD84AAAF6D6887CC /* FeedbackPlaceholder.png */; };
+		920192EE050A27722607C9BD3C137591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */; };
+		927F2545D650AD499F0114FC9E7C6341 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D655240BC7C03297587351085F8AEFBE /* fr.lproj */; };
+		929A47DFEE079F88A527F663D2065553 /* XCDYouTubeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D54839EF1E9806B40980842E7E88BB3C /* XCDYouTubeClient.m */; };
+		947E44184B30403F13924C59A1E3B3EE /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F780C32617C4E6FD752C462D948639F6 /* hu.lproj */; };
+		94B5D201C88E026273371DD67946B7DF /* SPTArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9374F0CEE67E3980E3E2909A4F35C7 /* SPTArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98F19C682AC68E9D2E2052F709F42AF9 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E275B3CBAF85C02E900BD4734A6E06D /* JSONModel+networking.m */; };
+		9BC767136A627318026727B775DC290F /* Rectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E15E3899822C508EF2765ED17AC29 /* Rectangle@3x.png */; };
+		9D2C5FB9C30AC6982E3171D94EA6BF55 /* SPTPlaylistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA5CFD4AB17E4C96FA89017A9FE9CE0 /* SPTPlaylistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D8231189152E968914B4C15B1CCE525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */; };
+		9F1E42A64A0982335FB22EA98BADA1CF /* feedbackActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = 80CFEAAD7C66B121F9F45AE114AF1A8C /* feedbackActivity.png */; };
+		A18DD09A116B5BFA895E52DBB9E05B4A /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDDBD69832955E8E132EA2EDB44510E /* Arrow@2x.png */; };
+		A523188109261D5B485FC7942AF19108 /* SPTUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 767CEA71D95A4260024845AA875664C8 /* SPTUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6038FBF96D954A53F2F4C6A8F87F7B1 /* XCDYouTubeLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C04AD5DCFCFFC4CD3B43264BB82E027 /* XCDYouTubeLogger.m */; };
+		A6C7B8D0D3757465916796D0E07855FC /* SPTImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C93CDC1D2CD60FDE1986DBD0204B8B56 /* SPTImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8385FDE5CF18A5B04D01BAE7A04B177 /* SPTDiskCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = E88E9DE1011DB818C46C93D1B9F70E93 /* SPTDiskCaching.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9049E4714E0FB8FC41A61768AE717BC /* Pods-PartyFY-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99E917D18E5E95B2B833837A7783257F /* Pods-PartyFY-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACE32A0A30642056880DC51F9EBDCDDD /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0947A584C0F66F7ED696FADAC5ACBA18 /* ru.lproj */; };
+		AD6CB0334A63CD8661A6961C12D83DCC /* SPTFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A9CCF4CAAAE131DF4E6CD38E07856A6 /* SPTFollow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE347AEE16AA23E27630B1B5097D5E79 /* SPTAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 09582F8BEB31DA6CB974EE32F8906DA5 /* SPTAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF756DF0D4B06480BBEA3BBF81A81D13 /* buttonRoundedDeleteHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E16DE20DDD549E6DECBB3846E3B5E4A /* buttonRoundedDeleteHighlighted@2x.png */; };
+		B1C86C2080B4927D0C1236FA6AD4128F /* SPTJSONDecoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1447E7F0A8D1C67E1277D65505E9C751 /* SPTJSONDecoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B540450ADAFCC5ADE665EADE490FE58F /* Spotify-iOS-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C7584A9EBC2897A4D8E7A33F228655 /* Spotify-iOS-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6475472227037267D160568835F321F /* XCDYouTubeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F9640293E5A53813846FB61BE5A3B8A /* XCDYouTubeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B84E3D8D4922F2B30E6B90CCBDF0CB0E /* XCDYouTubeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A31049E1B529C27BADC82F01704C93 /* XCDYouTubeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9B01F266C42D92C9B4DA47F966CCB8B /* SPTTrackProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBCB451426A499786A0C3E76D95E75F /* SPTTrackProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9DA84A97F1C6E43AEE370247272E003 /* SPTPartialObject.h in Headers */ = {isa = PBXBuildFile; fileRef = F4029CD8BEFD4D2E45BA4572D4020501 /* SPTPartialObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9EDCE6E451154EB487F04EF2F4EF2A9 /* AppIconPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD38B91AF6AF4FFBA2FC0F868D71088 /* AppIconPlaceHolder.png */; };
+		BA2ED62E726471DEF1AFB4B856643963 /* SPTYourMusic.h in Headers */ = {isa = PBXBuildFile; fileRef = BEB3CEA031718D981B2E06392D36F4A6 /* SPTYourMusic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBE137032787071A06BAD5B004C1FC9B /* XCDYouTubeVideoOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = AA427C273A44101D7529141AB773D283 /* XCDYouTubeVideoOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1970F57499E8C301B67FD290F6473B7 /* Pods-PartyFY-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AD793F2DD410F5A103EC251F0076B3 /* Pods-PartyFY-dummy.m */; };
+		C25A794C4E843E1CC2FA231F6DBF69B1 /* XCDYouTubePlayerScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C8B22984D998100BFE3127D16EB163 /* XCDYouTubePlayerScript.m */; };
+		C3C79F40C2CDEB88F04C0FD01138A5C2 /* SPTAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 08107377C8D748ECCB79348216CAF330 /* SPTAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6698330C2EC8446EE33C4C2515667E3 /* SPTPartialPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 48716A884B255AA13C2C74CE973153F5 /* SPTPartialPlaylist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C68BFBD26058088143DD4D06FD9A70CC /* SPTRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BE8602C164623472682488A031E6FA55 /* SPTRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6E03FE266AC3767805DE30EC71059C1 /* Blur@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 641E7A85E35B91FC5E8621E2DBAA1022 /* Blur@3x.png */; };
+		C6E9DDF394B9D50179A07335F0AB5863 /* hr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 35A5DE66B8DC10A48C53A41A696602E1 /* hr.lproj */; };
+		C72DB54354A8A8BA16D906CBD6EDC5DF /* XCDYouTubeLogger+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 778908F91D22344828D6560C7756DBF8 /* XCDYouTubeLogger+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C92AB7B24983B413DAE9E9D668686F27 /* Spotify-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC4A3D848CDE60C9243725A31B7F93 /* Spotify-iOS-SDK-dummy.m */; };
+		C9E4B1C85F025F8E59EEF36E416ED985 /* SPTCoreAudioController.h in Headers */ = {isa = PBXBuildFile; fileRef = AC949AE642B6B3C244E18740A15EE4F8 /* SPTCoreAudioController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC5FD2D069557A5B89BC1879996276D7 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 148F41E7FC1D122D1ED351771B862D43 /* nl.lproj */; };
+		CD9FB0D75EDC3673AAA051DED29F9490 /* buttonRoundedDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D284C5E4B9721F4690DD6B402CC041A /* buttonRoundedDelete@2x.png */; };
+		CE17D4A4F43C46A7EC4A625601E2A4C1 /* SPTListPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B202E2302AF390E89C80E7DC6E62F47 /* SPTListPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D04B99BD1CFCF232405B6F90B87D5E53 /* fa.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F5C858E416CA714ECB80A6A42F50460D /* fa.lproj */; };
+		D34E43E323C6A19985196C4D8F0A61D8 /* buttonRoundedRegular.png in Resources */ = {isa = PBXBuildFile; fileRef = 51FC1A8ED0EE322DDB5367DA78E1E559 /* buttonRoundedRegular.png */; };
+		D4929C61644B34D4143F3B5E8782B125 /* SPTTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = F6635BD236CE6438C831995849889897 /* SPTTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4E9B3DE75C23D365E255B6212CB1CB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */; };
-		DCF8430A2AC2C801A249713F84212C68 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD68A5405C707F267ED50F9C6CE7739 /* MediaPlayer.framework */; };
-		DFA0B0C7EC02135911CACDAFD38BE715 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D56CDE033DE6378D39A4E38309C5C0 /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0D1BFB93B4D81195A84EED52BB453F5 /* SPTEmbeddedImages.h in Headers */ = {isa = PBXBuildFile; fileRef = 116DE13387939B4A965BAA424009A766 /* SPTEmbeddedImages.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E395A559BA97D903B3246F85EC3945DA /* Spotify-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0CD9734669CBE348B8BF4BF9F54FE /* Spotify-iOS-SDK-dummy.m */; };
-		E39D9A942BCE728467A42C478816966F /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D31F05E926EE7F7505F98565670BE2 /* JSONModel.m */; };
-		E3C47E114E924D2F331F9A3F122AEE5C /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 12EFB69C9FC977384EFC5901E042D79D /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8B66ED1B6D94290FD9C431BFC77A003 /* SPTDiskCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D7AB3580AC3E8852AE26CD0951E55D /* SPTDiskCaching.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB569B3B5163025BD895951BA92CCECA /* SPTRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1392A0EF9D391A78CFE2E246D162BB11 /* SPTRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF56C22DCF824DCC58D1CF2261469C34 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C38828DF6B5236651DF474A255CD042 /* Empty.m */; };
-		F2D844EA27E3745A0EE753AF0E8E9F36 /* SPTAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = A9C3D572A893533B61B8BF6B7AEF20C5 /* SPTAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5405B3D5F35B7C5C5505D5FB60F61D8 /* SpotifyAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9D8CA24CBE53269F95FC6A02D96911 /* SpotifyAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F69A35822C97D40F04D525729CF53519 /* XCDYouTubePlayerScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D3A3470F43F1ABBCBE7E1319767A4B7 /* XCDYouTubePlayerScript.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F71ACDE6343F04C210055FD270467580 /* SPTFeaturedPlaylistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EE4BED1057EBD8EC1FCA56303C1D5D6 /* SPTFeaturedPlaylistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F721ED3FB1CC6D1FBACA1DC371A48114 /* XCDYouTubePlayerScript.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FF161E45B5CCF6BFCF50BA90238EBD /* XCDYouTubePlayerScript.m */; };
-		F76F5C928DE7D8AE47E71C25606C3663 /* SPTAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C82226733020DF6C33C41B35DAB03B /* SPTAuthViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD94E66CCAAACD99A6E58BEC311FB307 /* SPTPartialAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 34CC8A2B0AD56BFB02FD8C72E1A927EC /* SPTPartialAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF5087C04F042F9C8B1456A71C336B06 /* XCDYouTubeVideoWebpage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6253017F40B873D70846925279BA1A /* XCDYouTubeVideoWebpage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D5606F6FF66F1B3763C383537BB95DBA /* XCDYouTubeVideo+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 681B5B035595E85E5CBD3EDA4DBA0B05 /* XCDYouTubeVideo+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6C257696C9A6DB0C83D57D4C880A766 /* SPTCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B499E287885835C34D0CE7BBBED3D3C /* SPTCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D787D8D6A9462CF147B382C0DC66FB20 /* SPTStoreViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9456DBCD986AA87E1D5C20341723B889 /* SPTStoreViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7E40D3C0AE16A3D47BDC1914F38D34E /* SPTSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = C30E1E0D555311A6292A24591C02146A /* SPTSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D96B3084C039A486B589E010025C404D /* XCDYouTubeError.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D25646D03BC850351E4D92B49EF9AB4 /* XCDYouTubeError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC8D542FA309E2BC9C8952C3C7693F39 /* SPTAudioStreamingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 966E9A951983726BA0B8C8173FB549DE /* SPTAudioStreamingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD8B7B9DFFEEC713A009544DD66B5FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */; };
+		DDDDDD3F3F147523037A0E1457E2A239 /* SPTBrowse.h in Headers */ = {isa = PBXBuildFile; fileRef = D8FFFD6F83A1923F0D5027DF303C1BD6 /* SPTBrowse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFA0B0C7EC02135911CACDAFD38BE715 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7109FC88EB3F5B5DD947FAA066B14D36 /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFDE46266B9D8D56D4656A33A14309B0 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DE9B197646E2BE4FFEF094150E0C9F /* Rectangle.png */; };
+		E39D9A942BCE728467A42C478816966F /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8562B4DEBFC228A12A94E393301B53FB /* JSONModel.m */; };
+		E3C47E114E924D2F331F9A3F122AEE5C /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = A13B8AD0B99EBEF7F1C5FB2C670A1D2E /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB11590B490E543A3A721E6D0952E01A /* SPTDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB4F7B3B016D2F7C89154B228CEC0E6 /* SPTDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED0760DCF83AADA395403B8AD79588DC /* SPTEmbeddedImages.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B50770EC81A91136A68FB63C14B0EB /* SPTEmbeddedImages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED5B84ED3E9AB15307C6ED12D1C9F792 /* XCDYouTubeVideoWebpage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8030651892738D32A630AF933660BA4E /* XCDYouTubeVideoWebpage.m */; };
+		F011B9547643420C6BAAA32D9D1B6867 /* XCDYouTubeVideoPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE76B39F14CF6F5BE4DD0706D265A88 /* XCDYouTubeVideoPlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2852A28C22BF89F8787A33932048DB9 /* IconGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D463EC408D279EDC5603917828E691E2 /* IconGradient@2x.png */; };
+		F5A90570C26448C498D553B5042EC63F /* Cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC1B8732B8041948B4B475FD747C81C /* Cancel@2x.png */; };
+		F705A717CFBBCEFC5CD52C1E072B7D3F /* SPTPartialTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D66C393E86146E25841387F2D23C7CD /* SPTPartialTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7832D722DC20EA1887B494B5E50969F /* feedbackActivity@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD64766FCD63513DB586870A08E9D4D /* feedbackActivity@2x~ipad.png */; };
+		F93D762E66C4C543A0BB8B71CEB9CBE8 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DC0528A8B17F7D29EFD465033B2F380 /* bg.png */; };
+		FA2376FA9E859BC3271FB6B172CD4F3D /* SPTPlaybackState.h in Headers */ = {isa = PBXBuildFile; fileRef = 826F08E4288CA5FB4678FD2F15F07656 /* SPTPlaybackState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA6DC2548DF4BC0C649567D465189867 /* SPTPlaylistSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE63328DD235C65466B7213A6492F6D /* SPTPlaylistSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB6510577C9EB0624EDF73879DC61B45 /* Arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B67273BB3A04B0D945E9B9149CD39F /* Arrow@3x.png */; };
+		FC5600BD77AFCBBB05C884B19103C9FA /* SPTPartialAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 17AEE4A1C64BFE36F1EE0508D5AC672D /* SPTPartialAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE8DAEF3D5257521336469BCBDFE8775 /* SpPlaybackEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 820115F6E593DB6EF8A3D1289476D5EF /* SpPlaybackEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		435214F01A592EF7C915C71A712D1EDE /* PBXContainerItemProxy */ = {
+		6B1FA2F1554FCE2A1F40CE98F29D1B27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 83CE9B41DC97298DEBAB84D5CEFB91CD;
+			remoteGlobalIDString = B90AE85DEDFE3F072B01DBFA1C882E47;
+			remoteInfo = XCDYouTubeKit;
+		};
+		9C1B2B1B72F58AB633FB3C2B929432C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB9AD825427F216B54E693242E671FA1;
+			remoteInfo = "HockeySDK-HockeySDKResources";
+		};
+		CC4ED40577017470A1ECCBF2E68A39F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20C64977E04C7B959EFEACEC9F1D191;
 			remoteInfo = "Spotify-iOS-SDK";
 		};
-		54D461F3D61B695224522AFFC8040B40 /* PBXContainerItemProxy */ = {
+		E29404A965DEB698AE1D4FD2B7761167 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DC3688684BF42A20A8998F31DDA51A49;
 			remoteInfo = JSONModel;
 		};
-		DFACBD2CE7A79AB3784D69599AB0A48A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1F6FD9CC87D8554AEC42892813077BD;
-			remoteInfo = XCDYouTubeKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0094E681449D75BB78ED625C5F9805C1 /* SPTAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAuth.h; sourceTree = "<group>"; };
-		03332E4E236FB99CA82E1043541AD0F9 /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoPlayerViewController.m; path = XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.m; sourceTree = "<group>"; };
-		0BE97435F22DDE6DCB56CC3E7A1FB869 /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
-		0DCAAE4EDDB583C4EA69F18B1CD33761 /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
-		0F65AA435C0737A8918424EF51AB29C8 /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
-		116DE13387939B4A965BAA424009A766 /* SPTEmbeddedImages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTEmbeddedImages.h; sourceTree = "<group>"; };
-		126593E780C092E67385B6267AA086DC /* XCDYouTubeVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideo.h; path = XCDYouTubeKit/XCDYouTubeVideo.h; sourceTree = "<group>"; };
-		12EFB69C9FC977384EFC5901E042D79D /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
-		135154CE7C0CCAB72D4F75C771E0464E /* Spotify-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Spotify-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
-		1381583223C0EF8428339066E0AC44C6 /* XCDYouTubeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCDYouTubeKit-dummy.m"; sourceTree = "<group>"; };
-		1392A0EF9D391A78CFE2E246D162BB11 /* SPTRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTRequest.h; sourceTree = "<group>"; };
-		15006B66611D675A1001052CCBA4D546 /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
-		1986A32161211B1541E431375221512B /* SPTImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTImage.h; sourceTree = "<group>"; };
-		203C54A1183CE9BB59F552CA2BE71564 /* SPTUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTUser.h; sourceTree = "<group>"; };
+		00FC4A3D848CDE60C9243725A31B7F93 /* Spotify-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spotify-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		02C5488D1B4254C30A4EFC35D68EEDDA /* iconCamera.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = iconCamera.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera.png"; sourceTree = "<group>"; };
+		040E035E80C0F51BEBBE0B5DBFEFF1EE /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
+		079C612EC7D76A3120F162F02126C03C /* buttonRoundedRegularHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegularHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted@2x.png"; sourceTree = "<group>"; };
+		08107377C8D748ECCB79348216CAF330 /* SPTAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAuth.h; sourceTree = "<group>"; };
+		0947A584C0F66F7ED696FADAC5ACBA18 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ru.lproj"; sourceTree = "<group>"; };
+		09582F8BEB31DA6CB974EE32F8906DA5 /* SPTAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAlbum.h; sourceTree = "<group>"; };
+		0CD85ACC8E7649521CC0AE3E808E058E /* Rectangle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@2x.png"; sourceTree = "<group>"; };
+		0D284C5E4B9721F4690DD6B402CC041A /* buttonRoundedDelete@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDelete@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete@2x.png"; sourceTree = "<group>"; };
+		0E0B325D1C9EA5AA25F0B4FB2B3BDFEE /* libSpotifyAudioPlayback.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libSpotifyAudioPlayback.a; sourceTree = "<group>"; };
+		0EE27C40A4F7106CBC4D3EC054E522D5 /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
+		10963E6DE97F7735D274E8F7888EBDAB /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt-PT.lproj"; sourceTree = "<group>"; };
+		117909595141AB059A2D40EEF4633376 /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
+		1447E7F0A8D1C67E1277D65505E9C751 /* SPTJSONDecoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTJSONDecoding.h; sourceTree = "<group>"; };
+		148F41E7FC1D122D1ED351771B862D43 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nl.lproj"; sourceTree = "<group>"; };
+		17AEE4A1C64BFE36F1EE0508D5AC672D /* SPTPartialAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialAlbum.h; sourceTree = "<group>"; };
+		190519C88F44680AA45F4D84A7707463 /* SPTPlaylistTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistTrack.h; sourceTree = "<group>"; };
+		1C74734D45FDBC1BB4001075203B6216 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		1E1098A1EC0FBE8BA932F1EFD2A2FF69 /* XCDYouTubeLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeLogger.h; path = XCDYouTubeKit/XCDYouTubeLogger.h; sourceTree = "<group>"; };
+		1E375F4E295197995CEC72BB3052EE6E /* Spotify-iOS-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Spotify-iOS-SDK.modulemap"; sourceTree = "<group>"; };
+		1F4E15E3899822C508EF2765ED17AC29 /* Rectangle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@3x.png"; sourceTree = "<group>"; };
+		2247C19DF5EF648BA4A9B7AEAD5DF7C0 /* Spotify-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spotify-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
 		24A2C9BDD930CAEFFAB34A1C254E5C3C /* Pods-PartyFY.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PartyFY.modulemap"; sourceTree = "<group>"; };
 		293F333A38865704A2DE5BE826ADF80C /* Pods-PartyFY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartyFY.debug.xcconfig"; sourceTree = "<group>"; };
-		297760279D95879B608030A80D863D18 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XCDYouTubeKit.framework; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29A010CCCDC270F3B62294E10D2198F6 /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
-		2E1DCE31B498FD8EB67DDF3BE019C87A /* SPTTrackProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTTrackProvider.h; sourceTree = "<group>"; };
-		2EE4BED1057EBD8EC1FCA56303C1D5D6 /* SPTFeaturedPlaylistList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTFeaturedPlaylistList.h; sourceTree = "<group>"; };
-		305C2DBB9C202EE3CD999C7DB44D6CE7 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
-		3200BB20076E413AE49F92D33F373343 /* XCDYouTubeLogger+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCDYouTubeLogger+Private.h"; path = "XCDYouTubeKit/XCDYouTubeLogger+Private.h"; sourceTree = "<group>"; };
-		34CC8A2B0AD56BFB02FD8C72E1A927EC /* SPTPartialAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialAlbum.h; sourceTree = "<group>"; };
-		3B2C447625F89E9883A7A0DF946A8856 /* SPTFollow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTFollow.h; sourceTree = "<group>"; };
-		3CB5CB28A1E8FC259331A7C3E6392704 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
-		3CDF6F0391AFA3510C563D96C12FDB1B /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
-		3F797BDD57884F87966FD8A453B277B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F99CCA6565221C882EDA07037F723A9 /* SPTAudioStreamingController_ErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioStreamingController_ErrorCodes.h; sourceTree = "<group>"; };
-		40782688E490926E5BD4A7EC33E4918B /* SPTCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTCircularBuffer.h; sourceTree = "<group>"; };
-		444D7E9A2D22C34F2AF35EC528F7DFD4 /* SPTYourMusic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTYourMusic.h; sourceTree = "<group>"; };
-		492BBC277F9F324CDC682408B92FD394 /* XCDYouTubeLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeLogger.h; path = XCDYouTubeKit/XCDYouTubeLogger.h; sourceTree = "<group>"; };
-		4B8EB4FE26A214169C93BC0658124C8A /* XCDYouTubeVideo+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCDYouTubeVideo+Private.h"; path = "XCDYouTubeKit/XCDYouTubeVideo+Private.h"; sourceTree = "<group>"; };
-		51B8B55796C4E5DFBCEDC4C3EDBAC2B6 /* SPTBrowse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTBrowse.h; sourceTree = "<group>"; };
+		294EBACD309CABF237286203CBE3172B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29B8BD4925B08055B04E942BB1F80713 /* XCDYouTubeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = XCDYouTubeKit.modulemap; sourceTree = "<group>"; };
+		2B7D1C77421C92F0896631A45D9F13A6 /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		2E16DE20DDD549E6DECBB3846E3B5E4A /* buttonRoundedDeleteHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDeleteHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted@2x.png"; sourceTree = "<group>"; };
+		2EE64114646FC58433F0A2C753586A97 /* Spotify-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Spotify-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		2F47114B9F622EAE5DDACAE52D84FD4F /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
+		2F9640293E5A53813846FB61BE5A3B8A /* XCDYouTubeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeKit.h; path = XCDYouTubeKit/XCDYouTubeKit.h; sourceTree = "<group>"; };
+		31323741516E219A85EA585CF50E77F4 /* SPTPartialArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialArtist.h; sourceTree = "<group>"; };
+		329D22483D9777D5E63B1EB93CBED78D /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
+		33FF3B2E47036F9A849BA269A4341F1C /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/es.lproj"; sourceTree = "<group>"; };
+		35A5DE66B8DC10A48C53A41A696602E1 /* hr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hr.lproj"; sourceTree = "<group>"; };
+		36978317160D2F5A4C7564B60E3F004C /* SpotifyAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpotifyAuthentication.h; sourceTree = "<group>"; };
+		36C8B22984D998100BFE3127D16EB163 /* XCDYouTubePlayerScript.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubePlayerScript.m; path = XCDYouTubeKit/XCDYouTubePlayerScript.m; sourceTree = "<group>"; };
+		37B50770EC81A91136A68FB63C14B0EB /* SPTEmbeddedImages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTEmbeddedImages.h; sourceTree = "<group>"; };
+		3805015C4760845A5C07997482F6CC0A /* SPTSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSession.h; sourceTree = "<group>"; };
+		386C31CAA8A42FBA1B33B5BB3DCBA1FC /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
+		387B937C91ED093DBAC4301F81531E15 /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JSONModel.modulemap; sourceTree = "<group>"; };
+		399E8F8462497590219725D09474A3A5 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt.lproj"; sourceTree = "<group>"; };
+		3BC1B8732B8041948B4B475FD747C81C /* Cancel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@2x.png"; sourceTree = "<group>"; };
+		3C04AD5DCFCFFC4CD3B43264BB82E027 /* XCDYouTubeLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeLogger.m; path = XCDYouTubeKit/XCDYouTubeLogger.m; sourceTree = "<group>"; };
+		45A633F5FD667A71956E1DB3621048CD /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoPlayerViewController.m; path = XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.m; sourceTree = "<group>"; };
+		45E5D3328FAE03C08F9EBE4FD51EC713 /* Blur@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@2x.png"; sourceTree = "<group>"; };
+		47BAFB8CF82FA14CCF0F246E39CA5A5C /* XCDYouTubeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCDYouTubeKit-dummy.m"; sourceTree = "<group>"; };
+		48716A884B255AA13C2C74CE973153F5 /* SPTPartialPlaylist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialPlaylist.h; sourceTree = "<group>"; };
+		4904A02B0AB49D8ECEAB305546612DA5 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework"; sourceTree = "<group>"; };
+		49D16CE9BA6A4D375B6950ADB67772E9 /* libSpotifyAuthentication.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libSpotifyAuthentication.a; sourceTree = "<group>"; };
+		49D1BFA5CC6652936E3E6D430B2D0AF9 /* SPTPlaybackMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaybackMetadata.h; sourceTree = "<group>"; };
+		4A776CD12CDAD33FA542227BBF514F6D /* Ok@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@2x.png"; sourceTree = "<group>"; };
+		4A9CCF4CAAAE131DF4E6CD38E07856A6 /* SPTFollow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTFollow.h; sourceTree = "<group>"; };
+		4F05BCD791D469DDDBEB96FCE7382DA6 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ja.lproj"; sourceTree = "<group>"; };
+		4FC2CCBCA11433EB5C169359C1E65FE4 /* IconGradient.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = IconGradient.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient.png"; sourceTree = "<group>"; };
+		4FE76B39F14CF6F5BE4DD0706D265A88 /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoPlayerViewController.h; path = XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h; sourceTree = "<group>"; };
+		50927EE4E6E580A83DAE15CD72060BF9 /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		51FC1A8ED0EE322DDB5367DA78E1E559 /* buttonRoundedRegular.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegular.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular.png"; sourceTree = "<group>"; };
+		52323A9B52F324C3D39FAA001C61AAAF /* buttonRoundedRegularHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegularHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted.png"; sourceTree = "<group>"; };
+		526810FE4B08F7F2312B840D27A541E3 /* Blur.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Blur.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur.png"; sourceTree = "<group>"; };
+		5356961D40B1195E136D956F543A34A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B5BD7B8098AEBE254CA8BB634A6464C /* Pods-PartyFY-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartyFY-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5BAF58FAE8107FFC3F3A67231CE50FB7 /* XCDYouTubeError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeError.h; path = XCDYouTubeKit/XCDYouTubeError.h; sourceTree = "<group>"; };
-		5BC0CD9734669CBE348B8BF4BF9F54FE /* Spotify-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spotify-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
-		5BE0B0F2DE77F6DAD942F3DBFA38AB84 /* SPTSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSession.h; sourceTree = "<group>"; };
-		5C940739021340C1A07521AAD53E2549 /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
-		5D3A3470F43F1ABBCBE7E1319767A4B7 /* XCDYouTubePlayerScript.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubePlayerScript.h; path = XCDYouTubeKit/XCDYouTubePlayerScript.h; sourceTree = "<group>"; };
+		5C78B1CC6C99393252A2EAB34BEF4935 /* authorize_denied@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@2x.png"; sourceTree = "<group>"; };
 		5E947DEAAEEA21C8876F8F9C2FCA50EA /* Pods-PartyFY-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PartyFY-frameworks.sh"; sourceTree = "<group>"; };
-		673656632588ADBA5CE7A290A3E1FC1A /* SPTPlaybackState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaybackState.h; sourceTree = "<group>"; };
-		6A73B1BFAFE0FD5775EAF4CA80A3FA72 /* SPTPartialObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialObject.h; sourceTree = "<group>"; };
-		6D6253017F40B873D70846925279BA1A /* XCDYouTubeVideoWebpage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoWebpage.h; path = XCDYouTubeKit/XCDYouTubeVideoWebpage.h; sourceTree = "<group>"; };
-		6E041F52831F25C2BE26EED8107B9BDD /* SPTPartialPlaylist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialPlaylist.h; sourceTree = "<group>"; };
-		71981B46D16F3395891F0B331100DC73 /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JSONModel.framework; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9374F0CEE67E3980E3E2909A4F35C7 /* SPTArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTArtist.h; sourceTree = "<group>"; };
+		60671D5C97CC14A1D92DEB360EAF0EA6 /* XCDYouTubeOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeOperation.h; path = XCDYouTubeKit/XCDYouTubeOperation.h; sourceTree = "<group>"; };
+		60BB127394557ED1F52012CABB37341B /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XCDYouTubeKit.framework; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BDC7D6F3D6412A37D0770D2F69A0A8 /* Ok.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Ok.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok.png"; sourceTree = "<group>"; };
+		641E7A85E35B91FC5E8621E2DBAA1022 /* Blur@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@3x.png"; sourceTree = "<group>"; };
+		65EA7D1B6E3D9A7F406AC95E62682561 /* SPTMetadataTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTMetadataTypes.h; sourceTree = "<group>"; };
+		6709ED8A6E2840F9A5D7B887DB561707 /* authorize_denied.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = authorize_denied.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied.png"; sourceTree = "<group>"; };
+		67DC1782B610CF5147E1F42726327A61 /* XCDYouTubeVideoOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoOperation.m; path = XCDYouTubeKit/XCDYouTubeVideoOperation.m; sourceTree = "<group>"; };
+		681B5B035595E85E5CBD3EDA4DBA0B05 /* XCDYouTubeVideo+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCDYouTubeVideo+Private.h"; path = "XCDYouTubeKit/XCDYouTubeVideo+Private.h"; sourceTree = "<group>"; };
+		6B202E2302AF390E89C80E7DC6E62F47 /* SPTListPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTListPage.h; sourceTree = "<group>"; };
+		6B499E287885835C34D0CE7BBBED3D3C /* SPTCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTCircularBuffer.h; sourceTree = "<group>"; };
+		6D66C393E86146E25841387F2D23C7CD /* SPTPartialTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialTrack.h; sourceTree = "<group>"; };
+		6DD7D2E88985A6540FE541BA0CE97DA7 /* buttonRoundedDeleteHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDeleteHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted.png"; sourceTree = "<group>"; };
+		6E275B3CBAF85C02E900BD4734A6E06D /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
+		7109FC88EB3F5B5DD947FAA066B14D36 /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
 		73C27F778830EC95D46C7028ABDB1749 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		74BF46C66991203D38FF9E3AAA90466A /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
-		74E94DC8EC28CFB4CC8C9536750F8D11 /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoPlayerViewController.h; path = XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h; sourceTree = "<group>"; };
-		75EF974622D5123B9E5DD1104904F366 /* SPTPlaylistTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistTrack.h; sourceTree = "<group>"; };
-		77EAA2D182D6076BC596EFA8A6EA18FE /* XCDYouTubeVideoOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoOperation.m; path = XCDYouTubeKit/XCDYouTubeVideoOperation.m; sourceTree = "<group>"; };
-		7CC254999827BE75B56202DB3ECE0765 /* Spotify-iOS-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Spotify-iOS-SDK.modulemap"; sourceTree = "<group>"; };
-		7FB6A985E87FCB6061475ED98451E3BA /* XCDYouTubeClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeClient.m; path = XCDYouTubeKit/XCDYouTubeClient.m; sourceTree = "<group>"; };
-		80A8289D709E8DA622315A5F870728A1 /* SPTPlaylistList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistList.h; sourceTree = "<group>"; };
-		8104F115C47F18B9A3189A73C9528E14 /* XCDYouTubeClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeClient.h; path = XCDYouTubeKit/XCDYouTubeClient.h; sourceTree = "<group>"; };
-		849FC95707DDF453D1EE139B803E6738 /* XCDYouTubeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCDYouTubeKit-prefix.pch"; sourceTree = "<group>"; };
-		86B43534861B4BCB6BC795D1DB01A8D3 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		73C7584A9EBC2897A4D8E7A33F228655 /* Spotify-iOS-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spotify-iOS-SDK-umbrella.h"; sourceTree = "<group>"; };
+		74C0448103DA54ABFEF07B8E3A0A6295 /* ResourceBundle-HockeySDKResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HockeySDKResources-Info.plist"; sourceTree = "<group>"; };
+		767CEA71D95A4260024845AA875664C8 /* SPTUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTUser.h; sourceTree = "<group>"; };
+		778908F91D22344828D6560C7756DBF8 /* XCDYouTubeLogger+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCDYouTubeLogger+Private.h"; path = "XCDYouTubeKit/XCDYouTubeLogger+Private.h"; sourceTree = "<group>"; };
+		7A22F5F3CB50233737667902F4946A8E /* buttonRoundedRegular@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegular@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular@2x.png"; sourceTree = "<group>"; };
+		7F99DA2CB180CDDE8E0D20EA9C472C5A /* SPTAuthViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAuthViewController.h; sourceTree = "<group>"; };
+		8030651892738D32A630AF933660BA4E /* XCDYouTubeVideoWebpage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoWebpage.m; path = XCDYouTubeKit/XCDYouTubeVideoWebpage.m; sourceTree = "<group>"; };
+		804EEEEC823A4D999664AEC0045EEA76 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		80CFEAAD7C66B121F9F45AE114AF1A8C /* feedbackActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = feedbackActivity.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity.png"; sourceTree = "<group>"; };
+		820115F6E593DB6EF8A3D1289476D5EF /* SpPlaybackEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpPlaybackEvent.h; sourceTree = "<group>"; };
+		826F08E4288CA5FB4678FD2F15F07656 /* SPTPlaybackState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaybackState.h; sourceTree = "<group>"; };
+		8562B4DEBFC228A12A94E393301B53FB /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+		86661ECE25059FB081AF98F06518DF11 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/de.lproj"; sourceTree = "<group>"; };
 		87CDDA004D6F2648F4154DF7F1CF7976 /* Pods-PartyFY-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartyFY-acknowledgements.plist"; sourceTree = "<group>"; };
+		8A69581D04F02B2D2A768E5A130401E6 /* buttonRoundedDelete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDelete.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete.png"; sourceTree = "<group>"; };
 		8BB29E2AF39DADE2E44A129D33EA9890 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C38828DF6B5236651DF474A255CD042 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
-		8D4A30C051AA5CDD7C7B0D55F7ED60B5 /* libSpotifyMetadata.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libSpotifyMetadata.a; sourceTree = "<group>"; };
-		8EF8CA8355F8C64EF330618A6AEFB5D5 /* Pods_PartyFY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PartyFY.framework; path = "Pods-PartyFY.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		917A0222F85B61F8E53B77CA393ED0A0 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		8D25646D03BC850351E4D92B49EF9AB4 /* XCDYouTubeError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeError.h; path = XCDYouTubeKit/XCDYouTubeError.h; sourceTree = "<group>"; };
+		8FBD8835280E0DC2CB28408CB5FDC69A /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/it.lproj"; sourceTree = "<group>"; };
+		8FD64766FCD63513DB586870A08E9D4D /* feedbackActivity@2x~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x~ipad.png"; sourceTree = "<group>"; };
+		9205128971492D8109EC09FCAD549DE1 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		974B65AB6E95E68466EF002D5197CCFE /* XCDYouTubeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XCDYouTubeKit.xcconfig; sourceTree = "<group>"; };
-		97F72ABB528FCFA12D7CA90CE529005B /* SpotifyAudioPlayback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpotifyAudioPlayback.h; sourceTree = "<group>"; };
-		98D087E1B0A8356CA0EEC515B6C87619 /* SPTConnectButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTConnectButton.h; sourceTree = "<group>"; };
+		9456DBCD986AA87E1D5C20341723B889 /* SPTStoreViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTStoreViewController.h; sourceTree = "<group>"; };
+		95E8AB3284D00E0FB910CB393851835E /* HockeySDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = HockeySDKResources.bundle; path = HockeySDKResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		966E9A951983726BA0B8C8173FB549DE /* SPTAudioStreamingController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioStreamingController.h; sourceTree = "<group>"; };
+		975BD28CA273C92422C0B1DA565AF2B9 /* iconCamera@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "iconCamera@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera@2x.png"; sourceTree = "<group>"; };
 		99E917D18E5E95B2B833837A7783257F /* Pods-PartyFY-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PartyFY-umbrella.h"; sourceTree = "<group>"; };
-		9AD26C1C23F61743610BEAA786EC92C7 /* SPTStoreViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTStoreViewController.h; sourceTree = "<group>"; };
-		9AEF028169CD2F93902B1E45151D35AB /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
-		9B9758E5A4D00F34145E0914BBB2CE3D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D0B6E54A951C5DBF51BD59986A92070 /* Spotify-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spotify-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
-		9E2CAF569FB09CD382BF9CD95976F341 /* SPTSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSearch.h; sourceTree = "<group>"; };
-		A119F90DF096905CA178D8C5232DF0CD /* XCDYouTubeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = XCDYouTubeKit.modulemap; sourceTree = "<group>"; };
-		A9C3D572A893533B61B8BF6B7AEF20C5 /* SPTAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAlbum.h; sourceTree = "<group>"; };
-		A9CF14D4B19E3F279A1CC9945066EBB6 /* SpotifyMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpotifyMetadata.h; sourceTree = "<group>"; };
-		AA44DEE3FB2A8CA44C4CD9ACAC33046A /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
-		AA7B325456C29BB40AC681AECB8EB6FE /* SPTListPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTListPage.h; sourceTree = "<group>"; };
+		9B08D477EF895700D7F95725198FBE51 /* SPTAudioPlaybackTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioPlaybackTypes.h; sourceTree = "<group>"; };
+		9B9FB249A492B13801A48706DEC22855 /* Pods_PartyFY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PartyFY.framework; path = "Pods-PartyFY.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BFA459E8D26C1BF7F5BD6127741D513 /* Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spotify.framework; path = "Spotify-iOS-SDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB4F7B3B016D2F7C89154B228CEC0E6 /* SPTDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTDiskCache.h; sourceTree = "<group>"; };
+		9DA5CFD4AB17E4C96FA89017A9FE9CE0 /* SPTPlaylistList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistList.h; sourceTree = "<group>"; };
+		9DC0528A8B17F7D29EFD465033B2F380 /* bg.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = bg.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/bg.png"; sourceTree = "<group>"; };
+		9E0EC99976814E144ED050A00FF7A363 /* XCDYouTubeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCDYouTubeKit-prefix.pch"; sourceTree = "<group>"; };
+		9E815502867768ED0403026FB1CE6903 /* XCDYouTubePlayerScript.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubePlayerScript.h; path = XCDYouTubeKit/XCDYouTubePlayerScript.h; sourceTree = "<group>"; };
+		9F58CFB75A3504AB67EA7DFFA19B3403 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13B8AD0B99EBEF7F1C5FB2C670A1D2E /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
+		A3AAF84D6F84891A128BDB36638CF3E2 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nb.lproj"; sourceTree = "<group>"; };
+		A5C8111E407A686D928596DCCE8194CD /* Cancel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Cancel.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel.png"; sourceTree = "<group>"; };
+		A7C5D103895831720A88D720CCBD362C /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		AA3E9ED5AF03ADEF6B67D781E29CA1A1 /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		AA427C273A44101D7529141AB773D283 /* XCDYouTubeVideoOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoOperation.h; path = XCDYouTubeKit/XCDYouTubeVideoOperation.h; sourceTree = "<group>"; };
+		AC949AE642B6B3C244E18740A15EE4F8 /* SPTCoreAudioController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTCoreAudioController.h; sourceTree = "<group>"; };
 		B1DDB3179062C5C846FE64B27316F26F /* Pods-PartyFY-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PartyFY-resources.sh"; sourceTree = "<group>"; };
-		B20A588A6E91C85CD6CA4022FD9F99BF /* SPTJSONDecoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTJSONDecoding.h; sourceTree = "<group>"; };
-		B3F51C8AC011277A5840DBCADB6F2932 /* XCDYouTubeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCDYouTubeKit-umbrella.h"; sourceTree = "<group>"; };
-		B5D31F05E926EE7F7505F98565670BE2 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
-		B5D56CDE033DE6378D39A4E38309C5C0 /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
-		B5E9FFBC00C2BA0A67E0CC937C545856 /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
-		B737F424FAE6E6397556BD9E65AEEC11 /* SPTPartialTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialTrack.h; sourceTree = "<group>"; };
-		B8022F7994CA21AA406AFE532AE44DB3 /* SPTTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTTrack.h; sourceTree = "<group>"; };
-		C4C82226733020DF6C33C41B35DAB03B /* SPTAuthViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAuthViewController.h; sourceTree = "<group>"; };
-		C606D4E9BC611E676E8B589F9F0D71F3 /* libSpotifyAuthentication.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libSpotifyAuthentication.a; sourceTree = "<group>"; };
-		CE365EA405B5B9282063B3B7987FA9B3 /* SPTArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTArtist.h; sourceTree = "<group>"; };
+		B546C2B5A8E277B3E0012F1BDC6B418E /* Arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Arrow.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow.png"; sourceTree = "<group>"; };
+		B568BE52683177B6C8404EBC18C7678C /* SpotifyAudioPlayback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpotifyAudioPlayback.h; sourceTree = "<group>"; };
+		B79908BDBD976EFD21FA06590E23ADC9 /* feedbackActivity@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@3x.png"; sourceTree = "<group>"; };
+		B8DE9B197646E2BE4FFEF094150E0C9F /* Rectangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Rectangle.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle.png"; sourceTree = "<group>"; };
+		B96568590CA383D7CEA9246280336113 /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
+		BE8602C164623472682488A031E6FA55 /* SPTRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTRequest.h; sourceTree = "<group>"; };
+		BEB3CEA031718D981B2E06392D36F4A6 /* SPTYourMusic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTYourMusic.h; sourceTree = "<group>"; };
+		BEDDBD69832955E8E132EA2EDB44510E /* Arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@2x.png"; sourceTree = "<group>"; };
+		BF2F0A755088507F5F7ACA74EC942746 /* SPTFeaturedPlaylistList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTFeaturedPlaylistList.h; sourceTree = "<group>"; };
+		C2DFAF6D3B56E7CC41FFEB853E83B380 /* XCDYouTubeVideoWebpage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoWebpage.h; path = XCDYouTubeKit/XCDYouTubeVideoWebpage.h; sourceTree = "<group>"; };
+		C30E1E0D555311A6292A24591C02146A /* SPTSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSearch.h; sourceTree = "<group>"; };
+		C751C4771F1D9BCCF2FD381667BAEE90 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		C93CDC1D2CD60FDE1986DBD0204B8B56 /* SPTImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTImage.h; sourceTree = "<group>"; };
+		CA3B1C3CC9011D5D70216DF03B26DBA7 /* XCDYouTubeVideo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideo.m; path = XCDYouTubeKit/XCDYouTubeVideo.m; sourceTree = "<group>"; };
+		CB2CD0299F0D110A0814D77D943BB687 /* libSpotifyMetadata.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libSpotifyMetadata.a; sourceTree = "<group>"; };
+		CD15ED9CDAAFDA76D7735DDC1253B182 /* SPTAudioStreamingController_ErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioStreamingController_ErrorCodes.h; sourceTree = "<group>"; };
+		CD935E09B46D034156FB130569E472FB /* XCDYouTubeClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeClient.h; path = XCDYouTubeKit/XCDYouTubeClient.h; sourceTree = "<group>"; };
 		CF1BD73BF5A5CA11A24A2B591746C095 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D00334927EEF060CA0ADDA5B497D7705 /* Spotify-iOS-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spotify-iOS-SDK-umbrella.h"; sourceTree = "<group>"; };
-		D03D48FBADBE733503D3975A1C320964 /* SPTPlaylistSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistSnapshot.h; sourceTree = "<group>"; };
-		D3858C950F26A9CFF6D599753019F81A /* SPTPartialArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialArtist.h; sourceTree = "<group>"; };
+		CFA2F51D49B1542F6DCC9D48CFCA86C7 /* SPTSavedTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSavedTrack.h; sourceTree = "<group>"; };
+		D029D4AA347EE791A58562263C6D1C18 /* Cancel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@3x.png"; sourceTree = "<group>"; };
+		D1773674DE9911CF514477BC1F650F8D /* SPTConnectButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTConnectButton.h; sourceTree = "<group>"; };
+		D2721377FBB148406D92B7AFD22A3F5D /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/en.lproj"; sourceTree = "<group>"; };
 		D3AD793F2DD410F5A103EC251F0076B3 /* Pods-PartyFY-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartyFY-dummy.m"; sourceTree = "<group>"; };
-		D4C2A2E020723632FAFC7C4E0FCCC443 /* Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spotify.framework; path = "Spotify-iOS-SDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D585AB90F6AB2B2858945B85D2CE3575 /* SpPlaybackEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpPlaybackEvent.h; sourceTree = "<group>"; };
-		DDD35971EC7AF804F4D2C16F835EAB15 /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
-		E4045142A55A63064E69FB8E62A1B089 /* SPTMetadataTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTMetadataTypes.h; sourceTree = "<group>"; };
-		E5C4BE83EA7AA6EB2A20D90ECDD836AE /* XCDYouTubeVideoOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoOperation.h; path = XCDYouTubeKit/XCDYouTubeVideoOperation.h; sourceTree = "<group>"; };
-		E5E68CAC12D28F5381242F87A685789C /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
-		E5FF161E45B5CCF6BFCF50BA90238EBD /* XCDYouTubePlayerScript.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubePlayerScript.m; path = XCDYouTubeKit/XCDYouTubePlayerScript.m; sourceTree = "<group>"; };
-		E8D7AB3580AC3E8852AE26CD0951E55D /* SPTDiskCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTDiskCaching.h; sourceTree = "<group>"; };
-		EA9D8CA24CBE53269F95FC6A02D96911 /* SpotifyAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpotifyAuthentication.h; sourceTree = "<group>"; };
-		EC49691619301A18E22C8D34CE8F67BE /* SPTPlaybackMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaybackMetadata.h; sourceTree = "<group>"; };
+		D463EC408D279EDC5603917828E691E2 /* IconGradient@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "IconGradient@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient@2x.png"; sourceTree = "<group>"; };
+		D4A31049E1B529C27BADC82F01704C93 /* XCDYouTubeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCDYouTubeKit-umbrella.h"; sourceTree = "<group>"; };
+		D54839EF1E9806B40980842E7E88BB3C /* XCDYouTubeClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeClient.m; path = XCDYouTubeKit/XCDYouTubeClient.m; sourceTree = "<group>"; };
+		D655240BC7C03297587351085F8AEFBE /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fr.lproj"; sourceTree = "<group>"; };
+		D677BF228A90EFB6B6D5DABB21AEC0E4 /* XCDYouTubeVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideo.h; path = XCDYouTubeKit/XCDYouTubeVideo.h; sourceTree = "<group>"; };
+		D8FFFD6F83A1923F0D5027DF303C1BD6 /* SPTBrowse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTBrowse.h; sourceTree = "<group>"; };
+		DD9CD8CA087F4C2D475C02D501525A2D /* XCDYouTubeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XCDYouTubeKit.xcconfig; sourceTree = "<group>"; };
+		DFD38B91AF6AF4FFBA2FC0F868D71088 /* AppIconPlaceHolder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = AppIconPlaceHolder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/AppIconPlaceHolder.png"; sourceTree = "<group>"; };
+		E0660E439931294C6B5D16CF97901D15 /* feedbackActivity~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity~ipad.png"; sourceTree = "<group>"; };
+		E1F18BB80D4D7C3AF6B8D5652DEFF9CE /* feedbackActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x.png"; sourceTree = "<group>"; };
+		E88E9DE1011DB818C46C93D1B9F70E93 /* SPTDiskCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTDiskCaching.h; sourceTree = "<group>"; };
+		EAE63328DD235C65466B7213A6492F6D /* SPTPlaylistSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistSnapshot.h; sourceTree = "<group>"; };
 		EC7C04E568CC4CE591B642125B7DA07D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		EE4EC8050701CCFE41C43F229E733DCD /* SPTAudioPlaybackTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioPlaybackTypes.h; sourceTree = "<group>"; };
-		EFD3EA39283F1E141293A79214FDFA77 /* XCDYouTubeOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeOperation.h; path = XCDYouTubeKit/XCDYouTubeOperation.h; sourceTree = "<group>"; };
-		F0E799F6E8A4436568CF85E6A9A199B1 /* SPTSavedTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSavedTrack.h; sourceTree = "<group>"; };
-		F11088977E98C26C1A7819F6B931BBAD /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JSONModel.modulemap; sourceTree = "<group>"; };
-		F1FDA4D049794FFCB2EC055EC2AF10EC /* XCDYouTubeLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeLogger.m; path = XCDYouTubeKit/XCDYouTubeLogger.m; sourceTree = "<group>"; };
-		F2804E523891A9DC7A4165B47D9AC7DE /* SPTAudioStreamingController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioStreamingController.h; sourceTree = "<group>"; };
-		F4C8D7F484718FE9E6361226D30CB663 /* SPTCoreAudioController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTCoreAudioController.h; sourceTree = "<group>"; };
-		F51816748CE7E12BE83692B5D3A57B41 /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
-		F585A4FE828DB52925AF2C44693E969B /* XCDYouTubeVideo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideo.m; path = XCDYouTubeKit/XCDYouTubeVideo.m; sourceTree = "<group>"; };
-		F81A5F040377830EAA4CEC441B0A78FB /* libSpotifyAudioPlayback.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libSpotifyAudioPlayback.a; sourceTree = "<group>"; };
-		F9FFCF02E96847148DCB04D11CF40F0C /* XCDYouTubeVideoWebpage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoWebpage.m; path = XCDYouTubeKit/XCDYouTubeVideoWebpage.m; sourceTree = "<group>"; };
-		FA3DC20D4C37289E5E653505011F28E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEAE87E7438E161089D1EB189DF030DA /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		F0FEA2CAC111F68EDD84AAAF6D6887CC /* FeedbackPlaceholder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = FeedbackPlaceholder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/FeedbackPlaceholder.png"; sourceTree = "<group>"; };
+		F102E9D84C9347EFB302E1CDA9ADA3AE /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/zh-Hans.lproj"; sourceTree = "<group>"; };
+		F3B67273BB3A04B0D945E9B9149CD39F /* Arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@3x.png"; sourceTree = "<group>"; };
+		F4029CD8BEFD4D2E45BA4572D4020501 /* SPTPartialObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialObject.h; sourceTree = "<group>"; };
+		F5C0E26A800AE1C19D4DE52596098993 /* SpotifyMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SpotifyMetadata.h; sourceTree = "<group>"; };
+		F5C858E416CA714ECB80A6A42F50460D /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fa.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fa.lproj"; sourceTree = "<group>"; };
+		F61AB7F23E2800AB87AF6D162CC79A65 /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JSONModel.framework; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6635BD236CE6438C831995849889897 /* SPTTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTTrack.h; sourceTree = "<group>"; };
+		F780C32617C4E6FD752C462D948639F6 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hu.lproj"; sourceTree = "<group>"; };
+		F799480C4760A3B586C74E56F08F42DA /* Ok@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@3x.png"; sourceTree = "<group>"; };
+		F8FE1BC0174F1764D2E33620AD4F7F85 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		F9BE3FDA301CAB8D8C92D22B81DA475A /* authorize_denied@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@3x.png"; sourceTree = "<group>"; };
 		FCD68A5405C707F267ED50F9C6CE7739 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
-		FE33E487E15CE3DD29328E09A2415A5B /* SPTDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTDiskCache.h; sourceTree = "<group>"; };
-		FEF202E2E03A94E442C2DE853511062C /* XCDYouTubeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeKit.h; path = XCDYouTubeKit/XCDYouTubeKit.h; sourceTree = "<group>"; };
+		FEBCB451426A499786A0C3E76D95E75F /* SPTTrackProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTTrackProvider.h; sourceTree = "<group>"; };
+		FEF6A5EAAC3CD483713B08451AFBFCE8 /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
 		FF63C5779E63A1D36C29800E37CBC289 /* Pods-PartyFY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartyFY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,48 +376,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8E515DC8B0331AAC188514AC5CF131E /* Frameworks */ = {
+		3E4285FE58B9D59B584D9F34BF3244CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D106BE7841FFB12BF4A35754A1DE451E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA3F1C7B218EF5737B3270B559038D16 /* Frameworks */ = {
+		58A1DCF59EB8F42690E6C06BCC5323EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C195E4BF4767E5CB122989D1F1A456A /* Foundation.framework in Frameworks */,
-				CBC2C89C43AFEAD40655208A7092F026 /* JavaScriptCore.framework in Frameworks */,
-				DCF8430A2AC2C801A249713F84212C68 /* MediaPlayer.framework in Frameworks */,
+				9D8231189152E968914B4C15B1CCE525 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D925EC89B6079FB0DA1D2FC6024FBA0D /* Frameworks */ = {
+		D69CFB1BDAF69A30952A6236C4ABA655 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32DD9AF26F017B746959655FEC9F5B2A /* AVFoundation.framework in Frameworks */,
-				83D26504BF1CA5DFBB8A1A5160D19A3E /* Foundation.framework in Frameworks */,
+				17C29DE693CF03079553E58DF326C682 /* AVFoundation.framework in Frameworks */,
+				DD8B7B9DFFEEC713A009544DD66B5FA1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F528F1DD163760B49D5FDF776A24EE8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920192EE050A27722607C9BD3C137591 /* Foundation.framework in Frameworks */,
+				1D040F0C81BFB48A85D60FD02ADCA5A4 /* JavaScriptCore.framework in Frameworks */,
+				527739F5A4027F6155B36FCDB5AF542C /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12EE984AAF6CF815CE1F3A0FA7210AFC /* Support Files */ = {
+		0069B92AA7DB3834B205D40F14721A91 /* JSONModel */ = {
 			isa = PBXGroup;
 			children = (
-				3F797BDD57884F87966FD8A453B277B7 /* Info.plist */,
-				7CC254999827BE75B56202DB3ECE0765 /* Spotify-iOS-SDK.modulemap */,
-				135154CE7C0CCAB72D4F75C771E0464E /* Spotify-iOS-SDK.xcconfig */,
-				5BC0CD9734669CBE348B8BF4BF9F54FE /* Spotify-iOS-SDK-dummy.m */,
-				9D0B6E54A951C5DBF51BD59986A92070 /* Spotify-iOS-SDK-prefix.pch */,
-				D00334927EEF060CA0ADDA5B497D7705 /* Spotify-iOS-SDK-umbrella.h */,
+				117909595141AB059A2D40EEF4633376 /* JSONAPI.h */,
+				0EE27C40A4F7106CBC4D3EC054E522D5 /* JSONAPI.m */,
+				2F47114B9F622EAE5DDACAE52D84FD4F /* JSONHTTPClient.h */,
+				040E035E80C0F51BEBBE0B5DBFEFF1EE /* JSONHTTPClient.m */,
+				1C74734D45FDBC1BB4001075203B6216 /* JSONKeyMapper.h */,
+				9205128971492D8109EC09FCAD549DE1 /* JSONKeyMapper.m */,
+				A7C5D103895831720A88D720CCBD362C /* JSONModel.h */,
+				8562B4DEBFC228A12A94E393301B53FB /* JSONModel.m */,
+				A13B8AD0B99EBEF7F1C5FB2C670A1D2E /* JSONModel+networking.h */,
+				6E275B3CBAF85C02E900BD4734A6E06D /* JSONModel+networking.m */,
+				C751C4771F1D9BCCF2FD381667BAEE90 /* JSONModelClassProperty.h */,
+				F8FE1BC0174F1764D2E33620AD4F7F85 /* JSONModelClassProperty.m */,
+				AA3E9ED5AF03ADEF6B67D781E29CA1A1 /* JSONModelError.h */,
+				EEAE87E7438E161089D1EB189DF030DA /* JSONModelError.m */,
+				50927EE4E6E580A83DAE15CD72060BF9 /* JSONModelLib.h */,
+				7109FC88EB3F5B5DD947FAA066B14D36 /* JSONValueTransformer.h */,
+				2B7D1C77421C92F0896631A45D9F13A6 /* JSONValueTransformer.m */,
+				A6EFE93E82EE91E64744819F88F24B99 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Spotify-iOS-SDK";
+			name = JSONModel;
+			path = JSONModel;
 			sourceTree = "<group>";
 		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
@@ -312,34 +447,133 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2AFDD1794C0710369B774EBBD9ED85FF /* Support Files */ = {
+		1F0FF5A76F749BEC3F4FE4AB6A95D0E6 /* XCDYouTubeKit */ = {
 			isa = PBXGroup;
 			children = (
-				FA3DC20D4C37289E5E653505011F28E2 /* Info.plist */,
-				A119F90DF096905CA178D8C5232DF0CD /* XCDYouTubeKit.modulemap */,
-				974B65AB6E95E68466EF002D5197CCFE /* XCDYouTubeKit.xcconfig */,
-				1381583223C0EF8428339066E0AC44C6 /* XCDYouTubeKit-dummy.m */,
-				849FC95707DDF453D1EE139B803E6738 /* XCDYouTubeKit-prefix.pch */,
-				B3F51C8AC011277A5840DBCADB6F2932 /* XCDYouTubeKit-umbrella.h */,
+				CD935E09B46D034156FB130569E472FB /* XCDYouTubeClient.h */,
+				D54839EF1E9806B40980842E7E88BB3C /* XCDYouTubeClient.m */,
+				8D25646D03BC850351E4D92B49EF9AB4 /* XCDYouTubeError.h */,
+				2F9640293E5A53813846FB61BE5A3B8A /* XCDYouTubeKit.h */,
+				1E1098A1EC0FBE8BA932F1EFD2A2FF69 /* XCDYouTubeLogger.h */,
+				3C04AD5DCFCFFC4CD3B43264BB82E027 /* XCDYouTubeLogger.m */,
+				778908F91D22344828D6560C7756DBF8 /* XCDYouTubeLogger+Private.h */,
+				60671D5C97CC14A1D92DEB360EAF0EA6 /* XCDYouTubeOperation.h */,
+				9E815502867768ED0403026FB1CE6903 /* XCDYouTubePlayerScript.h */,
+				36C8B22984D998100BFE3127D16EB163 /* XCDYouTubePlayerScript.m */,
+				D677BF228A90EFB6B6D5DABB21AEC0E4 /* XCDYouTubeVideo.h */,
+				CA3B1C3CC9011D5D70216DF03B26DBA7 /* XCDYouTubeVideo.m */,
+				681B5B035595E85E5CBD3EDA4DBA0B05 /* XCDYouTubeVideo+Private.h */,
+				AA427C273A44101D7529141AB773D283 /* XCDYouTubeVideoOperation.h */,
+				67DC1782B610CF5147E1F42726327A61 /* XCDYouTubeVideoOperation.m */,
+				4FE76B39F14CF6F5BE4DD0706D265A88 /* XCDYouTubeVideoPlayerViewController.h */,
+				45A633F5FD667A71956E1DB3621048CD /* XCDYouTubeVideoPlayerViewController.m */,
+				C2DFAF6D3B56E7CC41FFEB853E83B380 /* XCDYouTubeVideoWebpage.h */,
+				8030651892738D32A630AF933660BA4E /* XCDYouTubeVideoWebpage.m */,
+				74A5B7797698CAB74661AF62CD654FD3 /* Support Files */,
+			);
+			name = XCDYouTubeKit;
+			path = XCDYouTubeKit;
+			sourceTree = "<group>";
+		};
+		3768FEDE6EF208D7CC71DF5538765201 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFD38B91AF6AF4FFBA2FC0F868D71088 /* AppIconPlaceHolder.png */,
+				B546C2B5A8E277B3E0012F1BDC6B418E /* Arrow.png */,
+				BEDDBD69832955E8E132EA2EDB44510E /* Arrow@2x.png */,
+				F3B67273BB3A04B0D945E9B9149CD39F /* Arrow@3x.png */,
+				6709ED8A6E2840F9A5D7B887DB561707 /* authorize_denied.png */,
+				5C78B1CC6C99393252A2EAB34BEF4935 /* authorize_denied@2x.png */,
+				F9BE3FDA301CAB8D8C92D22B81DA475A /* authorize_denied@3x.png */,
+				9DC0528A8B17F7D29EFD465033B2F380 /* bg.png */,
+				526810FE4B08F7F2312B840D27A541E3 /* Blur.png */,
+				45E5D3328FAE03C08F9EBE4FD51EC713 /* Blur@2x.png */,
+				641E7A85E35B91FC5E8621E2DBAA1022 /* Blur@3x.png */,
+				8A69581D04F02B2D2A768E5A130401E6 /* buttonRoundedDelete.png */,
+				0D284C5E4B9721F4690DD6B402CC041A /* buttonRoundedDelete@2x.png */,
+				6DD7D2E88985A6540FE541BA0CE97DA7 /* buttonRoundedDeleteHighlighted.png */,
+				2E16DE20DDD549E6DECBB3846E3B5E4A /* buttonRoundedDeleteHighlighted@2x.png */,
+				51FC1A8ED0EE322DDB5367DA78E1E559 /* buttonRoundedRegular.png */,
+				7A22F5F3CB50233737667902F4946A8E /* buttonRoundedRegular@2x.png */,
+				52323A9B52F324C3D39FAA001C61AAAF /* buttonRoundedRegularHighlighted.png */,
+				079C612EC7D76A3120F162F02126C03C /* buttonRoundedRegularHighlighted@2x.png */,
+				A5C8111E407A686D928596DCCE8194CD /* Cancel.png */,
+				3BC1B8732B8041948B4B475FD747C81C /* Cancel@2x.png */,
+				D029D4AA347EE791A58562263C6D1C18 /* Cancel@3x.png */,
+				86661ECE25059FB081AF98F06518DF11 /* de.lproj */,
+				D2721377FBB148406D92B7AFD22A3F5D /* en.lproj */,
+				33FF3B2E47036F9A849BA269A4341F1C /* es.lproj */,
+				F5C858E416CA714ECB80A6A42F50460D /* fa.lproj */,
+				80CFEAAD7C66B121F9F45AE114AF1A8C /* feedbackActivity.png */,
+				E1F18BB80D4D7C3AF6B8D5652DEFF9CE /* feedbackActivity@2x.png */,
+				8FD64766FCD63513DB586870A08E9D4D /* feedbackActivity@2x~ipad.png */,
+				B79908BDBD976EFD21FA06590E23ADC9 /* feedbackActivity@3x.png */,
+				E0660E439931294C6B5D16CF97901D15 /* feedbackActivity~ipad.png */,
+				F0FEA2CAC111F68EDD84AAAF6D6887CC /* FeedbackPlaceholder.png */,
+				D655240BC7C03297587351085F8AEFBE /* fr.lproj */,
+				35A5DE66B8DC10A48C53A41A696602E1 /* hr.lproj */,
+				F780C32617C4E6FD752C462D948639F6 /* hu.lproj */,
+				02C5488D1B4254C30A4EFC35D68EEDDA /* iconCamera.png */,
+				975BD28CA273C92422C0B1DA565AF2B9 /* iconCamera@2x.png */,
+				4FC2CCBCA11433EB5C169359C1E65FE4 /* IconGradient.png */,
+				D463EC408D279EDC5603917828E691E2 /* IconGradient@2x.png */,
+				8FBD8835280E0DC2CB28408CB5FDC69A /* it.lproj */,
+				4F05BCD791D469DDDBEB96FCE7382DA6 /* ja.lproj */,
+				A3AAF84D6F84891A128BDB36638CF3E2 /* nb.lproj */,
+				148F41E7FC1D122D1ED351771B862D43 /* nl.lproj */,
+				60BDC7D6F3D6412A37D0770D2F69A0A8 /* Ok.png */,
+				4A776CD12CDAD33FA542227BBF514F6D /* Ok@2x.png */,
+				F799480C4760A3B586C74E56F08F42DA /* Ok@3x.png */,
+				399E8F8462497590219725D09474A3A5 /* pt.lproj */,
+				10963E6DE97F7735D274E8F7888EBDAB /* pt-PT.lproj */,
+				B8DE9B197646E2BE4FFEF094150E0C9F /* Rectangle.png */,
+				0CD85ACC8E7649521CC0AE3E808E058E /* Rectangle@2x.png */,
+				1F4E15E3899822C508EF2765ED17AC29 /* Rectangle@3x.png */,
+				0947A584C0F66F7ED696FADAC5ACBA18 /* ru.lproj */,
+				F102E9D84C9347EFB302E1CDA9ADA3AE /* zh-Hans.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4C38A18C7F02BB70FBFDCD51D65960A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49D16CE9BA6A4D375B6950ADB67772E9 /* libSpotifyAuthentication.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		629330EC12F4EA37F299E8DBCC15A6A7 /* DefaultLib */ = {
+			isa = PBXGroup;
+			children = (
+				91C3A247E1679E0B1E123CFF9B4BD501 /* Frameworks */,
+				3768FEDE6EF208D7CC71DF5538765201 /* Resources */,
+			);
+			name = DefaultLib;
+			sourceTree = "<group>";
+		};
+		68E94EA3D08AA7D476029A66E838DD99 /* HockeySDK */ = {
+			isa = PBXGroup;
+			children = (
+				629330EC12F4EA37F299E8DBCC15A6A7 /* DefaultLib */,
+				A79C888489A7FE0CDB9A7C02CB8FB7E0 /* Support Files */,
+			);
+			name = HockeySDK;
+			path = HockeySDK;
+			sourceTree = "<group>";
+		};
+		74A5B7797698CAB74661AF62CD654FD3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5356961D40B1195E136D956F543A34A6 /* Info.plist */,
+				29B8BD4925B08055B04E942BB1F80713 /* XCDYouTubeKit.modulemap */,
+				DD9CD8CA087F4C2D475C02D501525A2D /* XCDYouTubeKit.xcconfig */,
+				47BAFB8CF82FA14CCF0F246E39CA5A5C /* XCDYouTubeKit-dummy.m */,
+				9E0EC99976814E144ED050A00FF7A363 /* XCDYouTubeKit-prefix.pch */,
+				D4A31049E1B529C27BADC82F01704C93 /* XCDYouTubeKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/XCDYouTubeKit";
-			sourceTree = "<group>";
-		};
-		35F2600F5AB6A3F52CC88BF91E11A651 /* Playback */ = {
-			isa = PBXGroup;
-			children = (
-				D61E9E8DE3D6530A984D02424256C4AF /* Frameworks */,
-			);
-			name = Playback;
-			sourceTree = "<group>";
-		};
-		417E48BAF88C0E1A3C8242A173DCFC79 /* Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				B505C2DE4DF920166FBF90DBBCFB1EB0 /* Frameworks */,
-			);
-			name = Metadata;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -347,99 +581,113 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				9F60694570DC83A1674043DE2C7452FB /* Pods */,
-				80D0416311F5208CABF965E418789CE6 /* Products */,
+				9D001EC57089FBC6842C8DB1B8CC6A10 /* Pods */,
+				8CEA39FD7188FB332B4A51F8ED0B124F /* Products */,
 				B1E897E0240F733CA05E1F2E8986F571 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		80D0416311F5208CABF965E418789CE6 /* Products */ = {
+		7F3F05F0A75B5D5EFE4D1862F15CD8EC /* Spotify-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				71981B46D16F3395891F0B331100DC73 /* JSONModel.framework */,
-				8EF8CA8355F8C64EF330618A6AEFB5D5 /* Pods_PartyFY.framework */,
-				D4C2A2E020723632FAFC7C4E0FCCC443 /* Spotify.framework */,
-				297760279D95879B608030A80D863D18 /* XCDYouTubeKit.framework */,
+				804EEEEC823A4D999664AEC0045EEA76 /* Empty.m */,
+				B568BE52683177B6C8404EBC18C7678C /* SpotifyAudioPlayback.h */,
+				36978317160D2F5A4C7564B60E3F004C /* SpotifyAuthentication.h */,
+				F5C0E26A800AE1C19D4DE52596098993 /* SpotifyMetadata.h */,
+				820115F6E593DB6EF8A3D1289476D5EF /* SpPlaybackEvent.h */,
+				09582F8BEB31DA6CB974EE32F8906DA5 /* SPTAlbum.h */,
+				5F9374F0CEE67E3980E3E2909A4F35C7 /* SPTArtist.h */,
+				9B08D477EF895700D7F95725198FBE51 /* SPTAudioPlaybackTypes.h */,
+				966E9A951983726BA0B8C8173FB549DE /* SPTAudioStreamingController.h */,
+				CD15ED9CDAAFDA76D7735DDC1253B182 /* SPTAudioStreamingController_ErrorCodes.h */,
+				08107377C8D748ECCB79348216CAF330 /* SPTAuth.h */,
+				7F99DA2CB180CDDE8E0D20EA9C472C5A /* SPTAuthViewController.h */,
+				D8FFFD6F83A1923F0D5027DF303C1BD6 /* SPTBrowse.h */,
+				6B499E287885835C34D0CE7BBBED3D3C /* SPTCircularBuffer.h */,
+				D1773674DE9911CF514477BC1F650F8D /* SPTConnectButton.h */,
+				AC949AE642B6B3C244E18740A15EE4F8 /* SPTCoreAudioController.h */,
+				9CB4F7B3B016D2F7C89154B228CEC0E6 /* SPTDiskCache.h */,
+				E88E9DE1011DB818C46C93D1B9F70E93 /* SPTDiskCaching.h */,
+				37B50770EC81A91136A68FB63C14B0EB /* SPTEmbeddedImages.h */,
+				BF2F0A755088507F5F7ACA74EC942746 /* SPTFeaturedPlaylistList.h */,
+				4A9CCF4CAAAE131DF4E6CD38E07856A6 /* SPTFollow.h */,
+				C93CDC1D2CD60FDE1986DBD0204B8B56 /* SPTImage.h */,
+				1447E7F0A8D1C67E1277D65505E9C751 /* SPTJSONDecoding.h */,
+				6B202E2302AF390E89C80E7DC6E62F47 /* SPTListPage.h */,
+				65EA7D1B6E3D9A7F406AC95E62682561 /* SPTMetadataTypes.h */,
+				17AEE4A1C64BFE36F1EE0508D5AC672D /* SPTPartialAlbum.h */,
+				31323741516E219A85EA585CF50E77F4 /* SPTPartialArtist.h */,
+				F4029CD8BEFD4D2E45BA4572D4020501 /* SPTPartialObject.h */,
+				48716A884B255AA13C2C74CE973153F5 /* SPTPartialPlaylist.h */,
+				6D66C393E86146E25841387F2D23C7CD /* SPTPartialTrack.h */,
+				49D1BFA5CC6652936E3E6D430B2D0AF9 /* SPTPlaybackMetadata.h */,
+				826F08E4288CA5FB4678FD2F15F07656 /* SPTPlaybackState.h */,
+				9DA5CFD4AB17E4C96FA89017A9FE9CE0 /* SPTPlaylistList.h */,
+				EAE63328DD235C65466B7213A6492F6D /* SPTPlaylistSnapshot.h */,
+				190519C88F44680AA45F4D84A7707463 /* SPTPlaylistTrack.h */,
+				BE8602C164623472682488A031E6FA55 /* SPTRequest.h */,
+				CFA2F51D49B1542F6DCC9D48CFCA86C7 /* SPTSavedTrack.h */,
+				C30E1E0D555311A6292A24591C02146A /* SPTSearch.h */,
+				3805015C4760845A5C07997482F6CC0A /* SPTSession.h */,
+				9456DBCD986AA87E1D5C20341723B889 /* SPTStoreViewController.h */,
+				F6635BD236CE6438C831995849889897 /* SPTTrack.h */,
+				FEBCB451426A499786A0C3E76D95E75F /* SPTTrackProvider.h */,
+				767CEA71D95A4260024845AA875664C8 /* SPTUser.h */,
+				BEB3CEA031718D981B2E06392D36F4A6 /* SPTYourMusic.h */,
+				E9917A4ECEDB700D7B45198940EB6D7C /* Authentication */,
+				C00DFF19889833324F16001FECFCA1E1 /* Metadata */,
+				F7ED074AD4B6BBDA1AC961AF3AFAAB11 /* Playback */,
+				E0B965B986F93CCD5F1EE17AF6761727 /* Support Files */,
+			);
+			name = "Spotify-iOS-SDK";
+			path = "Spotify-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		7FA0EA5DA8240878E3608516ADAFAAF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E0B325D1C9EA5AA25F0B4FB2B3BDFEE /* libSpotifyAudioPlayback.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CEA39FD7188FB332B4A51F8ED0B124F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95E8AB3284D00E0FB910CB393851835E /* HockeySDKResources.bundle */,
+				F61AB7F23E2800AB87AF6D162CC79A65 /* JSONModel.framework */,
+				9B9FB249A492B13801A48706DEC22855 /* Pods_PartyFY.framework */,
+				9BFA459E8D26C1BF7F5BD6127741D513 /* Spotify.framework */,
+				60BB127394557ED1F52012CABB37341B /* XCDYouTubeKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		916210912A01A006E18367EBAA30A0AC /* Authentication */ = {
+		91C3A247E1679E0B1E123CFF9B4BD501 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C6785EBE58F46547BE657A2F413921DD /* Frameworks */,
+				4904A02B0AB49D8ECEAB305546612DA5 /* HockeySDK.framework */,
 			);
-			name = Authentication;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		94AA6A0ADA34BFFF1DD500A8D6DAFE63 /* Support Files */ = {
+		997457B1E51DB0B21BBFAAB5D9B651C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B9758E5A4D00F34145E0914BBB2CE3D /* Info.plist */,
-				F11088977E98C26C1A7819F6B931BBAD /* JSONModel.modulemap */,
-				B5E9FFBC00C2BA0A67E0CC937C545856 /* JSONModel.xcconfig */,
-				9AEF028169CD2F93902B1E45151D35AB /* JSONModel-dummy.m */,
-				5C940739021340C1A07521AAD53E2549 /* JSONModel-prefix.pch */,
-				E5E68CAC12D28F5381242F87A685789C /* JSONModel-umbrella.h */,
+				CB2CD0299F0D110A0814D77D943BB687 /* libSpotifyMetadata.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/JSONModel";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9C5A861012300DC21A9B21EBC5848BD8 /* Spotify-iOS-SDK */ = {
+		9D001EC57089FBC6842C8DB1B8CC6A10 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8C38828DF6B5236651DF474A255CD042 /* Empty.m */,
-				97F72ABB528FCFA12D7CA90CE529005B /* SpotifyAudioPlayback.h */,
-				EA9D8CA24CBE53269F95FC6A02D96911 /* SpotifyAuthentication.h */,
-				A9CF14D4B19E3F279A1CC9945066EBB6 /* SpotifyMetadata.h */,
-				D585AB90F6AB2B2858945B85D2CE3575 /* SpPlaybackEvent.h */,
-				A9C3D572A893533B61B8BF6B7AEF20C5 /* SPTAlbum.h */,
-				CE365EA405B5B9282063B3B7987FA9B3 /* SPTArtist.h */,
-				EE4EC8050701CCFE41C43F229E733DCD /* SPTAudioPlaybackTypes.h */,
-				F2804E523891A9DC7A4165B47D9AC7DE /* SPTAudioStreamingController.h */,
-				3F99CCA6565221C882EDA07037F723A9 /* SPTAudioStreamingController_ErrorCodes.h */,
-				0094E681449D75BB78ED625C5F9805C1 /* SPTAuth.h */,
-				C4C82226733020DF6C33C41B35DAB03B /* SPTAuthViewController.h */,
-				51B8B55796C4E5DFBCEDC4C3EDBAC2B6 /* SPTBrowse.h */,
-				40782688E490926E5BD4A7EC33E4918B /* SPTCircularBuffer.h */,
-				98D087E1B0A8356CA0EEC515B6C87619 /* SPTConnectButton.h */,
-				F4C8D7F484718FE9E6361226D30CB663 /* SPTCoreAudioController.h */,
-				FE33E487E15CE3DD29328E09A2415A5B /* SPTDiskCache.h */,
-				E8D7AB3580AC3E8852AE26CD0951E55D /* SPTDiskCaching.h */,
-				116DE13387939B4A965BAA424009A766 /* SPTEmbeddedImages.h */,
-				2EE4BED1057EBD8EC1FCA56303C1D5D6 /* SPTFeaturedPlaylistList.h */,
-				3B2C447625F89E9883A7A0DF946A8856 /* SPTFollow.h */,
-				1986A32161211B1541E431375221512B /* SPTImage.h */,
-				B20A588A6E91C85CD6CA4022FD9F99BF /* SPTJSONDecoding.h */,
-				AA7B325456C29BB40AC681AECB8EB6FE /* SPTListPage.h */,
-				E4045142A55A63064E69FB8E62A1B089 /* SPTMetadataTypes.h */,
-				34CC8A2B0AD56BFB02FD8C72E1A927EC /* SPTPartialAlbum.h */,
-				D3858C950F26A9CFF6D599753019F81A /* SPTPartialArtist.h */,
-				6A73B1BFAFE0FD5775EAF4CA80A3FA72 /* SPTPartialObject.h */,
-				6E041F52831F25C2BE26EED8107B9BDD /* SPTPartialPlaylist.h */,
-				B737F424FAE6E6397556BD9E65AEEC11 /* SPTPartialTrack.h */,
-				EC49691619301A18E22C8D34CE8F67BE /* SPTPlaybackMetadata.h */,
-				673656632588ADBA5CE7A290A3E1FC1A /* SPTPlaybackState.h */,
-				80A8289D709E8DA622315A5F870728A1 /* SPTPlaylistList.h */,
-				D03D48FBADBE733503D3975A1C320964 /* SPTPlaylistSnapshot.h */,
-				75EF974622D5123B9E5DD1104904F366 /* SPTPlaylistTrack.h */,
-				1392A0EF9D391A78CFE2E246D162BB11 /* SPTRequest.h */,
-				F0E799F6E8A4436568CF85E6A9A199B1 /* SPTSavedTrack.h */,
-				9E2CAF569FB09CD382BF9CD95976F341 /* SPTSearch.h */,
-				5BE0B0F2DE77F6DAD942F3DBFA38AB84 /* SPTSession.h */,
-				9AD26C1C23F61743610BEAA786EC92C7 /* SPTStoreViewController.h */,
-				B8022F7994CA21AA406AFE532AE44DB3 /* SPTTrack.h */,
-				2E1DCE31B498FD8EB67DDF3BE019C87A /* SPTTrackProvider.h */,
-				203C54A1183CE9BB59F552CA2BE71564 /* SPTUser.h */,
-				444D7E9A2D22C34F2AF35EC528F7DFD4 /* SPTYourMusic.h */,
-				916210912A01A006E18367EBAA30A0AC /* Authentication */,
-				417E48BAF88C0E1A3C8242A173DCFC79 /* Metadata */,
-				35F2600F5AB6A3F52CC88BF91E11A651 /* Playback */,
-				12EE984AAF6CF815CE1F3A0FA7210AFC /* Support Files */,
+				68E94EA3D08AA7D476029A66E838DD99 /* HockeySDK */,
+				0069B92AA7DB3834B205D40F14721A91 /* JSONModel */,
+				7F3F05F0A75B5D5EFE4D1862F15CD8EC /* Spotify-iOS-SDK */,
+				1F0FF5A76F749BEC3F4FE4AB6A95D0E6 /* XCDYouTubeKit */,
 			);
-			name = "Spotify-iOS-SDK";
-			path = "Spotify-iOS-SDK";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		9D3CE72D7A1EF0026C04347AD89DF0FF /* iOS */ = {
@@ -453,14 +701,27 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9F60694570DC83A1674043DE2C7452FB /* Pods */ = {
+		A6EFE93E82EE91E64744819F88F24B99 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E935E283B17596EC1137BBA930997F58 /* JSONModel */,
-				9C5A861012300DC21A9B21EBC5848BD8 /* Spotify-iOS-SDK */,
-				FAE574102AB2CC1A0CE60F4ACA3207C0 /* XCDYouTubeKit */,
+				9F58CFB75A3504AB67EA7DFFA19B3403 /* Info.plist */,
+				387B937C91ED093DBAC4301F81531E15 /* JSONModel.modulemap */,
+				FEF6A5EAAC3CD483713B08451AFBFCE8 /* JSONModel.xcconfig */,
+				386C31CAA8A42FBA1B33B5BB3DCBA1FC /* JSONModel-dummy.m */,
+				329D22483D9777D5E63B1EB93CBED78D /* JSONModel-prefix.pch */,
+				B96568590CA383D7CEA9246280336113 /* JSONModel-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/JSONModel";
+			sourceTree = "<group>";
+		};
+		A79C888489A7FE0CDB9A7C02CB8FB7E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C0448103DA54ABFEF07B8E3A0A6295 /* ResourceBundle-HockeySDKResources-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HockeySDK";
 			sourceTree = "<group>";
 		};
 		B1E897E0240F733CA05E1F2E8986F571 /* Targets Support Files */ = {
@@ -471,20 +732,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B505C2DE4DF920166FBF90DBBCFB1EB0 /* Frameworks */ = {
+		C00DFF19889833324F16001FECFCA1E1 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				8D4A30C051AA5CDD7C7B0D55F7ED60B5 /* libSpotifyMetadata.a */,
+				997457B1E51DB0B21BBFAAB5D9B651C1 /* Frameworks */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C6785EBE58F46547BE657A2F413921DD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C606D4E9BC611E676E8B589F9F0D71F3 /* libSpotifyAuthentication.a */,
-			);
-			name = Frameworks;
+			name = Metadata;
 			sourceTree = "<group>";
 		};
 		C7D22D93EBFEDD257E89D972175A07A3 /* Pods-PartyFY */ = {
@@ -505,147 +758,87 @@
 			path = "Target Support Files/Pods-PartyFY";
 			sourceTree = "<group>";
 		};
-		D61E9E8DE3D6530A984D02424256C4AF /* Frameworks */ = {
+		E0B965B986F93CCD5F1EE17AF6761727 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F81A5F040377830EAA4CEC441B0A78FB /* libSpotifyAudioPlayback.a */,
+				294EBACD309CABF237286203CBE3172B /* Info.plist */,
+				1E375F4E295197995CEC72BB3052EE6E /* Spotify-iOS-SDK.modulemap */,
+				2EE64114646FC58433F0A2C753586A97 /* Spotify-iOS-SDK.xcconfig */,
+				00FC4A3D848CDE60C9243725A31B7F93 /* Spotify-iOS-SDK-dummy.m */,
+				2247C19DF5EF648BA4A9B7AEAD5DF7C0 /* Spotify-iOS-SDK-prefix.pch */,
+				73C7584A9EBC2897A4D8E7A33F228655 /* Spotify-iOS-SDK-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Spotify-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		E935E283B17596EC1137BBA930997F58 /* JSONModel */ = {
+		E9917A4ECEDB700D7B45198940EB6D7C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				15006B66611D675A1001052CCBA4D546 /* JSONAPI.h */,
-				AA44DEE3FB2A8CA44C4CD9ACAC33046A /* JSONAPI.m */,
-				F51816748CE7E12BE83692B5D3A57B41 /* JSONHTTPClient.h */,
-				3CDF6F0391AFA3510C563D96C12FDB1B /* JSONHTTPClient.m */,
-				86B43534861B4BCB6BC795D1DB01A8D3 /* JSONKeyMapper.h */,
-				305C2DBB9C202EE3CD999C7DB44D6CE7 /* JSONKeyMapper.m */,
-				0F65AA435C0737A8918424EF51AB29C8 /* JSONModel.h */,
-				B5D31F05E926EE7F7505F98565670BE2 /* JSONModel.m */,
-				12EFB69C9FC977384EFC5901E042D79D /* JSONModel+networking.h */,
-				0BE97435F22DDE6DCB56CC3E7A1FB869 /* JSONModel+networking.m */,
-				917A0222F85B61F8E53B77CA393ED0A0 /* JSONModelClassProperty.h */,
-				3CB5CB28A1E8FC259331A7C3E6392704 /* JSONModelClassProperty.m */,
-				DDD35971EC7AF804F4D2C16F835EAB15 /* JSONModelError.h */,
-				74BF46C66991203D38FF9E3AAA90466A /* JSONModelError.m */,
-				29A010CCCDC270F3B62294E10D2198F6 /* JSONModelLib.h */,
-				B5D56CDE033DE6378D39A4E38309C5C0 /* JSONValueTransformer.h */,
-				0DCAAE4EDDB583C4EA69F18B1CD33761 /* JSONValueTransformer.m */,
-				94AA6A0ADA34BFFF1DD500A8D6DAFE63 /* Support Files */,
+				4C38A18C7F02BB70FBFDCD51D65960A9 /* Frameworks */,
 			);
-			name = JSONModel;
-			path = JSONModel;
+			name = Authentication;
 			sourceTree = "<group>";
 		};
-		FAE574102AB2CC1A0CE60F4ACA3207C0 /* XCDYouTubeKit */ = {
+		F7ED074AD4B6BBDA1AC961AF3AFAAB11 /* Playback */ = {
 			isa = PBXGroup;
 			children = (
-				8104F115C47F18B9A3189A73C9528E14 /* XCDYouTubeClient.h */,
-				7FB6A985E87FCB6061475ED98451E3BA /* XCDYouTubeClient.m */,
-				5BAF58FAE8107FFC3F3A67231CE50FB7 /* XCDYouTubeError.h */,
-				FEF202E2E03A94E442C2DE853511062C /* XCDYouTubeKit.h */,
-				492BBC277F9F324CDC682408B92FD394 /* XCDYouTubeLogger.h */,
-				F1FDA4D049794FFCB2EC055EC2AF10EC /* XCDYouTubeLogger.m */,
-				3200BB20076E413AE49F92D33F373343 /* XCDYouTubeLogger+Private.h */,
-				EFD3EA39283F1E141293A79214FDFA77 /* XCDYouTubeOperation.h */,
-				5D3A3470F43F1ABBCBE7E1319767A4B7 /* XCDYouTubePlayerScript.h */,
-				E5FF161E45B5CCF6BFCF50BA90238EBD /* XCDYouTubePlayerScript.m */,
-				126593E780C092E67385B6267AA086DC /* XCDYouTubeVideo.h */,
-				F585A4FE828DB52925AF2C44693E969B /* XCDYouTubeVideo.m */,
-				4B8EB4FE26A214169C93BC0658124C8A /* XCDYouTubeVideo+Private.h */,
-				E5C4BE83EA7AA6EB2A20D90ECDD836AE /* XCDYouTubeVideoOperation.h */,
-				77EAA2D182D6076BC596EFA8A6EA18FE /* XCDYouTubeVideoOperation.m */,
-				74E94DC8EC28CFB4CC8C9536750F8D11 /* XCDYouTubeVideoPlayerViewController.h */,
-				03332E4E236FB99CA82E1043541AD0F9 /* XCDYouTubeVideoPlayerViewController.m */,
-				6D6253017F40B873D70846925279BA1A /* XCDYouTubeVideoWebpage.h */,
-				F9FFCF02E96847148DCB04D11CF40F0C /* XCDYouTubeVideoWebpage.m */,
-				2AFDD1794C0710369B774EBBD9ED85FF /* Support Files */,
+				7FA0EA5DA8240878E3608516ADAFAAF3 /* Frameworks */,
 			);
-			name = XCDYouTubeKit;
-			path = XCDYouTubeKit;
+			name = Playback;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		089CF420473783DFBDA5D4DC1EE9BBB2 /* Headers */ = {
+		3B8BD60CDD3ED2E87C18E19C688CFFC8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				138D81EC18900BB95316A2DC3E3DE941 /* Spotify-iOS-SDK-umbrella.h in Headers */,
-				0B107C22FF7ED8CDFAF7A971ED2CA6F0 /* SpotifyAudioPlayback.h in Headers */,
-				F5405B3D5F35B7C5C5505D5FB60F61D8 /* SpotifyAuthentication.h in Headers */,
-				4FDB36FBFBECE9AC4D186642B0E06CAD /* SpotifyMetadata.h in Headers */,
-				0897F8C6FEBC3B0865779F6D22D7C582 /* SpPlaybackEvent.h in Headers */,
-				F2D844EA27E3745A0EE753AF0E8E9F36 /* SPTAlbum.h in Headers */,
-				188BA3F54E7561098D07EC716A0AFC0F /* SPTArtist.h in Headers */,
-				773E1CA495909715A82514ECECD67101 /* SPTAudioPlaybackTypes.h in Headers */,
-				9EA229432486EDB48C5296B2BC96AB89 /* SPTAudioStreamingController.h in Headers */,
-				32AB65E83F532E56FC9032CDDCC2D6CE /* SPTAudioStreamingController_ErrorCodes.h in Headers */,
-				66A2864EE5E6658DB850AE1806159F5C /* SPTAuth.h in Headers */,
-				F76F5C928DE7D8AE47E71C25606C3663 /* SPTAuthViewController.h in Headers */,
-				B2C5144F8159A3DBD147866E8A53B6C0 /* SPTBrowse.h in Headers */,
-				B00714EF38284CE043632B2B62168EEB /* SPTCircularBuffer.h in Headers */,
-				4CCB82DB095EC607CD9BC7C8523CA949 /* SPTConnectButton.h in Headers */,
-				6D8DA8B99D280A4E8D8637372C53D4E9 /* SPTCoreAudioController.h in Headers */,
-				37FB279A43AA4520B69D306DD1A4F939 /* SPTDiskCache.h in Headers */,
-				E8B66ED1B6D94290FD9C431BFC77A003 /* SPTDiskCaching.h in Headers */,
-				E0D1BFB93B4D81195A84EED52BB453F5 /* SPTEmbeddedImages.h in Headers */,
-				F71ACDE6343F04C210055FD270467580 /* SPTFeaturedPlaylistList.h in Headers */,
-				ACA18C9D8518B5B7CB9E3ED1AED1EA6E /* SPTFollow.h in Headers */,
-				57A2B410864F1CF1426DD17249CC57E1 /* SPTImage.h in Headers */,
-				ACC6D9C91CD99F61C253C0F729B23DD2 /* SPTJSONDecoding.h in Headers */,
-				030CE75440600BA519E563A188B73722 /* SPTListPage.h in Headers */,
-				0DA1DFDEC57C961AA6F3DFBDCAFC15AE /* SPTMetadataTypes.h in Headers */,
-				FD94E66CCAAACD99A6E58BEC311FB307 /* SPTPartialAlbum.h in Headers */,
-				28F006F8B0FA9115FC25AA57C73768E2 /* SPTPartialArtist.h in Headers */,
-				4DCA0CE6AA8770916078F48F97F0358C /* SPTPartialObject.h in Headers */,
-				7653827389E33DE948A287D90A6659F8 /* SPTPartialPlaylist.h in Headers */,
-				2D898DD01BBA4D423AB4672158BC6CA5 /* SPTPartialTrack.h in Headers */,
-				4AAEABDA97A7AC5C041A76F7CD8E5EFD /* SPTPlaybackMetadata.h in Headers */,
-				0B856FF944E01FF740F2398072AEB81F /* SPTPlaybackState.h in Headers */,
-				94F72ED89A4F52C4265E3935C6DCDA17 /* SPTPlaylistList.h in Headers */,
-				4338200D994B348DDA5AACDCF586F104 /* SPTPlaylistSnapshot.h in Headers */,
-				7D6771A6631EF803B001DAEA6FDF8B67 /* SPTPlaylistTrack.h in Headers */,
-				EB569B3B5163025BD895951BA92CCECA /* SPTRequest.h in Headers */,
-				73F3458AAAC254A76BF481195691A405 /* SPTSavedTrack.h in Headers */,
-				B7D6D098DE8114837157FF6F053A53A2 /* SPTSearch.h in Headers */,
-				D324CE94488F29CE6B9A7C8825B6CEA8 /* SPTSession.h in Headers */,
-				5E7A2AEB7562CEF1709DB6F73A9D88CF /* SPTStoreViewController.h in Headers */,
-				29E8EBE2BC40B6CCBF8452234A84D436 /* SPTTrack.h in Headers */,
-				AC6B759B7BDD9DC8864B546DAADDC0CF /* SPTTrackProvider.h in Headers */,
-				BD5D2C57639E57240DD38B2A0949C780 /* SPTUser.h in Headers */,
-				A77FDB6806266352F675C9E1B6F73996 /* SPTYourMusic.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11248E9428AAD09A2BF0EC5237E9679C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07C339EE9C7A637951E73D6A45275840 /* XCDYouTubeClient.h in Headers */,
-				35A4819409E25DCE47C6D345F0981E78 /* XCDYouTubeError.h in Headers */,
-				9F6484D88EF9B6D156517AD9D94DFD11 /* XCDYouTubeKit-umbrella.h in Headers */,
-				AE5BA5D7910142771657690E03D87457 /* XCDYouTubeKit.h in Headers */,
-				508708F2D742DED43DC6E1DD56B10C6A /* XCDYouTubeLogger+Private.h in Headers */,
-				D34629DB6F904ECE914B10D72626F99C /* XCDYouTubeLogger.h in Headers */,
-				C3188823885859A32F3EA736DE3B921E /* XCDYouTubeOperation.h in Headers */,
-				F69A35822C97D40F04D525729CF53519 /* XCDYouTubePlayerScript.h in Headers */,
-				845327DE72183B6B7081290A4004DB25 /* XCDYouTubeVideo+Private.h in Headers */,
-				297EF6A8078895E061FB02833B46B2EA /* XCDYouTubeVideo.h in Headers */,
-				7A63589DD40954F8DB917CCD9A8C0377 /* XCDYouTubeVideoOperation.h in Headers */,
-				8F4CB044F07798A3F91D2A5D5F10F675 /* XCDYouTubeVideoPlayerViewController.h in Headers */,
-				FF5087C04F042F9C8B1456A71C336B06 /* XCDYouTubeVideoWebpage.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A107F0196B68ED13DF7BB454AEFDE070 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4633B76E029AB6B6F12797EB407BEE9E /* Pods-PartyFY-umbrella.h in Headers */,
+				B540450ADAFCC5ADE665EADE490FE58F /* Spotify-iOS-SDK-umbrella.h in Headers */,
+				725244C13D5FBDB78956005C0504D0F5 /* SpotifyAudioPlayback.h in Headers */,
+				2EB075BBB1F067D0AD08030262C587C6 /* SpotifyAuthentication.h in Headers */,
+				0BB197B0AA0618F6B803908E39A970E4 /* SpotifyMetadata.h in Headers */,
+				FE8DAEF3D5257521336469BCBDFE8775 /* SpPlaybackEvent.h in Headers */,
+				AE347AEE16AA23E27630B1B5097D5E79 /* SPTAlbum.h in Headers */,
+				94B5D201C88E026273371DD67946B7DF /* SPTArtist.h in Headers */,
+				4C29F26E3BAA63EBD85795A6037541E0 /* SPTAudioPlaybackTypes.h in Headers */,
+				DC8D542FA309E2BC9C8952C3C7693F39 /* SPTAudioStreamingController.h in Headers */,
+				0EEC8356E9319A4760E749A2089BDE1B /* SPTAudioStreamingController_ErrorCodes.h in Headers */,
+				C3C79F40C2CDEB88F04C0FD01138A5C2 /* SPTAuth.h in Headers */,
+				5D323ACA5D057AA290776EA7D2CE6619 /* SPTAuthViewController.h in Headers */,
+				DDDDDD3F3F147523037A0E1457E2A239 /* SPTBrowse.h in Headers */,
+				D6C257696C9A6DB0C83D57D4C880A766 /* SPTCircularBuffer.h in Headers */,
+				038A4380E9EAF5BBECEF1F9854C8842E /* SPTConnectButton.h in Headers */,
+				C9E4B1C85F025F8E59EEF36E416ED985 /* SPTCoreAudioController.h in Headers */,
+				EB11590B490E543A3A721E6D0952E01A /* SPTDiskCache.h in Headers */,
+				A8385FDE5CF18A5B04D01BAE7A04B177 /* SPTDiskCaching.h in Headers */,
+				ED0760DCF83AADA395403B8AD79588DC /* SPTEmbeddedImages.h in Headers */,
+				0850BB5F11C10FAE950A758B3DA0EE96 /* SPTFeaturedPlaylistList.h in Headers */,
+				AD6CB0334A63CD8661A6961C12D83DCC /* SPTFollow.h in Headers */,
+				A6C7B8D0D3757465916796D0E07855FC /* SPTImage.h in Headers */,
+				B1C86C2080B4927D0C1236FA6AD4128F /* SPTJSONDecoding.h in Headers */,
+				CE17D4A4F43C46A7EC4A625601E2A4C1 /* SPTListPage.h in Headers */,
+				0DB45C9316585F7ABF54C71813A696D4 /* SPTMetadataTypes.h in Headers */,
+				FC5600BD77AFCBBB05C884B19103C9FA /* SPTPartialAlbum.h in Headers */,
+				3591BE3AC49D85B82E01F5245875D1A2 /* SPTPartialArtist.h in Headers */,
+				B9DA84A97F1C6E43AEE370247272E003 /* SPTPartialObject.h in Headers */,
+				C6698330C2EC8446EE33C4C2515667E3 /* SPTPartialPlaylist.h in Headers */,
+				F705A717CFBBCEFC5CD52C1E072B7D3F /* SPTPartialTrack.h in Headers */,
+				7108AF31CF944A9443EDECDCD3CCBCED /* SPTPlaybackMetadata.h in Headers */,
+				FA2376FA9E859BC3271FB6B172CD4F3D /* SPTPlaybackState.h in Headers */,
+				9D2C5FB9C30AC6982E3171D94EA6BF55 /* SPTPlaylistList.h in Headers */,
+				FA6DC2548DF4BC0C649567D465189867 /* SPTPlaylistSnapshot.h in Headers */,
+				38346A807402BEA13689E0F28AB4A9C3 /* SPTPlaylistTrack.h in Headers */,
+				C68BFBD26058088143DD4D06FD9A70CC /* SPTRequest.h in Headers */,
+				721E3255764D80838325EFEFBA8896D6 /* SPTSavedTrack.h in Headers */,
+				D7E40D3C0AE16A3D47BDC1914F38D34E /* SPTSearch.h in Headers */,
+				8B56514998755BBA9E99667F32686B8C /* SPTSession.h in Headers */,
+				D787D8D6A9462CF147B382C0DC66FB20 /* SPTStoreViewController.h in Headers */,
+				D4929C61644B34D4143F3B5E8782B125 /* SPTTrack.h in Headers */,
+				B9B01F266C42D92C9B4DA47F966CCB8B /* SPTTrackProvider.h in Headers */,
+				A523188109261D5B485FC7942AF19108 /* SPTUser.h in Headers */,
+				BA2ED62E726471DEF1AFB4B856643963 /* SPTYourMusic.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,53 +859,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2E03D72ABED05AF0A67459CA42BCAB0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3410150813B4B3EB3A38A7437FF9EECE /* XCDYouTubeClient.h in Headers */,
+				D96B3084C039A486B589E010025C404D /* XCDYouTubeError.h in Headers */,
+				B84E3D8D4922F2B30E6B90CCBDF0CB0E /* XCDYouTubeKit-umbrella.h in Headers */,
+				B6475472227037267D160568835F321F /* XCDYouTubeKit.h in Headers */,
+				C72DB54354A8A8BA16D906CBD6EDC5DF /* XCDYouTubeLogger+Private.h in Headers */,
+				219397DC4A4FB649006112172D36BD74 /* XCDYouTubeLogger.h in Headers */,
+				204F26CF05E5D95DB7630CC2E8D5E153 /* XCDYouTubeOperation.h in Headers */,
+				285F61E2BF71A4CA10F65E553BC9D2E5 /* XCDYouTubePlayerScript.h in Headers */,
+				D5606F6FF66F1B3763C383537BB95DBA /* XCDYouTubeVideo+Private.h in Headers */,
+				794EAB9A47944EC2365071C42E1E3FF6 /* XCDYouTubeVideo.h in Headers */,
+				BBE137032787071A06BAD5B004C1FC9B /* XCDYouTubeVideoOperation.h in Headers */,
+				F011B9547643420C6BAAA32D9D1B6867 /* XCDYouTubeVideoPlayerViewController.h in Headers */,
+				312C471ABEB60DBA9EDFFA72A1A8E6DE /* XCDYouTubeVideoWebpage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44FA5186079EF39C3708A98AF66B02B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9049E4714E0FB8FC41A61768AE717BC /* Pods-PartyFY-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7B7E6099F9A950F152B506A49CD7718F /* Pods-PartyFY */ = {
+		B90AE85DEDFE3F072B01DBFA1C882E47 /* XCDYouTubeKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA8B4B6C37494179A64FE1F28FBE43B5 /* Build configuration list for PBXNativeTarget "Pods-PartyFY" */;
+			buildConfigurationList = 3AB1BCF4A35FE611DF8291C77EAA00A7 /* Build configuration list for PBXNativeTarget "XCDYouTubeKit" */;
 			buildPhases = (
-				2CCE35726CDCF13F6DECACF9F8AEE433 /* Sources */,
-				A8E515DC8B0331AAC188514AC5CF131E /* Frameworks */,
-				A107F0196B68ED13DF7BB454AEFDE070 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BA85556FC7E8E6F2B42E47ED1C132021 /* PBXTargetDependency */,
-				6E3C5140488DC426FEA06A275F00AB93 /* PBXTargetDependency */,
-				80DD7B70567D05B79F0E7CD25208861E /* PBXTargetDependency */,
-			);
-			name = "Pods-PartyFY";
-			productName = "Pods-PartyFY";
-			productReference = 8EF8CA8355F8C64EF330618A6AEFB5D5 /* Pods_PartyFY.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		83CE9B41DC97298DEBAB84D5CEFB91CD /* Spotify-iOS-SDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C5BFCD208BEFF0D941A5A4618BC8930 /* Build configuration list for PBXNativeTarget "Spotify-iOS-SDK" */;
-			buildPhases = (
-				1189BD230E3F75E58A6BC3A7BA8A3A86 /* Sources */,
-				D925EC89B6079FB0DA1D2FC6024FBA0D /* Frameworks */,
-				089CF420473783DFBDA5D4DC1EE9BBB2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Spotify-iOS-SDK";
-			productName = "Spotify-iOS-SDK";
-			productReference = D4C2A2E020723632FAFC7C4E0FCCC443 /* Spotify.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C1F6FD9CC87D8554AEC42892813077BD /* XCDYouTubeKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02F647FB11C6A4E0E94C979E0D0332D0 /* Build configuration list for PBXNativeTarget "XCDYouTubeKit" */;
-			buildPhases = (
-				AF97B248B5EB3D5910519D7C72671605 /* Sources */,
-				AA3F1C7B218EF5737B3270B559038D16 /* Frameworks */,
-				11248E9428AAD09A2BF0EC5237E9679C /* Headers */,
+				3D4A5BBA20C6A18FF95FBC4AC6C86F64 /* Sources */,
+				F528F1DD163760B49D5FDF776A24EE8A /* Frameworks */,
+				D2E03D72ABED05AF0A67459CA42BCAB0 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -720,7 +904,24 @@
 			);
 			name = XCDYouTubeKit;
 			productName = XCDYouTubeKit;
-			productReference = 297760279D95879B608030A80D863D18 /* XCDYouTubeKit.framework */;
+			productReference = 60BB127394557ED1F52012CABB37341B /* XCDYouTubeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C20C64977E04C7B959EFEACEC9F1D191 /* Spotify-iOS-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DAB12120CC6C676CB4851DFA89504AB /* Build configuration list for PBXNativeTarget "Spotify-iOS-SDK" */;
+			buildPhases = (
+				3357FAD31F7FB68092B2D985CA293A28 /* Sources */,
+				D69CFB1BDAF69A30952A6236C4ABA655 /* Frameworks */,
+				3B8BD60CDD3ED2E87C18E19C688CFFC8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spotify-iOS-SDK";
+			productName = "Spotify-iOS-SDK";
+			productReference = 9BFA459E8D26C1BF7F5BD6127741D513 /* Spotify.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DC3688684BF42A20A8998F31DDA51A49 /* JSONModel */ = {
@@ -737,7 +938,45 @@
 			);
 			name = JSONModel;
 			productName = JSONModel;
-			productReference = 71981B46D16F3395891F0B331100DC73 /* JSONModel.framework */;
+			productReference = F61AB7F23E2800AB87AF6D162CC79A65 /* JSONModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EB9AD825427F216B54E693242E671FA1 /* HockeySDK-HockeySDKResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36BC870E757C15E340A9A6F2C5E8A6F4 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */;
+			buildPhases = (
+				7097FE18530E2A5B620A9BFBDE8ABC3C /* Sources */,
+				3E4285FE58B9D59B584D9F34BF3244CC /* Frameworks */,
+				5E1A292E24DC1060B1BBA5AB692423C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HockeySDK-HockeySDKResources";
+			productName = "HockeySDK-HockeySDKResources";
+			productReference = 95E8AB3284D00E0FB910CB393851835E /* HockeySDKResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F13C6755870E732A744C7EF18700F815 /* Pods-PartyFY */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F22200EB7E1BBC04D8F932F19E7DF79 /* Build configuration list for PBXNativeTarget "Pods-PartyFY" */;
+			buildPhases = (
+				D2AAF6C0453C437E155AD59F2870792F /* Sources */,
+				58A1DCF59EB8F42690E6C06BCC5323EE /* Frameworks */,
+				E44FA5186079EF39C3708A98AF66B02B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4F214873BA77760F71BB0AA8B9400C5 /* PBXTargetDependency */,
+				F8678C30A2007615FE85AEAD79745C70 /* PBXTargetDependency */,
+				C49A9BB92329633044C4F28F7C9DBE81 /* PBXTargetDependency */,
+				58E1CBDFB4054C4014DECD1D59E5D4A4 /* PBXTargetDependency */,
+			);
+			name = "Pods-PartyFY";
+			productName = "Pods-PartyFY";
+			productReference = 9B9FB249A492B13801A48706DEC22855 /* Pods_PartyFY.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -757,48 +996,111 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 80D0416311F5208CABF965E418789CE6 /* Products */;
+			productRefGroup = 8CEA39FD7188FB332B4A51F8ED0B124F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EB9AD825427F216B54E693242E671FA1 /* HockeySDK-HockeySDKResources */,
 				DC3688684BF42A20A8998F31DDA51A49 /* JSONModel */,
-				7B7E6099F9A950F152B506A49CD7718F /* Pods-PartyFY */,
-				83CE9B41DC97298DEBAB84D5CEFB91CD /* Spotify-iOS-SDK */,
-				C1F6FD9CC87D8554AEC42892813077BD /* XCDYouTubeKit */,
+				F13C6755870E732A744C7EF18700F815 /* Pods-PartyFY */,
+				C20C64977E04C7B959EFEACEC9F1D191 /* Spotify-iOS-SDK */,
+				B90AE85DEDFE3F072B01DBFA1C882E47 /* XCDYouTubeKit */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5E1A292E24DC1060B1BBA5AB692423C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9EDCE6E451154EB487F04EF2F4EF2A9 /* AppIconPlaceHolder.png in Resources */,
+				44A7EACB545AABDD70E670102CF8C17C /* Arrow.png in Resources */,
+				A18DD09A116B5BFA895E52DBB9E05B4A /* Arrow@2x.png in Resources */,
+				FB6510577C9EB0624EDF73879DC61B45 /* Arrow@3x.png in Resources */,
+				83AA80C4C4288E95D1ED250B7A53B1DB /* authorize_denied.png in Resources */,
+				7C074DD39BC70B9C2FEA1DDC557D1E51 /* authorize_denied@2x.png in Resources */,
+				21AF0368D2A74AE7CACCDF04BDD015FF /* authorize_denied@3x.png in Resources */,
+				F93D762E66C4C543A0BB8B71CEB9CBE8 /* bg.png in Resources */,
+				491750401A9EFDFD245721E7BE4627C6 /* Blur.png in Resources */,
+				87CFB536A253F968FED77C5A75DC8847 /* Blur@2x.png in Resources */,
+				C6E03FE266AC3767805DE30EC71059C1 /* Blur@3x.png in Resources */,
+				8092BB02C170FE0923AD7E7A3640FB24 /* buttonRoundedDelete.png in Resources */,
+				CD9FB0D75EDC3673AAA051DED29F9490 /* buttonRoundedDelete@2x.png in Resources */,
+				84004D40E25E334F16B4D70D53BF149F /* buttonRoundedDeleteHighlighted.png in Resources */,
+				AF756DF0D4B06480BBEA3BBF81A81D13 /* buttonRoundedDeleteHighlighted@2x.png in Resources */,
+				D34E43E323C6A19985196C4D8F0A61D8 /* buttonRoundedRegular.png in Resources */,
+				3D8D9920EE3EF913B602FFEEB8C0A695 /* buttonRoundedRegular@2x.png in Resources */,
+				298A8CF1F92121EE8975416E1B42DA96 /* buttonRoundedRegularHighlighted.png in Resources */,
+				1A434D26CCA5BDDFD62A1C92FF4CE93C /* buttonRoundedRegularHighlighted@2x.png in Resources */,
+				2B196B950858F08FF975A2246D64C9F7 /* Cancel.png in Resources */,
+				F5A90570C26448C498D553B5042EC63F /* Cancel@2x.png in Resources */,
+				7F5F10E74ED8034D89B93DFEB5CFD539 /* Cancel@3x.png in Resources */,
+				2893823E9CB1E5776F122C091C03B4F7 /* de.lproj in Resources */,
+				82A484029E7E614526A7FD2C1366AC39 /* en.lproj in Resources */,
+				18C8FE31C992810CC728A5AFEDAA7F13 /* es.lproj in Resources */,
+				D04B99BD1CFCF232405B6F90B87D5E53 /* fa.lproj in Resources */,
+				9F1E42A64A0982335FB22EA98BADA1CF /* feedbackActivity.png in Resources */,
+				8055D3FC20CCE9BC4F44626203C81745 /* feedbackActivity@2x.png in Resources */,
+				F7832D722DC20EA1887B494B5E50969F /* feedbackActivity@2x~ipad.png in Resources */,
+				4CCBA4C92CA1EEF80DB166BBEE0E0920 /* feedbackActivity@3x.png in Resources */,
+				034F6BF87B11EFC7171144FD31993C02 /* feedbackActivity~ipad.png in Resources */,
+				90C28D94DAD18307A25CF195A78B18DF /* FeedbackPlaceholder.png in Resources */,
+				927F2545D650AD499F0114FC9E7C6341 /* fr.lproj in Resources */,
+				C6E9DDF394B9D50179A07335F0AB5863 /* hr.lproj in Resources */,
+				947E44184B30403F13924C59A1E3B3EE /* hu.lproj in Resources */,
+				0C7B08590B13FDCB31E05F09C69D02E8 /* iconCamera.png in Resources */,
+				1A2180E0DC0BA0B0C7B5CE3ACD2A6768 /* iconCamera@2x.png in Resources */,
+				6F35985538D059073ADF34294A4CD93C /* IconGradient.png in Resources */,
+				F2852A28C22BF89F8787A33932048DB9 /* IconGradient@2x.png in Resources */,
+				67CD82782BD1B0E3D61179A03E1D551C /* it.lproj in Resources */,
+				2F5E6CBD401998573AD5FE0E464262B1 /* ja.lproj in Resources */,
+				62B3B2FF935934D79D6A3F98DD9A3310 /* nb.lproj in Resources */,
+				CC5FD2D069557A5B89BC1879996276D7 /* nl.lproj in Resources */,
+				4F72D084AB1AB0385AFA896BD39BE97D /* Ok.png in Resources */,
+				546C2C92080EDDC0E0991C5D93D85C8C /* Ok@2x.png in Resources */,
+				6FEEAB6B0BF65AD3A4B262D249393BB5 /* Ok@3x.png in Resources */,
+				8C115D2276DEB53520730E0B8791BE0F /* pt-PT.lproj in Resources */,
+				0CA78AC46C03FD0677D2BD70F763AA5D /* pt.lproj in Resources */,
+				DFDE46266B9D8D56D4656A33A14309B0 /* Rectangle.png in Resources */,
+				0A9ED6AAA5EE93F76F69579EEE1BF2FE /* Rectangle@2x.png in Resources */,
+				9BC767136A627318026727B775DC290F /* Rectangle@3x.png in Resources */,
+				ACE32A0A30642056880DC51F9EBDCDDD /* ru.lproj in Resources */,
+				3D9524F690E8C682CA151F6A071BC937 /* zh-Hans.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		1189BD230E3F75E58A6BC3A7BA8A3A86 /* Sources */ = {
+		3357FAD31F7FB68092B2D985CA293A28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF56C22DCF824DCC58D1CF2261469C34 /* Empty.m in Sources */,
-				E395A559BA97D903B3246F85EC3945DA /* Spotify-iOS-SDK-dummy.m in Sources */,
+				027D24A66E9033A7A9529B3EDF0F144E /* Empty.m in Sources */,
+				C92AB7B24983B413DAE9E9D668686F27 /* Spotify-iOS-SDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CCE35726CDCF13F6DECACF9F8AEE433 /* Sources */ = {
+		3D4A5BBA20C6A18FF95FBC4AC6C86F64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756083FAF98FB5F3092A969105A1BB64 /* Pods-PartyFY-dummy.m in Sources */,
+				929A47DFEE079F88A527F663D2065553 /* XCDYouTubeClient.m in Sources */,
+				1705097FFCF47B5114A6F4B062C70C08 /* XCDYouTubeKit-dummy.m in Sources */,
+				A6038FBF96D954A53F2F4C6A8F87F7B1 /* XCDYouTubeLogger.m in Sources */,
+				C25A794C4E843E1CC2FA231F6DBF69B1 /* XCDYouTubePlayerScript.m in Sources */,
+				5F295668215CCE1A3712A6ED4C91D127 /* XCDYouTubeVideo.m in Sources */,
+				534196205FFE269EBFCD893A79821DA4 /* XCDYouTubeVideoOperation.m in Sources */,
+				604AF9FF3220046790ECBA3383CFDB8B /* XCDYouTubeVideoPlayerViewController.m in Sources */,
+				ED5B84ED3E9AB15307C6ED12D1C9F792 /* XCDYouTubeVideoWebpage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF97B248B5EB3D5910519D7C72671605 /* Sources */ = {
+		7097FE18530E2A5B620A9BFBDE8ABC3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71850C00296611C9B16BE15499E3BF67 /* XCDYouTubeClient.m in Sources */,
-				8BDE7345B86407B93F5790DEB6643883 /* XCDYouTubeKit-dummy.m in Sources */,
-				272F811759D01C41869101065959687B /* XCDYouTubeLogger.m in Sources */,
-				F721ED3FB1CC6D1FBACA1DC371A48114 /* XCDYouTubePlayerScript.m in Sources */,
-				79F40D5913AAE1ADF155C9AB19A1C46C /* XCDYouTubeVideo.m in Sources */,
-				7D65DCA5FAC22175259250AF75890831 /* XCDYouTubeVideoOperation.m in Sources */,
-				CDC9BC35DC7DCE95F50C6545302BD00E /* XCDYouTubeVideoPlayerViewController.m in Sources */,
-				6DDBE1170C51796CECC4174DFA2360A3 /* XCDYouTubeVideoWebpage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,30 +1120,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2AAF6C0453C437E155AD59F2870792F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1970F57499E8C301B67FD290F6473B7 /* Pods-PartyFY-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E3C5140488DC426FEA06A275F00AB93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Spotify-iOS-SDK";
-			target = 83CE9B41DC97298DEBAB84D5CEFB91CD /* Spotify-iOS-SDK */;
-			targetProxy = 435214F01A592EF7C915C71A712D1EDE /* PBXContainerItemProxy */;
-		};
-		80DD7B70567D05B79F0E7CD25208861E /* PBXTargetDependency */ = {
+		58E1CBDFB4054C4014DECD1D59E5D4A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XCDYouTubeKit;
-			target = C1F6FD9CC87D8554AEC42892813077BD /* XCDYouTubeKit */;
-			targetProxy = DFACBD2CE7A79AB3784D69599AB0A48A /* PBXContainerItemProxy */;
+			target = B90AE85DEDFE3F072B01DBFA1C882E47 /* XCDYouTubeKit */;
+			targetProxy = 6B1FA2F1554FCE2A1F40CE98F29D1B27 /* PBXContainerItemProxy */;
 		};
-		BA85556FC7E8E6F2B42E47ED1C132021 /* PBXTargetDependency */ = {
+		C49A9BB92329633044C4F28F7C9DBE81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Spotify-iOS-SDK";
+			target = C20C64977E04C7B959EFEACEC9F1D191 /* Spotify-iOS-SDK */;
+			targetProxy = CC4ED40577017470A1ECCBF2E68A39F3 /* PBXContainerItemProxy */;
+		};
+		C4F214873BA77760F71BB0AA8B9400C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HockeySDK-HockeySDKResources";
+			target = EB9AD825427F216B54E693242E671FA1 /* HockeySDK-HockeySDKResources */;
+			targetProxy = 9C1B2B1B72F58AB633FB3C2B929432C9 /* PBXContainerItemProxy */;
+		};
+		F8678C30A2007615FE85AEAD79745C70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONModel;
 			target = DC3688684BF42A20A8998F31DDA51A49 /* JSONModel */;
-			targetProxy = 54D461F3D61B695224522AFFC8040B40 /* PBXContainerItemProxy */;
+			targetProxy = E29404A965DEB698AE1D4FD2B7761167 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		03DBF75339B4ABECF2766411BE3CC8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF63C5779E63A1D36C29800E37CBC289 /* Pods-PartyFY.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PartyFY/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PartyFY/Pods-PartyFY.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PartyFY;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		12C4B864767C59600DBFA238F1E2F8BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -896,127 +1245,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		13AED095CC47EB8000942F31C3B5A80D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 974B65AB6E95E68466EF002D5197CCFE /* XCDYouTubeKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XCDYouTubeKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit.modulemap";
-				PRODUCT_NAME = XCDYouTubeKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2901B9C290CB6C0F64F6C50141035969 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF63C5779E63A1D36C29800E37CBC289 /* Pods-PartyFY.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PartyFY/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PartyFY/Pods-PartyFY.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PartyFY;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		40403F222785C0E19D546940327FC5CF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 135154CE7C0CCAB72D4F75C771E0464E /* Spotify-iOS-SDK.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Spotify-iOS-SDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK.modulemap";
-				PRODUCT_NAME = Spotify;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4AA1BEE03DED3DD5505D7DFF2CA3CD8E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 974B65AB6E95E68466EF002D5197CCFE /* XCDYouTubeKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XCDYouTubeKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit.modulemap";
-				PRODUCT_NAME = XCDYouTubeKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		59F0302F2371FCC6B73EF0A418D40734 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1078,38 +1306,24 @@
 			};
 			name = Debug;
 		};
-		AFC2F14F9FA28152A047252340D6C333 /* Debug */ = {
+		675E5639654F7FFFDBCE91856BA39D7C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5E9FFBC00C2BA0A67E0CC937C545856 /* JSONModel.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
-				PRODUCT_NAME = JSONModel;
+				PRODUCT_NAME = HockeySDKResources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
-		C47C9CE2F1DCB60EB6C6D872E4FEEECC /* Release */ = {
+		692689C03079357D664049A0227B6967 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 135154CE7C0CCAB72D4F75C771E0464E /* Spotify-iOS-SDK.xcconfig */;
+			baseConfigurationReference = 2EE64114646FC58433F0A2C753586A97 /* Spotify-iOS-SDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1137,7 +1351,7 @@
 			};
 			name = Release;
 		};
-		EE065171329A64E6BFCEC5C12C1326E0 /* Debug */ = {
+		722F24B514164A4346AAAD344E0AE2C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 293F333A38865704A2DE5BE826ADF80C /* Pods-PartyFY.debug.xcconfig */;
 			buildSettings = {
@@ -1169,9 +1383,141 @@
 			};
 			name = Debug;
 		};
+		839589B59F4853886F87F951D357286F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
+				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HockeySDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AFC2F14F9FA28152A047252340D6C333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEF6A5EAAC3CD483713B08451AFBFCE8 /* JSONModel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B37C46BD74C0A129964B1B533082A03D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD9CD8CA087F4C2D475C02D501525A2D /* XCDYouTubeKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XCDYouTubeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit.modulemap";
+				PRODUCT_NAME = XCDYouTubeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0D6793D2FC5C4AAB1FDFF2F5A98BA09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EE64114646FC58433F0A2C753586A97 /* Spotify-iOS-SDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spotify-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK.modulemap";
+				PRODUCT_NAME = Spotify;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED954FCE08B7F4FD54D3E0322E60EB32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD9CD8CA087F4C2D475C02D501525A2D /* XCDYouTubeKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XCDYouTubeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XCDYouTubeKit/XCDYouTubeKit.modulemap";
+				PRODUCT_NAME = XCDYouTubeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		FCE6218454D069D4167A69C74437A9A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5E9FFBC00C2BA0A67E0CC937C545856 /* JSONModel.xcconfig */;
+			baseConfigurationReference = FEF6A5EAAC3CD483713B08451AFBFCE8 /* JSONModel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1202,24 +1548,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02F647FB11C6A4E0E94C979E0D0332D0 /* Build configuration list for PBXNativeTarget "XCDYouTubeKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4AA1BEE03DED3DD5505D7DFF2CA3CD8E /* Debug */,
-				13AED095CC47EB8000942F31C3B5A80D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2C5BFCD208BEFF0D941A5A4618BC8930 /* Build configuration list for PBXNativeTarget "Spotify-iOS-SDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				40403F222785C0E19D546940327FC5CF /* Debug */,
-				C47C9CE2F1DCB60EB6C6D872E4FEEECC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1229,11 +1557,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA8B4B6C37494179A64FE1F28FBE43B5 /* Build configuration list for PBXNativeTarget "Pods-PartyFY" */ = {
+		36BC870E757C15E340A9A6F2C5E8A6F4 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE065171329A64E6BFCEC5C12C1326E0 /* Debug */,
-				2901B9C290CB6C0F64F6C50141035969 /* Release */,
+				675E5639654F7FFFDBCE91856BA39D7C /* Debug */,
+				839589B59F4853886F87F951D357286F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB1BCF4A35FE611DF8291C77EAA00A7 /* Build configuration list for PBXNativeTarget "XCDYouTubeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED954FCE08B7F4FD54D3E0322E60EB32 /* Debug */,
+				B37C46BD74C0A129964B1B533082A03D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F22200EB7E1BBC04D8F932F19E7DF79 /* Build configuration list for PBXNativeTarget "Pods-PartyFY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				722F24B514164A4346AAAD344E0AE2C7 /* Debug */,
+				03DBF75339B4ABECF2766411BE3CC8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DAB12120CC6C676CB4851DFA89504AB /* Build configuration list for PBXNativeTarget "Spotify-iOS-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D6793D2FC5C4AAB1FDFF2F5A98BA09 /* Debug */,
+				692689C03079357D664049A0227B6967 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

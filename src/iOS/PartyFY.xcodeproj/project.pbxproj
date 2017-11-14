@@ -136,6 +136,7 @@
 				3218F5381FB602CA00E8ED65 /* Resources */,
 				9B248D5FF5529A6606354595 /* [CP] Embed Pods Frameworks */,
 				CFE7937A1343CDBD51988D11 /* [CP] Copy Pods Resources */,
+				325F08691FBA453E00D7F4DF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -195,6 +196,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		325F08691FBA453E00D7F4DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
+		};
 		454274432B8AED10FA93578F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,9 +255,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PartyFY/Pods-PartyFY-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/HockeySDK/HockeySDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -410,7 +427,7 @@
 					"\"XCDYouTubeKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.PartyFY;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.partify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -433,7 +450,7 @@
 					"\"XCDYouTubeKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.PartyFY;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.partify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

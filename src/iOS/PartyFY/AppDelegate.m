@@ -5,6 +5,7 @@
 //  Created by Runar Ovesen Hjerpbakk on 10/11/2017.
 //  Copyright © 2017 Runar Ovesen Hjerpbakk. All rights reserved.
 //
+@import HockeySDK;
 
 #import "AppDelegate.h"
 #import "RestClient.h"
@@ -19,6 +20,11 @@ AppConfig *appConfig;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"9cd9b822fc184178ba7f675446a1ba75"];
+    // Do some additional configuration if needed here
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator
+     authenticateInstallation];
     
     NSString* path = [[NSBundle mainBundle] pathForResource:@"config"
                                                      ofType:@"json"];
@@ -36,12 +42,10 @@ AppConfig *appConfig;
     return YES;
 }
 
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -57,18 +61,22 @@ AppConfig *appConfig;
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
-    [RestClient makeRestAPICall:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response){
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    [RestClient makeRestAPICall:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response) {
         NSError *error;
         Service* service = [[Service alloc] initWithString:response error:&error];
         if (error) {
             // TODO: Errorhandling
         }
+        
         appConfig.apiURL = service.ip;
+        mainController.appConfig = appConfig;
+        dispatch_semaphore_signal(sema);
     }];
     
-    ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     self.spotifyAuthenticator = [[SpotiyAuthenticator alloc] initWithConfig:appConfig viewController:mainController];
-    [self.spotifyAuthenticator startAuthenticationFlow];
 }
 
 

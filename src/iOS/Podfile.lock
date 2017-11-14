@@ -1,4 +1,7 @@
 PODS:
+  - HockeySDK (5.0.0):
+    - HockeySDK/DefaultLib (= 5.0.0)
+  - HockeySDK/DefaultLib (5.0.0)
   - JSONModel (1.7.0)
   - Spotify-iOS-SDK (0.25.0):
     - Spotify-iOS-SDK/Authentication (= 0.25.0)
@@ -10,15 +13,17 @@ PODS:
   - XCDYouTubeKit (2.5.6)
 
 DEPENDENCIES:
+  - HockeySDK (~> 5.0.0)
   - JSONModel
   - Spotify-iOS-SDK
   - XCDYouTubeKit
 
 SPEC CHECKSUMS:
+  HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Spotify-iOS-SDK: 58d4092b225578623dd17029f3c7e7042ac3ef6e
   XCDYouTubeKit: dccfe0c17dd5c5187969ec27e93069573badb08f
 
-PODFILE CHECKSUM: 3e22b847dd3c5b09246de4614d98a8a9af171f16
+PODFILE CHECKSUM: 0faed50b781a58aeb23328d177b7956f8fdeb33d
 
 COCOAPODS: 1.3.1
