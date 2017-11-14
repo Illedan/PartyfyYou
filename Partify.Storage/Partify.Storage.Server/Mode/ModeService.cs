@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Partify.Storage.Server.CQRS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,15 @@ namespace Partify.Storage.Server.Mode
 {
     public class ModeService : IModeService
     {
-        public async Task<List<ModeResult>> GetAllModes()
+        private readonly IQueryExecutor m_queryExecutor;
+        public ModeService(IQueryExecutor queryExecutor)
         {
-            await Task.Delay(1);
-            return new List<ModeResult> { new ModeResult { Id = Guid.NewGuid().ToString(), Name = "Karaoke" }, new ModeResult { Id = Guid.NewGuid().ToString(), Name = "Cover" } };
+            m_queryExecutor = queryExecutor;
+        }
+        public async Task<IEnumerable<ModeResult>> GetAllModes()
+        {
+            var result = await m_queryExecutor.ExecuteAsync(new ModeQuery());
+            return result;
         }
     }
 }

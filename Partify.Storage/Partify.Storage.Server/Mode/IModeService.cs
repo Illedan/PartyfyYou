@@ -8,6 +8,6 @@ namespace Partify.Storage.Server.Mode
 {
     public interface IModeService
     {
-        Task<List<ModeResult>> GetAllModes();
+        Task<IEnumerable<ModeResult>> GetAllModes();
     }
 }

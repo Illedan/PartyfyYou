@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LightInject;
+﻿using LightInject;
 using Partify.Storage.Server.Mode;
+using Partify.Storage.Server.CQRS;
+using System.Data;
+using System;
+using System.Data.SqlClient;
 
 namespace Partify.Storage.Server
 {
@@ -12,7 +11,20 @@ namespace Partify.Storage.Server
     {
         public void Compose(IServiceRegistry serviceRegistry)
         {
-            serviceRegistry.Register<IModeService, ModeService>(new PerScopeLifetime());
+            serviceRegistry
+                .RegisterQueryHandlers()
+                .RegisterCommandHandlers()
+                .Register<IModeService, ModeService>(new PerScopeLifetime())
+                
+                .Register<IDbConnection>(factory => CreateMySqlConnection(factory));
+        }
+
+        private SqlConnection CreateMySqlConnection(IServiceFactory factory)
+        {
+           //TODO: add string
+            var connection = new SqlConnection("");
+            connection.Open();
+            return connection;
         }
     }
 }
