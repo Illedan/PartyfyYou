@@ -22,7 +22,7 @@
 @implementation ViewController
 
 SPTSession *currentSession;
-NSString *currentYouTubeId;
+NSString *currentSpotifyId;
 NSTimer *timer;
 
 XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
@@ -64,21 +64,29 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
     [self getYouTubeSongId:@""];
 }
 
-// TODO: Do I need this?
+// TODO: Change service discovery key
 - (void)getSpotifySongId {
     NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/id?token=%@", self.appConfig.apiURL, currentSession.accessToken];
-    [RestClient makeRestAPICall:getCurrentSongURL responseHandler:^(NSString *response) {
+    [RestClient makeRestAPICall:getCurrentSongURL responseHandler:^(NSString *spotifyId) {
         NSError *error;
         if (error) {
             // TODO: Errorhandling
         }
         
-        [self getYouTubeSongId:response];
+        if ([currentSpotifyId isEqualToString:spotifyId]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // TODO: enable background playing and update OS states
+                // TODO: Test properly with airplay
+                [self playCurrentVideo];
+            });
+        } else {
+            [self getYouTubeSongId:spotifyId];
+        }      
     }];
 }
 
-// TODO: Simplify if other method is not needed
 - (void)getYouTubeSongId:(NSString*) spotifyId {
+    // TODO: Use proper service when available...
     NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/url?token=%@", self.appConfig.apiURL, currentSession.accessToken];
     [RestClient makeRestAPICall:getCurrentSongURL responseHandler:^(NSString *youTubeId) {
         NSError *error;
@@ -86,31 +94,29 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
             // TODO: Errorhandling
         }
         
-        if ([youTubeId isEqualToString:currentYouTubeId]) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // TODO: enable background playing and update OS states
-                // TODO: Test properly with airplay
-                if (videoPlayerViewController.moviePlayer.playbackState != MPNowPlayingPlaybackStatePlaying) {
-                    [videoPlayerViewController.moviePlayer play];
-                }
-            });
-
-            return ;
-        }
-        
-        currentYouTubeId = youTubeId;
         dispatch_async(dispatch_get_main_queue(), ^{
-            videoPlayerViewController.videoIdentifier = youTubeId;
-            if (!videoPlayerViewController.isFirstResponder) {
-                [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
-            }
-            
-            [videoPlayerViewController.moviePlayer prepareToPlay];
+            [self prepareToPlayNewVideo:youTubeId];
         });
        
     }];
 }
 
+- (void)prepareToPlayNewVideo:(NSString*) youTubeId {
+    videoPlayerViewController.videoIdentifier = youTubeId;
+    if (!videoPlayerViewController.isFirstResponder) {
+        [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+    }
+    
+    [videoPlayerViewController.moviePlayer prepareToPlay];
+}
+
+- (void)playCurrentVideo {
+    if (videoPlayerViewController.moviePlayer.playbackState != MPNowPlayingPlaybackStatePlaying) {
+        [videoPlayerViewController.moviePlayer play];
+    }
+}
+
+// TODO: Crap below, understand and make work
 - (void)playVideo:(NSString*) youTubeId {
     XCDYouTubeVideoPlayerViewController* videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youTubeId];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:videoPlayerViewController.moviePlayer];
