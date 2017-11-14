@@ -1,0 +1,6 @@
+platform :tvos, '11.0'
+use_frameworks!
+
+target 'PartifyTV' do
+  pod 'XCDYouTubeKit'
+end
