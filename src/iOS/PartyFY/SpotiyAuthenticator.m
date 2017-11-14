@@ -16,6 +16,38 @@
 
 @implementation SpotiyAuthenticator
 
+// TODO: Lag side i appen med en knapp man må trykke på som igjen kjører denne
+// TODO: Lagre session hver gang vi får ny i NSUserDefaults
+// TODO: Hent den opp igjen, lag ny om ikke finnes fra før. Kjør flyten under...
+
+//SPTSession *session = …; // Restore session
+//
+//if (session == nil) {
+//    // No session at all - use SPTAuth to ask the user
+//    // for access to their account.
+//    [self presentFirstTimeLoginToUser];
+//
+//} else if ([session isValid]) {
+//    // Our session is valid - go straight to music playback.
+//    [self playMusicWithSession:session];
+//
+//} else {
+//    // Session expired - we need to refresh it before continuing.
+//    // This process doesn't involve user interaction unless it fails.
+//    NSURL *refreshServiceEndpoint = …;
+//    [SPTAuth defaultInstance] renewSession:session
+//callback:^(NSError *error, SPTSession *session)
+//    {
+//        if (error == nil) {
+//            [self playMusicWithSession:session];
+//        } else {
+//            [self handleError:error];
+//        }
+//    }];
+//}
+
+
+
 - (id)initWithConfig:(AppConfig*)config viewController:(ViewController*)viewController {
     self.viewController = viewController;
     self.auth = [SPTAuth defaultInstance];
@@ -40,7 +72,7 @@
 - (void)startAuthenticationFlow {
     // Check if we could use the access token we already have
     if ([self.auth.session isValid]) {
-        [self.viewController authenticationCompleted:self.auth.session];
+        [self authenticatedWithValidSession];
     } else {
         // Get the URL to the Spotify authorization portal
         NSURL *authURL = [self.auth spotifyWebAuthenticationURL];
@@ -60,12 +92,16 @@
         // Parse the incoming url to a session object
         [self.auth handleAuthCallbackWithTriggeredAuthURL:url callback:^(NSError *error, SPTSession *session) {
             if (session) {
-                [self.viewController authenticationCompleted:self.auth.session];
+                [self authenticatedWithValidSession];
             }
         }];
         return YES;
     }
     return NO;
+}
+
+- (void)authenticatedWithValidSession {
+    [self.viewController authenticationCompleted:self.auth.session];
 }
 
 @end

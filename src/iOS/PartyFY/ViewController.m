@@ -23,7 +23,6 @@
 
 SPTSession *currentSession;
 NSString *currentSpotifyId;
-NSTimer *timer;
 
 XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 
@@ -32,8 +31,7 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
     // Do any additional setup after loading the view, typically from a nib.
     
     videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] init];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:videoPlayerViewController.moviePlayer];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayerViewControllerDidReceiveVideo:) name:MPMoviePlayerNowPlayingMovieDidChangeNotification object:videoPlayerViewController.moviePlayer];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:videoPlayerViewController.moviePlayer];
 }
 
 
@@ -53,7 +51,7 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
     //[self getSpotifySongId:session];
     
     // TODO: pause video and timer if app is sent to background
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+    self.spotifyRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                               target:self
                                             selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
                                             userInfo:nil
@@ -61,7 +59,7 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 }
 
 - (void)playVideoForCurrentlyPlayingSpotifySong:(NSTimer*)timer {
-    [self getYouTubeSongId:@""];
+    [self getSpotifySongId];
 }
 
 // TODO: Change service discovery key
@@ -73,15 +71,12 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
             // TODO: Errorhandling
         }
         
-        if ([currentSpotifyId isEqualToString:spotifyId]) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // TODO: enable background playing and update OS states
-                // TODO: Test properly with airplay
-                [self playCurrentVideo];
-            });
-        } else {
+        // TODO: enable background playing and update OS states
+        // TODO: Test properly with airplay
+        if (![currentSpotifyId isEqualToString:spotifyId]) {
+            currentSpotifyId = spotifyId;
             [self getYouTubeSongId:spotifyId];
-        }      
+        }
     }];
 }
 
@@ -107,39 +102,40 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
         [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
     }
     
+    // TODO: Må nok gjøre noe mer. Funker stort sett, men ikke alltid. Stoppe og starte osv?
     [videoPlayerViewController.moviePlayer prepareToPlay];
 }
 
-- (void)playCurrentVideo {
-    if (videoPlayerViewController.moviePlayer.playbackState != MPNowPlayingPlaybackStatePlaying) {
-        [videoPlayerViewController.moviePlayer play];
-    }
-}
+//- (void)playCurrentVideo {
+//    if (videoPlayerViewController.moviePlayer.playbackState != MPNowPlayingPlaybackStatePlaying) {
+//        [videoPlayerViewController.moviePlayer play];
+//    }
+//}
 
 // TODO: Crap below, understand and make work
-- (void)playVideo:(NSString*) youTubeId {
-    XCDYouTubeVideoPlayerViewController* videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youTubeId];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:videoPlayerViewController.moviePlayer];
-    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
-}
-
-- (void)moviePlayerPlaybackDidFinish:(NSNotification *)notification
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:notification.object];
-    MPMovieFinishReason finishReason = [notification.userInfo[MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] integerValue];
-    if (finishReason == MPMovieFinishReasonPlaybackError)
-    {
-        NSError *error = notification.userInfo[XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey];
-        // Handle error
-    }
-}
-
-- (void) videoPlayerViewControllerDidReceiveVideo:(NSNotification *)notification
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        XCDYouTubeVideoPlayerViewController *videoPlayerViewController = notification.object;
-        [videoPlayerViewController.moviePlayer prepareToPlay];
-    });
-}
+//- (void)playVideo:(NSString*) youTubeId {
+//    XCDYouTubeVideoPlayerViewController* videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youTubeId];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:videoPlayerViewController.moviePlayer];
+//    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+//}
+//
+//- (void)moviePlayerPlaybackDidFinish:(NSNotification *)notification
+//{
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:notification.object];
+//    MPMovieFinishReason finishReason = [notification.userInfo[MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] integerValue];
+//    if (finishReason == MPMovieFinishReasonPlaybackError)
+//    {
+//        NSError *error = notification.userInfo[XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey];
+//        // Handle error
+//    }
+//}
+//
+//- (void) videoPlayerViewControllerDidReceiveVideo:(NSNotification *)notification
+//{
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        XCDYouTubeVideoPlayerViewController *videoPlayerViewController = notification.object;
+//        [videoPlayerViewController.moviePlayer prepareToPlay];
+//    });
+//}
 
 @end
