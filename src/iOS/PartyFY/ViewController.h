@@ -12,6 +12,8 @@
 
 @interface ViewController : UIViewController
 @property (nonatomic, strong) AppConfig *appConfig;
+@property (nonatomic, strong) NSTimer *spotifyRefreshTimer;
+
 - (void)authenticationCompleted:(SPTSession*) session;
 @end
 
