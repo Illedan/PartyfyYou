@@ -19,6 +19,7 @@
 
 NSString *currentSession;
 NSString *currentSpotifyId;
+AVPlayerViewController *playerViewController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,7 +47,8 @@ NSString *currentSpotifyId;
                                                                repeats:YES];
     
     // TODO: Why do timer no work
-    [self getSpotifySongId];
+    //[self getSpotifySongId];
+    //[[NSRunLoop mainRunLoop] addTimer:self.spotifyRefreshTimer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)playVideoForCurrentlyPlayingSpotifySong:(NSTimer*)timer {
@@ -81,9 +83,10 @@ NSString *currentSpotifyId;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            AVPlayerViewController *playerViewController = [AVPlayerViewController new];
-            [self presentViewController:playerViewController animated:YES completion:nil];
+            if (!playerViewController) {
+                playerViewController = [AVPlayerViewController new];
+                [self presentViewController:playerViewController animated:YES completion:nil];
+            }
             
             __weak AVPlayerViewController *weakPlayerViewController = playerViewController;
             [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:youTubeId completionHandler:^(XCDYouTubeVideo * _Nullable video, NSError * _Nullable error) {

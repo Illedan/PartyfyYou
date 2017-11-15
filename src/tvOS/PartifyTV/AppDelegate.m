@@ -95,8 +95,9 @@ AppConfig *appConfig;
         if (error) {
             // TODO: Errorhandling
         }
-        
-        [mainController authenticationCompleted:token];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [mainController authenticationCompleted:token];
+        });
     }];
 }
 
