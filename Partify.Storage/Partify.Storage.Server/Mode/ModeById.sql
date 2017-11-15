@@ -1,0 +1,1 @@
+﻿SELECT Id, Name FROM Mode Where Id=@Id
