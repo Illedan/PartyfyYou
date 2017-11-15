@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		320EADB51FBC1EE7007D5B80 /* EEUserID.m in Sources */ = {isa = PBXBuildFile; fileRef = 320EADB41FBC1EE7007D5B80 /* EEUserID.m */; };
+		3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224482A1FBB77E8006774F7 /* AppDelegate.m */; };
+		3224482E1FBB77E8006774F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224482D1FBB77E8006774F7 /* ViewController.m */; };
+		322448311FBB77E8006774F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3224482F1FBB77E8006774F7 /* Main.storyboard */; };
+		322448331FBB77E8006774F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322448321FBB77E8006774F7 /* Assets.xcassets */; };
+		322448361FBB77E8006774F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 322448351FBB77E8006774F7 /* main.m */; };
+		327494981FBC2129003E30F4 /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 327494971FBC2129003E30F4 /* RESTClient.m */; };
+		B45A3C2BC73AF2753E04A009 /* Pods_PartifyTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		320EADB31FBC1EE7007D5B80 /* EEUserID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EEUserID.h; sourceTree = "<group>"; };
+		320EADB41FBC1EE7007D5B80 /* EEUserID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EEUserID.m; sourceTree = "<group>"; };
+		320EADB61FBC1F6E007D5B80 /* PartifyTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartifyTV.entitlements; sourceTree = "<group>"; };
+		322448261FBB77E8006774F7 /* PartifyTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartifyTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		322448291FBB77E8006774F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3224482A1FBB77E8006774F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3224482C1FBB77E8006774F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3224482D1FBB77E8006774F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		322448301FBB77E8006774F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		322448321FBB77E8006774F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		322448341FBB77E8006774F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		322448351FBB77E8006774F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		327494961FBC2129003E30F4 /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
+		327494971FBC2129003E30F4 /* RESTClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
+		5BFCC1C59A1E4F0A4B5B67E6 /* Pods-PartifyTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.release.xcconfig"; sourceTree = "<group>"; };
+		6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartifyTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB961081A291E74B3C946812 /* Pods-PartifyTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		322448231FBB77E8006774F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45A3C2BC73AF2753E04A009 /* Pods_PartifyTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3224481D1FBB77E8006774F7 = {
+			isa = PBXGroup;
+			children = (
+				322448281FBB77E8006774F7 /* PartifyTV */,
+				322448271FBB77E8006774F7 /* Products */,
+				D03FB2CDE526A91ADDB7CAE1 /* Pods */,
+				58327698A7E1D611B60F9F30 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		322448271FBB77E8006774F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				322448261FBB77E8006774F7 /* PartifyTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		322448281FBB77E8006774F7 /* PartifyTV */ = {
+			isa = PBXGroup;
+			children = (
+				320EADB61FBC1F6E007D5B80 /* PartifyTV.entitlements */,
+				322448291FBB77E8006774F7 /* AppDelegate.h */,
+				3224482A1FBB77E8006774F7 /* AppDelegate.m */,
+				3224482C1FBB77E8006774F7 /* ViewController.h */,
+				3224482D1FBB77E8006774F7 /* ViewController.m */,
+				3224482F1FBB77E8006774F7 /* Main.storyboard */,
+				322448321FBB77E8006774F7 /* Assets.xcassets */,
+				322448341FBB77E8006774F7 /* Info.plist */,
+				322448351FBB77E8006774F7 /* main.m */,
+				320EADB31FBC1EE7007D5B80 /* EEUserID.h */,
+				320EADB41FBC1EE7007D5B80 /* EEUserID.m */,
+				327494961FBC2129003E30F4 /* RESTClient.h */,
+				327494971FBC2129003E30F4 /* RESTClient.m */,
+			);
+			path = PartifyTV;
+			sourceTree = "<group>";
+		};
+		58327698A7E1D611B60F9F30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D03FB2CDE526A91ADDB7CAE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB961081A291E74B3C946812 /* Pods-PartifyTV.debug.xcconfig */,
+				5BFCC1C59A1E4F0A4B5B67E6 /* Pods-PartifyTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		322448251FBB77E8006774F7 /* PartifyTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 322448391FBB77E8006774F7 /* Build configuration list for PBXNativeTarget "PartifyTV" */;
+			buildPhases = (
+				E8AA3BBE04DC224E99176149 /* [CP] Check Pods Manifest.lock */,
+				322448221FBB77E8006774F7 /* Sources */,
+				322448231FBB77E8006774F7 /* Frameworks */,
+				322448241FBB77E8006774F7 /* Resources */,
+				B949B91C6104836F64391275 /* [CP] Embed Pods Frameworks */,
+				4A3D23D10559F5007FA77B5D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PartifyTV;
+			productName = PartifyTV;
+			productReference = 322448261FBB77E8006774F7 /* PartifyTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3224481E1FBB77E8006774F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Runar Ovesen Hjerpbakk";
+				TargetAttributes = {
+					322448251FBB77E8006774F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 322448211FBB77E8006774F7 /* Build configuration list for PBXProject "PartifyTV" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3224481D1FBB77E8006774F7;
+			productRefGroup = 322448271FBB77E8006774F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				322448251FBB77E8006774F7 /* PartifyTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		322448241FBB77E8006774F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322448331FBB77E8006774F7 /* Assets.xcassets in Resources */,
+				322448311FBB77E8006774F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A3D23D10559F5007FA77B5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B949B91C6104836F64391275 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/XCDYouTubeKit/XCDYouTubeKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCDYouTubeKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8AA3BBE04DC224E99176149 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartifyTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		322448221FBB77E8006774F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				327494981FBC2129003E30F4 /* RESTClient.m in Sources */,
+				3224482E1FBB77E8006774F7 /* ViewController.m in Sources */,
+				322448361FBB77E8006774F7 /* main.m in Sources */,
+				3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */,
+				320EADB51FBC1EE7007D5B80 /* EEUserID.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3224482F1FBB77E8006774F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				322448301FBB77E8006774F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		322448371FBB77E8006774F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		322448381FBB77E8006774F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3224483A1FBB77E8006774F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB961081A291E74B3C946812 /* Pods-PartifyTV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = PartifyTV/PartifyTV.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3BMHYY53W;
+				INFOPLIST_FILE = PartifyTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.PartifyTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		3224483B1FBB77E8006774F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BFCC1C59A1E4F0A4B5B67E6 /* Pods-PartifyTV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = PartifyTV/PartifyTV.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3BMHYY53W;
+				INFOPLIST_FILE = PartifyTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjerpbakk.PartifyTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		322448211FBB77E8006774F7 /* Build configuration list for PBXProject "PartifyTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				322448371FBB77E8006774F7 /* Debug */,
+				322448381FBB77E8006774F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		322448391FBB77E8006774F7 /* Build configuration list for PBXNativeTarget "PartifyTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3224483A1FBB77E8006774F7 /* Debug */,
+				3224483B1FBB77E8006774F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3224481E1FBB77E8006774F7 /* Project object */;
+}
