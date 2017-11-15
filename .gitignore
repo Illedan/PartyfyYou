@@ -352,3 +352,4 @@ fastlane/test_output
 
 iOSInjectionProject/
 src/iOS/PartyFY/config.json
+Partify.Storage/Partify.Storage.WebApi.Host/Configuration.json

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Partify.Storage.Server
 {
-    public interface IConfiguration
+    public class ConfigurationModel
     {
-        string ConnectionString { get; }
+        public string DBConnectionString { get; set; }
     }
 }
