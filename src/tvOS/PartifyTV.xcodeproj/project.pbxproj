@@ -13,6 +13,7 @@
 		322448311FBB77E8006774F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3224482F1FBB77E8006774F7 /* Main.storyboard */; };
 		322448331FBB77E8006774F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322448321FBB77E8006774F7 /* Assets.xcassets */; };
 		322448361FBB77E8006774F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 322448351FBB77E8006774F7 /* main.m */; };
+		327494981FBC2129003E30F4 /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 327494971FBC2129003E30F4 /* RESTClient.m */; };
 		B45A3C2BC73AF2753E04A009 /* Pods_PartifyTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 		322448321FBB77E8006774F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		322448341FBB77E8006774F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322448351FBB77E8006774F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		327494961FBC2129003E30F4 /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
+		327494971FBC2129003E30F4 /* RESTClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
 		5BFCC1C59A1E4F0A4B5B67E6 /* Pods-PartifyTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.release.xcconfig"; sourceTree = "<group>"; };
 		6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartifyTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB961081A291E74B3C946812 /* Pods-PartifyTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				322448351FBB77E8006774F7 /* main.m */,
 				320EADB31FBC1EE7007D5B80 /* EEUserID.h */,
 				320EADB41FBC1EE7007D5B80 /* EEUserID.m */,
+				327494961FBC2129003E30F4 /* RESTClient.h */,
+				327494971FBC2129003E30F4 /* RESTClient.m */,
 			);
 			path = PartifyTV;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327494981FBC2129003E30F4 /* RESTClient.m in Sources */,
 				3224482E1FBB77E8006774F7 /* ViewController.m in Sources */,
 				322448361FBB77E8006774F7 /* main.m in Sources */,
 				3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */,
