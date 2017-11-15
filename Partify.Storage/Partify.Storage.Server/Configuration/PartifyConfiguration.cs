@@ -1,12 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Partify.Storage.Server
+namespace Partify.Storage.Server.Configuration
 {
     public class PartifyConfiguration : IConfiguration
     {

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Partify.Storage.Server
+﻿
+namespace Partify.Storage.Server.Configuration
 {
     public class ConfigurationModel
     {

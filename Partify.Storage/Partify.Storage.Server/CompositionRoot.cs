@@ -3,6 +3,7 @@ using Partify.Storage.Server.Mode;
 using Partify.Storage.Server.CQRS;
 using System.Data;
 using System.Data.SqlClient;
+using Partify.Storage.Server.Configuration;
 
 namespace Partify.Storage.Server
 {
