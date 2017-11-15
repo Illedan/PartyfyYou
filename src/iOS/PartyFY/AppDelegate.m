@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "RestClient.h"
 #import "Service.h"
+#import "EEUserID.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) SpotiyAuthenticator *spotifyAuthenticator;
@@ -60,7 +61,9 @@ AppConfig *appConfig;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [EEUserID load];
     
+    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     ViewController* mainController = (ViewController*)  self.window.rootViewController;
     [RestClient makeRestAPICall:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response) {
