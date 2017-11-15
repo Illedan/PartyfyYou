@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppConfig.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) AppConfig *appConfig;
+@property (nonatomic, strong) NSTimer *spotifyRefreshTimer;
+
+- (void)authenticationCompleted:(NSString*) session;
 
 @end
 

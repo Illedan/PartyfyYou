@@ -1,7 +1,4 @@
 {
-    "SpotifyClientId": "[SpotifyClientId]",
-    "SpotifyClientSecret": "[SpotifyClientSecret]",
-    "YouTubeServiceId": "[YouTubeServiceId]",
     "ServiceDiscoveryURL": "[ServiceDiscoveryURL]",
     "apiURL": "[apiURL]"
 }
