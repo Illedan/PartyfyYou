@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AVKit/AVKit.h>
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
+#import "RESTClient.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 @implementation ViewController
 
 NSString *currentSession;
+NSString *currentSpotifyId;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,23 +32,7 @@ NSString *currentSession;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    AVPlayerViewController *playerViewController = [AVPlayerViewController new];
-    [self presentViewController:playerViewController animated:YES completion:nil];
-    
-    __weak AVPlayerViewController *weakPlayerViewController = playerViewController;
-    [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:@"2ot_katYYiU" completionHandler:^(XCDYouTubeVideo * _Nullable video, NSError * _Nullable error) {
-        if (video)
-        {
-            NSDictionary *streamURLs = video.streamURLs;
-            NSURL *streamURL = streamURLs[XCDYouTubeVideoQualityHTTPLiveStreaming] ?: streamURLs[@(XCDYouTubeVideoQualityHD720)] ?: streamURLs[@(XCDYouTubeVideoQualityMedium360)] ?: streamURLs[@(XCDYouTubeVideoQualitySmall240)];
-            weakPlayerViewController.player = [AVPlayer playerWithURL:streamURL];
-            [weakPlayerViewController.player play];
-        }
-        else
-        {
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
-    }];
+    [super viewDidAppear:animated];
 }
 
 - (void)authenticationCompleted:(NSString*)session {
@@ -58,6 +44,9 @@ NSString *currentSession;
                                                               selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
                                                               userInfo:nil
                                                                repeats:YES];
+    
+    // TODO: Why do timer no work
+    [self getSpotifySongId];
 }
 
 - (void)playVideoForCurrentlyPlayingSpotifySong:(NSTimer*)timer {
@@ -66,8 +55,8 @@ NSString *currentSession;
 
 // TODO: Change service discovery key
 - (void)getSpotifySongId {
-    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/id?token=%@", self.appConfig.apiURL, currentSession.accessToken];
-    [RestClient makeRestAPICall:getCurrentSongURL responseHandler:^(NSString *spotifyId) {
+    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/id?token=%@", self.appConfig.apiURL, currentSession];
+    [RESTClient get:getCurrentSongURL responseHandler:^(NSString *spotifyId) {
         NSError *error;
         if (error) {
             // TODO: Errorhandling
@@ -84,28 +73,47 @@ NSString *currentSession;
 
 - (void)getYouTubeSongId:(NSString*) spotifyId {
     // TODO: Use proper service when available...
-    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/url?token=%@", self.appConfig.apiURL, currentSession.accessToken];
-    [RestClient makeRestAPICall:getCurrentSongURL responseHandler:^(NSString *youTubeId) {
+    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/url?token=%@", self.appConfig.apiURL, currentSession];
+    [RESTClient get:getCurrentSongURL responseHandler:^(NSString *youTubeId) {
         NSError *error;
         if (error) {
             // TODO: Errorhandling
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self prepareToPlayNewVideo:youTubeId];
+            
+            AVPlayerViewController *playerViewController = [AVPlayerViewController new];
+            [self presentViewController:playerViewController animated:YES completion:nil];
+            
+            __weak AVPlayerViewController *weakPlayerViewController = playerViewController;
+            [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:youTubeId completionHandler:^(XCDYouTubeVideo * _Nullable video, NSError * _Nullable error) {
+                if (video)
+                {
+                    NSDictionary *streamURLs = video.streamURLs;
+                    NSURL *streamURL = streamURLs[XCDYouTubeVideoQualityHTTPLiveStreaming] ?: streamURLs[@(XCDYouTubeVideoQualityHD720)] ?: streamURLs[@(XCDYouTubeVideoQualityMedium360)] ?: streamURLs[@(XCDYouTubeVideoQualitySmall240)];
+                    weakPlayerViewController.player = [AVPlayer playerWithURL:streamURL];
+                    [weakPlayerViewController.player play];
+                }
+                else
+                {
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }
+            }];
+            
+            
         });
         
     }];
 }
 
-- (void)prepareToPlayNewVideo:(NSString*) youTubeId {
-    videoPlayerViewController.videoIdentifier = youTubeId;
-    if (!videoPlayerViewController.isFirstResponder) {
-        [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
-    }
-    
-    // TODO: Må nok gjøre noe mer. Funker stort sett, men ikke alltid. Stoppe og starte osv?
-    [videoPlayerViewController.moviePlayer prepareToPlay];
-}
+//- (void)prepareToPlayNewVideo:(NSString*) youTubeId {
+//    videoPlayerViewController.videoIdentifier = youTubeId;
+//    if (!videoPlayerViewController.isFirstResponder) {
+//        [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+//    }
+//
+//    // TODO: Må nok gjøre noe mer. Funker stort sett, men ikke alltid. Stoppe og starte osv?
+//    [videoPlayerViewController.moviePlayer prepareToPlay];
+//}
 
 @end

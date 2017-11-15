@@ -73,6 +73,10 @@ AppConfig *appConfig;
             // TODO: Errorhandling
         }
         
+        if (!service.ip) {
+            //            TODO: Die horribly
+        }
+        
         appConfig.apiURL = service.ip;
         mainController.appConfig = appConfig;
         dispatch_semaphore_signal(sema);

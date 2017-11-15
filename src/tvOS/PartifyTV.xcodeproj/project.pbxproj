@@ -13,12 +13,11 @@
 		322448311FBB77E8006774F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3224482F1FBB77E8006774F7 /* Main.storyboard */; };
 		322448331FBB77E8006774F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322448321FBB77E8006774F7 /* Assets.xcassets */; };
 		322448361FBB77E8006774F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 322448351FBB77E8006774F7 /* main.m */; };
+		3253A9241FBC3571005A0B5B /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 3253A9231FBC3571005A0B5B /* Service.m */; };
+		3253A9271FBC3A72005A0B5B /* config.default.json in Resources */ = {isa = PBXBuildFile; fileRef = 3253A9251FBC3A72005A0B5B /* config.default.json */; };
+		3253A9281FBC3A72005A0B5B /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3253A9261FBC3A72005A0B5B /* config.json */; };
 		327494981FBC2129003E30F4 /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 327494971FBC2129003E30F4 /* RESTClient.m */; };
 		32D957311FBC31B2004D72BC /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D957301FBC31B2004D72BC /* AppConfig.m */; };
-		32D957341FBC31C0004D72BC /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 32D957321FBC31C0004D72BC /* config.json */; };
-		32D957351FBC31C0004D72BC /* config.default.json in Resources */ = {isa = PBXBuildFile; fileRef = 32D957331FBC31C0004D72BC /* config.default.json */; };
-		32D957381FBC3235004D72BC /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D957361FBC3234004D72BC /* Service.m */; };
-		32D957411FBC329F004D72BC /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D957401FBC329F004D72BC /* Service.m */; };
 		B45A3C2BC73AF2753E04A009 /* Pods_PartifyTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,16 +34,14 @@
 		322448321FBB77E8006774F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		322448341FBB77E8006774F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322448351FBB77E8006774F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3253A9221FBC3571005A0B5B /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		3253A9231FBC3571005A0B5B /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		3253A9251FBC3A72005A0B5B /* config.default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.default.json; sourceTree = "<group>"; };
+		3253A9261FBC3A72005A0B5B /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		327494961FBC2129003E30F4 /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
 		327494971FBC2129003E30F4 /* RESTClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
 		32D9572F1FBC31B2004D72BC /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
 		32D957301FBC31B2004D72BC /* AppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
-		32D957321FBC31C0004D72BC /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../iOS/PartyFY/config.json; sourceTree = "<group>"; };
-		32D957331FBC31C0004D72BC /* config.default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.default.json; path = ../../iOS/PartyFY/config.default.json; sourceTree = "<group>"; };
-		32D957361FBC3234004D72BC /* Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
-		32D957371FBC3235004D72BC /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
-		32D9573F1FBC329F004D72BC /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
-		32D957401FBC329F004D72BC /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		5BFCC1C59A1E4F0A4B5B67E6 /* Pods-PartifyTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.release.xcconfig"; sourceTree = "<group>"; };
 		6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartifyTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB961081A291E74B3C946812 /* Pods-PartifyTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,11 +82,11 @@
 			children = (
 				32D9572F1FBC31B2004D72BC /* AppConfig.h */,
 				32D957301FBC31B2004D72BC /* AppConfig.m */,
+				3253A9251FBC3A72005A0B5B /* config.default.json */,
+				3253A9261FBC3A72005A0B5B /* config.json */,
 				322448291FBB77E8006774F7 /* AppDelegate.h */,
 				3224482A1FBB77E8006774F7 /* AppDelegate.m */,
 				322448321FBB77E8006774F7 /* Assets.xcassets */,
-				32D957331FBC31C0004D72BC /* config.default.json */,
-				32D957321FBC31C0004D72BC /* config.json */,
 				320EADB31FBC1EE7007D5B80 /* EEUserID.h */,
 				320EADB41FBC1EE7007D5B80 /* EEUserID.m */,
 				322448341FBB77E8006774F7 /* Info.plist */,
@@ -98,12 +95,10 @@
 				320EADB61FBC1F6E007D5B80 /* PartifyTV.entitlements */,
 				327494961FBC2129003E30F4 /* RESTClient.h */,
 				327494971FBC2129003E30F4 /* RESTClient.m */,
-				32D9573F1FBC329F004D72BC /* Service.h */,
-				32D957371FBC3235004D72BC /* Service.h */,
-				32D957361FBC3234004D72BC /* Service.m */,
+				3253A9221FBC3571005A0B5B /* Service.h */,
+				3253A9231FBC3571005A0B5B /* Service.m */,
 				3224482C1FBB77E8006774F7 /* ViewController.h */,
 				3224482D1FBB77E8006774F7 /* ViewController.m */,
-				32D957361FBC3234004D72BC /* Service.m */,
 			);
 			path = PartifyTV;
 			sourceTree = "<group>";
@@ -191,10 +186,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D957351FBC31C0004D72BC /* config.default.json in Resources */,
 				322448331FBB77E8006774F7 /* Assets.xcassets in Resources */,
+				3253A9281FBC3A72005A0B5B /* config.json in Resources */,
 				322448311FBB77E8006774F7 /* Main.storyboard in Resources */,
-				32D957341FBC31C0004D72BC /* config.json in Resources */,
+				3253A9271FBC3A72005A0B5B /* config.default.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +261,7 @@
 				322448361FBB77E8006774F7 /* main.m in Sources */,
 				3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */,
 				320EADB51FBC1EE7007D5B80 /* EEUserID.m in Sources */,
-				32D957411FBC329F004D72BC /* Service.m in Sources */,
-				32D957381FBC3235004D72BC /* Service.m in Sources */,
+				3253A9241FBC3571005A0B5B /* Service.m in Sources */,
 				32D957311FBC31B2004D72BC /* AppConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

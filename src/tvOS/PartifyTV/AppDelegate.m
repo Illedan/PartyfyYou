@@ -18,9 +18,24 @@
 
 @implementation AppDelegate
 
+AppConfig *appConfig;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"config"
+                                                     ofType:@"json"];
+    
+    NSString* myJson = [NSString stringWithContentsOfFile:path
+                                                 encoding:NSUTF8StringEncoding
+                                                    error:NULL];
+    
+    NSError *error;
+    appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
+    if (error) {
+        return NO;
+    }
+    
     return YES;
 }
 
@@ -47,11 +62,15 @@
 
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     ViewController* mainController = (ViewController*)  self.window.rootViewController;
-    [RestClient get:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response) {
+    [RESTClient get:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response) {
         NSError *error;
         Service* service = [[Service alloc] initWithString:response error:&error];
         if (error) {
             // TODO: Errorhandling
+        }
+        
+        if (!service.ip) {
+            // TODO: verifiser at det er slik man sjekker for nil og Die horribly
         }
         
         appConfig.apiURL = service.ip;
@@ -61,10 +80,24 @@
     
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     
-//    [EEUserID load];
+    [EEUserID load];
     
-//    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
-//    [RESTClient put:uniqueIDForiTunesAccount body:@"token" responseHandler:nil];
+    
+    
+    // TODO: Bare gjør dette dersom ikke har token allerede osv
+    // TODO: Må skaffe seg refresh token ved behov...
+    
+    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
+    NSString* authURL = @"http://localhost:5000/api/auth/";
+    authURL = [authURL stringByAppendingString:uniqueIDForiTunesAccount];
+    [RESTClient get:authURL responseHandler:^(NSString *token) {
+        NSError *error;
+        if (error) {
+            // TODO: Errorhandling
+        }
+        
+        [mainController authenticationCompleted:token];
+    }];
 }
 
 
