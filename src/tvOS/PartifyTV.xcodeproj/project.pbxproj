@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320EADB51FBC1EE7007D5B80 /* EEUserID.m in Sources */ = {isa = PBXBuildFile; fileRef = 320EADB41FBC1EE7007D5B80 /* EEUserID.m */; };
 		3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224482A1FBB77E8006774F7 /* AppDelegate.m */; };
 		3224482E1FBB77E8006774F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224482D1FBB77E8006774F7 /* ViewController.m */; };
 		322448311FBB77E8006774F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3224482F1FBB77E8006774F7 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320EADB31FBC1EE7007D5B80 /* EEUserID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EEUserID.h; sourceTree = "<group>"; };
+		320EADB41FBC1EE7007D5B80 /* EEUserID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EEUserID.m; sourceTree = "<group>"; };
+		320EADB61FBC1F6E007D5B80 /* PartifyTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartifyTV.entitlements; sourceTree = "<group>"; };
 		322448261FBB77E8006774F7 /* PartifyTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartifyTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322448291FBB77E8006774F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3224482A1FBB77E8006774F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		322448281FBB77E8006774F7 /* PartifyTV */ = {
 			isa = PBXGroup;
 			children = (
+				320EADB61FBC1F6E007D5B80 /* PartifyTV.entitlements */,
 				322448291FBB77E8006774F7 /* AppDelegate.h */,
 				3224482A1FBB77E8006774F7 /* AppDelegate.m */,
 				3224482C1FBB77E8006774F7 /* ViewController.h */,
@@ -71,6 +76,8 @@
 				322448321FBB77E8006774F7 /* Assets.xcassets */,
 				322448341FBB77E8006774F7 /* Info.plist */,
 				322448351FBB77E8006774F7 /* main.m */,
+				320EADB31FBC1EE7007D5B80 /* EEUserID.h */,
+				320EADB41FBC1EE7007D5B80 /* EEUserID.m */,
 			);
 			path = PartifyTV;
 			sourceTree = "<group>";
@@ -127,6 +134,11 @@
 					322448251FBB77E8006774F7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -222,6 +234,7 @@
 				3224482E1FBB77E8006774F7 /* ViewController.m in Sources */,
 				322448361FBB77E8006774F7 /* main.m in Sources */,
 				3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */,
+				320EADB51FBC1EE7007D5B80 /* EEUserID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = PartifyTV/PartifyTV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3BMHYY53W;
 				INFOPLIST_FILE = PartifyTV/Info.plist;
@@ -363,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = PartifyTV/PartifyTV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3BMHYY53W;
 				INFOPLIST_FILE = PartifyTV/Info.plist;
