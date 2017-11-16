@@ -14,6 +14,8 @@
 @property (nonatomic, strong) AppConfig *appConfig;
 @property (nonatomic, strong) NSTimer *spotifyRefreshTimer;
 
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+
 - (void)authenticationCompleted:(NSString*) session;
 
 @end

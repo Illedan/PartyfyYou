@@ -11,6 +11,7 @@
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
 #import "RESTClient.h"
 
+
 @interface ViewController ()
 
 @end
@@ -34,6 +35,14 @@ AVPlayerViewController *playerViewController;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    
+    self.image.transform = CGAffineTransformMakeScale(0.1, 0.1);
+    [UIView animateWithDuration:5 animations:^(){
+                        self.image.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                        self.image.center = self.view.center;
+                    }
+                    completion:nil];
 }
 
 - (void)authenticationCompleted:(NSString*)session {

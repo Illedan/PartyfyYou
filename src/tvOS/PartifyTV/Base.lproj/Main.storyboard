@@ -30,6 +30,9 @@
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="yoa-SJ-Y9l" id="VWN-bB-kgz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
