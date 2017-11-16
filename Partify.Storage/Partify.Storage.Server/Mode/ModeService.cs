@@ -16,8 +16,14 @@ namespace Partify.Storage.Server.Mode
         }
         public async Task<IEnumerable<ModeResult>> GetAllModes()
         {
-            var result = await m_queryExecutor.ExecuteAsync(new ModeQuery());
-            return result;
+            var results = await m_queryExecutor.ExecuteAsync(new ModeQuery());
+            return results;
+        }
+
+        public async Task<ModeResult> GetModeById(Guid Id)
+        {
+            var results = await m_queryExecutor.ExecuteAsync(new ModeQuery {Id = Id });
+            return results.FirstOrDefault();
         }
     }
 }

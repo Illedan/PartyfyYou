@@ -47,7 +47,7 @@ namespace Partify.Storage.Server.CQRS
         private static Func<IServiceFactory, IQuery<TResult>, Task<TResult>> CreateDelegate<TResult>(Type queryType)
         {
             // Define the signature of the dynamic method.
-            var dynamicMethod = new System.Reflection.Emit.DynamicMethod("Aql", typeof(Task<TResult>), new[] { typeof(IServiceFactory), typeof(IQuery<TResult>) });
+            var dynamicMethod = new System.Reflection.Emit.DynamicMethod("Sql", typeof(Task<TResult>), new[] { typeof(IServiceFactory), typeof(IQuery<TResult>) });
             System.Reflection.Emit.ILGenerator generator = dynamicMethod.GetILGenerator();
 
             // Create the closed generic query handler type.
@@ -78,7 +78,7 @@ namespace Partify.Storage.Server.CQRS
             // and we need to cast it to the actual query type.
             generator.Emit(OpCodes.Castclass, queryType);
 
-            // Call the Aql method and push the Task<TResult>
+            // Call the Sql method and push the Task<TResult>
             // onto the evaluation stack.
             generator.Emit(OpCodes.Callvirt, method);
 

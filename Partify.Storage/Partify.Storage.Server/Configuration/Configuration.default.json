@@ -1,0 +1,8 @@
+﻿/// <summary>
+/// NOTE: This will not work for Docker
+///  Copy this to Partify.Storage/Partify.Storage.WebApi.Host/Configuration.json
+///  Do not commit Configuration.json
+/// </summary>
+{
+  "DBConnectionString": "YourDBConnectionStringHere"
+}

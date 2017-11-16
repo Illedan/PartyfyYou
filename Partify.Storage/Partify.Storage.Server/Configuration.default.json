@@ -1,7 +1,0 @@
-﻿/// <summary>  
-///  Copy this file and make rename it Configuration.json
-///  Do not commit Configuration.json
-/// </summary>
-{
-  "DBConnectionString": "YourDBConnectionStringHere"
-}

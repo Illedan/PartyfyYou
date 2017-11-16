@@ -29,9 +29,11 @@ namespace Partify.Storage.WebApi.Controller
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        [ProducesResponseType(typeof(ModeResult), 200)]
+        public async Task<IActionResult> Get(Guid id)
         {
-            return "value";
+            var result = await m_modeService.GetModeById(id);
+            return Ok(result);
         }
 
         // POST api/values
