@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
 #import "RestClient.h"
+#import "SpotiyAuthenticator.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) NSTimer *spotifyRefreshTimer;
 @end
 
 
@@ -21,6 +22,7 @@
 // TODO: Spør API etter ny token før expiration period er over (1 time per token)
 @implementation ViewController
 
+// TODO: move session to auth
 SPTSession *currentSession;
 NSString *currentSpotifyId;
 
@@ -34,7 +36,6 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:videoPlayerViewController.moviePlayer];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -42,6 +43,14 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+}
+
+- (BOOL)handleURL:(NSURL *)url {
+    return [self.spotifyAuthenticator handleCallbackURL:url];
+}
+
+- (IBAction)PlayShowVideoForCurrentSpotifySong:(UIButton *)sender {
+    [self.spotifyAuthenticator startAuthenticationFlow];
 }
 
 - (void)authenticationCompleted:(SPTSession*)session {

@@ -10,10 +10,9 @@
 #import <SafariServices/SafariServices.h>
 #import <Spotify/SpotifyAuthentication.h>
 #import "AppConfig.h"
-#import "ViewController.h"
 
 @interface SpotiyAuthenticator : NSObject
-- (id)initWithConfig:(AppConfig*)config viewController:(ViewController*)viewController;
+- (id)initWithConfig:(AppConfig*)config authCompletedHanlder:(void (^) (SPTSession *session))handler;
 - (void)startAuthenticationFlow;
 - (BOOL)handleCallbackURL:(NSURL*)url;
 @end

@@ -13,11 +13,12 @@
 #import "EEUserID.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong) SpotiyAuthenticator *spotifyAuthenticator;
+
 @end
 
 @implementation AppDelegate
-AppConfig *appConfig;
+
+ViewController* mainController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -35,9 +36,21 @@ AppConfig *appConfig;
                                                      error:NULL];
     
     NSError *error;
-    appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
+    self.appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
     if (error) {
-        return NO;
+        NSException* exception = [NSException
+                                    exceptionWithName:@"ConfigNotParsedException"
+                                    reason:error.localizedFailureReason
+                                    userInfo:nil];
+        [exception raise];
+    }
+    
+    if (!self.appConfig) {
+        NSException* exception = [NSException
+                                    exceptionWithName:@"ConfigNotParsedException"
+                                    reason:@"Could not create AppConfig from JSON"
+                                    userInfo:nil];
+        [exception raise];
     }
         
     return YES;
@@ -61,12 +74,14 @@ AppConfig *appConfig;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    [EEUserID load];
+
+//    TODO: Should be able to autologon apple tv app using this, but need to make other case working first
+//    [EEUserID load];
+//    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
     
-    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    ViewController* mainController = (ViewController*)  self.window.rootViewController;
-    [RestClient makeRestAPICall:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response) {
+    mainController = (ViewController*)  self.window.rootViewController;
+    [RestClient makeRestAPICall:self.appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response) {
         NSError *error;
         Service* service = [[Service alloc] initWithString:response error:&error];
         if (error) {
@@ -77,13 +92,15 @@ AppConfig *appConfig;
             //            TODO: Die horribly
         }
         
-        appConfig.apiURL = service.ip;
-        mainController.appConfig = appConfig;
+        self.appConfig.apiURL = service.ip;
+        mainController.appConfig = self.appConfig;
+        mainController.spotifyAuthenticator = [[SpotiyAuthenticator alloc] initWithConfig:self.appConfig authCompletedHanlder:^(SPTSession *session) {
+            [mainController authenticationCompleted:session];
+        }];
         dispatch_semaphore_signal(sema);
     }];
     
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-    self.spotifyAuthenticator = [[SpotiyAuthenticator alloc] initWithConfig:appConfig viewController:mainController];
 }
 
 
@@ -95,11 +112,7 @@ AppConfig *appConfig;
             openURL:(NSURL *)url
             options:(NSDictionary *)options
 {
-    if ([self.spotifyAuthenticator handleCallbackURL:url]) {
-        return YES;
-    }
-    
-    return NO;
+    return [mainController handleURL:url];
 }
 
 @end

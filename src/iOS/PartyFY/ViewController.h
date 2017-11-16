@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <Spotify/SpotifyAuthentication.h>
 #import "AppConfig.h"
+#import "SpotiyAuthenticator.h"
 
 @interface ViewController : UIViewController
-@property (nonatomic, strong) AppConfig *appConfig;
-@property (nonatomic, strong) NSTimer *spotifyRefreshTimer;
+@property (strong, nonatomic) AppConfig *appConfig;
+@property (strong, nonatomic) SpotiyAuthenticator *spotifyAuthenticator;
 
+- (IBAction)PlayShowVideoForCurrentSpotifySong:(UIButton *)sender;
 - (void)authenticationCompleted:(SPTSession*) session;
+- (BOOL)handleURL:(NSURL *)url;
 @end
 
