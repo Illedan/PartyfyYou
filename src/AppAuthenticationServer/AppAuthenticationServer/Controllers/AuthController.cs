@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AppAuthenticationServer.Model;
 using AppAuthenticationServer.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
@@ -18,8 +19,9 @@ namespace AppAuthenticationServer.Controllers
 
         // GET api/auth/
         [HttpGet]
-        public string Get() {
-            return authService.GetSimpleCodeForDisplay();
+        public OneTimeCode Get() {
+            var oneTimeCode = new OneTimeCode(authService.GetSimpleCodeForDisplay(), "http://localhost:5000/appletv/");
+            return oneTimeCode;
         }
 
         // GET api/auth/f19a5452-9e3a-4768-84b7-a34aaa07c4bc 

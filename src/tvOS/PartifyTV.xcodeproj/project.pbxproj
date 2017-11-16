@@ -18,6 +18,8 @@
 		3253A9281FBC3A72005A0B5B /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3253A9261FBC3A72005A0B5B /* config.json */; };
 		3253A92B1FBC6FC2005A0B5B /* partify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3253A92A1FBC6FC2005A0B5B /* partify.png */; };
 		327494981FBC2129003E30F4 /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 327494971FBC2129003E30F4 /* RESTClient.m */; };
+		327940671FBE27ED0067D496 /* AuthHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 327940661FBE27ED0067D496 /* AuthHandler.m */; };
+		3279406A1FBE31370067D496 /* OneTimeCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 327940691FBE31370067D496 /* OneTimeCode.m */; };
 		32D957311FBC31B2004D72BC /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D957301FBC31B2004D72BC /* AppConfig.m */; };
 		B45A3C2BC73AF2753E04A009 /* Pods_PartifyTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,10 @@
 		3253A92A1FBC6FC2005A0B5B /* partify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = partify.png; path = icon/partify.png; sourceTree = SOURCE_ROOT; };
 		327494961FBC2129003E30F4 /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
 		327494971FBC2129003E30F4 /* RESTClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
+		327940651FBE27ED0067D496 /* AuthHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthHandler.h; sourceTree = "<group>"; };
+		327940661FBE27ED0067D496 /* AuthHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthHandler.m; sourceTree = "<group>"; };
+		327940681FBE31370067D496 /* OneTimeCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneTimeCode.h; sourceTree = "<group>"; };
+		327940691FBE31370067D496 /* OneTimeCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTimeCode.m; sourceTree = "<group>"; };
 		32D9572F1FBC31B2004D72BC /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
 		32D957301FBC31B2004D72BC /* AppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
 		5BFCC1C59A1E4F0A4B5B67E6 /* Pods-PartifyTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,20 +88,24 @@
 		322448281FBB77E8006774F7 /* PartifyTV */ = {
 			isa = PBXGroup;
 			children = (
-				3253A9291FBC6F80005A0B5B /* Resources */,
 				32D9572F1FBC31B2004D72BC /* AppConfig.h */,
 				32D957301FBC31B2004D72BC /* AppConfig.m */,
-				3253A9251FBC3A72005A0B5B /* config.default.json */,
-				3253A9261FBC3A72005A0B5B /* config.json */,
 				322448291FBB77E8006774F7 /* AppDelegate.h */,
 				3224482A1FBB77E8006774F7 /* AppDelegate.m */,
 				322448321FBB77E8006774F7 /* Assets.xcassets */,
+				327940651FBE27ED0067D496 /* AuthHandler.h */,
+				327940661FBE27ED0067D496 /* AuthHandler.m */,
+				3253A9251FBC3A72005A0B5B /* config.default.json */,
+				3253A9261FBC3A72005A0B5B /* config.json */,
 				320EADB31FBC1EE7007D5B80 /* EEUserID.h */,
 				320EADB41FBC1EE7007D5B80 /* EEUserID.m */,
 				322448341FBB77E8006774F7 /* Info.plist */,
 				322448351FBB77E8006774F7 /* main.m */,
 				3224482F1FBB77E8006774F7 /* Main.storyboard */,
+				327940681FBE31370067D496 /* OneTimeCode.h */,
+				327940691FBE31370067D496 /* OneTimeCode.m */,
 				320EADB61FBC1F6E007D5B80 /* PartifyTV.entitlements */,
+				3253A9291FBC6F80005A0B5B /* Resources */,
 				327494961FBC2129003E30F4 /* RESTClient.h */,
 				327494971FBC2129003E30F4 /* RESTClient.m */,
 				3253A9221FBC3571005A0B5B /* Service.h */,
@@ -268,12 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327940671FBE27ED0067D496 /* AuthHandler.m in Sources */,
 				327494981FBC2129003E30F4 /* RESTClient.m in Sources */,
 				3224482E1FBB77E8006774F7 /* ViewController.m in Sources */,
 				322448361FBB77E8006774F7 /* main.m in Sources */,
 				3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */,
 				320EADB51FBC1EE7007D5B80 /* EEUserID.m in Sources */,
 				3253A9241FBC3571005A0B5B /* Service.m in Sources */,
+				3279406A1FBE31370067D496 /* OneTimeCode.m in Sources */,
 				32D957311FBC31B2004D72BC /* AppConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

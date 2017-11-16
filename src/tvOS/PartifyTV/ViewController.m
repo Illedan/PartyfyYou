@@ -25,6 +25,8 @@ AVPlayerViewController *playerViewController;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.headerLabel.text = @"Good header";
+    self.codeLabel.hidden = YES;
 }
 
 
@@ -43,17 +45,30 @@ AVPlayerViewController *playerViewController;
                         self.image.center = self.view.center;
                     }
                     completion:nil];
+    
+    self.headerLabel.transform = CGAffineTransformMakeScale(0.1, 0.1);
+    [UIView animateWithDuration:5 animations:^(){
+                        self.headerLabel.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                        self.headerLabel.center = self.headerLabel.center;
+                    }
+                    completion:nil];
+}
+
+- (void)showAuthCode:(OneTimeCode*) authCode {
+    self.headerLabel.text = authCode.url;
+    self.codeLabel.text = authCode.code;
+    self.codeLabel.hidden = NO;
 }
 
 - (void)authenticationCompleted:(NSString*)session {
     currentSession = session;
     
     // TODO: pause video and timer if app is sent to background
-    self.spotifyRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                                target:self
-                                                              selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
-                                                              userInfo:nil
-                                                               repeats:YES];
+//    self.spotifyRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+//                                                                target:self
+//                                                              selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
+//                                                              userInfo:nil
+//                                                               repeats:YES];
 }
 
 - (void)playVideoForCurrentlyPlayingSpotifySong:(NSTimer*)timer {

@@ -9,6 +9,7 @@
     <Folder Include="Services\" />
     <Folder Include="Views\" />
     <Folder Include="Views\AppleTVAuth\" />
+    <Folder Include="Model\" />
   </ItemGroup>
 
   <ItemGroup>

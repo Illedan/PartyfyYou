@@ -14,12 +14,23 @@ namespace AppAuthenticationServer.Services
         } 
 
         public string GetSimpleCodeForDisplay() {
+            // TODO: RAndom code etc...
             var simpleCode = "4444";
             memoryCache.Remove(simpleCode);
             var cacheEntryOptions = new MemoryCacheEntryOptions()
                 .SetAbsoluteExpiration(tokenTimeout);
-            memoryCache.Set(simpleCode, "BQChhM6I4EK18P9ugbFYhNbl_JZn9znz5UZadQxHfzry2qEP2z9Nf8noXrrav9yYVSGK8ZoxobJYCyHkqMdDyc8s5RhU9Pry0hFjlpYYY1P1oPJMNvNA7Fzd8R97bGKY6X6Md_j-1N5VZOCfiOxjZQ", cacheEntryOptions);
+            memoryCache.Set(simpleCode, new object(), cacheEntryOptions);
             return simpleCode;
+        }
+
+        public bool VerifySimpleCodeWasCorrect(string simpleCode) {
+            if (memoryCache.TryGetValue(simpleCode, out object dummyObject))
+            {
+                memoryCache.Remove(simpleCode);
+                return true;
+            }
+
+            return false;
         }
 
         public string GetTokenForUserId(string userId) {

@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "AppConfig.h"
+#import "OneTimeCode.h"
 
 @interface ViewController : UIViewController
 
 @property (nonatomic, strong) AppConfig *appConfig;
 @property (nonatomic, strong) NSTimer *spotifyRefreshTimer;
+@property (weak, nonatomic) IBOutlet UILabel *codeLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 
 - (void)authenticationCompleted:(NSString*) session;
+- (void)showAuthCode:(OneTimeCode*) authCode;
 
 @end
 

@@ -25,10 +25,11 @@ namespace AppAuthenticationServer.Controllers
         [HttpPost]
         public IActionResult Index(string appleTVKey)
         {
+            if (authService.VerifySimpleCodeWasCorrect(appleTVKey)) {
+                return Content($"Do auth flow {appleTVKey}");    
+            }
 
-
-
-            return Content($"Hello {appleTVKey}");
+            return Content($"Wrong key {appleTVKey}");
         }    
     }
 }

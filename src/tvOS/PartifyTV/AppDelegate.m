@@ -11,9 +11,11 @@
 #import "RESTClient.h"
 #import "ViewController.h"
 #import "Service.h"
+#import "AuthHandler.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) AuthHandler *authHandler;
 @end
 
 @implementation AppDelegate
@@ -86,7 +88,6 @@ AppConfig *appConfig;
         }
         
         appConfig.apiURL = service.ip;
-        
         dispatch_semaphore_signal(sema);
     }];
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
@@ -110,40 +111,9 @@ AppConfig *appConfig;
     ViewController* mainController = (ViewController*)  self.window.rootViewController;
     mainController.appConfig = appConfig;
     
-    // TODO: Bare gjør dette dersom ikke har token allerede osv
-    // TODO: Må skaffe seg refresh token ved behov...
-    
-    // TODO: Bruk denne på sikt, manuelt må funke først
-//    [EEUserID load];
-//    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
-    
-    // TODO: Naming
-    __block NSString* oneTimeKey;
-    sema = dispatch_semaphore_create(0);
-    [RESTClient get:appConfig.authURL responseHandler:^(NSString *oneTimeToken) {
-        NSError *error;
-        if (error) {
-            // TODO: Errorhandling
-        }
-        
-        oneTimeKey = oneTimeToken;
-        dispatch_semaphore_signal(sema);
-    }];
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-    
-    
-    // TODO: Generate code and show on screen for website auth
-    // TODO: Push message to app for app auth
-    
-    [RESTClient get:[appConfig.authURL stringByAppendingString:oneTimeKey] responseHandler:^(NSString *token) {
-        NSError *error;
-        if (error) {
-            // TODO: Errorhandling
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [mainController authenticationCompleted:token];
-        });
-    }];
+    // TODO: Gjøre dette hver gang eller bare ved oppstart? kommer vel an på refresh token I guess...
+    self.authHandler = [[AuthHandler alloc] initWithAppConfig:appConfig viewController:mainController];
+    [self.authHandler ensureAuthenticated];
 }
 
 

@@ -39,7 +39,7 @@ ViewController* mainController;
     self.appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
     if (error) {
         NSException* exception = [NSException
-                                    exceptionWithName:@"ConfigNotParsedException"
+                                    exceptionWithName:@"AppConfigNotCreated"
                                     reason:error.localizedFailureReason
                                     userInfo:nil];
         [exception raise];
@@ -47,8 +47,8 @@ ViewController* mainController;
     
     if (!self.appConfig) {
         NSException* exception = [NSException
-                                    exceptionWithName:@"ConfigNotParsedException"
-                                    reason:@"Could not create AppConfig from JSON"
+                                    exceptionWithName:@"AppConfigNotCreated"
+                                    reason:@"AppConfig could not be constructed from config.json"
                                     userInfo:nil];
         [exception raise];
     }
