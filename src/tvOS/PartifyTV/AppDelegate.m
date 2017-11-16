@@ -33,7 +33,19 @@ AppConfig *appConfig;
     NSError *error;
     appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
     if (error) {
-        return NO;
+        NSException* myException = [NSException
+                                    exceptionWithName:@"AppConfigNotCreated"
+                                    reason:error.localizedFailureReason
+                                    userInfo:nil];
+        [myException raise];
+    }
+    
+    if (!appConfig) {
+        NSException* myException = [NSException
+                                    exceptionWithName:@"AppConfigNotCreated"
+                                    reason:@"AppConfig could not be constructed from config.json"
+                                    userInfo:nil];
+        [myException raise];
     }
     
     return YES;
@@ -60,9 +72,9 @@ AppConfig *appConfig;
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 
+    // TODO: Kan gjøres samtidig og med mindre kode
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    ViewController* mainController = (ViewController*)  self.window.rootViewController;
-    [RESTClient get:appConfig.ServiceDiscoveryURL responseHandler:^(NSString *response) {
+    [RESTClient get:[appConfig.ServiceDiscoveryURL stringByAppendingString:@"/partify-service"] responseHandler:^(NSString *response) {
         NSError *error;
         Service* service = [[Service alloc] initWithString:response error:&error];
         if (error) {
@@ -70,27 +82,60 @@ AppConfig *appConfig;
         }
         
         if (!service.ip) {
-            // TODO: verifiser at det er slik man sjekker for nil og Die horribly
+            // TODO: Die horribly
         }
         
         appConfig.apiURL = service.ip;
-        mainController.appConfig = appConfig;
+        
         dispatch_semaphore_signal(sema);
     }];
-    
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    sema = dispatch_semaphore_create(0);
+    [RESTClient get:[appConfig.ServiceDiscoveryURL stringByAppendingString:@"/partify-auth-service"] responseHandler:^(NSString *response) {
+        NSError *error;
+        Service* service = [[Service alloc] initWithString:response error:&error];
+        if (error) {
+            // TODO: Errorhandling
+        }
+        
+        if (!service.ip) {
+            // TODO: Die horribly
+        }
+        
+        appConfig.authURL = [service.ip stringByAppendingString:@"/api/auth/"];
+        dispatch_semaphore_signal(sema);
+    }];
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     
-    [EEUserID load];
-    
-    
+    ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    mainController.appConfig = appConfig;
     
     // TODO: Bare gjør dette dersom ikke har token allerede osv
     // TODO: Må skaffe seg refresh token ved behov...
     
-    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
-    NSString* authURL = @"http://localhost:5000/api/auth/";
-    authURL = [authURL stringByAppendingString:uniqueIDForiTunesAccount];
-    [RESTClient get:authURL responseHandler:^(NSString *token) {
+    // TODO: Bruk denne på sikt, manuelt må funke først
+//    [EEUserID load];
+//    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
+    
+    // TODO: Naming
+    __block NSString* oneTimeKey;
+    sema = dispatch_semaphore_create(0);
+    [RESTClient get:appConfig.authURL responseHandler:^(NSString *oneTimeToken) {
+        NSError *error;
+        if (error) {
+            // TODO: Errorhandling
+        }
+        
+        oneTimeKey = oneTimeToken;
+        dispatch_semaphore_signal(sema);
+    }];
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    
+    
+    // TODO: Generate code and show on screen for website auth
+    // TODO: Push message to app for app auth
+    
+    [RESTClient get:[appConfig.authURL stringByAppendingString:oneTimeKey] responseHandler:^(NSString *token) {
         NSError *error;
         if (error) {
             // TODO: Errorhandling

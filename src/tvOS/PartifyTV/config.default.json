@@ -1,4 +1,5 @@
 {
     "ServiceDiscoveryURL": "[ServiceDiscoveryURL]",
-    "apiURL": "[apiURL]"
+    "apiURL": "[apiURL]",
+    "authURL": "[authURL]"
 }

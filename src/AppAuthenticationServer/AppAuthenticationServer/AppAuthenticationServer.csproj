@@ -7,6 +7,8 @@
   <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="Services\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\AppleTVAuth\" />
   </ItemGroup>
 
   <ItemGroup>

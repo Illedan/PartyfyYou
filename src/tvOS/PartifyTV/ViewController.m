@@ -45,17 +45,12 @@ AVPlayerViewController *playerViewController;
                                                               selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
                                                               userInfo:nil
                                                                repeats:YES];
-    
-    // TODO: Why do timer no work
-    //[self getSpotifySongId];
-    //[[NSRunLoop mainRunLoop] addTimer:self.spotifyRefreshTimer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)playVideoForCurrentlyPlayingSpotifySong:(NSTimer*)timer {
     [self getSpotifySongId];
 }
 
-// TODO: Change service discovery key
 - (void)getSpotifySongId {
     NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/id?token=%@", self.appConfig.apiURL, currentSession];
     [RESTClient get:getCurrentSongURL responseHandler:^(NSString *spotifyId) {
@@ -92,6 +87,7 @@ AVPlayerViewController *playerViewController;
             [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:youTubeId completionHandler:^(XCDYouTubeVideo * _Nullable video, NSError * _Nullable error) {
                 if (video)
                 {
+                    // TODO: Need to be as HD as possible
                     NSDictionary *streamURLs = video.streamURLs;
                     NSURL *streamURL = streamURLs[XCDYouTubeVideoQualityHTTPLiveStreaming] ?: streamURLs[@(XCDYouTubeVideoQualityHD720)] ?: streamURLs[@(XCDYouTubeVideoQualityMedium360)] ?: streamURLs[@(XCDYouTubeVideoQualitySmall240)];
                     weakPlayerViewController.player = [AVPlayer playerWithURL:streamURL];

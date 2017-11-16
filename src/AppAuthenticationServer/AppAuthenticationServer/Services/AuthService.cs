@@ -13,6 +13,15 @@ namespace AppAuthenticationServer.Services
             tokenTimeout = TimeSpan.FromMinutes(5);
         } 
 
+        public string GetSimpleCodeForDisplay() {
+            var simpleCode = "4444";
+            memoryCache.Remove(simpleCode);
+            var cacheEntryOptions = new MemoryCacheEntryOptions()
+                .SetAbsoluteExpiration(tokenTimeout);
+            memoryCache.Set(simpleCode, "BQChhM6I4EK18P9ugbFYhNbl_JZn9znz5UZadQxHfzry2qEP2z9Nf8noXrrav9yYVSGK8ZoxobJYCyHkqMdDyc8s5RhU9Pry0hFjlpYYY1P1oPJMNvNA7Fzd8R97bGKY6X6Md_j-1N5VZOCfiOxjZQ", cacheEntryOptions);
+            return simpleCode;
+        }
+
         public string GetTokenForUserId(string userId) {
             if (memoryCache.TryGetValue(userId, out string token)) {
                 memoryCache.Remove(userId);

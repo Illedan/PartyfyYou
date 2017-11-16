@@ -12,9 +12,15 @@ namespace AppAuthenticationServer.Controllers
     [Route("api/[controller]")]
     public class AuthController : Controller
     {
-        AuthService authService;
+        readonly AuthService authService;
 
         public AuthController(AuthService authService) => this.authService = authService;
+
+        // GET api/auth/
+        [HttpGet]
+        public string Get() {
+            return authService.GetSimpleCodeForDisplay();
+        }
 
         // GET api/auth/f19a5452-9e3a-4768-84b7-a34aaa07c4bc 
         [HttpGet("{userId}")]

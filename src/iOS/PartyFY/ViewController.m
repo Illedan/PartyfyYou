@@ -62,7 +62,6 @@ XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
     [self getSpotifySongId];
 }
 
-// TODO: Change service discovery key
 - (void)getSpotifySongId {
     NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/id?token=%@", self.appConfig.apiURL, currentSession.accessToken];
     [RestClient makeRestAPICall:getCurrentSongURL responseHandler:^(NSString *spotifyId) {

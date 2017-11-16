@@ -11,7 +11,9 @@
 
 @interface AppConfig : JSONModel
 
+// TODO: Create another config for the config file... Has 2 unneeded properties in it now
 @property (nonatomic, strong) NSString *ServiceDiscoveryURL;
 @property (nonatomic, strong) NSString *apiURL;
+@property (nonatomic, strong) NSString *authURL;
 
 @end
