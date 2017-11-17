@@ -42,20 +42,28 @@ namespace AppAuthenticationServer.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(string activationKey)
+        public IActionResult Index(string oneTimeCode)
         {
-            if (authService.VerifySimpleCodeWasCorrect(activationKey)) {
-                return new RedirectResult(spotifyAuthenticator.SpotifyAuthenticationURL, false, false);
+            if (authService.OneTimeCodeExists(oneTimeCode)) {
+                return new RedirectResult(spotifyAuthenticator.GetSpotifyAuthenticationURL(oneTimeCode), false, false);
             }
 
             // TODO: sm00there feilhåndtering
-            return Content($"Wrong key {activationKey}");
+            return Content($"Wrong key {oneTimeCode}");
         }
 
         [HttpGet("callback")]
-        public async Task<IActionResult> SpotifyAuthCallback([FromQuery] string code)
+        public async Task<IActionResult> SpotifyAuthCallback([FromQuery] string code, [FromQuery] string state)
         {
-            await spotifyAuthenticator.GetSpotifyAccessToken(code);
+            if (authService.OneTimeCodeExists(state))
+            {
+                // TODO: sm00there feilhåndtering, noen har prøvde seg her..
+                return Content($"Wrong key {state}");
+            }
+
+            // TODO: Hva skjer når bruker trykker cancel??? https://example.com/callback?error=access_denied&state=STATE
+            var spotifySession = await spotifyAuthenticator.GetSpotifySession(code);
+            authService.SetSpotifySession(state, spotifySession);
             return Content($"SuccessfullyAuthenticated");
         }
     }

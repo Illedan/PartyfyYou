@@ -35,7 +35,7 @@ namespace AppAuthenticationServer.Services
             return new OneTimeCode(oneTimeCode, "http://localhost:5000/activate/");
         }
 
-        public bool VerifySimpleCodeWasCorrect(string simpleCode) {
+        public bool OneTimeCodeExists(string simpleCode) {
             if (memoryCache.TryGetValue(simpleCode, out object dummyObject))
             {
                 memoryCache.Remove(simpleCode);

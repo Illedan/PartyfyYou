@@ -17,31 +17,30 @@ namespace AppAuthenticationServer.Services
     public class SpotifyAuthenticator
     {
         readonly ISpotifyAuthConfig appConfig;
-        readonly AuthService authService;
 
         readonly string callbackURL;
 
-        public SpotifyAuthenticator(ISpotifyAuthConfig appConfig, AuthService authService)
+        public SpotifyAuthenticator(ISpotifyAuthConfig appConfig)
         {
             this.appConfig = appConfig;
-            this.authService = authService;
 
             // TODO: Må være dynamisk basert på host
             callbackURL = "http://localhost:5000/activate/callback/";
-            const string Scopes = "user-read-currently-playing user-read-playback-state";
-            SpotifyAuthenticationURL = $"https://accounts.spotify.com/authorize?client_id={appConfig.SpotifyClientId}&redirect_uri={callbackURL}&scope={Scopes}&response_type=code";
         }
 
-        public string SpotifyAuthenticationURL { get; }
+        public string GetSpotifyAuthenticationURL(string oneTimeCode) { 
+            const string Scopes = "user-read-currently-playing user-read-playback-state";
+            return $"https://accounts.spotify.com/authorize?client_id={appConfig.SpotifyClientId}&redirect_uri={callbackURL}&scope={Scopes}&response_type=code&state={oneTimeCode}";
+        }
 
-        public async Task GetSpotifyAccessToken(string spotifyAuthCode) {
+        public async Task<SpotifySession> GetSpotifySession(string authorizationCode) {
             using(var httpClient = new HttpClient()) {
                 var authHeader = Convert.ToBase64String(Encoding.Default.GetBytes($"{appConfig.SpotifyClientId}:{appConfig.SpotifyClientSecret}"));
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeader);
                 var postParams = new Dictionary<string, string>
                 {
                     { "grant_type", "authorization_code" },
-                    { "code", spotifyAuthCode },
+                    { "code", authorizationCode },
                     { "redirect_uri", callbackURL }
                 };
 
@@ -53,7 +52,7 @@ namespace AppAuthenticationServer.Services
                         {
                             string textResponse = await content.ReadAsStringAsync();
                             var spotifySession = JsonConvert.DeserializeObject<SpotifySession>(textResponse);
-
+                            return spotifySession;
                         }
                     }    
                 }
