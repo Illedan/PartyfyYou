@@ -9,6 +9,7 @@
 #import "AuthHandler.h"
 #import "RESTClient.h"
 #import "OneTimeCode.h"
+#import <RGLockbox/RGLockbox.h>
 
 @interface AuthHandler ()
 @property (strong, nonatomic) AppConfig *appConfig;
@@ -31,6 +32,13 @@
     //    [EEUserID load];
     //    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
     
+    RGLockbox* lockbox = [RGLockbox manager];
+    NSData* spotifyTokenAsData = [lockbox dataForKey:@"spotifyToken"];
+    if (spotifyTokenAsData) {
+        NSString* spotifyToken = [[NSString alloc] initWithData:spotifyTokenAsData encoding:NSUTF8StringEncoding];
+        [self.viewController authenticationCompleted:spotifyToken];
+        return;
+    }
     
     // TODO: Generate code and show on screen for website auth
     // TODO: Naming
@@ -76,6 +84,12 @@
 //            [self.viewController authenticationCompleted:token];
 //        });
 //    }];
+    
+    
+    // TODO: Lagre token
+//    NSData* data = [@"abcd" dataWithEncoding:NSUTF8StringEncoding];
+//    RGLockbox* lockbox = [RGLockbox manager];
+//    [lockbox setData:data forKey:@"myData"];
 }
 
 @end

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Net.Http;
+using AppAuthenticationServer.Configuration;
+using AppAuthenticationServer.Model;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace AppAuthenticationServer.Services
@@ -6,21 +9,30 @@ namespace AppAuthenticationServer.Services
     public class AuthService
     {
         readonly IMemoryCache memoryCache;
+
         readonly TimeSpan tokenTimeout;
+        readonly Random random;
 
         public AuthService(IMemoryCache memoryCache) {
             this.memoryCache = memoryCache;
+
             tokenTimeout = TimeSpan.FromMinutes(5);
+            random = new Random();
         } 
 
-        public string GetSimpleCodeForDisplay() {
-            // TODO: RAndom code etc...
-            var simpleCode = "4444";
-            memoryCache.Remove(simpleCode);
+        public OneTimeCode GetOneTimeCodeForDisplay() {
+            var oneTimeCode = "";
+            do
+            {
+                oneTimeCode = random.Next(0, 99999).ToString("D5");;
+            } while (memoryCache.TryGetValue(oneTimeCode, out object dummyObject));
+
             var cacheEntryOptions = new MemoryCacheEntryOptions()
                 .SetAbsoluteExpiration(tokenTimeout);
-            memoryCache.Set(simpleCode, new object(), cacheEntryOptions);
-            return simpleCode;
+            memoryCache.Set(oneTimeCode, new object(), cacheEntryOptions);
+
+            // TODO: Hent URL from service discovery
+            return new OneTimeCode(oneTimeCode, "http://localhost:5000/activate/");
         }
 
         public bool VerifySimpleCodeWasCorrect(string simpleCode) {
@@ -33,22 +45,20 @@ namespace AppAuthenticationServer.Services
             return false;
         }
 
-        public string GetTokenForUserId(string userId) {
-            if (memoryCache.TryGetValue(userId, out string token)) {
-                memoryCache.Remove(userId);
-                return token;
+        public SpotifySession GetSpotifySession(string oneTimeCode) {
+            if (memoryCache.TryGetValue(oneTimeCode, out SpotifySession spotifySession)) {
+                memoryCache.Remove(oneTimeCode);
+                return spotifySession;
             }
 
-            return "";
+            return new SpotifySession();
         }
             
-        // TODO: Må ha noe token greier som bruker ser på skjermen som han kan skrive inn på websiden.
-        // TODO: Ellers må bruker ha iOS appen slik at den kan la bruker trykke OK elno
-        public void SetTokenForUserId(string userId, string token) {
-            memoryCache.Remove(userId);
+        public void SetSpotifySession(string oneTimeCode, SpotifySession spotifySession) {
+            memoryCache.Remove(oneTimeCode);
             var cacheEntryOptions = new MemoryCacheEntryOptions()
                 .SetAbsoluteExpiration(tokenTimeout);
-            memoryCache.Set(userId, token, cacheEntryOptions);
+            memoryCache.Set(oneTimeCode, spotifySession, cacheEntryOptions);
         }
     }
 }

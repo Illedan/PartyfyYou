@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using AppAuthenticationServer.Configuration;
 using AppAuthenticationServer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace AppAuthenticationServer
 {
@@ -27,6 +31,9 @@ namespace AppAuthenticationServer
             services.AddMemoryCache();
             services.AddMvc();
 
+            var appConfig = ReadConfig();
+            services.AddSingleton<ISpotifyAuthConfig>(appConfig);
+            services.AddSingleton<SpotifyAuthenticator>();
             services.AddSingleton<AuthService>();
         }
 
@@ -40,5 +47,7 @@ namespace AppAuthenticationServer
 
             app.UseMvc();
         }
+
+        static AppConfig ReadConfig() => JsonConvert.DeserializeObject<AppConfig>(File.ReadAllText("config.json"));
     }
 }

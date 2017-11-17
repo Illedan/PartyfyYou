@@ -1,0 +1,6 @@
+framework module RGLockbox {
+  umbrella header "RGLockbox-umbrella.h"
+
+  export *
+  module * { export * }
+}

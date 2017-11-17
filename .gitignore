@@ -353,3 +353,4 @@ fastlane/test_output
 iOSInjectionProject/
 src/iOS/PartyFY/config.json
 src/tvOS/PartifyTV/config.json
+src/AppAuthenticationServer/AppAuthenticationServer/config.json
