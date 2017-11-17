@@ -2,7 +2,7 @@
 
 namespace AppAuthenticationServer.Model
 {
-    public struct SpotifySession
+    public class SpotifySession
     {
         [JsonProperty(PropertyName = "access_token")]
         public string AccessToken { get; set; }

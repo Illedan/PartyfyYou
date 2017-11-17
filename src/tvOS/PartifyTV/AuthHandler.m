@@ -10,10 +10,13 @@
 #import "RESTClient.h"
 #import "OneTimeCode.h"
 #import <RGLockbox/RGLockbox.h>
+#import "SpotifySession.h"
 
 @interface AuthHandler ()
 @property (strong, nonatomic) AppConfig *appConfig;
 @property (strong, nonatomic) ViewController *viewController;
+@property (nonatomic, strong) NSTimer *activationRetryTimer;
+@property (strong, nonatomic) NSString *activationCode;
 @end
 
 @implementation AuthHandler
@@ -49,6 +52,7 @@
             // TODO: Errorhandling
         }
         
+        // TODO: Tja, kanskje skrive feilmelding istedenfor å krasje appen
         OneTimeCode* authCode = [[OneTimeCode alloc] initWithString:oneTimeCode error:&error];
         if (error) {
             NSException* myException = [NSException
@@ -65,6 +69,8 @@
                                         userInfo:nil];
             [myException raise];
         }
+        
+        self.activationCode = authCode.code;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.viewController showAuthCode:authCode];
         });
@@ -74,16 +80,11 @@
     
     // TODO: Push message to app for app auth
     
-    // TODO: loop here untill succesfully authenticated on website...
-//    [RESTClient get:[self.appConfig.authURL stringByAppendingString:oneTimeKey] responseHandler:^(NSString *token) {
-//        NSError *error;
-//        if (error) {
-//            // TODO: Errorhandling
-//        }
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.viewController authenticationCompleted:token];
-//        });
-//    }];
+    self.activationRetryTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                target:self
+                                                              selector:@selector(getSpotifySession:)
+                                                              userInfo:nil
+                                                               repeats:YES];
     
     
     // TODO: Lagre token
@@ -91,5 +92,39 @@
 //    RGLockbox* lockbox = [RGLockbox manager];
 //    [lockbox setData:data forKey:@"myData"];
 }
+
+
+
+
+
+- (void)getSpotifySession:(NSTimer*)timer {
+    NSString* url = [self.appConfig.authURL stringByAppendingString:self.activationCode];
+    [RESTClient get:url responseHandler:^(NSString *token) {
+        NSError *error;
+        if (error) {
+            // TODO: Errorhandling
+        }
+        
+        if(!token || [token isEqualToString:@""]) {
+            return;
+        }
+        
+        //         TODO: token is wrong name
+        SpotifySession* spotifySession = [[SpotifySession alloc] initWithString:token error:&error];
+        if (error) {
+            // TODO: Errorhandling
+        }
+        
+        if (!spotifySession.access_token) {
+            // TODO: Die horribly
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.viewController authenticationCompleted:spotifySession.access_token];
+        });
+    }];
+
+}
+
 
 @end

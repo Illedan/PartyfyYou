@@ -103,7 +103,7 @@ AppConfig *appConfig;
             // TODO: Die horribly
         }
         
-        appConfig.authURL = [service.ip stringByAppendingString:@"/api/auth/"];
+        appConfig.authURL = [service.ip stringByAppendingString:@"/activate/code/"];
         dispatch_semaphore_signal(sema);
     }];
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);

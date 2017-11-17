@@ -25,18 +25,18 @@ namespace AppAuthenticationServer.Services
             do
             {
                 oneTimeCode = random.Next(0, 99999).ToString("D5");;
-            } while (memoryCache.TryGetValue(oneTimeCode, out object dummyObject));
+            } while (memoryCache.TryGetValue(oneTimeCode, out SpotifySession dummyObject));
 
             var cacheEntryOptions = new MemoryCacheEntryOptions()
                 .SetAbsoluteExpiration(tokenTimeout);
-            memoryCache.Set(oneTimeCode, new object(), cacheEntryOptions);
+            memoryCache.Set<SpotifySession>(oneTimeCode, null, cacheEntryOptions);
 
             // TODO: Hent URL from service discovery
             return new OneTimeCode(oneTimeCode, "http://localhost:5000/activate/");
         }
 
         public bool OneTimeCodeExists(string simpleCode) {
-            if (memoryCache.TryGetValue(simpleCode, out object dummyObject))
+            if (memoryCache.TryGetValue(simpleCode, out SpotifySession dummyObject))
             {
                 memoryCache.Remove(simpleCode);
                 return true;
@@ -47,11 +47,14 @@ namespace AppAuthenticationServer.Services
 
         public SpotifySession GetSpotifySession(string oneTimeCode) {
             if (memoryCache.TryGetValue(oneTimeCode, out SpotifySession spotifySession)) {
-                memoryCache.Remove(oneTimeCode);
-                return spotifySession;
+                if (spotifySession != null) {
+                    memoryCache.Remove(oneTimeCode);     
+                }
+
+                return spotifySession;   
             }
 
-            return new SpotifySession();
+            return null;
         }
             
         public void SetSpotifySession(string oneTimeCode, SpotifySession spotifySession) {

@@ -64,11 +64,11 @@ AVPlayerViewController *playerViewController;
     currentSession = session;
     
     // TODO: pause video and timer if app is sent to background
-//    self.spotifyRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-//                                                                target:self
-//                                                              selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
-//                                                              userInfo:nil
-//                                                               repeats:YES];
+    self.spotifyRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                target:self
+                                                              selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
+                                                              userInfo:nil
+                                                               repeats:YES];
 }
 
 - (void)playVideoForCurrentlyPlayingSpotifySong:(NSTimer*)timer {
