@@ -55,36 +55,35 @@
         // TODO: Tja, kanskje skrive feilmelding istedenfor å krasje appen
         OneTimeCode* authCode = [[OneTimeCode alloc] initWithString:oneTimeCode error:&error];
         if (error) {
-            NSException* myException = [NSException
-                                        exceptionWithName:@"OneTimeCodeNotCreated"
-                                        reason:error.localizedFailureReason
-                                        userInfo:nil];
-            [myException raise];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.viewController couldNotContactServer];
+            });
+        } else {
+            if (!authCode) {
+                NSException* myException = [NSException
+                                            exceptionWithName:@"OneTimeCodeNotCreated"
+                                            reason:@"OneTimeCode could not be constructed from server response"
+                                            userInfo:nil];
+                [myException raise];
+            }
+            
+            self.activationCode = authCode.code;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.viewController showAuthCode:authCode];
+                // TODO: Push message to app for app auth
+                self.activationRetryTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                             target:self
+                                                                           selector:@selector(getSpotifySession:)
+                                                                           userInfo:nil
+                                                                            repeats:YES];
+            });
         }
         
-        if (!authCode) {
-            NSException* myException = [NSException
-                                        exceptionWithName:@"OneTimeCodeNotCreated"
-                                        reason:@"OneTimeCode could not be constructed from server response"
-                                        userInfo:nil];
-            [myException raise];
-        }
-        
-        self.activationCode = authCode.code;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.viewController showAuthCode:authCode];
-        });
         dispatch_semaphore_signal(sema);
     }];
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     
-    // TODO: Push message to app for app auth
     
-    self.activationRetryTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                                target:self
-                                                              selector:@selector(getSpotifySession:)
-                                                              userInfo:nil
-                                                               repeats:YES];
     
     
     // TODO: Lagre token
@@ -119,6 +118,7 @@
             // TODO: Die horribly
         }
         
+        [timer invalidate];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.viewController authenticationCompleted:spotifySession.access_token];
         });

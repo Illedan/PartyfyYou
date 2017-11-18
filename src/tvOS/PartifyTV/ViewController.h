@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 
+- (void)couldNotContactServer;
 - (void)authenticationCompleted:(NSString*) session;
 - (void)showAuthCode:(OneTimeCode*) authCode;
 

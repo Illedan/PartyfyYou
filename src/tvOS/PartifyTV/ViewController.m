@@ -54,6 +54,12 @@ AVPlayerViewController *playerViewController;
                     completion:nil];
 }
 
+- (void)couldNotContactServer {
+    self.headerLabel.text = @"Could not contact server";
+    self.codeLabel.text = @"Party is over 🤯";
+    self.codeLabel.hidden = NO;
+}
+
 - (void)showAuthCode:(OneTimeCode*) authCode {
     self.headerLabel.text = authCode.url;
     self.codeLabel.text = authCode.code;
