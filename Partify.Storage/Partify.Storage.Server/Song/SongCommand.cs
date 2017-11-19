@@ -2,7 +2,7 @@
 
 namespace Partify.Storage.Server.SpotifySong
 {
-    public class CreateSongCommand
+    public class SongCommand
     {
         public Guid Id { get; set; }
         public string SongId { get; set; }

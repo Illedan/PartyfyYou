@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Partify.Storage.Server.Suggestion
 {
-    public class SuggestionCommandHandler : ICommandHandler<SuggestionCommand>
+    public class UserCommandHandler : ICommandHandler<SuggestionCommand>
     {
         private readonly IDbConnection m_dbConnection;
-        public SuggestionCommandHandler(IDbConnection dbConnection)
+        public UserCommandHandler(IDbConnection dbConnection)
         {
             m_dbConnection = dbConnection;
         }

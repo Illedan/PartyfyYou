@@ -2,7 +2,7 @@
 
 namespace Partify.Storage.Server.UserSuggestion
 {
-    public class CreateUserSuggestionCommand
+    public class UserSuggestionCommand
     {
         public Guid Id { get; set; }
         public Guid SuggestionId { get; set; }
