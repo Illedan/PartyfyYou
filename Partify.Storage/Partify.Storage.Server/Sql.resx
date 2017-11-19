@@ -124,4 +124,10 @@
   <data name="ModeById" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>mode\modebyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="PostSuggestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>suggestion\postsuggestion.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PostVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>video\postvideo.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>
