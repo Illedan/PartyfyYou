@@ -77,5 +77,17 @@ namespace Partify.Storage.Server {
                 return ResourceManager.GetString("ModeById", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO SpotifySong 
+        ///(Id, SongId)
+        ///VALUES 
+        ///(@Id, @SongId).
+        /// </summary>
+        internal static string PostSong {
+            get {
+                return ResourceManager.GetString("PostSong", resourceCulture);
+            }
+        }
     }
 }
