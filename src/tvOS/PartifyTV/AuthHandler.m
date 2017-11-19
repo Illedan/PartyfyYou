@@ -15,8 +15,8 @@
 @interface AuthHandler ()
 @property (strong, nonatomic) AppConfig *appConfig;
 @property (strong, nonatomic) ViewController *viewController;
-@property (nonatomic, strong) NSTimer *activationRetryTimer;
 @property (strong, nonatomic) NSString *activationCode;
+@property (strong, nonatomic) SpotifySession *spotifySession;
 @end
 
 @implementation AuthHandler
@@ -28,23 +28,41 @@
 }
 
 - (void)ensureAuthenticated {
-    // TODO: Bare gjør dette dersom ikke har token allerede osv
-    // TODO: Må skaffe seg refresh token ved behov...
-    
-    // TODO: Bruk denne på sikt, manuelt må funke først
+    // TODO: Bruk iCloud på sikt, men manuelt må funke først
     //    [EEUserID load];
     //    NSString *uniqueIDForiTunesAccount = [EEUserID getUUIDString];
     
-    RGLockbox* lockbox = [RGLockbox manager];
-    NSData* spotifyTokenAsData = [lockbox dataForKey:@"spotifyToken"];
-    if (spotifyTokenAsData) {
-        NSString* spotifyToken = [[NSString alloc] initWithData:spotifyTokenAsData encoding:NSUTF8StringEncoding];
-        [self.viewController authenticationCompleted:spotifyToken];
+    // TODO: Push to iOS app for auth
+    
+    if ([self isAlreadyAuthenticated]) {
+        [self refreshSpotifySession:nil];
+        [self authenticationCompleted];
         return;
     }
     
-    // TODO: Generate code and show on screen for website auth
-    // TODO: Naming
+    [self getOneTimeCodeAndAuthenticateRemotely];
+}
+
+- (BOOL)isAlreadyAuthenticated {
+    RGLockbox* lockbox = [RGLockbox manager];
+    NSData* sessionAsData = [lockbox dataForKey:@"spotifyToken"];
+    NSString* sessionAsString = [[NSString alloc] initWithData:sessionAsData encoding:NSUTF8StringEncoding];
+    NSError *error;
+    SpotifySession* spotifySession = [[SpotifySession alloc] initWithString:sessionAsString error:&error];
+    if (!error && spotifySession) {
+        self.spotifySession = spotifySession;
+        return YES;
+    }
+    
+    return NO;
+}
+
+// TODO: do call and set session afterwards
+- (void)refreshSpotifySession:(NSTimer*)timer {
+    self.viewController.spotifySession = self.spotifySession;
+}
+
+- (void)getOneTimeCodeAndAuthenticateRemotely {
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     [RESTClient get:self.appConfig.authURL responseHandler:^(NSString *oneTimeCode) {
         NSError *error;
@@ -52,25 +70,16 @@
             // TODO: Errorhandling
         }
         
-        // TODO: Tja, kanskje skrive feilmelding istedenfor å krasje appen
         OneTimeCode* authCode = [[OneTimeCode alloc] initWithString:oneTimeCode error:&error];
-        if (error) {
+        if (error || !authCode) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.viewController couldNotContactServer];
+                [self.viewController showErrorMessage:@"Could not authenticate with Partify server"];
             });
         } else {
-            if (!authCode) {
-                NSException* myException = [NSException
-                                            exceptionWithName:@"OneTimeCodeNotCreated"
-                                            reason:@"OneTimeCode could not be constructed from server response"
-                                            userInfo:nil];
-                [myException raise];
-            }
-            
             self.activationCode = authCode.code;
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.viewController showAuthCode:authCode];
-                // TODO: Push message to app for app auth
+                [self.viewController showOneTimeAuthenticationCode:authCode];
+                
                 self.activationRetryTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                                              target:self
                                                                            selector:@selector(getSpotifySession:)
@@ -82,49 +91,54 @@
         dispatch_semaphore_signal(sema);
     }];
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-    
-    
-    
-    
-    // TODO: Lagre token
-//    NSData* data = [@"abcd" dataWithEncoding:NSUTF8StringEncoding];
-//    RGLockbox* lockbox = [RGLockbox manager];
-//    [lockbox setData:data forKey:@"myData"];
 }
-
-
-
-
 
 - (void)getSpotifySession:(NSTimer*)timer {
     NSString* url = [self.appConfig.authURL stringByAppendingString:self.activationCode];
-    [RESTClient get:url responseHandler:^(NSString *token) {
+    [RESTClient get:url responseHandler:^(NSString *session) {
         NSError *error;
         if (error) {
             // TODO: Errorhandling
         }
         
-        if(!token || [token isEqualToString:@""]) {
+        if(!session || [session isEqualToString:@""]) {
             return;
         }
         
-        //         TODO: token is wrong name
-        SpotifySession* spotifySession = [[SpotifySession alloc] initWithString:token error:&error];
-        if (error) {
-            // TODO: Errorhandling
+        self.spotifySession = [[SpotifySession alloc] initWithString:session error:&error];
+        if (error || self.spotifySession.access_token == nil || [self.spotifySession.access_token isEqualToString:@""] || self.spotifySession.refresh_token == nil || [self.spotifySession.refresh_token isEqualToString:@""]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [timer invalidate];
+                [self.viewController showErrorMessage:@"Could not authenticate with Spotify"];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [timer invalidate];
+                [self authenticationCompleted];
+            });
         }
-        
-        if (!spotifySession.access_token) {
-            // TODO: Die horribly
-        }
-        
-        [timer invalidate];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.viewController authenticationCompleted:spotifySession.access_token];
-        });
     }];
-
 }
 
+- (void)authenticationCompleted {
+    self.spotifySessionRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                 target:self
+                                                               selector:@selector(refreshSpotifySession:)
+                                                               userInfo:nil
+                                                                repeats:YES];
+    self.viewController.spotifySession = self.spotifySession;
+    [self.viewController authenticationCompleted];
+}
+
+- (void)saveSession {
+    if (!self.spotifySession) {
+        return;
+    }
+    
+    RGLockbox* lockbox = [RGLockbox manager];
+    NSString* sessionAsJSON = [self.spotifySession toJSONString];
+    NSData* sessionAsData = [sessionAsJSON dataUsingEncoding:NSUTF8StringEncoding];
+    [lockbox setData:sessionAsData forKey:@"spotifyToken"];
+}
 
 @end

@@ -37,10 +37,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wU-Pz-mZt">
+                                <rect key="frame" x="863" y="768" width="195" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vkT-jM-U5V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yoa-SJ-Y9l" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="600" id="2Fr-8i-oJe"/>
+                            <constraint firstItem="6wU-Pz-mZt" firstAttribute="top" secondItem="mNZ-ME-WTw" secondAttribute="bottom" constant="24" id="5hY-md-OVd"/>
                             <constraint firstItem="mNZ-ME-WTw" firstAttribute="top" secondItem="yoa-SJ-Y9l" secondAttribute="bottom" constant="85" id="5it-TK-4VH"/>
                             <constraint firstItem="OzJ-l8-S6w" firstAttribute="top" secondItem="yoa-SJ-Y9l" secondAttribute="bottom" constant="20" id="8IP-iq-vTB"/>
                             <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="OzJ-l8-S6w" secondAttribute="trailing" constant="20" id="P5b-Fp-QyR"/>
@@ -48,11 +57,13 @@
                             <constraint firstItem="yoa-SJ-Y9l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="308" id="UWV-UO-qVP"/>
                             <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="yoa-SJ-Y9l" secondAttribute="trailing" constant="600" id="Whg-oO-4EW"/>
                             <constraint firstItem="mNZ-ME-WTw" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="20" id="YOh-vf-Ip8"/>
+                            <constraint firstItem="6wU-Pz-mZt" firstAttribute="centerX" secondItem="mNZ-ME-WTw" secondAttribute="centerX" id="ijf-sF-yZT"/>
                             <constraint firstItem="OzJ-l8-S6w" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="20" id="zu7-YD-dDZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="6wU-Pz-mZt" id="l4R-kW-jmv"/>
                         <outlet property="codeLabel" destination="mNZ-ME-WTw" id="hJN-x8-nyf"/>
                         <outlet property="headerLabel" destination="OzJ-l8-S6w" id="5uE-Dq-gTS"/>
                         <outlet property="image" destination="yoa-SJ-Y9l" id="VWN-bB-kgz"/>

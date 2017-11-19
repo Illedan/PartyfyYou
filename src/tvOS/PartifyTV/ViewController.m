@@ -13,14 +13,11 @@
 
 
 @interface ViewController ()
-
+@property (nonatomic, strong) NSString *currentSpotifyId;
+@property (nonatomic, strong) AVPlayerViewController *playerViewController;
 @end
 
 @implementation ViewController
-
-NSString *currentSession;
-NSString *currentSpotifyId;
-AVPlayerViewController *playerViewController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,22 +51,20 @@ AVPlayerViewController *playerViewController;
                     completion:nil];
 }
 
-- (void)couldNotContactServer {
-    self.headerLabel.text = @"Could not contact server";
+- (void)showErrorMessage:(NSString*)errorMessage {
+    self.headerLabel.text = errorMessage;
     self.codeLabel.text = @"Party is over 🤯";
     self.codeLabel.hidden = NO;
 }
 
-- (void)showAuthCode:(OneTimeCode*) authCode {
+- (void)showOneTimeAuthenticationCode:(OneTimeCode*) authCode {
     self.headerLabel.text = authCode.url;
     self.codeLabel.text = authCode.code;
     self.codeLabel.hidden = NO;
 }
 
-- (void)authenticationCompleted:(NSString*)session {
-    currentSession = session;
-    
-    // TODO: pause video and timer if app is sent to background
+- (void)authenticationCompleted {
+    [self playVideoForCurrentlyPlayingSpotifySong:nil];
     self.spotifyRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                                 target:self
                                                               selector:@selector(playVideoForCurrentlyPlayingSpotifySong:)
@@ -81,26 +76,33 @@ AVPlayerViewController *playerViewController;
     [self getSpotifySongId];
 }
 
+// TODO: Use proper service when available...
 - (void)getSpotifySongId {
-    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/id?token=%@", self.appConfig.apiURL, currentSession];
+    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/id?token=%@", self.appConfig.apiURL, self.spotifySession.access_token];
     [RESTClient get:getCurrentSongURL responseHandler:^(NSString *spotifyId) {
         NSError *error;
         if (error) {
             // TODO: Errorhandling
         }
         
-        // TODO: enable background playing and update OS states
-        // TODO: Test properly with airplay
-        if (![currentSpotifyId isEqualToString:spotifyId]) {
-            currentSpotifyId = spotifyId;
-            [self getYouTubeSongId:spotifyId];
-        }
+        
+        
+        [self getYouTubeSongId:spotifyId];
     }];
 }
 
 - (void)getYouTubeSongId:(NSString*) spotifyId {
-    // TODO: Use proper service when available...
-    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/url?token=%@", self.appConfig.apiURL, currentSession];
+    if (!spotifyId) {
+        // TODO: No song playing
+        return;
+    }
+    
+    if ([self.currentSpotifyId isEqualToString:spotifyId]) {
+        return;
+    }
+    
+    self.currentSpotifyId = spotifyId;
+    NSString* getCurrentSongURL = [NSString stringWithFormat:@"%@/url?token=%@", self.appConfig.apiURL, self.spotifySession.access_token];
     [RESTClient get:getCurrentSongURL responseHandler:^(NSString *youTubeId) {
         NSError *error;
         if (error) {
@@ -108,12 +110,12 @@ AVPlayerViewController *playerViewController;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (!playerViewController) {
-                playerViewController = [AVPlayerViewController new];
-                [self presentViewController:playerViewController animated:YES completion:nil];
+            if (!self.playerViewController) {
+                self.playerViewController = [AVPlayerViewController new];
+                [self presentViewController:self.playerViewController animated:YES completion:nil];
             }
             
-            __weak AVPlayerViewController *weakPlayerViewController = playerViewController;
+            __weak AVPlayerViewController *weakPlayerViewController = self.playerViewController;
             [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:youTubeId completionHandler:^(XCDYouTubeVideo * _Nullable video, NSError * _Nullable error) {
                 if (video)
                 {
@@ -145,4 +147,6 @@ AVPlayerViewController *playerViewController;
 //    [videoPlayerViewController.moviePlayer prepareToPlay];
 //}
 
+- (IBAction)buttonPressed:(UIButton *)sender {
+}
 @end

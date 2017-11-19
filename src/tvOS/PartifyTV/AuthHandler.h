@@ -11,6 +11,10 @@
 #import "ViewController.h"
 
 @interface AuthHandler : NSObject
+@property (strong, nonatomic) NSTimer *spotifySessionRefreshTimer;
+@property (strong, nonatomic) NSTimer *activationRetryTimer;
+
 - (id)initWithAppConfig:(AppConfig*)appConfig viewController:(ViewController*)viewController;
 - (void)ensureAuthenticated;
+- (void)saveSession;
 @end

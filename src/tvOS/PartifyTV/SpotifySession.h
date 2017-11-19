@@ -8,7 +8,7 @@
 
 #import <JSONModel/JSONModel.h>
 
-@interface SpotifySession : JSONModel
+@interface SpotifySession : JSONModel <NSSecureCoding>
 @property (nonatomic, strong) NSString *access_token;
 @property (nonatomic) int expires_in;
 @property (nonatomic, strong) NSString *refresh_token;
