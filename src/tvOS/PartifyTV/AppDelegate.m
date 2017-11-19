@@ -77,7 +77,6 @@
     ViewController* mainController = (ViewController*)  self.window.rootViewController;
     if ([self servicesSetFromServiceDiscovery]) {
         mainController.appConfig = self.appConfig;
-        // TODO: Gjøre dette hver gang eller bare ved oppstart? kommer vel an på refresh token I guess...
         self.authHandler = [[AuthHandler alloc] initWithAppConfig:self.appConfig viewController:mainController];
         [self.authHandler ensureAuthenticated];
     } else {

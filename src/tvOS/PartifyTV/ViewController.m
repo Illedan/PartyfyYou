@@ -84,15 +84,13 @@
         if (error) {
             // TODO: Errorhandling
         }
-        
-        
-        
+
         [self getYouTubeSongId:spotifyId];
     }];
 }
 
 - (void)getYouTubeSongId:(NSString*) spotifyId {
-    if (!spotifyId) {
+    if (!spotifyId || [spotifyId isEqualToString:@""]) {
         // TODO: No song playing
         return;
     }
@@ -148,5 +146,6 @@
 //}
 
 - (IBAction)buttonPressed:(UIButton *)sender {
+    
 }
 @end
