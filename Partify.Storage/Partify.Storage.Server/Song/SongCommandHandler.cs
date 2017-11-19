@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace Partify.Storage.Server.Song
 {
-    public class CreateSongCommandHandler : ICommandHandler<CreateSongCommand>
+    public class SongCommandHandler : ICommandHandler<SongCommand>
     {
         private readonly IDbConnection m_dbConnection;
 
-        public CreateSongCommandHandler(IDbConnection dbConnection)
+        public SongCommandHandler(IDbConnection dbConnection)
         {
             m_dbConnection = dbConnection;
         }
 
-        public async Task HandleAsync(CreateSongCommand command)
+        public async Task HandleAsync(SongCommand command)
         {
             await m_dbConnection.QueryAsync(Sql.PostSong, command);
         }

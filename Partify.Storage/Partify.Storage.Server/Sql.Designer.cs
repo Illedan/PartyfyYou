@@ -70,33 +70,20 @@ namespace Partify.Storage.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id, Name, Country, SpotifyUserId, Name FROM [User].
+        /// </summary>
+        internal static string AllUsers {
+            get {
+                return ResourceManager.GetString("AllUsers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id, Name FROM Mode Where Id=@Id.
         /// </summary>
         internal static string ModeById {
             get {
                 return ResourceManager.GetString("ModeById", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Suggestion
-        ///(Id, SpotifyIdFK, YoutubeIdFK, Count, Overruled, ModeIdFK) 
-        ///VALUES (@Id, @SpotifyId, @YoutubeId, @Count, @Overruled, @ModeId).
-        /// </summary>
-        internal static string PostSuggestion {
-            get {
-                return ResourceManager.GetString("PostSuggestion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO YoutubeVideo
-        ///(Id, VideoId) 
-        ///VALUES (@Id, @VideoId).
-        /// </summary>
-        internal static string PostVideo {
-            get {
-                return ResourceManager.GetString("PostVideo", resourceCulture);
             }
         }
         
@@ -113,6 +100,29 @@ namespace Partify.Storage.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Suggestion
+        ///(Id, SpotifyIdFK, YoutubeIdFK, Count, Overruled, ModeIdFK) 
+        ///VALUES (@Id, @SpotifyId, @YoutubeId, @Count, @Overruled, @ModeId).
+        /// </summary>
+        internal static string PostSuggestion {
+            get {
+                return ResourceManager.GetString("PostSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO [User]
+        ///(Id, Name, Country, SpotifyUserId)
+        ///VALUES 
+        ///(@Id, @Name, @Country, @SpotifyUserId).
+        /// </summary>
+        internal static string PostUser {
+            get {
+                return ResourceManager.GetString("PostUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INSERT INTO UserSuggestion 
         ///(Id, SuggestionIdFK, UserIdFK)
         ///VALUES 
@@ -121,6 +131,26 @@ namespace Partify.Storage.Server {
         internal static string PostUserSuggestion {
             get {
                 return ResourceManager.GetString("PostUserSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO YoutubeVideo
+        ///(Id, VideoId) 
+        ///VALUES (@Id, @VideoId).
+        /// </summary>
+        internal static string PostVideo {
+            get {
+                return ResourceManager.GetString("PostVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id, Name, Country, SpotifyUserId FROM [User] Where Id=@Id.
+        /// </summary>
+        internal static string UserById {
+            get {
+                return ResourceManager.GetString("UserById", resourceCulture);
             }
         }
     }

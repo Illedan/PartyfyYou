@@ -6,16 +6,16 @@ using Dapper;
 
 namespace Partify.Storage.Server.UserSuggestion
 {
-    public class CreateUserSuggestionCommandHandler : ICommandHandler<CreateUserSuggestionCommand>
+    public class UserSuggestionCommandHandler : ICommandHandler<UserSuggestionCommand>
     {
         private readonly IDbConnection m_dbConnection;
 
-        public CreateUserSuggestionCommandHandler(IDbConnection dbConnection)
+        public UserSuggestionCommandHandler(IDbConnection dbConnection)
         {
             m_dbConnection = dbConnection;
         }
 
-        public async Task HandleAsync(CreateUserSuggestionCommand command)
+        public async Task HandleAsync(UserSuggestionCommand command)
         {
             await m_dbConnection.ExecuteAsync(Sql.PostUserSuggestion, command);
         }

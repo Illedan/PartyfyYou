@@ -19,7 +19,7 @@ namespace Partify.Storage.Server.UserSuggestion
 
         public async Task Post(CreateUserSuggestionRequest createUserSuggestionRequest)
         {
-            var createUserSuggestionCommand = new CreateUserSuggestionCommand
+            var createUserSuggestionCommand = new UserSuggestionCommand
             {
                 Id = Guid.NewGuid(),
                 SuggestionId = createUserSuggestionRequest.SuggestionId,

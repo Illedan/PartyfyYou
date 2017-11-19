@@ -1,6 +1,6 @@
 ﻿namespace Partify.Storage.Server.SpotifySong
 {
-    public class SongCreateRequest
+    public class CreateSongRequest
     {
         public string SongId { get; set; }
     }

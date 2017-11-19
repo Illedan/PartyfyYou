@@ -8,6 +8,7 @@ using Partify.Storage.Server.SpotifySong;
 using Partify.Storage.Server.Video;
 using Partify.Storage.Server.Suggestion;
 using Partify.Storage.Server.UserSuggestion;
+using Partify.Storage.Server.User;
 
 namespace Partify.Storage.Server
 {
@@ -23,6 +24,7 @@ namespace Partify.Storage.Server
                 .Register<ISuggestionService, SuggestionService>(new PerScopeLifetime())
                 .Register<ISongService, SongService>(new PerScopeLifetime())
                 .Register<IUserSuggestionService, UserSuggestionService>(new PerScopeLifetime())
+                .Register<IUserService, UserService>(new PerScopeLifetime())
                 .Register<IConfiguration, PartifyConfiguration>(new PerContainerLifetime())
                 .Register<IDbConnection>(factory => CreateMySqlConnection(factory));    
         }

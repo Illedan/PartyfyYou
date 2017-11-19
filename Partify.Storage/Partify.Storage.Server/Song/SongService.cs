@@ -15,9 +15,9 @@ namespace Partify.Storage.Server.SpotifySong
             m_commandExecutor = commandExecutor;
         }
 
-        public async Task Post(SongCreateRequest songResult)
+        public async Task Post(CreateSongRequest songResult)
         {
-            var createSongCommand = new CreateSongCommand
+            var createSongCommand = new SongCommand
             {
                 Id = Guid.NewGuid(),
                 SongId = songResult.SongId

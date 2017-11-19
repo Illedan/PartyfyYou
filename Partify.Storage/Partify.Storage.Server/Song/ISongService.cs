@@ -5,6 +5,6 @@ namespace Partify.Storage.Server.SpotifySong
 {
     public interface ISongService
     {
-        Task Post(SongCreateRequest songResult);
+        Task Post(CreateSongRequest songResult);
     }
 }
