@@ -8,5 +8,6 @@ namespace Partify.Storage.Server.Suggestion
     public interface ISuggestionService
     {
         Task PostSuggestion(CreateSuggestionRequest request);
+        //Task PostSuggestionRelation(CreateSuggestionRelationRequest request);
     }
 }

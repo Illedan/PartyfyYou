@@ -26,5 +26,10 @@ namespace Partify.Storage.Server.Suggestion
                     YoutubeId = request.YoutubeId }
                 );
         }
+
+        //public Task PostSuggestionRelation(CreateSuggestionRelationRequest request)
+        //{
+        //    //var res = await m_commandExecutor.ExecuteAsync(new SuggestionCommand());
+        //}
     }
 }
