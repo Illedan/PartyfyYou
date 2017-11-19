@@ -1,17 +1,18 @@
 ﻿using Partify.Storage.Server.CQRS;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Partify.Storage.Server.Suggestion
 {
     public class SuggestionService : ISuggestionService
     {
         private readonly ICommandExecutor m_commandExecutor;
-        public SuggestionService(ICommandExecutor commandExecutor)
+        private readonly IQueryExecutor m_queryExecutor;
+        public SuggestionService(ICommandExecutor commandExecutor, IQueryExecutor queryExecutor)
         {
             m_commandExecutor = commandExecutor;
+            m_queryExecutor = queryExecutor;
         }
 
         public async Task PostSuggestion(CreateSuggestionRequest request)
@@ -27,9 +28,17 @@ namespace Partify.Storage.Server.Suggestion
                 );
         }
 
-        //public Task PostSuggestionRelation(CreateSuggestionRelationRequest request)
-        //{
-        //    //var res = await m_commandExecutor.ExecuteAsync(new SuggestionCommand());
-        //}
+        public async Task<SuggestionResult> GetSuggestionRelation(string videoId, string songId, string modeName, string userName)
+        {
+            var result = await m_queryExecutor.ExecuteAsync(
+                new SuggestionQuery {
+                    VideoId = videoId,
+                    SongId = songId,
+                    ModeName = modeName,
+                    UserName = userName
+                });
+
+            return result.FirstOrDefault();
+        }
     }
 }

@@ -146,6 +146,28 @@ namespace Partify.Storage.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to select  Suggestion.Id ,
+        ///	SpotifySong.Id as SpotifyId, 
+        ///	SpotifySong.SongId as SpotifySongId, 
+        ///	YoutubeVideo.Id as YoutubeId, 
+        ///	YoutubeVideo.VideoId as YoutubeVideoId, 
+        ///	Mode.Name as Mode, 
+        ///	Mode.Id as ModeId, 
+        ///	Suggestion.Count, 
+        ///	Suggestion.Overruled 
+        ///					from (((SpotifySong
+        ///						inner join Suggestion on Suggestion.SpotifyIdFK = SpotifySong.Id)
+        ///						inner join YoutubeVideo on Suggestion.YoutubeIdFK = YoutubeVideo.Id) 
+        ///						inner join Mode on Suggestion.ModeIdFK = Mode.Id)
+        ///					where Youtub [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SuggestionByIds {
+            get {
+                return ResourceManager.GetString("SuggestionByIds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id, Name, Country, SpotifyUserId FROM [User] Where Id=@Id.
         /// </summary>
         internal static string UserById {

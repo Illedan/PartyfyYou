@@ -9,6 +9,5 @@ namespace Partify.Storage.Server.Suggestion
         public string SongId { get; set; }
         public string VideoId { get; set; }
         public string ModeName { get; set; }
-        public Guid UserId { get; set; }
     }
 }
