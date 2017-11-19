@@ -99,5 +99,29 @@ namespace Partify.Storage.Server {
                 return ResourceManager.GetString("PostVideo", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO SpotifySong 
+        ///(Id, SongId)
+        ///VALUES 
+        ///(@Id, @SongId).
+        /// </summary>
+        internal static string PostSong {
+            get {
+                return ResourceManager.GetString("PostSong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO UserSuggestion 
+        ///(Id, SuggestionIdFK, UserIdFK)
+        ///VALUES 
+        ///(@Id, @SuggestionId, @UserId).
+        /// </summary>
+        internal static string PostUserSuggestion {
+            get {
+                return ResourceManager.GetString("PostUserSuggestion", resourceCulture);
+            }
+        }
     }
 }
