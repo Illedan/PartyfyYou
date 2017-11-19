@@ -14,7 +14,6 @@
 @interface ViewController : UIViewController
 
 @property (nonatomic, strong) AppConfig *appConfig;
-@property (nonatomic, strong) NSTimer *spotifyRefreshTimer;
 @property (nonatomic, strong) SpotifySession *spotifySession;
 
 @property (weak, nonatomic) IBOutlet UILabel *codeLabel;
@@ -26,6 +25,7 @@
 - (void)showErrorMessage:(NSString*)errorMessage;
 - (void)authenticationCompleted;
 - (void)showOneTimeAuthenticationCode:(OneTimeCode*) authCode;
-
+- (void)saveSession;
+- (void)stopTimers;
 @end
 

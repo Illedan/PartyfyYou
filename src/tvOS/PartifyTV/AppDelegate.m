@@ -11,11 +11,10 @@
 #import "RESTClient.h"
 #import "ViewController.h"
 #import "Service.h"
-#import "AuthHandler.h"
 
 @interface AppDelegate ()
-@property (strong, nonatomic) AuthHandler *authHandler;
 @property (strong, nonatomic) AppConfig *appConfig;
+@property (strong, nonatomic) ViewController* mainController;
 @end
 
 @implementation AppDelegate
@@ -50,21 +49,26 @@
     
     self.appConfig.authURL = nil;
     self.appConfig.apiURL = nil;
+    
+    self.mainController = (ViewController*)  self.window.rootViewController;
+    if ([self servicesSetFromServiceDiscovery]) {
+        self.mainController.appConfig = self.appConfig;
+    } else {
+        [self.mainController showErrorMessage:@"Could not connect to Partify server"];
+    }
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    [[(ViewController*)  self.window.rootViewController spotifyRefreshTimer] invalidate];
-    [self.authHandler.spotifySessionRefreshTimer invalidate];
-    [self.authHandler.activationRetryTimer invalidate];
+    [(ViewController*)  self.window.rootViewController stopTimers];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [self.authHandler saveSession];
+    [self.mainController saveSession];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -73,20 +77,11 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-
-    ViewController* mainController = (ViewController*)  self.window.rootViewController;
-    if ([self servicesSetFromServiceDiscovery]) {
-        mainController.appConfig = self.appConfig;
-        self.authHandler = [[AuthHandler alloc] initWithAppConfig:self.appConfig viewController:mainController];
-        [self.authHandler ensureAuthenticated];
-    } else {
-        [mainController showErrorMessage:@"Could not connect to Partify server"];
-    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [self.authHandler saveSession];
+    [self.mainController saveSession];
 }
 
 - (BOOL)servicesSetFromServiceDiscovery {

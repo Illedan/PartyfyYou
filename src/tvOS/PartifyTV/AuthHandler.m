@@ -112,8 +112,10 @@
                 [self.viewController showErrorMessage:@"Could not authenticate with Spotify"];
             });
         } else {
+            
+            [timer invalidate];
+            [self saveSession];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [timer invalidate];
                 [self authenticationCompleted];
             });
         }

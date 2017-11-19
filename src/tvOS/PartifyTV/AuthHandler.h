@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSTimer *activationRetryTimer;
 
 - (id)initWithAppConfig:(AppConfig*)appConfig viewController:(ViewController*)viewController;
+- (BOOL)isAlreadyAuthenticated;
 - (void)ensureAuthenticated;
 - (void)saveSession;
 @end
