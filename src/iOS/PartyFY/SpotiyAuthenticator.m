@@ -7,11 +7,12 @@
 //
 
 #import "SpotiyAuthenticator.h"
+#import <Lockbox/Lockbox.h>
 
 @interface SpotiyAuthenticator()
 @property (nonatomic, strong) SPTAuth *auth;
 @property (nonatomic, strong) UIViewController *authViewController;
-@property (nonatomic, strong) ViewController *viewController;
+@property (nonatomic, strong) void (^authCompletedHanlder)(SPTSession *session);
 @end
 
 @implementation SpotiyAuthenticator
@@ -46,26 +47,15 @@
 //    }];
 //}
 
-
-
-- (id)initWithConfig:(AppConfig*)config viewController:(ViewController*)viewController {
-    self.viewController = viewController;
+- (id)initWithConfig:(AppConfig*)config authCompletedHanlder:(void (^) (SPTSession *session))handler{
+    self.authCompletedHanlder = handler;
     self.auth = [SPTAuth defaultInstance];
-    // The client ID you got from the developer site
     self.auth.clientID = config.SpotifyClientId;
-    // The redirect URL as you entered it at the developer site
     self.auth.redirectURL = [NSURL URLWithString:@"com.hjerpbakk.partyfy.auth://completed/"];
-    // Setting the `sessionUserDefaultsKey` enables SPTAuth to automatically store the session object for future use.
-    self.auth.sessionUserDefaultsKey = @"current session";
-    // Set the scopes you need the user to authorize. `SPTAuthStreamingScope` is required for playing audio.
+    // TODO: what scope is needed?
     self.auth.requestedScopes = @[SPTAuthStreamingScope];
     
-    
-    // Start authenticating when the app is finished launching
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self startAuthenticationFlow];
-    });
-    
+    self.auth.session = [Lockbox unarchiveObjectForKey:@"SpotifySession"];
     return self;
 }
 
@@ -78,7 +68,7 @@
         NSURL *authURL = [self.auth spotifyWebAuthenticationURL];
         // Present in a SafariViewController
         self.authViewController = [[SFSafariViewController alloc] initWithURL:authURL];
-        [self.viewController presentViewController:self.authViewController animated:YES completion:nil];
+        [[[[UIApplication sharedApplication] keyWindow] rootViewController] presentViewController:self.authViewController animated:YES completion:nil];
     }
 }
 
@@ -101,7 +91,8 @@
 }
 
 - (void)authenticatedWithValidSession {
-    [self.viewController authenticationCompleted:self.auth.session];
+    [Lockbox archiveObject:self.auth.session forKey:@"SpotifySession"];
+    self.authCompletedHanlder(self.auth.session);
 }
 
 @end

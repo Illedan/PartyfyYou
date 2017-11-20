@@ -103,11 +103,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Spotify-iOS-SDK/Spotify.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCDYouTubeKit/XCDYouTubeKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Spotify-iOS-SDK/Spotify.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCDYouTubeKit/XCDYouTubeKit.framework"
 fi

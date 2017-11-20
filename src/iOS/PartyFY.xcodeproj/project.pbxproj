@@ -15,6 +15,7 @@
 		3218F54D1FB602CA00E8ED65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3218F54C1FB602CA00E8ED65 /* main.m */; };
 		322E05271FB82823009594E8 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E05261FB82823009594E8 /* AppConfig.m */; };
 		322E052B1FB874A8009594E8 /* SpotiyAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E052A1FB874A8009594E8 /* SpotiyAuthenticator.m */; };
+		3253A9311FBD7303005A0B5B /* partify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3253A9301FBD7303005A0B5B /* partify.png */; };
 		325F08651FB8F87300D7F4DF /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F08641FB8F87300D7F4DF /* Service.m */; };
 		325F08681FB97FC100D7F4DF /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F08671FB97FC100D7F4DF /* RestClient.m */; };
 		3261BF411FB756AC005BA9B0 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3261BF401FB756AC005BA9B0 /* config.json */; };
@@ -39,6 +40,7 @@
 		322E05281FB87417009594E8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		322E05291FB874A8009594E8 /* SpotiyAuthenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotiyAuthenticator.h; sourceTree = "<group>"; };
 		322E052A1FB874A8009594E8 /* SpotiyAuthenticator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotiyAuthenticator.m; sourceTree = "<group>"; };
+		3253A9301FBD7303005A0B5B /* partify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partify.png; sourceTree = "<group>"; };
 		325F08631FB8F87300D7F4DF /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		325F08641FB8F87300D7F4DF /* Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		325F08661FB97FC100D7F4DF /* RestClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestClient.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		3218F53C1FB602CA00E8ED65 /* PartyFY */ = {
 			isa = PBXGroup;
 			children = (
+				3253A92F1FBD72F6005A0B5B /* Resources */,
 				327B14531FBB9BB700D2870F /* PartyFY.entitlements */,
 				3218F53D1FB602CA00E8ED65 /* AppDelegate.h */,
 				3218F53E1FB602CA00E8ED65 /* AppDelegate.m */,
@@ -119,6 +122,14 @@
 				327B14511FBB9B4100D2870F /* EEUserID.m */,
 			);
 			path = PartyFY;
+			sourceTree = "<group>";
+		};
+		3253A92F1FBD72F6005A0B5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3253A9301FBD7303005A0B5B /* partify.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C04307BAA155440481D7DBA3 /* Frameworks */ = {
@@ -202,6 +213,7 @@
 				3261BF431FB756F5005BA9B0 /* config.default.json in Resources */,
 				3218F5471FB602CA00E8ED65 /* Assets.xcassets in Resources */,
 				3218F5451FB602CA00E8ED65 /* Main.storyboard in Resources */,
+				3253A9311FBD7303005A0B5B /* partify.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,12 +259,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PartyFY/Pods-PartyFY-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Spotify-iOS-SDK/Spotify.framework",
 				"${BUILT_PRODUCTS_DIR}/XCDYouTubeKit/XCDYouTubeKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spotify.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCDYouTubeKit.framework",
 			);

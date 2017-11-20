@@ -6,4 +6,5 @@ target 'PartyFY' do
   pod 'JSONModel'
   pod 'Spotify-iOS-SDK'
   pod 'HockeySDK', '~> 5.0.0'
+  pod 'Lockbox'
 end

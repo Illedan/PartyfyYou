@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AppConfig.h"
-#import "SpotiyAuthenticator.h"
 #import "ViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) AppConfig *appConfig;
 
 @end
 
