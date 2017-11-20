@@ -25,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     // TODO: Fast størrelse på knappen
+    self.playerViewController = [AVPlayerViewController new];
 }
 
 
@@ -35,10 +36,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    [self stopTimers];
-    self.currentSpotifyId = nil;
-    [self.button setEnabled:YES];
     
     self.authHandler = [[AuthHandler alloc] initWithAppConfig:self.appConfig viewController:self];
     if (!self.appConfig.authURL || !self.appConfig.apiURL) {
@@ -141,13 +138,14 @@
         }
         
         // TODO: hva skjer når video ikke kommer etter man trykker på knappen etter å ha vært innom appens åpningsskjerm?
+        // TODO: noen ganger kommer lyd og ikke video når jeg trykker på hjemknappen
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (!self.playerViewController) {
-                self.playerViewController = [AVPlayerViewController new];
-            }
-                
             if (!self.playerViewController.isFirstResponder) {
-                [self presentViewController:self.playerViewController animated:YES completion:nil];
+                @try {
+                    [self presentViewController:self.playerViewController animated:YES completion:nil];
+                } @catch (NSException *e ) {
+                    // TODO: proper bad "solution"
+                }
             }
             
             __weak AVPlayerViewController *weakPlayerViewController = self.playerViewController;
@@ -163,6 +161,7 @@
                 else
                 {
                     [self dismissViewControllerAnimated:YES completion:nil];
+                    [self viewWillAppear:YES];
                 }
             }];
             
@@ -183,10 +182,10 @@
 //}
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-    [self.button setEnabled:NO];
+    [self stopTimers];
+    self.currentSpotifyId = nil;
     if ([self.button.currentTitle isEqualToString:@"Authenticate"]) {
         [self.button setTitle:@"Cancel" forState:UIControlStateNormal];
-        [self.button setEnabled:YES];
         [self.authHandler ensureAuthenticated];
     } else if ([self.button.currentTitle isEqualToString:@"Partify"]) {
         [self.authHandler ensureAuthenticated];
