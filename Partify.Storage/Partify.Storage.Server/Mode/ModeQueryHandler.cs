@@ -1,10 +1,8 @@
-﻿
-using Dapper;
+﻿using Dapper;
 using Partify.Storage.Server.CQRS;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Partify.Storage.Server.Mode
@@ -20,8 +18,12 @@ namespace Partify.Storage.Server.Mode
 
         public async Task<IEnumerable<ModeResult>> HandleAsync(ModeQuery query)
         {
-            var result = await m_dbConnection.QueryAsync<ModeResult>("SELECT [Id] ,[Name] FROM [dbo].[Mode]");
-            return result;
+            if (query.Id == Guid.Empty)
+            {
+               return await m_dbConnection.QueryAsync<ModeResult>(Sql.AllModes);
+            }
+
+            return await m_dbConnection.QueryAsync<ModeResult>(Sql.ModeById, query);
         }
     }
 }

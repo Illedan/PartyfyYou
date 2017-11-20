@@ -17,7 +17,12 @@ namespace Partify.Storage.WebApi
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().AddApplicationPart(typeof(Startup).Assembly);
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver
+                    = new Newtonsoft.Json.Serialization.DefaultContractResolver();
+            });
+
             AddSwaggerConfiguration(services);
             var container = new ServiceContainer(new ContainerOptions()
             {
@@ -34,7 +39,7 @@ namespace Partify.Storage.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
             });
 
             app.UseMvc();

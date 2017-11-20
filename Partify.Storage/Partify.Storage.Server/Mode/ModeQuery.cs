@@ -7,6 +7,6 @@ namespace Partify.Storage.Server.Mode
 {
     public class ModeQuery : IQuery<IEnumerable<ModeResult>>
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
     }
 }
