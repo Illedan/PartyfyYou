@@ -12,6 +12,7 @@
 #import <RGLockbox/RGLockbox.h>
 #import "SpotifySession.h"
 #import "Service.h"
+#import "SpotifyRefreshToken.h"
 
 @interface AuthHandler ()
 @property (strong, nonatomic) AppConfig *appConfig;
@@ -58,9 +59,27 @@
     return NO;
 }
 
-// TODO: do call and set session afterwards
 - (void)refreshSpotifySession:(NSTimer*)timer {
-    self.viewController.spotifySession = self.spotifySession;
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    [RESTClient get:[NSString stringWithFormat:@"%@/refreshToken?refreshToken=%@", self.appConfig.apiURL, self.spotifySession.refresh_token] responseHandler:^(NSString *refreshTokenResponse) {
+        NSError *error;
+        if (error) {
+            // TODO: Errorhandling
+        }
+        
+        SpotifyRefreshToken* spotifySession = [[SpotifyRefreshToken alloc] initWithString:refreshTokenResponse error:&error];
+        if (!error && spotifySession) {
+            self.spotifySession.access_token = spotifySession.access_token;
+            self.spotifySession.expires_in = spotifySession.expires_in;
+            self.viewController.spotifySession = self.spotifySession;
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.viewController showErrorMessage:@"Could not reauthenticate with Partify server"];
+            });
+        }
+        dispatch_semaphore_signal(sema);
+    }];
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 }
 
 - (void)getOneTimeCodeAndAuthenticateRemotely {
@@ -124,7 +143,7 @@
 }
 
 - (void)authenticationCompleted {
-    self.spotifySessionRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+    self.spotifySessionRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:self.spotifySession.expires_in - 30
                                                                  target:self
                                                                selector:@selector(refreshSpotifySession:)
                                                                userInfo:nil

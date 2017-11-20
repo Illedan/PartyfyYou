@@ -21,6 +21,7 @@
 		327940671FBE27ED0067D496 /* AuthHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 327940661FBE27ED0067D496 /* AuthHandler.m */; };
 		3279406A1FBE31370067D496 /* OneTimeCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 327940691FBE31370067D496 /* OneTimeCode.m */; };
 		3279406D1FBF2D8F0067D496 /* SpotifySession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3279406C1FBF2D8F0067D496 /* SpotifySession.m */; };
+		327940701FC2BE360067D496 /* SpotifyRefreshToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3279406F1FC2BE360067D496 /* SpotifyRefreshToken.m */; };
 		32D957311FBC31B2004D72BC /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D957301FBC31B2004D72BC /* AppConfig.m */; };
 		B45A3C2BC73AF2753E04A009 /* Pods_PartifyTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E32C7B2A95C8DB40680C888 /* Pods_PartifyTV.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		327940691FBE31370067D496 /* OneTimeCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTimeCode.m; sourceTree = "<group>"; };
 		3279406B1FBF2D8F0067D496 /* SpotifySession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifySession.h; sourceTree = "<group>"; };
 		3279406C1FBF2D8F0067D496 /* SpotifySession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifySession.m; sourceTree = "<group>"; };
+		3279406E1FC2BE360067D496 /* SpotifyRefreshToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyRefreshToken.h; sourceTree = "<group>"; };
+		3279406F1FC2BE360067D496 /* SpotifyRefreshToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifyRefreshToken.m; sourceTree = "<group>"; };
 		32D9572F1FBC31B2004D72BC /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
 		32D957301FBC31B2004D72BC /* AppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
 		5BFCC1C59A1E4F0A4B5B67E6 /* Pods-PartifyTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartifyTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartifyTV/Pods-PartifyTV.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				327494971FBC2129003E30F4 /* RESTClient.m */,
 				3253A9221FBC3571005A0B5B /* Service.h */,
 				3253A9231FBC3571005A0B5B /* Service.m */,
+				3279406E1FC2BE360067D496 /* SpotifyRefreshToken.h */,
+				3279406F1FC2BE360067D496 /* SpotifyRefreshToken.m */,
 				3279406B1FBF2D8F0067D496 /* SpotifySession.h */,
 				3279406C1FBF2D8F0067D496 /* SpotifySession.m */,
 				3224482C1FBB77E8006774F7 /* ViewController.h */,
@@ -290,6 +295,7 @@
 				3224482E1FBB77E8006774F7 /* ViewController.m in Sources */,
 				322448361FBB77E8006774F7 /* main.m in Sources */,
 				3224482B1FBB77E8006774F7 /* AppDelegate.m in Sources */,
+				327940701FC2BE360067D496 /* SpotifyRefreshToken.m in Sources */,
 				320EADB51FBC1EE7007D5B80 /* EEUserID.m in Sources */,
 				3253A9241FBC3571005A0B5B /* Service.m in Sources */,
 				3279406D1FBF2D8F0067D496 /* SpotifySession.m in Sources */,
