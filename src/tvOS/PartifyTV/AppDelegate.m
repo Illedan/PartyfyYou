@@ -13,7 +13,6 @@
 #import "Service.h"
 
 @interface AppDelegate ()
-@property (strong, nonatomic) AppConfig *appConfig;
 @property (strong, nonatomic) ViewController* mainController;
 @end
 
@@ -30,7 +29,7 @@
                                                     error:NULL];
     
     NSError *error;
-    self.appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
+    AppConfig* appConfig = [[AppConfig alloc] initWithString:myJson error:&error];
     if (error) {
         NSException* myException = [NSException
                                     exceptionWithName:@"AppConfigNotCreated"
@@ -39,7 +38,7 @@
         [myException raise];
     }
     
-    if (!self.appConfig) {
+    if (!appConfig) {
         NSException* myException = [NSException
                                     exceptionWithName:@"AppConfigNotCreated"
                                     reason:@"AppConfig could not be constructed from config.json"
@@ -47,15 +46,11 @@
         [myException raise];
     }
     
-    self.appConfig.authURL = nil;
-    self.appConfig.apiURL = nil;
+    appConfig.authURL = nil;
+    appConfig.apiURL = nil;
     
     self.mainController = (ViewController*)  self.window.rootViewController;
-    if ([self servicesSetFromServiceDiscovery]) {
-        self.mainController.appConfig = self.appConfig;
-    } else {
-        [self.mainController showErrorMessage:@"Could not connect to Partify server"];
-    }
+    self.mainController.appConfig = appConfig;
     return YES;
 }
 
@@ -82,38 +77,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [self.mainController saveSession];
-}
-
-- (BOOL)servicesSetFromServiceDiscovery {
-    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    [RESTClient get:[self.appConfig.ServiceDiscoveryURL stringByAppendingString:@"/partify-service"] responseHandler:^(NSString *response) {
-        NSError *error;
-        Service* service = [[Service alloc] initWithString:response error:&error];
-        if (!error && service) {
-            self.appConfig.apiURL = service.ip;
-        }
-        
-        dispatch_semaphore_signal(sema);
-    }];
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-    
-    sema = dispatch_semaphore_create(0);
-    [RESTClient get:[self.appConfig.ServiceDiscoveryURL stringByAppendingString:@"/partify-auth-service"] responseHandler:^(NSString *response) {
-        NSError *error;
-        Service* service = [[Service alloc] initWithString:response error:&error];
-        if (!error && service) {
-            self.appConfig.authURL = [service.ip stringByAppendingString:@"/activate/code/"];
-        }
-        
-        dispatch_semaphore_signal(sema);
-    }];
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-    
-    if (!self.appConfig.authURL || !self.appConfig.apiURL) {
-        return NO;
-    }
-    
-    return YES;
 }
 
 @end

@@ -11,6 +11,7 @@
 #import "OneTimeCode.h"
 #import <RGLockbox/RGLockbox.h>
 #import "SpotifySession.h"
+#import "Service.h"
 
 @interface AuthHandler ()
 @property (strong, nonatomic) AppConfig *appConfig;
@@ -141,6 +142,35 @@
     NSString* sessionAsJSON = [self.spotifySession toJSONString];
     NSData* sessionAsData = [sessionAsJSON dataUsingEncoding:NSUTF8StringEncoding];
     [lockbox setData:sessionAsData forKey:@"spotifyToken"];
+}
+
+- (void)setServicesFromServiceDiscovery:(dispatch_semaphore_t)semaphore {
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    [RESTClient get:[self.appConfig.ServiceDiscoveryURL stringByAppendingString:@"/partify-service"] responseHandler:^(NSString *response) {
+        NSError *error;
+        Service* service = [[Service alloc] initWithString:response error:&error];
+        if (!error && service) {
+            self.appConfig.apiURL = service.ip;
+        }
+        
+        dispatch_semaphore_signal(sema);
+    }];
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    
+    sema = dispatch_semaphore_create(0);
+    [RESTClient get:[self.appConfig.ServiceDiscoveryURL stringByAppendingString:@"/partify-auth-service"] responseHandler:^(NSString *response) {
+        NSError *error;
+        Service* service = [[Service alloc] initWithString:response error:&error];
+        if (!error && service) {
+            self.appConfig.authURL = [service.ip stringByAppendingString:@"/activate/code/"];
+        }
+        
+        dispatch_semaphore_signal(sema);
+    }];
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    dispatch_semaphore_signal(semaphore);
+    
+    self.viewController.appConfig = self.appConfig;
 }
 
 @end

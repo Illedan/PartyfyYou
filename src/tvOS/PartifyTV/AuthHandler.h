@@ -18,4 +18,5 @@
 - (BOOL)isAlreadyAuthenticated;
 - (void)ensureAuthenticated;
 - (void)saveSession;
+- (void)setServicesFromServiceDiscovery:(dispatch_semaphore_t)semaphore;
 @end

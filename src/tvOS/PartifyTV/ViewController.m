@@ -24,8 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.headerLabel.text = @"Good header";
-    self.codeLabel.hidden = YES;
+    // TODO: Fast størrelse på knappen
 }
 
 
@@ -36,21 +35,32 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     [self stopTimers];
     self.currentSpotifyId = nil;
-    self.button.hidden = NO;
     [self.button setEnabled:YES];
+    
     self.authHandler = [[AuthHandler alloc] initWithAppConfig:self.appConfig viewController:self];
+    if (!self.appConfig.authURL || !self.appConfig.apiURL) {
+        
+        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+        [self.authHandler setServicesFromServiceDiscovery:semaphore];
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        
+        if (!self.appConfig.authURL || !self.appConfig.apiURL) {
+            [self showErrorMessage:@"Could not connect to Partify server"];
+            return;
+        }   
+    }
+    
     if ([self.authHandler isAlreadyAuthenticated]) {
         [self.button setTitle:@"Partify" forState:UIControlStateNormal];
         self.headerLabel.text = @"Prepare to be Partified!";
         self.codeLabel.text = @"Press Partify to show the music video for the currently playing song on Spotify.";
-        self.codeLabel.hidden = NO;
     } else {
         [self.button setTitle:@"Authenticate" forState:UIControlStateNormal];
         self.headerLabel.text = @"Prepare to be Partified!";
         self.codeLabel.text = @"Press Authenticate to authenticate with Spotify";
-        self.codeLabel.hidden = NO;
     }
 }
 
@@ -75,14 +85,12 @@
 - (void)showErrorMessage:(NSString*)errorMessage {
     self.headerLabel.text = errorMessage;
     self.codeLabel.text = @"Party is over 🤯";
-    self.codeLabel.hidden = NO;
-    // TODO: Gjør noe med knappen her også
+    [self.button setTitle:@"Try again" forState:UIControlStateNormal];
 }
 
 - (void)showOneTimeAuthenticationCode:(OneTimeCode*) authCode {
     self.headerLabel.text = authCode.url;
     self.codeLabel.text = authCode.code;
-    self.codeLabel.hidden = NO;
 }
 
 - (void)authenticationCompleted {
@@ -113,7 +121,10 @@
 
 - (void)getYouTubeSongId:(NSString*) spotifyId {
     if (!spotifyId || [spotifyId isEqualToString:@""]) {
-        // TODO: No song playing
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self dismissViewControllerAnimated:YES completion:nil];
+            [self viewWillAppear:YES];
+        });
         return;
     }
     
@@ -133,6 +144,9 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!self.playerViewController) {
                 self.playerViewController = [AVPlayerViewController new];
+            }
+                
+            if (!self.playerViewController.isFirstResponder) {
                 [self presentViewController:self.playerViewController animated:YES completion:nil];
             }
             
@@ -176,7 +190,7 @@
         [self.authHandler ensureAuthenticated];
     } else if ([self.button.currentTitle isEqualToString:@"Partify"]) {
         [self.authHandler ensureAuthenticated];
-    } else if ([self.button.currentTitle isEqualToString:@"Cancel"]) {
+    } else if ([self.button.currentTitle isEqualToString:@"Cancel"] || [self.button.currentTitle isEqualToString:@"Try again"]) {
         [self viewWillAppear:YES];
     }
     
