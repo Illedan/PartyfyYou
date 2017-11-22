@@ -28,17 +28,22 @@ namespace Partify.Storage.Server.Suggestion
                 );
         }
 
-        public async Task<SuggestionResult> GetSuggestionRelation(string videoId, string songId, string modeName, string userName)
+        public async Task<SuggestionRelationResult> GetSuggestionRelation(SuggestionRelationRequest suggestion)
         {
             var result = await m_queryExecutor.ExecuteAsync(
-                new SuggestionQuery {
-                    VideoId = videoId,
-                    SongId = songId,
-                    ModeName = modeName,
-                    UserName = userName
+                new SuggestionRelationQuery {
+                    SongId = suggestion.SongId,
+                    ModeId = suggestion.ModeId,
+                    UserId = suggestion.UserId
                 });
 
             return result.FirstOrDefault();
+        }
+
+        public async Task<SuggestionResult> GetSuggestion(Guid songId, Guid videoId, Guid modeId)
+        {
+            var result = await m_queryExecutor.ExecuteAsync(new SuggestionQuery {ModeId = modeId, SpotifyId = songId, YoutubeId = videoId });
+            return result;
         }
     }
 }

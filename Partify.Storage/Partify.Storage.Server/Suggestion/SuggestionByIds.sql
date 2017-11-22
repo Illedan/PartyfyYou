@@ -1,4 +1,5 @@
 ﻿select  Suggestion.Id ,
+	UserSuggestion.Id as UserSuggestionId,
 	SpotifySong.Id as SpotifyId, 
 	SpotifySong.SongId as SpotifySongId, 
 	YoutubeVideo.Id as YoutubeId, 
@@ -15,4 +16,4 @@
 						inner join Mode on Suggestion.ModeIdFK = Mode.Id)
 						inner join UserSuggestion on Suggestion.Id = UserSuggestion.SuggestionIdFK)
 						inner join [User] on UserSuggestion.UserIdFK = [User].Id)
-					where YoutubeVideo.VideoId = @VideoId and SpotifySong.SongId = @SongId and Mode.Name = @ModeName and [User].Name = @UserName
+					where SpotifySong.SongId = @SongId and Mode.Id = @ModeId and [User].Id = @UserId

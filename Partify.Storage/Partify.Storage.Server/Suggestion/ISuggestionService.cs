@@ -8,6 +8,7 @@ namespace Partify.Storage.Server.Suggestion
     public interface ISuggestionService
     {
         Task PostSuggestion(CreateSuggestionRequest request);
-        Task<SuggestionResult> GetSuggestionRelation(string videoId, string songId, string modeName, string userName);
+        Task<SuggestionRelationResult> GetSuggestionRelation(SuggestionRelationRequest suggestion);
+        Task<SuggestionResult> GetSuggestion(Guid songId, Guid videoId, Guid modeId);
     }
 }

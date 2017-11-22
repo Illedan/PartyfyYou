@@ -7,5 +7,6 @@ namespace Partify.Storage.Server.User
     public class UserQuery : IQuery<IEnumerable<UserResult>>
     {
         public Guid Id { get; set; }
+        public string SpotifyUserId { get; set; }   
     }
 }

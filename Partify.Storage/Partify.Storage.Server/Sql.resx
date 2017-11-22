@@ -148,4 +148,19 @@
   <data name="SuggestionByIds" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>suggestion\suggestionbyids.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="UserBySpotifyId" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>user\userbyspotifyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="VideoByVideoId" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>video\videobyvideoid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SongBySpotifyId" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>song\songbyspotifyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GetSuggestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>suggestion\getsuggestion.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="DeleteUserSuggestionById" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>usersuggestion\deleteusersuggestionbyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

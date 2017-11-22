@@ -1,12 +1,12 @@
 ﻿using Dapper;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Partify.Storage.Server.CQRS;
 using System.Data;
+using System.Linq;
 
 namespace Partify.Storage.Server.Suggestion
 {
-    public class SuggestionQueryHandler : IQueryHandler<SuggestionQuery, IEnumerable<SuggestionResult>>
+    public class SuggestionQueryHandler : IQueryHandler<SuggestionQuery, SuggestionResult>
     {
         private readonly IDbConnection m_dbConnection;
 
@@ -14,10 +14,11 @@ namespace Partify.Storage.Server.Suggestion
         {
             m_dbConnection = dbConnection;
         }
-        public async Task<IEnumerable<SuggestionResult>> HandleAsync(SuggestionQuery query)
+        public async Task<SuggestionResult> HandleAsync(SuggestionQuery query)
         {
-            var result = await m_dbConnection.QueryAsync<SuggestionResult>(Sql.SuggestionByIds, query);
-            return result;
+            var result = await m_dbConnection.QueryAsync<SuggestionResult>(Sql.GetSuggestion,query);
+
+            return result.FirstOrDefault();
         }
     }
 }

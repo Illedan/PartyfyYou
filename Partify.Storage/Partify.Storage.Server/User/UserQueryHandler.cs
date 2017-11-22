@@ -18,12 +18,16 @@ namespace Partify.Storage.Server.User
 
         public async Task<IEnumerable<UserResult>> HandleAsync(UserQuery query)
         {
-            if (query.Id == Guid.Empty)
+            if (query.Id != Guid.Empty)
             {
-               return await m_dbConnection.QueryAsync<UserResult>(Sql.AllUsers);
+                return await m_dbConnection.QueryAsync<UserResult>(Sql.UserById, query);
+            }
+            if (!string.IsNullOrEmpty(query.SpotifyUserId))
+            {
+                return await m_dbConnection.QueryAsync<UserResult>(Sql.UserBySpotifyId, query);
             }
 
-            return await m_dbConnection.QueryAsync<UserResult>(Sql.UserById, query);
+            return await m_dbConnection.QueryAsync<UserResult>(Sql.AllUsers);
         }
     }
 }

@@ -79,6 +79,35 @@ namespace Partify.Storage.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DELETE FROM UserSuggestion where Id = @Id.
+        /// </summary>
+        internal static string DeleteUserSuggestionById {
+            get {
+                return ResourceManager.GetString("DeleteUserSuggestionById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to select 
+        ///	Id,
+        ///	SpotifyIdFk as SpotifyId,
+        ///	YoutubeIdFk as YoutubeId,
+        ///	ModeIdFk as ModeId,
+        ///	Overruled,
+        ///	Count
+        ///from Suggestion
+        ///where
+        ///	ModeIdFk = @ModeId and
+        ///	YoutubeIdFk = @YoutubeId and
+        ///	SpotifyIdFk = @SpotifyId.
+        /// </summary>
+        internal static string GetSuggestion {
+            get {
+                return ResourceManager.GetString("GetSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id, Name FROM Mode Where Id=@Id.
         /// </summary>
         internal static string ModeById {
@@ -146,20 +175,30 @@ namespace Partify.Storage.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Id, SongId from SpotifySong where SongId = @SongId.
+        /// </summary>
+        internal static string SongBySpotifyId {
+            get {
+                return ResourceManager.GetString("SongBySpotifyId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to select  Suggestion.Id ,
+        ///	UserSuggestion.Id as UserSuggestionId,
         ///	SpotifySong.Id as SpotifyId, 
         ///	SpotifySong.SongId as SpotifySongId, 
         ///	YoutubeVideo.Id as YoutubeId, 
         ///	YoutubeVideo.VideoId as YoutubeVideoId, 
         ///	Mode.Name as Mode, 
-        ///	Mode.Id as ModeId, 
+        ///	Mode.Id as ModeId,
+        ///	[User].Name as UserName,
+        ///	[User].Id as UserId,
         ///	Suggestion.Count, 
         ///	Suggestion.Overruled 
-        ///					from (((SpotifySong
+        ///					from (((((SpotifySong
         ///						inner join Suggestion on Suggestion.SpotifyIdFK = SpotifySong.Id)
-        ///						inner join YoutubeVideo on Suggestion.YoutubeIdFK = YoutubeVideo.Id) 
-        ///						inner join Mode on Suggestion.ModeIdFK = Mode.Id)
-        ///					where Youtub [rest of string was truncated]&quot;;.
+        ///						inner join YoutubeVideo on Suggestion.YoutubeIdFK = Y [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SuggestionByIds {
             get {
@@ -173,6 +212,26 @@ namespace Partify.Storage.Server {
         internal static string UserById {
             get {
                 return ResourceManager.GetString("UserById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id, Name, Country, SpotifyUserId FROM [User] Where SpotifyUserId=@SpotifyUserId.
+        /// </summary>
+        internal static string UserBySpotifyId {
+            get {
+                return ResourceManager.GetString("UserBySpotifyId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id
+        ///      ,VideoId
+        ///  FROM YoutubeVideo where VideoId = @VideoId.
+        /// </summary>
+        internal static string VideoByVideoId {
+            get {
+                return ResourceManager.GetString("VideoByVideoId", resourceCulture);
             }
         }
     }

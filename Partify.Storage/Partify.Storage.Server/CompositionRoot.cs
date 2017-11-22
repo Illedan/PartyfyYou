@@ -9,6 +9,7 @@ using Partify.Storage.Server.Video;
 using Partify.Storage.Server.Suggestion;
 using Partify.Storage.Server.UserSuggestion;
 using Partify.Storage.Server.User;
+using Partify.Storage.Server.UseCase;
 
 namespace Partify.Storage.Server
 {
@@ -22,6 +23,8 @@ namespace Partify.Storage.Server
                 .Register<IModeService, ModeService>(new PerScopeLifetime())
                 .Register<IVideoService, VideoService>(new PerScopeLifetime())
                 .Register<ISuggestionService, SuggestionService>(new PerScopeLifetime())
+                .Register<IUserHandlerService, UserHandlerService>(new PerScopeLifetime())
+                .Register<ISuggestionHandlerService, SuggestionHandlerService>(new PerScopeLifetime())
                 .Register<ISongService, SongService>(new PerScopeLifetime())
                 .Register<IUserSuggestionService, UserSuggestionService>(new PerScopeLifetime())
                 .Register<IUserService, UserService>(new PerScopeLifetime())

@@ -20,7 +20,7 @@ namespace Partify.Storage.Server.Song
 
         public async Task HandleAsync(SongCommand command)
         {
-            await m_dbConnection.QueryAsync(Sql.PostSong, command);
+            await m_dbConnection.ExecuteAsync(Sql.PostSong, command);
         }
     }
 }

@@ -1,0 +1,1 @@
+﻿SELECT Id, Name, Country, SpotifyUserId FROM [User] Where SpotifyUserId=@SpotifyUserId

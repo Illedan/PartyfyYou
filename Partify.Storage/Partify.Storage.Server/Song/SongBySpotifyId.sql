@@ -1,0 +1,1 @@
+﻿Select Id, SongId from SpotifySong where SongId = @SongId

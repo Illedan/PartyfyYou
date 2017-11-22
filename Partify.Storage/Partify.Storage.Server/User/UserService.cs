@@ -25,6 +25,12 @@ namespace Partify.Storage.Server.User
             return result.FirstOrDefault();
         }
 
+        public async Task<UserResult> Get(string spotifyUserId)
+        {
+            var result = await m_queryExecutor.ExecuteAsync(new UserQuery { SpotifyUserId = spotifyUserId });
+            return result.FirstOrDefault();
+        }
+
         public async Task<IEnumerable<UserResult>> GetAll()
         {
             var result = await m_queryExecutor.ExecuteAsync(new UserQuery());
