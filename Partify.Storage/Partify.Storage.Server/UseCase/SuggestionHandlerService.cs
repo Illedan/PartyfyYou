@@ -18,6 +18,7 @@ namespace Partify.Storage.Server.UseCase
         private readonly IUserSuggestionService m_userSuggestionService;
 
         private readonly Guid PartifySystemUserId = new Guid("6E952A43-0FFF-4B5A-A008-480A8BB0E8EE");
+
         public SuggestionHandlerService(IVideoService videoService, ISongService songService, ISuggestionService suggestionService, IUserSuggestionService userSuggestionService)
         {
             m_videoService = videoService;
@@ -59,28 +60,31 @@ namespace Partify.Storage.Server.UseCase
                 return;
                
             }
+
+            // the user have allready added a suggestion for him/herserlf, we should now change the prefered suggestion for that spesific user
+            await RemoveSuggestion(suggestionRelation.UserSuggestionId);
+            var existingSuggestion = await m_suggestionService.GetSuggestion(song.Id, video.Id, modeId);
+            await m_userSuggestionService.Post(new CreateUserSuggestionRequest { SuggestionId = existingSuggestion.Id, UserId = userId });
+
+
+        }
+
+        public async Task<SuggestionRelationResult> GetSuggestion(SuggestionRelationRequest suggestion)
+        {
             
-            // the user have allready added a suggestion for him/herserlf, we should now chance the prefered suggestion for that spesific user
-            //delete from UserSuggestion where UserSuggestion.Id = suggestionRelation.UserSuggestionId
-            // post to UserSuggestion with updated values
-            // await m_userSuggestionService.Post(new CreateUserSuggestionRequest { SuggestionId = suggestionByPartifySystemUser.Id, UserId = userId });
-            
+            var song = await m_songService.Get(suggestion.SongId);
+            if (song == null)
+            {
+                return null;
+            }
+            var suggestionRelation = await m_suggestionService.GetSuggestionRelation(new SuggestionRelationRequest { ModeId = suggestion.ModeId, SongId = song.SongId, UserId = suggestion.UserId });
 
+            return suggestionRelation;
         }
 
-        public Task<SuggestionRelationResult> GetSuggestion(SuggestionRelationRequest suggestion)
+        public async Task RemoveSuggestion(Guid userSuggestionId)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task RemoveSuggestion(string videoId, string songId, Guid modeId, Guid userId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task ReplaceSuggestion(string newVideoId, string songId, Guid modeId, Guid userId)
-        {
-            throw new NotImplementedException();
+            await m_userSuggestionService.Delete(userSuggestionId);
         }
     }
 }

@@ -79,6 +79,15 @@ namespace Partify.Storage.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DELETE FROM Suggestion where Id = @Id.
+        /// </summary>
+        internal static string DeleteSuggestionById {
+            get {
+                return ResourceManager.GetString("DeleteSuggestionById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DELETE FROM UserSuggestion where Id = @Id.
         /// </summary>
         internal static string DeleteUserSuggestionById {

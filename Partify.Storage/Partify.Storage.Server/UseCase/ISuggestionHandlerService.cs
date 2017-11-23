@@ -11,7 +11,6 @@ namespace Partify.Storage.Server.UseCase
     {
         Task<SuggestionRelationResult> GetSuggestion(SuggestionRelationRequest suggestion);
         Task AddSuggestion(string videoId, string songId, Guid modeId, Guid userId);
-        Task RemoveSuggestion(string videoId, string songId, Guid modeId, Guid userId);
-        Task ReplaceSuggestion(string newVideoId, string songId, Guid modeId, Guid userId);
+        Task RemoveSuggestion(Guid userSuggestionId);
     }
 }

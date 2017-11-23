@@ -45,5 +45,10 @@ namespace Partify.Storage.Server.Suggestion
             var result = await m_queryExecutor.ExecuteAsync(new SuggestionQuery {ModeId = modeId, SpotifyId = songId, YoutubeId = videoId });
             return result;
         }
+
+        public async Task DeleteSuggestion(Guid suggestionId)
+        {
+            await m_commandExecutor.ExecuteAsync(new DeleteSuggestionCommand {Id = suggestionId });
+        }
     }
 }

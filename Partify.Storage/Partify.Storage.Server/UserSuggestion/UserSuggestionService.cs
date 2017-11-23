@@ -17,6 +17,11 @@ namespace Partify.Storage.Server.UserSuggestion
             m_commandExecutor = commandExecutor;
         }
 
+        public async Task Delete(Guid id)
+        {
+            await m_commandExecutor.ExecuteAsync(new DeleteUserSuggestionCommand { Id = id });
+        }
+
         public async Task Post(CreateUserSuggestionRequest createUserSuggestionRequest)
         {
             var createUserSuggestionCommand = new UserSuggestionCommand

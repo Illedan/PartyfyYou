@@ -10,5 +10,6 @@ namespace Partify.Storage.Server.Suggestion
         Task PostSuggestion(CreateSuggestionRequest request);
         Task<SuggestionRelationResult> GetSuggestionRelation(SuggestionRelationRequest suggestion);
         Task<SuggestionResult> GetSuggestion(Guid songId, Guid videoId, Guid modeId);
+        Task DeleteSuggestion(Guid suggestionId);
     }
 }
