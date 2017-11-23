@@ -64,6 +64,12 @@ namespace Partify.Storage.Server.UseCase
             // the user have allready added a suggestion for him/herserlf, we should now change the prefered suggestion for that spesific user
             await RemoveSuggestion(suggestionRelation.UserSuggestionId);
             var existingSuggestion = await m_suggestionService.GetSuggestion(song.Id, video.Id, modeId);
+            if (existingSuggestion == null)
+            {
+                await m_suggestionService.PostSuggestion(new CreateSuggestionRequest { ModeId = modeId, Overruled = false, SpotifyId = song.Id, YoutubeId = video.Id });
+                existingSuggestion = await m_suggestionService.GetSuggestion(song.Id, video.Id, modeId);
+            }
+           
             await m_userSuggestionService.Post(new CreateUserSuggestionRequest { SuggestionId = existingSuggestion.Id, UserId = userId });
 
 

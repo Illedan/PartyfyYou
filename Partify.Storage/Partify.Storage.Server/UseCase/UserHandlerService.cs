@@ -17,7 +17,7 @@ namespace Partify.Storage.Server.UseCase
         public async Task<UserResult> HandleUser(UserModel user)
         {
             var userResult = await m_userService.Get(user.SpotifyUserId);
-            if (user == null)
+            if (userResult == null)
             {
                 await m_userService.Post(new CreateUserRequest
                 {

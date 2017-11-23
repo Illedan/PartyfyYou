@@ -16,7 +16,7 @@ namespace Partify.Storage.Server.Video
         }
         public async Task<VideoResult> HandleAsync(VideoQuery query)
         {
-            var result = await m_dbConnection.QueryAsync(Sql.VideoByVideoId,query);
+            var result = await m_dbConnection.QueryAsync<VideoResult>(Sql.VideoByVideoId,query);
             return result.FirstOrDefault();
         }
     }

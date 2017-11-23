@@ -30,9 +30,9 @@ namespace Partify.Storage.WebApi.Controller
 
         // POST api/values
         [HttpPost]
-        public async Task Post([FromBody]string videoId, [FromBody]string songId, [FromBody]Guid modeId, [FromBody]Guid userId)
+        public async Task Post([FromBody]PostSuggestionModel postSuggestionModel)
         {
-            await m_suggestionHandlerService.AddSuggestion(videoId, songId, modeId, userId);
+            await m_suggestionHandlerService.AddSuggestion(postSuggestionModel.VideoId, postSuggestionModel.SongId, postSuggestionModel.ModeId, postSuggestionModel.UserId);
         }
 
         // DELETE api/values/5
