@@ -85,6 +85,11 @@ namespace Partify.Storage.Server.UseCase
             }
             var suggestionRelation = await m_suggestionService.GetSuggestionRelation(new SuggestionRelationRequest { ModeId = suggestion.ModeId, SongId = song.SongId, UserId = suggestion.UserId });
 
+            if (suggestionRelation == null)
+            {
+                suggestionRelation = await m_suggestionService.GetSuggestionRelation(new SuggestionRelationRequest { ModeId = suggestion.ModeId, SongId = song.SongId, UserId = PartifySystemUserId });
+            }
+
             return suggestionRelation;
         }
 
