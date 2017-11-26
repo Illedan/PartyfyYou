@@ -7,11 +7,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Partify.Storage.Server;
 using System;
+using Microsoft.Extensions.Configuration;
+using Partify.Storage.Server.Configuration;
 
 namespace Partify.Storage.WebApi
 {
     public class Startup
     {
+        public IConfigurationRoot Configuration { get; }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -28,9 +31,15 @@ namespace Partify.Storage.WebApi
             {
                 EnablePropertyInjection = false
             });
+            container.Register(factory => CreateConfiguration(), new PerContainerLifetime());
             container.ScopeManagerProvider = new PerLogicalCallContextScopeManagerProvider();
             container.RegisterFrom<CompositionRoot>();
             return container.CreateServiceProvider(services);
+        }
+
+        private Server.Configuration.IConfiguration CreateConfiguration()
+        {
+            return new PartifyConfiguration(Configuration.GetSection("DBConnectionString").Value);  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +61,15 @@ namespace Partify.Storage.WebApi
             {
                 await context.Response.WriteAsync("MVC didnt find anything");
             });
+        }
+        public Startup(IHostingEnvironment env)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("Configuration.json", optional: true, reloadOnChange: true)
+                .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
         }
         private static void AddSwaggerConfiguration(IServiceCollection services)
         {

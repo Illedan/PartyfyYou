@@ -28,7 +28,6 @@ namespace Partify.Storage.Server
                 .Register<ISongService, SongService>(new PerScopeLifetime())
                 .Register<IUserSuggestionService, UserSuggestionService>(new PerScopeLifetime())
                 .Register<IUserService, UserService>(new PerScopeLifetime())
-                .Register<IConfiguration, PartifyConfiguration>(new PerContainerLifetime())
                 .Register<IDbConnection>(factory => CreateMySqlConnection(factory));    
         }
 

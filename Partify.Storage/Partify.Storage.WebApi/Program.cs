@@ -16,7 +16,6 @@ namespace Partify.Storage.WebApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-               // .ConfigureServices(sc => sc.AddSingleton<Action<IServiceContainer>>(container => { }))
                 .Build();
     }
 }
