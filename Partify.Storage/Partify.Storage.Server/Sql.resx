@@ -124,4 +124,49 @@
   <data name="ModeById" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>mode\modebyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="PostSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>song\postsong.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PostUserSuggestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>usersuggestion\postusersuggestion.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PostSuggestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>suggestion\postsuggestion.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PostVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>video\postvideo.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="AllUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>user\allusers.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="UserById" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>user\userbyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PostUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>user\postuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SuggestionByIds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>suggestion\suggestionbyids.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="UserBySpotifyId" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>user\userbyspotifyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="VideoByVideoId" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>video\videobyvideoid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SongBySpotifyId" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>song\songbyspotifyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GetSuggestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>suggestion\getsuggestion.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="DeleteUserSuggestionById" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>usersuggestion\deleteusersuggestionbyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="DeleteSuggestionById" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>suggestion\deletesuggestionbyid.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SuggestionByMostPopular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>suggestion\suggestionbymostpopular.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

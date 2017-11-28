@@ -70,11 +70,200 @@ namespace Partify.Storage.Server {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id, Name, Country, SpotifyUserId, Name FROM [User].
+        /// </summary>
+        internal static string AllUsers {
+            get {
+                return ResourceManager.GetString("AllUsers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DELETE FROM Suggestion where Id = @Id.
+        /// </summary>
+        internal static string DeleteSuggestionById {
+            get {
+                return ResourceManager.GetString("DeleteSuggestionById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DELETE FROM UserSuggestion where Id = @Id.
+        /// </summary>
+        internal static string DeleteUserSuggestionById {
+            get {
+                return ResourceManager.GetString("DeleteUserSuggestionById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to select 
+        ///	Id,
+        ///	SpotifyIdFk as SpotifyId,
+        ///	YoutubeIdFk as YoutubeId,
+        ///	ModeIdFk as ModeId,
+        ///	Overruled,
+        ///	Count
+        ///from Suggestion
+        ///where
+        ///	ModeIdFk = @ModeId and
+        ///	YoutubeIdFk = @YoutubeId and
+        ///	SpotifyIdFk = @SpotifyId.
+        /// </summary>
+        internal static string GetSuggestion {
+            get {
+                return ResourceManager.GetString("GetSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id, Name FROM Mode Where Id=@Id.
         /// </summary>
         internal static string ModeById {
             get {
                 return ResourceManager.GetString("ModeById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO SpotifySong 
+        ///(Id, SongId)
+        ///VALUES 
+        ///(@Id, @SongId).
+        /// </summary>
+        internal static string PostSong {
+            get {
+                return ResourceManager.GetString("PostSong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Suggestion
+        ///(Id, SpotifyIdFK, YoutubeIdFK, Count, Overruled, ModeIdFK) 
+        ///VALUES (@Id, @SpotifyId, @YoutubeId, @Count, @Overruled, @ModeId).
+        /// </summary>
+        internal static string PostSuggestion {
+            get {
+                return ResourceManager.GetString("PostSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO [User]
+        ///(Id, Name, Country, SpotifyUserId)
+        ///VALUES 
+        ///(@Id, @Name, @Country, @SpotifyUserId).
+        /// </summary>
+        internal static string PostUser {
+            get {
+                return ResourceManager.GetString("PostUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO UserSuggestion 
+        ///(Id, SuggestionIdFK, UserIdFK)
+        ///VALUES 
+        ///(@Id, @SuggestionId, @UserId).
+        /// </summary>
+        internal static string PostUserSuggestion {
+            get {
+                return ResourceManager.GetString("PostUserSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO YoutubeVideo
+        ///(Id, VideoId) 
+        ///VALUES (@Id, @VideoId).
+        /// </summary>
+        internal static string PostVideo {
+            get {
+                return ResourceManager.GetString("PostVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Id, SongId from SpotifySong where SongId = @SongId.
+        /// </summary>
+        internal static string SongBySpotifyId {
+            get {
+                return ResourceManager.GetString("SongBySpotifyId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to select  Suggestion.Id ,
+        ///	UserSuggestion.Id as UserSuggestionId,
+        ///	SpotifySong.Id as SpotifyId, 
+        ///	SpotifySong.SongId as SpotifySongId, 
+        ///	YoutubeVideo.Id as YoutubeId, 
+        ///	YoutubeVideo.VideoId as YoutubeVideoId, 
+        ///	Mode.Name as Mode, 
+        ///	Mode.Id as ModeId,
+        ///	[User].Name as UserName,
+        ///	[User].Id as UserId,
+        ///	Suggestion.Count, 
+        ///	Suggestion.Overruled 
+        ///					from (((((SpotifySong
+        ///						inner join Suggestion on Suggestion.SpotifyIdFK = SpotifySong.Id)
+        ///						inner join YoutubeVideo on Suggestion.YoutubeIdFK = Y [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SuggestionByIds {
+            get {
+                return ResourceManager.GetString("SuggestionByIds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to select TOP (1)
+        ///	count(*) as [Count],
+        ///	Suggestion.Id as Id,
+        ///	Suggestion.YoutubeIdFK as YoutubeId,
+        ///	(select YoutubeVideo.VideoId from YoutubeVideo where YoutubeVideo.Id = Suggestion.YoutubeIdFK) as YoutubeVideoId
+        ///from 
+        ///	UserSuggestion, 
+        ///	Suggestion
+        ///	
+        ///where 
+        ///EXISTS
+        ///	(select * from SpotifySong where SpotifySong.SongId = @SongId and SpotifySong.Id = Suggestion.SpotifyIdFK) and
+        ///EXISTS 
+        ///	(select * from Mode where Mode.Id = @ModeId and Mode.Id = Suggestion.ModeIdFK) and
+        ///Suggestion.Id = UserSuggestion. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SuggestionByMostPopular {
+            get {
+                return ResourceManager.GetString("SuggestionByMostPopular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id, Name, Country, SpotifyUserId FROM [User] Where Id=@Id.
+        /// </summary>
+        internal static string UserById {
+            get {
+                return ResourceManager.GetString("UserById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id, Name, Country, SpotifyUserId FROM [User] Where SpotifyUserId=@SpotifyUserId.
+        /// </summary>
+        internal static string UserBySpotifyId {
+            get {
+                return ResourceManager.GetString("UserBySpotifyId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id
+        ///      ,VideoId
+        ///  FROM YoutubeVideo where VideoId = @VideoId.
+        /// </summary>
+        internal static string VideoByVideoId {
+            get {
+                return ResourceManager.GetString("VideoByVideoId", resourceCulture);
             }
         }
     }

@@ -1,0 +1,1 @@
+﻿DELETE FROM UserSuggestion where Id = @Id

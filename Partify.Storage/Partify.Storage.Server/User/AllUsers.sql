@@ -1,0 +1,1 @@
+﻿SELECT Id, Name, Country, SpotifyUserId, Name FROM [User]

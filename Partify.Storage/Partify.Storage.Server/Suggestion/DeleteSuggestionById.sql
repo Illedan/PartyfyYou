@@ -1,0 +1,1 @@
+﻿DELETE FROM Suggestion where Id = @Id
