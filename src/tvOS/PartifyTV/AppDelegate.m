@@ -46,8 +46,8 @@
         [myException raise];
     }
     
-    appConfig.authURL = nil;
-    appConfig.apiURL = nil;
+//    appConfig.authURL = nil;
+//    appConfig.apiURL = nil;
     
     self.mainController = (ViewController*)  self.window.rootViewController;
     self.mainController.appConfig = appConfig;
