@@ -100,4 +100,11 @@ public class Item
         public int expires_in { get; set; }
         public string scope { get; set; }
     }
+
+    public class SpotifySearchResult
+    {
+        public string Name { get; set; }
+        public string ThumbnailUrl { get; set; }
+        public string VideoId { get; set; }
+    }
 }

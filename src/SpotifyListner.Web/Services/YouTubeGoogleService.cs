@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Threading.Tasks;
 using Google.Apis.Services;
@@ -44,6 +45,37 @@ namespace SpotifyListner.Web.Services
             }
 
             return songId;
+        }
+
+        public async Task<List<SpotifySearchResult>> GetSearchResults(SpotifyContent spotifySong, string mode, int maxResults)
+        {
+            await CreateYouTubeService();
+
+            var searchListRequest = youtubeService.Search.List("snippet");
+            var searchTerm = spotifySong.item.name + " " + spotifySong.item.artists.First().name;
+            if (!string.IsNullOrEmpty(mode))
+            {
+                searchTerm += " " + mode;
+            }
+            searchListRequest.Q = searchTerm;
+            searchListRequest.MaxResults = maxResults;
+
+            var searchListResponse = await searchListRequest.ExecuteAsync();
+
+            var songs = searchListResponse.Items.Where(s => s.Id.Kind.Equals("youtube#video"));
+            var spotifySearchResults = new List<SpotifySearchResult>();
+            foreach (var song in songs)
+            {
+                spotifySearchResults.Add(new SpotifySearchResult
+                {
+                    Name = song.Snippet.Title,
+                    ThumbnailUrl = song.Snippet.Thumbnails.Default__.Url,
+                    VideoId = song.Id.VideoId
+
+                });
+            }
+
+            return spotifySearchResults;
         }
 
         public async Task<TimeSpan> GetSongLength(string id)

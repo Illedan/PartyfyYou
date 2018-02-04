@@ -27,6 +27,13 @@ namespace SpotifyListner.Web
                 }
                 return null;
             };
+            Get["/search", true] = async (parameters, ct) =>
+            {
+                string token = this.Request.Query["token"];
+                string mode = this.Request.Query["mode"];
+                var song = (await spotifyService.GetCurrentSong(token));
+                return await youTubeGoogleService.GetSearchResults(song, mode, 4);
+            };
             //Get["/pause/{id}", true] = async (parameters, ct) => await spotifyService.PauseSong(parameters["id"]);
 
             Get["/join/asd/", true] = async (parameters, ct) =>

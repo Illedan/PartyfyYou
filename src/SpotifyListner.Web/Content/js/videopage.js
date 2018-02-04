@@ -24,10 +24,46 @@ function SetPlayMode(songMode) {
     GetPlayingSong(songIdReturned);
 }
 
+function HandleWrongVideo() {
+   
+    
+}
+
+function VideoClicked(videoId) {
+    songIdReturned(videoId);
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-left",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+    toastr.success('Thank you for making Partify better!','Saved');
+    //document.getElementById("searchResult").innerHTML = null;
+}
+
+function GenerateSearchResult() {
+    GetSearchResult(searchResultReturned);
+    
+}
+
 
 
 function GetPlayingSong(callback) {
     return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token+"&mode="+mode, callback);
+}
+function GetSearchResult(callback) {
+    return httpGetRequest(apiUrlBase + '/search?token=' + tokenResponse.access_token + "&mode=" + mode, callback);
 }
 function GetSongIdPlayedWithSpotify(callback) {
     return httpGetRequest(apiUrlBase + '/id?token=' + tokenResponse.access_token, callback);
@@ -35,12 +71,28 @@ function GetSongIdPlayedWithSpotify(callback) {
 function RefreshToken(callback) {
     return httpGetRequest(apiUrlBase + '/refreshToken?refreshToken=' + tokenResponse.refresh_token, callback);
 }
+
+function searchResultReturned(searchResultsText) {
+
+    var text, fLen, i;
+    var searchResults = JSON.parse(searchResultsText);
+
+    fLen = searchResults.length;
+    text = "<ul>";
+    for (i = 0; i < fLen; i++) {
+        text += "<li>" + "<div onclick=\"VideoClicked('" + searchResults[i].videoId + "')\"> " + "<p style=\"font- family:courier;color: white;\">" + searchResults[i].name + "</p> " + " <img  src='" + searchResults[i].thumbnailUrl + "'> </div></li>";
+    }
+    text += "</ul>";
+    document.getElementById("searchResult").innerHTML = text;
+}
+
 function songIdReturned(songId) {
  
 	var newUrl = createYoutubeUrl(songId);
 	if(document.getElementById('Myframe').src !== newUrl){
 
-		document.getElementById('Myframe').src = newUrl;
+        document.getElementById('Myframe').src = newUrl;
+	    document.getElementById("searchResult").innerHTML = null;
 	}  
 }
 

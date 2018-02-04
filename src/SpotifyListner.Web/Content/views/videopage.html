@@ -6,6 +6,10 @@
     <script src="Content/js/videopage.js"></script>
     <title></title>
     <link rel="stylesheet" href="Content/css/videopage.css"/>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
 </head>
 <body>
     
@@ -39,7 +43,17 @@
                         </span>
                     </a>
                 </li>
+                <li class="has-subnav" onclick="GenerateSearchResult()" >
+                    <a href="#">
+                        <i class="fa"></i>
+                        <span class="nav-text">
+                            This is the wrong video
+                        </span>
+                    </a>
+                </li>
+                
             </ul>
+            <div id="searchResult"></div>
         </nav>
     </div>
 
