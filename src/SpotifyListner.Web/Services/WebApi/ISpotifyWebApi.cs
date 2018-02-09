@@ -7,5 +7,6 @@ namespace SpotifyListner.Web.Services.WebApi
     {
         Task<string> RefreshToken(string token);
         Task<SpotifyContent> GetPlayingSong(string token);
+        Task<SpotifyUser> GetUser(string token);
     }
 }

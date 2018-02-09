@@ -21,14 +21,29 @@ namespace SpotifyListner.Web.Services.WebApi
             return content;
         }
 
+        public async Task<SpotifyUser> GetUser(string token)
+        {
+            SpotifyUser user = await GetAsync<SpotifyUser>("https://api.spotify.com/v1/me", token);
+            
+           
+            return user;
+        }
+
         private static async Task<T> GetAsync<T>(string url, string token)
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            HttpResponseMessage responeMessage;
+
+            
+                responeMessage = await httpClient.GetAsync(url);
            
-            var responeMessage = await httpClient.GetAsync(url);
+        
+           
             var result = await responeMessage.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<T>(result);
+            var res = JsonConvert.DeserializeObject<T>(result);
+            return res;
         }
     }
 }

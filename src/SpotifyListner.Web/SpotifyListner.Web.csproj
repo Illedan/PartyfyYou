@@ -101,15 +101,23 @@
     <Compile Include="CustomBootstrapper.cs" />
     <Compile Include="MainModule.cs" />
     <Compile Include="Models\KeyModel.cs" />
+    <Compile Include="Models\PostSuggestionModel.cs" />
     <Compile Include="Models\SpotifyModels.cs" />
+    <Compile Include="Models\SuggestionRelationResult.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserResult.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Authorization.cs" />
     <Compile Include="AuthorizationModule.cs" />
     <Compile Include="Services\IAuthorization.cs" />
     <Compile Include="Services\IKeyService.cs" />
+    <Compile Include="Services\IPartifyStorageService.cs" />
+    <Compile Include="Services\IRestClientWrapper.cs" />
     <Compile Include="Services\ISpotifyService.cs" />
     <Compile Include="Services\KeyService.cs" />
+    <Compile Include="Services\PartifyStorageService.cs" />
+    <Compile Include="Services\RestClientWrapper.cs" />
     <Compile Include="Services\WebApi\ISpotifyWebApi.cs" />
     <Compile Include="Services\IYouTubeGoogleService.cs" />
     <Compile Include="Services\SpotifyService.cs" />
@@ -117,6 +125,7 @@
     <Compile Include="Services\YouTubeGoogleService.cs" />
     <Compile Include="SpotifyListnerSelfHost.cs" />
     <Compile Include="UrlModule.cs" />
+    <Compile Include="UserModule.cs" />
     <Compile Include="ViewModule.cs" />
   </ItemGroup>
   <ItemGroup>

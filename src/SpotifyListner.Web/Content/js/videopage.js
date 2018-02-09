@@ -20,6 +20,17 @@ function httpGetRequest(theUrl, callback) {
 }
 
 function SetPlayMode(songMode) {
+    switch (songMode) {
+    case '':
+            sessionStorage.setItem("modeGuid","763BFA3C-60A2-483A-A0A2-3D70A46B45D1");
+        break;
+    case 'cover':
+            sessionStorage.setItem("modeGuid", "763BFA3C-60A2-483A-A0A2-3D73A47B45D1");
+        break;
+    case 'karaoke':
+            sessionStorage.setItem("modeGuid", "763BFA3C-60A2-483A-A0A2-3D71A47B45D1");
+        break;
+    }
     mode = songMode;
     GetPlayingSong(songIdReturned);
 }
@@ -60,6 +71,17 @@ function GenerateSearchResult() {
 
 
 function GetPlayingSong(callback) {
+   // var playingVideoId = sessionStorage.getItem("currentlyPlayingVideoId");
+    var storedUser = sessionStorage.getItem("storedUser");
+    var user = JSON.parse(storedUser);
+    var modeGuid = sessionStorage.getItem("modeGuid");
+    if (user != null) {
+       
+        return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token + "&mode=" + mode + "&userId=" + user.id + "&modeId=" + modeGuid, callback);
+        
+
+    }
+   
     return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token+"&mode="+mode, callback);
 }
 function GetSearchResult(callback) {
@@ -68,8 +90,24 @@ function GetSearchResult(callback) {
 function GetSongIdPlayedWithSpotify(callback) {
     return httpGetRequest(apiUrlBase + '/id?token=' + tokenResponse.access_token, callback);
 }
+function GetUser(callback) {
+    var storedSpotifyUser = sessionStorage.getItem("storedSpotifyUser");
+    var spotifyUser = JSON.parse(storedSpotifyUser);
+
+    return httpGetRequest(apiUrlBase + '/user?Name=' + spotifyUser.display_name + "&Contry=" + spotifyUser.country + "&SpotifyUserId="+spotifyUser.id, callback);
+}
+function GetSpotifyUser(callback) {
+    return httpGetRequest(apiUrlBase + '/spotifyUser?token=' + tokenResponse.access_token, callback);
+}
 function RefreshToken(callback) {
     return httpGetRequest(apiUrlBase + '/refreshToken?refreshToken=' + tokenResponse.refresh_token, callback);
+}
+
+function spotifyUserReturned(userString) {
+    sessionStorage.setItem("storedSpotifyUser",userString);
+}
+function userReturned(userString) {
+    sessionStorage.setItem("storedUser", userString);
 }
 
 function searchResultReturned(searchResultsText) {
@@ -90,7 +128,7 @@ function songIdReturned(songId) {
  
 	var newUrl = createYoutubeUrl(songId);
 	if(document.getElementById('Myframe').src !== newUrl){
-
+	    sessionStorage.setItem("currentlyPlayingVideoId", songId);
         document.getElementById('Myframe').src = newUrl;
 	    document.getElementById("searchResult").innerHTML = null;
 	}  
@@ -100,21 +138,21 @@ function spotifySongIdReturned(songId) {
  
 	if(songId != null){
 
-		var storedCurrentlyPlaingId = localStorage.getItem("currentlyPlayingSpotifyId");
+        var storedCurrentlyPlaingId = sessionStorage.getItem("currentlyPlayingSpotifyId");
 		if(storedCurrentlyPlaingId == null){
-			localStorage.setItem("currentlyPlayingSpotifyId", songId);
+		    sessionStorage.setItem("currentlyPlayingSpotifyId", songId);
 			GetPlayingSong(songIdReturned);
 			return;
 		}
 		if(loopCounter<2){
-			localStorage.setItem("currentlyPlayingSpotifyId", songId);
+		    sessionStorage.setItem("currentlyPlayingSpotifyId", songId);
 			GetPlayingSong(songIdReturned);
 			return;
 		}
 		if(songId === storedCurrentlyPlaingId){
 			return;
 		}
-		localStorage.setItem("currentlyPlayingSpotifyId", songId);
+	    sessionStorage.setItem("currentlyPlayingSpotifyId", songId);
 		GetPlayingSong(songIdReturned);  
 	}
 	
@@ -160,6 +198,18 @@ function loadedFrame() {
             if (timeDifference>50) {
 		        RefreshToken(tokenReturned);
             }
+        }
+        var storedSpotifyUser = sessionStorage.getItem("storedSpotifyUser");
+        var spotifyUser = JSON.parse(storedSpotifyUser);
+
+       
+        if (spotifyUser == null) {
+            GetSpotifyUser(spotifyUserReturned);
+        }
+        var storedUser = sessionStorage.getItem("storedUser");
+        var user = JSON.parse(storedUser);
+        if (user == null) {
+            GetUser(userReturned);
         }
     }
 
