@@ -20,12 +20,12 @@ namespace SpotifyListner.Web
                 var song = (await spotifyService.GetCurrentSong(token));
                 var songId = song?.item?.id;
                 string videoId = null;
-
+                
                 if (!string.IsNullOrEmpty(songId) && !string.IsNullOrEmpty(userId) && !string.IsNullOrEmpty(modeId))
                 {
                     var userIdDidParse = Guid.TryParse(userId, out var userIdGuid);
                     var modeIdDidParse = Guid.TryParse(modeId, out var modeIdGuid);
-                    var suggestion = await partifyStorageService.GetSuggestion(songId, modeIdGuid, new Guid());
+                    var suggestion = await partifyStorageService.GetSuggestion(songId, modeIdGuid, userIdGuid);
                     if (suggestion!= null)
                     {
                         return suggestion.YoutubeVideoId;

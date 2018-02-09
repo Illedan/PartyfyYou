@@ -84,6 +84,19 @@ function GetPlayingSong(callback) {
    
     return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token+"&mode="+mode, callback);
 }
+function StoreSuggestion() {
+    // var playingVideoId = sessionStorage.getItem("currentlyPlayingVideoId");
+    var storedUser = sessionStorage.getItem("storedUser");
+    var user = JSON.parse(storedUser);
+    var modeGuid = sessionStorage.getItem("modeGuid");
+    var videoId = sessionStorage.getItem("currentlyPlayingVideoId");
+    var songId = sessionStorage.getItem("currentlyPlayingSpotifyId");
+    if (user != null && modeGuid && videoId && songId) {
+        httpGetRequest(apiUrlBase + '/store?songId=' + songId + "&userId=" + user.id + "&modeId=" + modeGuid + "&videoId=" + videoId);
+    }
+    
+
+}
 function GetSearchResult(callback) {
     return httpGetRequest(apiUrlBase + '/search?token=' + tokenResponse.access_token + "&mode=" + mode, callback);
 }
@@ -104,7 +117,7 @@ function RefreshToken(callback) {
 }
 
 function spotifyUserReturned(userString) {
-    sessionStorage.setItem("storedSpotifyUser",userString);
+    sessionStorage.setItem("storedSpotifyUser", userString);
 }
 function userReturned(userString) {
     sessionStorage.setItem("storedUser", userString);
@@ -128,7 +141,8 @@ function songIdReturned(songId) {
  
 	var newUrl = createYoutubeUrl(songId);
 	if(document.getElementById('Myframe').src !== newUrl){
-	    sessionStorage.setItem("currentlyPlayingVideoId", songId);
+        sessionStorage.setItem("currentlyPlayingVideoId", songId);
+	    StoreSuggestion();
         document.getElementById('Myframe').src = newUrl;
 	    document.getElementById("searchResult").innerHTML = null;
 	}  
@@ -176,7 +190,8 @@ function tokenReturned(token) {
 	localStorage.setItem("responseString", JSON.stringify(newToken));
     localStorage.setItem("timeTicketFetched", JSON.stringify(Date.now()));
 }
- 
+
+sessionStorage.setItem("modeGuid", "763BFA3C-60A2-483A-A0A2-3D70A46B45D1");
 var tokenResponse;
 var isLoaded = false;
 var loopCounter = 0;
