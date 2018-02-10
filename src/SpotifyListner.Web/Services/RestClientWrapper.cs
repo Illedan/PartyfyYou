@@ -16,7 +16,7 @@ namespace SpotifyListner.Web.Services
         {
             m_httpClient = new HttpClient()
             {
-                BaseAddress = new Uri("http://localhost:5000/api/")
+                BaseAddress = new Uri("https://partifystoragewebapp.azurewebsites.net/api/")
             };
             m_httpClient.DefaultRequestHeaders.Accept.Clear();
             m_httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
