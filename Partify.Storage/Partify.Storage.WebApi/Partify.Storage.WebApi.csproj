@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\PublishProfiles\PartifyStorage - Web Deploy.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -21,3 +26,4 @@
   </ItemGroup>
 
 </Project>
+

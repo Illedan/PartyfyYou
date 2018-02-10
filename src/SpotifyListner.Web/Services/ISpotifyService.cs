@@ -8,5 +8,6 @@ namespace SpotifyListner.Web.Services
         Task PauseSong(string videoId, string token);
 
         Task<SpotifyContent> GetCurrentSong(string token);
+        Task<SpotifyUser> GetUser(string token);
     }
 }

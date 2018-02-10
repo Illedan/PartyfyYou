@@ -19,7 +19,9 @@ function login() {
         }
 
         var loginUrl = getLoginURL([
-            //'playlist-modify-public'
+            'user-read-private',
+            'user-read-birthdate',
+            'user-read-email',
             'user-read-currently-playing',
             'user-read-playback-state'
         ]);

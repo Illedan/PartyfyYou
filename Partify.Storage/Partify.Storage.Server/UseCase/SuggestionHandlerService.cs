@@ -83,19 +83,14 @@ namespace Partify.Storage.Server.UseCase
             {
                 return null;
             }
-            if (suggestion.UserId == Guid.Empty)
-            {
-                var mostPopularSuggestion = await m_suggestionService.GetSuggestionRelation(new SuggestionRelationRequest { ModeId = suggestion.ModeId, SongId = song.SongId });
-                return mostPopularSuggestion;
-            }
             var suggestionRelation = await m_suggestionService.GetSuggestionRelation(new SuggestionRelationRequest { ModeId = suggestion.ModeId, SongId = song.SongId, UserId = suggestion.UserId });
-
-            if (suggestionRelation == null)
+            if (suggestionRelation != null)
             {
-                suggestionRelation = await m_suggestionService.GetSuggestionRelation(new SuggestionRelationRequest { ModeId = suggestion.ModeId, SongId = song.SongId, UserId = PartifySystemUserId });
+                return suggestionRelation;
             }
 
-            return suggestionRelation;
+            var mostPopularSuggestion = await m_suggestionService.GetSuggestionRelation(new SuggestionRelationRequest { ModeId = suggestion.ModeId, SongId = song.SongId });
+            return mostPopularSuggestion;
         }
 
         public async Task RemoveSuggestion(Guid userSuggestionId)
