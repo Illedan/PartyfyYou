@@ -43,6 +43,14 @@
                         </span>
                     </a>
                 </li>
+                <li class="has-subnav" onclick="SetPlayMode('lyrics')">
+                    <a href="#">
+                        <i class="fa fa-user"></i>
+                        <span class="nav-text">
+                            Lyrics
+                        </span>
+                    </a>
+                </li>
                 <li class="has-subnav" onclick="GenerateSearchResult()" >
                     <a href="#">
                         <i class="fa"></i>
@@ -53,7 +61,8 @@
                 </li>
                 
             </ul>
-            <div id="searchResult"></div>
+            <div style="overflow-y: scroll;" id="searchResult"></div>
+            
         </nav>
     </div>
 

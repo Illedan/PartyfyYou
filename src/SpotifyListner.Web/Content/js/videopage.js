@@ -29,6 +29,9 @@ function SetPlayMode(songMode) {
         break;
     case 'karaoke':
             sessionStorage.setItem("modeGuid", "763BFA3C-60A2-483A-A0A2-3D71A47B45D1");
+            break;
+    case 'lyrics':
+            sessionStorage.setItem("modeGuid", "24F97CA9-2797-44CD-8BF6-340C5274A1FE");
         break;
     }
     mode = songMode;
