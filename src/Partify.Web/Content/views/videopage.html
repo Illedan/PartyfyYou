@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="/Content/js/videopage.js"></script>
+    <title></title>
+    <link rel="stylesheet" href="/Content/css/videopage.css"/>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+</head>
+<body>
+    
+<div class="holder">
+    <div class="bar">
+        <nav class="main-menu">
+            <ul>
+                <li class="has-subnav" onclick="SetPlayMode('')">
+                    <a href="#">
+                        <i class="fa fa-music fa-2x"></i>
+                        <span class="nav-text">
+                            Play normal
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav" onclick="SetPlayMode('karaoke')">
+                    <a href="#">
+                        <i class="fa fa-microphone fa-2x"></i>
+                        <span class="nav-text">
+                            Karaoke
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav" onclick="SetPlayMode('cover')">
+                    <a href="#">
+                        <i class="fa fa-user"></i>
+                        <span class="nav-text">
+                            Cover
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav" onclick="SetPlayMode('lyrics')">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                        <span class="nav-text">
+                            Lyrics
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav" onclick="GenerateSearchResult()" >
+                    <a href="#">
+                        <i class="fa fa-code-fork"></i>
+                        <span class="nav-text">
+                            This is the wrong video
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+            <div style="overflow-y: scroll;" id="searchResult"></div>
+            
+        </nav>
+    </div>
+
+
+    <iframe id="Myframe" onLoad="loadedFrame();" src="about:blank" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%; border: none; margin: 0; padding: 0; overflow: hidden; z-index: 1;">
+        Your browser doesn't support iframes
+    </iframe>
+</div>
+</body>
+</html>
+
+<!---->

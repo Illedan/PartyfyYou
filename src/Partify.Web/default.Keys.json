@@ -1,0 +1,12 @@
+﻿/// <summary>  
+///  When you edit this file for the first time run this command.
+///  This ensures that you don't commit the changes in the file.	 
+///
+///	git update-index --assume-unchanged src/SpotifyListner.Web/Services/Keys.json
+///
+/// </summary>
+{
+  "SpotifyClientId": "YourSpotifyClientIdHere",
+  "SpotifyClientSecret": "YourSpotifyClientSecretHere",
+  "YouTubeServiceId": "YourYouTubeServiceIdHere"
+}
