@@ -55,6 +55,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.32.2.1162" />
     <PackageReference Include="LightInject.Microsoft.DependencyInjection" Version="2.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.2" />

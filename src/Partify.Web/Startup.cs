@@ -53,7 +53,7 @@ namespace Partify.Web
 
         private Server.Configuration.IConfiguration CreateConfiguration()
         {
-            return new Configuration(Configuration.GetSection("SpotifyClientId").Value, Configuration.GetSection("SpotifyClientSecret").Value, Configuration.GetSection("YouTubeServiceId").Value);
+            return new Configuration(Configuration.GetSection("SpotifyClientId").Value, Configuration.GetSection("SpotifyClientSecret").Value, Configuration.GetSection("YouTubeServiceId").Value, Configuration.GetSection("RedirectUri").Value);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

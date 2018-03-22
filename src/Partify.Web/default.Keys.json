@@ -8,5 +8,6 @@
 {
   "SpotifyClientId": "YourSpotifyClientIdHere",
   "SpotifyClientSecret": "YourSpotifyClientSecretHere",
-  "YouTubeServiceId": "YourYouTubeServiceIdHere"
+  "YouTubeServiceId": "YourYouTubeServiceIdHere",
+  "RedirectUri": "RedirectUri"
 }
