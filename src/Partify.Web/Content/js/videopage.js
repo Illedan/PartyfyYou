@@ -80,7 +80,7 @@ function GetPlayingSong(callback) {
     var modeGuid = sessionStorage.getItem("modeGuid");
     if (user != null) {
        
-        return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token + "&mode=" + mode + "&userId=" + user.id + "&modeId=" + modeGuid, callback);
+        return httpGetRequest(apiUrlBase + '/url?token=' + tokenResponse.access_token + "&mode=" + mode + "&userId=" + user.Id + "&modeId=" + modeGuid, callback);
         
 
     }
@@ -95,7 +95,7 @@ function StoreSuggestion() {
     var videoId = sessionStorage.getItem("currentlyPlayingVideoId");
     var songId = sessionStorage.getItem("currentlyPlayingSpotifyId");
     if (user != null && modeGuid && videoId && songId) {
-        httpGetRequest(apiUrlBase + '/store?songId=' + songId + "&userId=" + user.id + "&modeId=" + modeGuid + "&videoId=" + videoId);
+        httpGetRequest(apiUrlBase + '/store?songId=' + songId + "&userId=" + user.Id + "&modeId=" + modeGuid + "&videoId=" + videoId);
     }
     
 
@@ -134,7 +134,7 @@ function searchResultReturned(searchResultsText) {
     fLen = searchResults.length;
     text = "<ul>";
     for (i = 0; i < fLen; i++) {
-        text += "<li>" + "<div onclick=\"VideoClicked('" + searchResults[i].videoId + "')\"> " + "<p style=\"font- family:courier;color: white;\">" + searchResults[i].name + "</p> " + " <img  src='" + searchResults[i].thumbnailUrl + "'> </div></li>";
+        text += "<li>" + "<div onclick=\"VideoClicked('" + searchResults[i].VideoId + "')\"> " + "<p style=\"font- family:courier;color: white;\">" + searchResults[i].Name + "</p> " + " <img  src='" + searchResults[i].ThumbnailUrl + "'> </div></li>";
     }
     text += "</ul>";
     document.getElementById("searchResult").innerHTML = text;
