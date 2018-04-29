@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyListner.Web", "SpotifyListner.Web\SpotifyListner.Web.csproj", "{56C2BD12-2C06-4596-95FB-F3B23C3B9514}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partify.Web", "Partify.Web\Partify.Web.csproj", "{D84CD965-32DA-4383-B12F-51E7DA5712B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Partify.Web", "Partify.Web\Partify.Web.csproj", "{D84CD965-32DA-4383-B12F-51E7DA5712B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partify.Server", "Partify.Server\Partify.Server.csproj", "{86140B68-F321-4CBE-93BF-A72FB539C197}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Partify.Server", "Partify.Server\Partify.Server.csproj", "{86140B68-F321-4CBE-93BF-A72FB539C197}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1AFD158B-AA87-433D-B7A0-71412FF82BDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{86140B68-F321-4CBE-93BF-A72FB539C197}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86140B68-F321-4CBE-93BF-A72FB539C197}.Release|x86.ActiveCfg = Release|Any CPU
 		{86140B68-F321-4CBE-93BF-A72FB539C197}.Release|x86.Build.0 = Release|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Debug|x86.Build.0 = Debug|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Release|x86.ActiveCfg = Release|Any CPU
+		{1AFD158B-AA87-433D-B7A0-71412FF82BDB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

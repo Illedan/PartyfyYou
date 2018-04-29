@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  partify.web:
+    image: partifyweb
+    build:
+      context: .
+      dockerfile: Partify.Web/Dockerfile
