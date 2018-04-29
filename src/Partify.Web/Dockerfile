@@ -1,6 +1,10 @@
 FROM microsoft/aspnetcore:2.0 AS base
 WORKDIR /app
-EXPOSE 80 433 64756 64757
+EXPOSE 64756
+
+# Set ASP.NET Core environment variables
+#ENV ASPNETCORE_URLS="http://*:64756"
+#ENV ASPNETCORE_ENVIRONMENT="Production"
 
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src

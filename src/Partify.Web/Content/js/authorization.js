@@ -3,7 +3,7 @@ if (!window.console) console = {};
 console.log = console.log || function () { };
 var awsome = "";
 var originalToken = "";
-var apiUrlBase = "http://" + window.location.host;
+var apiUrlBase = window.location.protocol+ "//" + window.location.host;
 function ExtractData(str) {
     return str.split("=")[1];
 }

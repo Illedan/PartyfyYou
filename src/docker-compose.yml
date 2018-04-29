@@ -6,3 +6,5 @@ services:
     build:
       context: .
       dockerfile: Partify.Web/Dockerfile
+  ports:
+    - "80"
